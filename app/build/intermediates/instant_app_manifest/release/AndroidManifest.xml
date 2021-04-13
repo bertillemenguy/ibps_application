@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.endpointapp"
+    android:targetSandboxVersion="2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="27" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_app_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo_app_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.example.endpointapp.ActivityReunification" />
+        <activity android:name="com.example.endpointapp.ActivityRechercheponte" />
+        <activity android:name="com.example.endpointapp.ActivityRechercheaccouplement" />
+        <activity android:name="com.example.endpointapp.ActivityRechercheaccouplementkm" />
+        <activity android:name="com.example.endpointapp.ActivityAccouplement" />
+        <activity android:name="com.example.endpointapp.ActivityRecapaccouplement" />
+        <activity android:name="com.example.endpointapp.ActivityRecherche5" />
+        <activity android:name="com.example.endpointapp.ActivityItemdetails5" />
+        <activity android:name="com.example.endpointapp.ActivityRecherche4" />
+        <activity android:name="com.example.endpointapp.ActivityItemdetails4" />
+        <activity android:name="com.example.endpointapp.ActivityTablehistoriquegestionbacskm" />
+        <activity android:name="com.example.endpointapp.ActivityHistoriquedetailssouffrance" />
+        <activity android:name="com.example.endpointapp.ActivityHistoriqueActionssouffrance" />
+        <activity android:name="com.example.endpointapp.ActivityHistoriqueIncidents" />
+        <activity android:name="com.example.endpointapp.ActivityHistoriquePoissontsMorts" />
+        <activity android:name="com.example.endpointapp.ActivityRecherche3" />
+        <activity android:name="com.example.endpointapp.ActivityRechercheMorts" />
+        <activity android:name="com.example.endpointapp.ActivityRechercheGestionBacs" />
+        <activity android:name="com.example.endpointapp.ActivityRechercheSouffrance" />
+        <activity android:name="com.example.endpointapp.ActivityItemdetails2" />
+        <activity android:name="com.example.endpointapp.ActivityItemdetails3" />
+        <activity android:name="com.example.endpointapp.ActivityRecherche2" />
+        <activity android:name="com.example.endpointapp.ActivityOeuf2" />
+        <activity android:name="com.example.endpointapp.ActivityOeuf" />
+        <activity android:name="com.example.endpointapp.ActivitySurveillance" />
+        <activity android:name="com.example.endpointapp.ActivityRas" />
+        <activity android:name="com.example.endpointapp.ActivityIsolement" />
+        <activity android:name="com.example.endpointapp.ActivityEuthanasie" />
+        <activity android:name="com.example.endpointapp.ActivityEvaluationsouffrance" />
+        <activity android:name="com.example.endpointapp.ActivityEvaluationsouffrance2" />
+        <activity android:name="com.example.endpointapp.ActivityPoissonmort" />
+        <activity android:name="com.example.endpointapp.ActivitySignaler" />
+        <activity android:name="com.example.endpointapp.ActivityMenu" />
+        <activity android:name="com.example.endpointapp.ActivitySplash" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.endpointapp.ActivityRecherche" />
+        <activity android:name="com.example.endpointapp.ActivityItemdetails" />
+        <activity android:name="com.example.endpointapp.ActivityRechercheGestion" />
+        <activity android:name="com.example.endpointapp.ActivityItemGestion" />
+        <activity android:name="com.example.endpointapp.ActivityDeplacer" />
+        <activity android:name="com.example.endpointapp.ActivityReunir" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.endpointapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+
+        <activity android:name=".ActivityDupliquerBacs" />
+        <activity android:name=".ActivityHistoriqueIncidents" />
+        <activity android:name=".ActivityWebHistoriqueAnimalerieAlevins" />
+        <activity android:name=".ActivityWebHistoriqueAnimalerieRemplissage" />
+
+
+        <activity android:name=".ActivityWebHistoriqueReservationZebrafish" />
+        <activity android:name=".ActivityWebHistoriqueReservationInjection" />
+
+        <activity android:name=".ActivityReunificationBacs" />
+        <activity android:name=".ActivityHistoriqueOeufs" />
+        <activity android:name=".ActivityHistoriqueAccouplementsPourOeufs" />
+        <activity android:name=".ActivityHistoriqueAccouplements" />
+
+        <activity android:name=".ActivityEcrirRecapAccouplement" />
+        <activity android:name=".ActivityRechercheRegistreAccouplementsFemelle" />
+        <activity android:name=".ActivityRechercheRegistreAccouplementsMale" />
+
+
+        <activity android:name=".ActivityRechercheRegistre" />
+        <activity android:name=".ActivityHistoriqueMorts" />
+
+        <activity android:name=".ActivityRechercheGestionBacs" />
+        <activity android:name=".ActivityHistoriqueSouffrance" />
+
+        <activity android:name=".ActivityRechercheRegistreSouffrance" />
+
+        <activity android:name=".ActivityEcrirRecapOeuf" />
+        <activity android:name=".ActivitySurveillance" />
+        <activity android:name=".ActivityRas" />
+        <activity android:name=".ActivityIsolement" />
+        <activity android:name=".ActivityEuthanasie" />
+
+        <activity android:name=".ActivityEcrirRecapSouffrance" />
+        <activity android:name=".ActivityEcrirRecapMort" />
+        <activity android:name=".ActivityEcrirRecapIncidents" />
+        <activity android:name=".ActivityMenu" />
+
+        <activity android:name=".ActivitySplash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityRechercheRegistreMorts" />
+        <activity android:name=".ActivityRechercheRegistreBacs" />
+        <activity android:name=".ActivityEcrirRecapBacs" />
+        <activity android:name=".ActivityDeplacerBacs" />
+        <activity android:name=".ActivityReunirBacs" />
+        <activity android:name=".ActivityErreur" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

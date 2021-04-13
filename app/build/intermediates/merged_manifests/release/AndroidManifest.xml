@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.endpointapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="27" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.example.endpointapp.ActivityDupliquerBacs" />
+        <activity android:name="com.example.endpointapp.ActivityHistoriqueIncidents" />
+        <activity android:name="com.example.endpointapp.ActivityWebHistoriqueAnimalerieAlevins" />
+        <activity android:name="com.example.endpointapp.ActivityWebHistoriqueAnimalerieRemplissage" />
+        <activity android:name="com.example.endpointapp.ActivityWebHistoriqueReservationZebrafish" />
+        <activity android:name="com.example.endpointapp.ActivityWebHistoriqueReservationInjection" />
+        <activity android:name="com.example.endpointapp.ActivityReunificationBacs" />
+        <activity android:name="com.example.endpointapp.ActivityHistoriqueOeufs" />
+        <activity android:name="com.example.endpointapp.ActivityHistoriqueAccouplements" />
+        <activity android:name="com.example.endpointapp.ActivityHistoriqueAccouplements2" />
+        <activity android:name="com.example.endpointapp.ActivityEcrirRecapAccouplement" />
+        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreAccouplementsFemelle" />
+        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreAccouplementsMale" />
+        <activity android:name="com.example.endpointapp.ActivityRechercheRegistre" />
+        <activity android:name="com.example.endpointapp.ActivityHistoriqueMorts" />
+        <activity android:name="com.example.endpointapp.ActivityRechercheGestionBacs" />
+        <activity android:name="com.example.endpointapp.ActivityHistoriqueSouffrance" />
+        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreSouffrance" />
+        <activity android:name="com.example.endpointapp.ActivityEcrirEecapOeuf" />
+        <activity android:name="com.example.endpointapp.ActivitySurveillance" />
+        <activity android:name="com.example.endpointapp.ActivityRas" />
+        <activity android:name="com.example.endpointapp.ActivityIsolement" />
+        <activity android:name="com.example.endpointapp.ActivityEuthanasie" />
+        <activity android:name="com.example.endpointapp.ActivityEcrirRecapSouffrance" />
+        <activity android:name="com.example.endpointapp.ActivityEcrirRecapMort" />
+        <activity android:name="com.example.endpointapp.ActivityEcrirRecapIncidents" />
+        <activity android:name="com.example.endpointapp.ActivityMenu" />
+        <activity android:name="com.example.endpointapp.ActivitySplash" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreMorts" />
+        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreBacs" />
+        <activity android:name="com.example.endpointapp.ActivityEcrirRecapBacs" />
+        <activity android:name="com.example.endpointapp.ActivityDeplacerBacs" />
+        <activity android:name="com.example.endpointapp.ActivityReunirBacs" />
+        <activity android:name="com.example.endpointapp.ActivityErreur" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

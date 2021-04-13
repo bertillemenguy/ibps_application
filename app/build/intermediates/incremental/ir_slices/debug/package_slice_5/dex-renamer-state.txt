@@ -1,0 +1,4 @@
+#Fri Aug 02 13:07:56 CEST 2019
+base.0=C\:\\Users\\Mannioui\\Downloads\\Application EndPoint\\Karim\\EndpointApp_final_km01_08_19\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5
+path.0=classes.dex
+renamed.0=classes.dex

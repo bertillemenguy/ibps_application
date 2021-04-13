@@ -1,0 +1,153 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.endpointapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="27" />
+9-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:6:5-67
+11-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:6:22-64
+12
+13    <application
+13-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:8:5-73:19
+14        android:allowBackup="true"
+14-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:9:9-35
+15        android:icon="@mipmap/ic_launcher"
+15-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:10:9-43
+16        android:label="@string/app_name"
+16-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:11:9-41
+17        android:roundIcon="@mipmap/ic_launcher_round"
+17-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:12:9-54
+18        android:supportsRtl="true"
+18-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:13:9-35
+19        android:theme="@style/AppTheme" >
+19-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:14:9-40
+20        <activity android:name="com.example.endpointapp.ActivityDupliquerBacs" />
+20-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:18:9-59
+20-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:18:19-56
+21        <activity android:name="com.example.endpointapp.ActivityHistoriqueIncidents" />
+21-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:19:9-65
+21-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:19:19-62
+22        <activity android:name="com.example.endpointapp.ActivityWebHistoriqueAnimalerieAlevins" />
+22-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:20:9-76
+22-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:20:19-73
+23        <activity android:name="com.example.endpointapp.ActivityWebHistoriqueAnimalerieRemplissage" />
+23-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:21:9-80
+23-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:21:19-77
+24        <activity android:name="com.example.endpointapp.ActivityWebHistoriqueReservationZebrafish" />
+24-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:24:9-79
+24-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:24:19-76
+25        <activity android:name="com.example.endpointapp.ActivityWebHistoriqueReservationInjection" />
+25-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:25:9-79
+25-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:25:19-76
+26        <activity android:name="com.example.endpointapp.ActivityReunificationBacs" />
+26-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:27:9-63
+26-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:27:19-60
+27        <activity android:name="com.example.endpointapp.ActivityHistoriqueOeufs" />
+27-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:28:9-61
+27-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:28:19-58
+28        <activity android:name="com.example.endpointapp.ActivityHistoriqueAccouplements" />
+28-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:29:9-69
+28-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:29:19-66
+29        <activity android:name="com.example.endpointapp.ActivityHistoriqueAccouplements2" />
+29-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:30:9-70
+29-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:30:19-67
+30        <activity android:name="com.example.endpointapp.ActivityEcrirRecapAccouplement" />
+30-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:32:9-68
+30-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:32:19-65
+31        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreAccouplementsFemelle" />
+31-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:33:9-83
+31-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:33:19-80
+32        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreAccouplementsMale" />
+32-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:34:9-80
+32-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:34:19-77
+33        <activity android:name="com.example.endpointapp.ActivityRechercheRegistre" />
+33-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:37:9-63
+33-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:37:19-60
+34        <activity android:name="com.example.endpointapp.ActivityHistoriqueMorts" />
+34-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:38:9-61
+34-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:38:19-58
+35        <activity android:name="com.example.endpointapp.ActivityRechercheGestionBacs" />
+35-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:40:9-66
+35-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:40:19-63
+36        <activity android:name="com.example.endpointapp.ActivityHistoriqueSouffrance" />
+36-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:41:9-66
+36-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:41:19-63
+37        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreSouffrance" />
+37-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:43:9-73
+37-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:43:19-70
+38        <activity android:name="com.example.endpointapp.ActivityEcrirEecapOeuf" />
+38-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:45:9-60
+38-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:45:19-57
+39        <activity android:name="com.example.endpointapp.ActivitySurveillance" />
+39-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:46:9-58
+39-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:46:19-55
+40        <activity android:name="com.example.endpointapp.ActivityRas" />
+40-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:47:9-49
+40-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:47:19-46
+41        <activity android:name="com.example.endpointapp.ActivityIsolement" />
+41-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:48:9-55
+41-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:48:19-52
+42        <activity android:name="com.example.endpointapp.ActivityEuthanasie" />
+42-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:49:9-56
+42-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:49:19-53
+43        <activity android:name="com.example.endpointapp.ActivityEcrirRecapSouffrance" />
+43-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:51:9-66
+43-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:51:19-63
+44        <activity android:name="com.example.endpointapp.ActivityEcrirRecapMort" />
+44-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:52:9-60
+44-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:52:19-57
+45        <activity android:name="com.example.endpointapp.ActivityEcrirRecapIncidents" />
+45-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:53:9-65
+45-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:53:19-62
+46        <activity android:name="com.example.endpointapp.ActivityMenu" />
+46-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:54:9-50
+46-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:54:19-47
+47        <activity android:name="com.example.endpointapp.ActivitySplash" >
+47-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:56:9-62:20
+47-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:56:19-49
+48            <intent-filter>
+48-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:57:13-61:29
+49                <action android:name="android.intent.action.MAIN" />
+49-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:58:17-69
+49-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:58:25-66
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:60:17-77
+51-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:60:27-74
+52            </intent-filter>
+53        </activity>
+54        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreMorts" />
+54-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:63:9-68
+54-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:63:19-65
+55        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreBacs" />
+55-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:64:9-67
+55-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:64:19-64
+56        <activity android:name="com.example.endpointapp.ActivityEcrirRecapBacs" />
+56-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:65:9-60
+56-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:65:19-57
+57        <activity android:name="com.example.endpointapp.ActivityDeplacerBacs" />
+57-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:66:9-58
+57-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:66:19-55
+58        <activity android:name="com.example.endpointapp.ActivityReunirBacs" />
+58-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:67:9-56
+58-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:67:19-53
+59        <activity android:name="com.example.endpointapp.ActivityErreur" />
+59-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:68:9-52
+59-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:68:19-49
+60
+61        <meta-data
+61-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:70:9-72:57
+62            android:name="preloaded_fonts"
+62-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:71:13-43
+63            android:resource="@array/preloaded_fonts" />
+63-->C:\Users\Mannioui\Downloads\ApplicationEndPoint\Karim\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\app\src\main\AndroidManifest.xml:72:13-54
+64    </application>
+65
+66</manifest>

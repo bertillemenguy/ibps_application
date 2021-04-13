@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.endpointapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="27" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_app"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.endpointapp.ActivityReunification"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityRechercheponte"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityRechercheaccouplement"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityRechercheaccouplementkm"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityAccouplement"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityRecapaccouplement"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityRecherche5"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityItemdetails5"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityRecherche4"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityItemdetails4"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityTablehistoriquegestionbacskm"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityHistoriquedetailssouffrance"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityHistoriqueActionssouffrance"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityHistoriqueIncidents"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityHistoriquePoissontsMorts"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityRecherche3"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityItemdetails2"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityItemdetails3"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityRecherche2"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityOeuf2"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityOeuf"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivitySurveillance"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityRas"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityIsolement"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityEuthanasie"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityEvaluationsouffrance"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityEvaluationsouffrance2"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityPoissonmort"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivitySignaler"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityMenu"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivitySplash"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.endpointapp.ActivityRecherche"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityItemdetails"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityRechercheGestion"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityItemGestion"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityDeplacer"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.endpointapp.ActivityReunir"
+            android:screenOrientation="landscape" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

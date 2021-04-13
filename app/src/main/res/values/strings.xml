@@ -1,0 +1,245 @@
+<resources>
+    <string name="app_name">Zebrafish</string>
+    <string name="zebrafish">Zebrafish</string>
+    <string name="splash_page">Splash Page</string>
+
+    <string name="operateur">Sélectionnez un opérateur</string>
+    <string name="search_item">search item</string>
+
+    <string name="NageAnormale">Nage Anormale</string>
+    <string name="Prostration">Prostration</string>
+    <string name="Malnutrition"> Trouble alimentaire</string>
+    <string name="positionInhabituelle">Position Inhabituelle</string>
+
+    <string name="choisiraltphysique">Choisir alteration physique</string>
+    <string name="choisiraltcomportementale">Choisir alteration comportementale</string>
+    <string name="ob_sit">9. Obésité</string>
+    <string name="ulc_re_mycose_saignement">4. Ulcère/Mycose/Saignement</string>
+    <string name="scoliose">1. Scoliose</string>
+    <string name="alteration_nageoire">2. Alteration Nageoire</string>
+    <string name="blessure_lesion">3. Blessure  Lesion</string>
+    <string name="maigreur">6. Maigreur</string>
+    <string name="opercules_ouvertes">7. Opercules ouvertes</string>
+    <string name="exophtalmie_d_formation_faciale">5. Exophtalmie/Déformation faciale</string>
+    <string name="changement_de_couleur">8. Changement de couleur</string>
+
+
+
+    <string-array name="nourrisage">
+        <item></item>
+        <item>Granulées </item>
+        <item>Rotifers</item>
+        <item>Artemias</item>
+
+    </string-array>
+
+
+    <string-array name="operateur">
+        <item></item>
+        <item>TEST</item>
+        <item>Animalerie </item>
+        <item>Charles Durand</item>
+        <item>Coralie Fassier</item>
+        <item>De-Li Shi</item>
+        <item>Estelle Hirsinger</item>
+        <item>Elim Hong</item>
+        <item>Georges Debrégeas</item>
+        <item>Jamilé Hazan</item>
+        <item>Marie Breau</item>
+        <item>Nadhir YousfiY</item>
+        <item>Sandrine Cadel</item>
+        <item>Sylvie Schneider-Maunoury</item>
+        <item>Autre</item>
+
+    </string-array>
+
+    <string-array name="eaudeville">
+        <item></item>
+        <item>Coupure Eau de ville</item>
+        <item>Panne Osmoseur </item>
+
+    </string-array>
+
+    <string-array name="eausysteme">
+        <item></item>
+        <item>NO2</item>
+        <item>NO3 </item>
+        <item>NH4 </item>
+        <item>PH </item>
+        <item>T° </item>
+        <item>CD </item>
+
+
+    </string-array>
+
+    <string-array name="systemeaquatique">
+        <item></item>
+        <item>UV</item>
+        <item>Fuite </item>
+        <item>Arrêt du systeme </item>
+        <item>Autre Panne </item>
+
+    </string-array>
+
+    <string-array name="travaux">
+        <item></item>
+        <item>Vibrations</item>
+        <item>Divers </item>
+
+    </string-array>
+
+
+    <string-array name="electricite">
+        <item></item>
+        <item>Coupure Programmée</item>
+        <item>Coupure Inopinée </item>
+
+    </string-array>
+
+    <string-array name="aircomprime">
+        <item></item>
+        <item>Arrêt air comprimé</item>
+
+    </string-array>
+    <string-array name="climatisation">
+        <item></item>
+        <item>Arrêt CTA</item>
+
+
+    </string-array>
+
+
+    <string-array name="alphabet">
+        <item></item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+
+    <string-array name="nombre">
+        <item></item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+    </string-array>
+
+    <string-array name="chiffre">
+        <item></item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="couleurs">
+        <item></item>
+        <item>Blanc</item>
+        <item>Bleu</item>
+        <item>Jaune</item>
+        <item>Orange</item>
+        <item>Rouge</item>
+        <item>Rose</item>
+        <item>Vert</item>
+
+    </string-array>
+
+</resources>
+
+
+
+

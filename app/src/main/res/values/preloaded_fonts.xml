@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/average</item>
+        <item>@font/cutive</item>
+        <item>@font/kadwa</item>
+        <item>@font/slabo_13px</item>
+    </array>
+</resources>

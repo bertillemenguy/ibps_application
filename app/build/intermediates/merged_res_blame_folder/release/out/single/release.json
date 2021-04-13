@@ -1,0 +1,298 @@
+[
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\color_checkbox_filter_tint.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\color\\checkbox_filter_tint.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_ecrir_recap_mort.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_ecrir_recap_mort.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_ecrir_recap_incidents.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_ecrir_recap_incidents.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_deplacer.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_deplacer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_ecrir_recap_souffrance.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_ecrir_recap_souffrance.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_logo_app.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-xxxhdpi\\logo_app.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_logo_app.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-xhdpi\\logo_app.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_dupliquer.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_dupliquer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_logo_app_round.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-xxxhdpi\\logo_app_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_rechercheregistreaccouplementfemelle.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_rechercheregistreaccouplementfemelle.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\xml_backup_descriptor.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\xml\\backup_descriptor.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\font_kadwa.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\font\\kadwa.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-anydpi-v26_logo_app_round.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-anydpi-v26\\logo_app_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_logo_app.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-mdpi\\logo_app.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_recherche_gestion_bacs_traite.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_recherche_gestion_bacs_traite.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\font_average.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\font\\average.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_male_female.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\drawable\\ic_male_female.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\font_slabo_13px.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\font\\slabo_13px.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_recherche_registre_item.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_recherche_registre_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\drawable_fish_bones.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\drawable\\fish_bones.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_list_item_historique_bacs.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\list_item_historique_bacs.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_recap_souffrance_isolement.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_recap_souffrance_isolement.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_recap_souffrance_ras.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_recap_souffrance_ras.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_logo_app_round.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-hdpi\\logo_app_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_logo_app.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-xxhdpi\\logo_app.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_list_item_historique_accouplement2.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\list_item_historique_accouplement2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_menu.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_search.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\drawable\\ic_search.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_logo_app_round.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-mdpi\\logo_app_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_list_item_registre.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\list_item_registre.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\drawable_tag.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\drawable\\tag.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_ecrir_recap_bacs.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_ecrir_recap_bacs.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\font_cutive.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\font\\cutive.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_list_item_historique_incidents.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\list_item_historique_incidents.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_recap_bacs_erreur.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_recap_bacs_erreur.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_eggb.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\drawable\\ic_eggb.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_ecrir_recap_oeuf.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_ecrir_recap_oeuf.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\drawable_zebrafish.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\drawable\\zebrafish.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-anydpi-v26_logo_app.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-anydpi-v26\\logo_app.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_ecrir_recap_accouplement.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_ecrir_recap_accouplement.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\drawable_sync_proble.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\drawable\\sync_proble.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_logo_app_round.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-xhdpi\\logo_app_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_rechercheregistreaccouplmentmale.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_rechercheregistreaccouplmentmale.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_logo_app_round.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-xxhdpi\\logo_app_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_recap_souffrance_surveillance.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_recap_souffrance_surveillance.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_list_item_historique_morts.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\list_item_historique_morts.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\drawable_img_splash.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\drawable\\img_splash.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_list_item_historique_souffrance.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\list_item_historique_souffrance.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_list_item_historique_oeufs.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\list_item_historique_oeufs.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\drawable_imgphysique.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\drawable\\imgphysique.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_recap_souffrance_euthanasie.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\activity_recap_souffrance_euthanasie.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\drawable_icon_home.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\drawable\\icon_home.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_logo_app.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\mipmap-hdpi\\logo_app.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\drawable_exchang.png.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\drawable\\exchang.png"
+    },
+    {
+        "merged": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\build\\intermediates\\res\\merged\\release\\layout_web_historique.xml.flat",
+        "source": "C:\\Users\\Mannioui\\Downloads\\ApplicationEndPoint\\Karim\\EndpointApp_final_km01_08_19_v_Tablette_Fonctionne du 23 04 2020\\app\\src\\main\\res\\layout\\web_historique.xml"
+    }
+]

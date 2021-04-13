@@ -1,0 +1,277 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-75:12
+INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-75:12
+INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-75:12
+INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-75:12
+MERGED from [com.android.support:design:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/7672364edf7d2fb87874b79bd4922003/design-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/28cefeb5fe25d9fe6341a6fa8c11c9be/smileyrating-1.6.8/AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/2fd1badfe235a86c9c4f24dc039376c6/appcompat-v7-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b86b41220db59f6c596245c4fe2b6212/constraint-layout-1.1.3/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5307ab0fba38b9b718d3a7fb9a29b00f/cardview-v7-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.volley:volley:1.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/8791c781ef62abac7b59ad07164cf6df/volley-1.1.1/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5cf5acdf3da09b087263a7119a17e469/support-v4-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0c19fdd807c306dfd21cf072d31f49fc/support-fragment-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/bd5453cae97d20f98ac073be86f4de3f/animated-vector-drawable-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/edf7fc6ada281b4f4b750fb58b76cc62/recyclerview-v7-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/2b701ae5ddd88240760608cc768e9784/support-core-ui-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/31b24ea2eadae461fd63b1ffead369c6/support-core-utils-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/91a417b558c859a0eac369818706bb76/support-vector-drawable-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/f9e8ed1d486995c6948dba8d8d246d3b/transition-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/e398ed70892f78b60daefba521af5cae/support-media-compat-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b5a1b086f5f1cb641bc0eaedaf84b95f/support-compat-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/abe20aa3392e86f8873da1ec2a4b1213/livedata-core-1.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b7997940a8f4a03292b220b77b63affe/viewmodel-1.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/6a75fc164d20e893ff704b8f5fc71219/runtime-1.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/3ebca0af94afd47abe917c2fb4525dc0/runtime-1.1.0/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-75:12
+INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-75:12
+INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-75:12
+	package
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:4:5-38
+		INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-75:12
+		INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-75:12
+		INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:6:22-64
+application
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:8:5-73:19
+MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/28cefeb5fe25d9fe6341a6fa8c11c9be/smileyrating-1.6.8/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/28cefeb5fe25d9fe6341a6fa8c11c9be/smileyrating-1.6.8/AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b86b41220db59f6c596245c4fe2b6212/constraint-layout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b86b41220db59f6c596245c4fe2b6212/constraint-layout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/8791c781ef62abac7b59ad07164cf6df/volley-1.1.1/AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/8791c781ef62abac7b59ad07164cf6df/volley-1.1.1/AndroidManifest.xml:9:5-20
+	android:supportsRtl
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:11:9-41
+	tools:ignore
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:15:9-48
+	android:roundIcon
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:12:9-54
+	android:icon
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:10:9-43
+	android:allowBackup
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:14:9-40
+activity#com.example.endpointapp.ActivityDupliquerBacs
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:18:9-59
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:18:19-56
+activity#com.example.endpointapp.ActivityHistoriqueIncidents
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:19:9-65
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:19:19-62
+activity#com.example.endpointapp.ActivityWebHistoriqueAnimalerieAlevins
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:20:9-76
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:20:19-73
+activity#com.example.endpointapp.ActivityWebHistoriqueAnimalerieRemplissage
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:21:9-80
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:21:19-77
+activity#com.example.endpointapp.ActivityWebHistoriqueReservationZebrafish
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:24:9-79
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:24:19-76
+activity#com.example.endpointapp.ActivityWebHistoriqueReservationInjection
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:25:9-79
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:25:19-76
+activity#com.example.endpointapp.ActivityReunificationBacs
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:27:9-63
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:27:19-60
+activity#com.example.endpointapp.ActivityHistoriqueOeufs
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:28:9-61
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:28:19-58
+activity#com.example.endpointapp.ActivityHistoriqueAccouplementsPourOeufs
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:29:9-78
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:29:19-75
+activity#com.example.endpointapp.ActivityHistoriqueAccouplements
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:30:9-69
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:30:19-66
+activity#com.example.endpointapp.ActivityEcrirRecapAccouplement
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:32:9-68
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:32:19-65
+activity#com.example.endpointapp.ActivityRechercheRegistreAccouplementsFemelle
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:33:9-83
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:33:19-80
+activity#com.example.endpointapp.ActivityRechercheRegistreAccouplementsMale
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:34:9-80
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:34:19-77
+activity#com.example.endpointapp.ActivityRechercheRegistre
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:37:9-63
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:37:19-60
+activity#com.example.endpointapp.ActivityHistoriqueMorts
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:38:9-61
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:38:19-58
+activity#com.example.endpointapp.ActivityRechercheGestionBacs
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:40:9-66
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:40:19-63
+activity#com.example.endpointapp.ActivityHistoriqueSouffrance
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:41:9-66
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:41:19-63
+activity#com.example.endpointapp.ActivityRechercheRegistreSouffrance
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:43:9-73
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:43:19-70
+activity#com.example.endpointapp.ActivityEcrirRecapOeuf
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:45:9-60
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:45:19-57
+activity#com.example.endpointapp.ActivitySurveillance
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:46:9-58
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:46:19-55
+activity#com.example.endpointapp.ActivityRas
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:47:9-49
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:47:19-46
+activity#com.example.endpointapp.ActivityIsolement
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:48:9-55
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:48:19-52
+activity#com.example.endpointapp.ActivityEuthanasie
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:49:9-56
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:49:19-53
+activity#com.example.endpointapp.ActivityEcrirRecapSouffrance
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:51:9-66
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:51:19-63
+activity#com.example.endpointapp.ActivityEcrirRecapMort
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:52:9-60
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:52:19-57
+activity#com.example.endpointapp.ActivityEcrirRecapIncidents
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:53:9-65
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:53:19-62
+activity#com.example.endpointapp.ActivityMenu
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:54:9-50
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:54:19-47
+activity#com.example.endpointapp.ActivitySplash
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:56:9-62:20
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:56:19-49
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:57:13-61:29
+action#android.intent.action.MAIN
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:58:17-69
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:58:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:60:17-77
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:60:27-74
+activity#com.example.endpointapp.ActivityRechercheRegistreMorts
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:63:9-68
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:63:19-65
+activity#com.example.endpointapp.ActivityRechercheRegistreBacs
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:64:9-67
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:64:19-64
+activity#com.example.endpointapp.ActivityEcrirRecapBacs
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:65:9-60
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:65:19-57
+activity#com.example.endpointapp.ActivityDeplacerBacs
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:66:9-58
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:66:19-55
+activity#com.example.endpointapp.ActivityReunirBacs
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:67:9-56
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:67:19-53
+activity#com.example.endpointapp.ActivityErreur
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:68:9-52
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:68:19-49
+meta-data#preloaded_fonts
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:70:9-72:57
+	android:resource
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:72:13-54
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:71:13-43
+uses-sdk
+INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
+INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/7672364edf7d2fb87874b79bd4922003/design-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/7672364edf7d2fb87874b79bd4922003/design-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/28cefeb5fe25d9fe6341a6fa8c11c9be/smileyrating-1.6.8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/28cefeb5fe25d9fe6341a6fa8c11c9be/smileyrating-1.6.8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/2fd1badfe235a86c9c4f24dc039376c6/appcompat-v7-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/2fd1badfe235a86c9c4f24dc039376c6/appcompat-v7-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b86b41220db59f6c596245c4fe2b6212/constraint-layout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b86b41220db59f6c596245c4fe2b6212/constraint-layout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5307ab0fba38b9b718d3a7fb9a29b00f/cardview-v7-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5307ab0fba38b9b718d3a7fb9a29b00f/cardview-v7-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.volley:volley:1.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/8791c781ef62abac7b59ad07164cf6df/volley-1.1.1/AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/8791c781ef62abac7b59ad07164cf6df/volley-1.1.1/AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:support-v4:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5cf5acdf3da09b087263a7119a17e469/support-v4-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5cf5acdf3da09b087263a7119a17e469/support-v4-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0c19fdd807c306dfd21cf072d31f49fc/support-fragment-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0c19fdd807c306dfd21cf072d31f49fc/support-fragment-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/bd5453cae97d20f98ac073be86f4de3f/animated-vector-drawable-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/bd5453cae97d20f98ac073be86f4de3f/animated-vector-drawable-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/edf7fc6ada281b4f4b750fb58b76cc62/recyclerview-v7-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/edf7fc6ada281b4f4b750fb58b76cc62/recyclerview-v7-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/2b701ae5ddd88240760608cc768e9784/support-core-ui-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/2b701ae5ddd88240760608cc768e9784/support-core-ui-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/31b24ea2eadae461fd63b1ffead369c6/support-core-utils-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/31b24ea2eadae461fd63b1ffead369c6/support-core-utils-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/91a417b558c859a0eac369818706bb76/support-vector-drawable-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/91a417b558c859a0eac369818706bb76/support-vector-drawable-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/f9e8ed1d486995c6948dba8d8d246d3b/transition-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/f9e8ed1d486995c6948dba8d8d246d3b/transition-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/e398ed70892f78b60daefba521af5cae/support-media-compat-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/e398ed70892f78b60daefba521af5cae/support-media-compat-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b5a1b086f5f1cb641bc0eaedaf84b95f/support-compat-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b5a1b086f5f1cb641bc0eaedaf84b95f/support-compat-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/abe20aa3392e86f8873da1ec2a4b1213/livedata-core-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/abe20aa3392e86f8873da1ec2a4b1213/livedata-core-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b7997940a8f4a03292b220b77b63affe/viewmodel-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b7997940a8f4a03292b220b77b63affe/viewmodel-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/6a75fc164d20e893ff704b8f5fc71219/runtime-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/6a75fc164d20e893ff704b8f5fc71219/runtime-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/3ebca0af94afd47abe917c2fb4525dc0/runtime-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/3ebca0af94afd47abe917c2fb4525dc0/runtime-1.1.0/AndroidManifest.xml:20:5-44
+INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
+INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml

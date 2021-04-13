@@ -1,0 +1,7 @@
+#Tue Apr 13 13:47:50 CEST 2021
+base.0=/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex
