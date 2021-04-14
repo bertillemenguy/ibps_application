@@ -26,6 +26,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Comparator;
 import java.util.Collections;
@@ -138,8 +139,7 @@ public class ActivityRechercheRegistre extends AppCompatActivity {
                 list.add(item);
             }
 
-            /*Triepar ordre décroissant l'Age*/
-
+            /*Trie par ordre décroissant l'Age*/
             Comparator<HashMap<String, String>> ageComparator = new Comparator<HashMap<String,String>>() {
 
                 @Override
@@ -148,17 +148,21 @@ public class ActivityRechercheRegistre extends AppCompatActivity {
                     Integer age1 = Integer.parseInt(o1.get("Age"));
                     Integer age2 = Integer.parseInt(o2.get("Age"));
 
-                    /*Trie par ordre alphabétique*/
+                    /* Trie par odre alphabétique */
                     if (age1==age2){
 
-                    }
+                        /*mettre en majuscule pour trier les majuscules et les minuscules*/
+                        return (o1.get("Lignee").toUpperCase()).compareTo((o2.get("Lignee")).toUpperCase());
 
-                    return age2.compareTo(age1);
+                    } else {
+                        return age2.compareTo(age1);
+                    }
                 }
             };
 
             // And then sort it using collections.sort().
             Collections.sort(list, ageComparator);
+
 
 
         } catch (JSONException e) {
