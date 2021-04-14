@@ -9,7 +9,10 @@ import android.widget.TextClock;
 
 
 public class ActivityMenu extends AppCompatActivity {
-    
+
+    /*---------------------ACCUEIL-------------------------*/
+    /*-----------------------------------------------------*/
+
     // String operateur = "";
     // Spinner OperateurSpinner;
     

@@ -27,6 +27,9 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Comparator;
+import java.util.Collections;
+
 
 public class ActivityRechercheRegistre extends AppCompatActivity {
     
@@ -133,8 +136,31 @@ public class ActivityRechercheRegistre extends AppCompatActivity {
                 item.put("Key", Key);
     
                 list.add(item);
-    
             }
+
+            /*Triepar ordre décroissant l'Age*/
+
+            Comparator<HashMap<String, String>> ageComparator = new Comparator<HashMap<String,String>>() {
+
+                @Override
+                public int compare(HashMap<String, String> o1, HashMap<String, String> o2) {
+                    // Get the Age and compare the Age.
+                    Integer age1 = Integer.parseInt(o1.get("Age"));
+                    Integer age2 = Integer.parseInt(o2.get("Age"));
+
+                    /*Trie par ordre alphabétique*/
+                    if (age1==age2){
+
+                    }
+
+                    return age2.compareTo(age1);
+                }
+            };
+
+            // And then sort it using collections.sort().
+            Collections.sort(list, ageComparator);
+
+
         } catch (JSONException e) {
             e.printStackTrace();
     
@@ -143,7 +169,8 @@ public class ActivityRechercheRegistre extends AppCompatActivity {
     
         adapter=new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable});
     
-    
+
+
         //assign adapter to list view
         listView.setAdapter(adapter);
         loading.dismiss();
@@ -221,5 +248,11 @@ public class ActivityRechercheRegistre extends AppCompatActivity {
     // public void onPointerCaptureChanged(boolean hasCapture) {
     
     // }
+
+    public void filtre(){
+
+        
+    }
+
 }
 
