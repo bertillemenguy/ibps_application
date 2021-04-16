@@ -47,7 +47,7 @@ public class ActivityHistoriqueSouffrance extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recherche_registre_morts_item);
+        setContentView(R.layout.activity_historique_item);
         //setContentView(R.layout.activity_recherche_morts);
     
         listView=findViewById(R.id.lv_items);

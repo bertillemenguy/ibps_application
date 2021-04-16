@@ -1320,6 +1320,7 @@ layout activity_ecrir_recap_incidents
 layout activity_ecrir_recap_mort
 layout activity_ecrir_recap_oeuf
 layout activity_ecrir_recap_souffrance
+layout activity_historique_item
 layout activity_menu
 layout activity_recap_bacs_erreur
 layout activity_recap_souffrance_euthanasie

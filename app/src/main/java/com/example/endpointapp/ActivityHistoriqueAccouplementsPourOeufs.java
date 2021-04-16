@@ -52,7 +52,7 @@ public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recherche_registre_morts_item);
+        setContentView(R.layout.activity_historique_item);
     
         listView=findViewById(R.id.lv_items);
         listView.setOnItemClickListener(this);
