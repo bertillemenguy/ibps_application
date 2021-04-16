@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
 
     android:focusableInTouchMode="true"
-    tools:context=".ActivityRechercheRegistreMorts"
+    tools:context=".ActivityRechercheRegistre"
     tools:layout_editor_absoluteY="81dp">
 
     <LinearLayout
@@ -40,14 +40,14 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="249dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
                         <EditText
                             android:id="@+id/et_search"
-                            android:layout_width="match_parent"
+                            android:layout_width="230dp"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="10dp"
@@ -59,12 +59,28 @@
                             android:textColor="@color/colorAccent" />
                     </LinearLayout>
 
+
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center|right"
                         android:orientation="vertical">
+
+
+                        <Button
+                            android:id="@+id/trie"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="lancertri"
+                            android:text="Trier" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="51dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
 
                         <ImageButton
                             android:id="@+id/btn_return"
@@ -75,7 +91,11 @@
                             android:layout_alignParentBottom="false"
                             android:onClick="lancermenu"
                             app:srcCompat="@drawable/icon_home" />
+
                     </LinearLayout>
+
+
+
 
                 </LinearLayout>
 
@@ -88,10 +108,14 @@
                 android:background="@android:color/white"
                 android:orientation="vertical">
 
+
                 <ListView
                     android:id="@+id/lv_items"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+
+                    />
+
             </LinearLayout>
 
         </LinearLayout>

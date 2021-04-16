@@ -7,10 +7,12 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Button;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -26,20 +28,17 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
-import java.util.Comparator;
-import java.util.Collections;
 
 
-public class ActivityRechercheRegistre extends AppCompatActivity {
+public class ActivityRechercheRegistre extends AppCompatActivity implements View.OnTouchListener, View.OnClickListener {
     
     
     ListView listView;
     SimpleAdapter adapter;
     ProgressDialog loading;
     EditText editTextSearchItem;
-    
+
     /**
      * @param savedInstanceState
      */
@@ -56,7 +55,9 @@ public class ActivityRechercheRegistre extends AppCompatActivity {
          * ajout de la barre recherche
          */
         editTextSearchItem=findViewById(R.id.et_search);
-        
+
+
+
         // Get the transferred data from source activity.
         //    Intent intent = getIntent();
         //  operateur = intent.getStringExtra("operateur");
@@ -104,7 +105,9 @@ public class ActivityRechercheRegistre extends AppCompatActivity {
      *
      * @param jsonResponce
      */
-    
+
+
+
     private void parseItems(String jsonResponce) {
         
         //
@@ -138,31 +141,6 @@ public class ActivityRechercheRegistre extends AppCompatActivity {
     
                 list.add(item);
             }
-
-            /*Trie par ordre décroissant l'Age*/
-            Comparator<HashMap<String, String>> ageComparator = new Comparator<HashMap<String,String>>() {
-
-                @Override
-                public int compare(HashMap<String, String> o1, HashMap<String, String> o2) {
-                    // Get the Age and compare the Age.
-                    Integer age1 = Integer.parseInt(o1.get("Age"));
-                    Integer age2 = Integer.parseInt(o2.get("Age"));
-
-                    /* Trie par odre alphabétique */
-                    if (age1==age2){
-
-                        /*mettre en majuscule pour trier les majuscules et les minuscules*/
-                        return (o1.get("Lignee").toUpperCase()).compareTo((o2.get("Lignee")).toUpperCase());
-
-                    } else {
-                        return age2.compareTo(age1);
-                    }
-                }
-            };
-
-            // And then sort it using collections.sort().
-            Collections.sort(list, ageComparator);
-
 
 
         } catch (JSONException e) {
@@ -247,16 +225,30 @@ public class ActivityRechercheRegistre extends AppCompatActivity {
         //  intent.putExtra("operateur", operateur);
         startActivity(intent);
     }
-    
-    
+
+
+    public void lancertri(View view) {
+
+        Intent intent = new Intent(this, ActivityRechercheRegistreTrier.class);
+        startActivity(intent);
+    }
+
+
+    @Override
+    public void onClick(View v) {
+
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        return false;
+    }
+
+
     // public void onPointerCaptureChanged(boolean hasCapture) {
     
     // }
 
-    public void filtre(){
-
-        
-    }
 
 }
 

@@ -24,6 +24,10 @@
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/list_item_registre.xml"
     },
     {
+        "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_activity_recherche_registre_morts_item.xml.flat",
+        "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/activity_recherche_registre_morts_item.xml"
+    },
+    {
         "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_activity_menu.xml.flat",
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/activity_menu.xml"
     },
@@ -144,6 +148,10 @@
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/activity_dupliquer.xml"
     },
     {
+        "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_activity_recherche_registre_tri_item.xml.flat",
+        "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/activity_recherche_registre_tri_item.xml"
+    },
+    {
         "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/drawable_fish_bones.png.flat",
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/drawable/fish_bones.png"
     },
@@ -242,6 +250,10 @@
     {
         "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_activity_splash.xml.flat",
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/activity_splash.xml"
+    },
+    {
+        "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_activity_recherche_registre_morts_tri_item.xml.flat",
+        "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/activity_recherche_registre_morts_tri_item.xml"
     },
     {
         "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",

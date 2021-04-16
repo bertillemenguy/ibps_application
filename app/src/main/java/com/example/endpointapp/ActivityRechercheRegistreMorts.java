@@ -13,6 +13,8 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
+
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -30,25 +32,26 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ActivityRechercheRegistreMorts extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class ActivityRechercheRegistreMorts extends AppCompatActivity implements AdapterView.OnItemClickListener, AdapterView.OnItemSelectedListener {
     
     
     ListView listView;
     SimpleAdapter adapter;
     ProgressDialog loading;
     EditText editTextSearchItem;
-    
+
     //  String operateur = "";
     
     
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recherche_registre_item);
+        setContentView(R.layout.activity_recherche_registre_morts_item);
         
         listView = findViewById(R.id.lv_items);
         listView.setOnItemClickListener(this);
         editTextSearchItem = findViewById(R.id.et_search);
+
         
         // Get the transferred data from source activity.
         Intent intent = getIntent();
@@ -57,8 +60,10 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         getItems();
         
     }
-    
-    
+
+
+
+
     private void getItems() {
         
         
@@ -86,7 +91,8 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         queue.add(stringRequest);
     
     }
-    
+
+
     /**
      * @param jsonResponce
      */
@@ -121,9 +127,10 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
                 item.put("Key", Key);
                 
                 list.add(item);
-                
-                
+
             }
+
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -191,9 +198,28 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         //   intent.putExtra("operateur", operateur);
         startActivity(intent);
     }
-    
-    
+
+
+    public void lancertrie(View view) {
+
+        Intent intent = new Intent(this, ActivityRechercheRegistreMortsTrier.class);
+        startActivity(intent);
+    }
+
+
     public void onPointerCaptureChanged(boolean hasCapture) {
     
+    }
+
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        String text = parent.getItemAtPosition(position).toString();
+        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }

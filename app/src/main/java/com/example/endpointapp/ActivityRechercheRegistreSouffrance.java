@@ -43,7 +43,7 @@ public class ActivityRechercheRegistreSouffrance extends AppCompatActivity imple
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recherche_registre_item);
+        setContentView(R.layout.activity_recherche_registre_morts_item);
         
         
         listView = findViewById(R.id.lv_items);

@@ -32,6 +32,10 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 
+import java.util.Comparator;
+import java.util.Collections;
+
+
 public class ActivityHistoriqueMorts extends AppCompatActivity {
     
     
@@ -47,7 +51,7 @@ public class ActivityHistoriqueMorts extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recherche_registre_item);
+        setContentView(R.layout.activity_recherche_registre_morts_item);
         //setContentView(R.layout.activity_recherche_morts);
     
         listView=findViewById(R.id.lv_items);
@@ -137,8 +141,32 @@ public class ActivityHistoriqueMorts extends AppCompatActivity {
     
     
                 list.add(item);
-    
-    
+
+                 //Trie par ordre décroissant l'Age
+    Comparator<HashMap<String, String>> ageComparator = new Comparator<HashMap<String,String>>() {
+
+        @Override
+        public int compare(HashMap<String, String> o1, HashMap<String, String> o2) {
+            // Get the Age and compare the Age.
+            Integer age1 = Integer.parseInt(o1.get("Age"));
+            Integer age2 = Integer.parseInt(o2.get("Age"));
+
+            // Trie par odre alphabétique
+            if (age1==age2){
+
+                //mettre en majuscule pour trier les majuscules et les minuscules
+                return (o1.get("Lignee").toUpperCase()).compareTo((o2.get("Lignee")).toUpperCase());
+
+            } else {
+                return age2.compareTo(age1);
+            }
+        }
+    };
+
+    // And then sort it using collections.sort().
+            Collections.sort(list, ageComparator);
+
+
             }
         } catch (JSONException e) {
             e.printStackTrace();

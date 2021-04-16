@@ -1213,6 +1213,8 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tri
+id trie
 id tv_Bac
 id tv_Bac2
 id tv_DupliBac2
@@ -1326,6 +1328,9 @@ layout activity_recap_souffrance_ras
 layout activity_recap_souffrance_surveillance
 layout activity_recherche_gestion_bacs_traite
 layout activity_recherche_registre_item
+layout activity_recherche_registre_morts_item
+layout activity_recherche_registre_morts_tri_item
+layout activity_recherche_registre_tri_item
 layout activity_rechercheregistreaccouplementfemelle
 layout activity_rechercheregistreaccouplmentmale
 layout activity_splash
