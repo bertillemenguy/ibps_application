@@ -24,7 +24,7 @@ public class WriteOnSheetSignaler {
         //final String CoupureEau, final String Panne, final String CoupureProg, final String CoupureInop, final String ArretAir, final String ArretCTA, final String PH, final String Conductivite, final String NO2, final String NO3, final String NH4, final String Temperature, final String ArretSysteme, final String Fuite, final String UV, final String Autre, final String Vibrations, final String Divers) {
         final ProgressDialog loading = ProgressDialog.show(context, "Chargement...", "Veuillez patienter");
         
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbzXnqUeSu75zuuKQjPpIqY3mhS_l_GqwgDpfGYPdtIWV7D8JAIIamLx-BOAx6IkqXD3Nw/exec?action=addItem",
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbyM66GkooEO_wSj4rcRj0LGKP7TSbZszsdl8Rdvr5TE9IgY02WZrAVdZlhNjubESkPOcg/exec?action=addItem",
         
         
                 new Response.Listener<String>() {

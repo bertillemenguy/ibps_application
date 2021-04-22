@@ -129,11 +129,10 @@ com/example/endpointapp/ActivityHistoriqueAccouplements.java
  com.example.endpointapp.ActivityHistoriqueAccouplements$3
 com/example/endpointapp/ActivityDeplacerBacs.java
  com.example.endpointapp.ActivityDeplacerBacs
-com/example/endpointapp/ActivityHistoriqueIncidents.java
- com.example.endpointapp.ActivityHistoriqueIncidents
- com.example.endpointapp.ActivityHistoriqueIncidents$1
- com.example.endpointapp.ActivityHistoriqueIncidents$2
- com.example.endpointapp.ActivityHistoriqueIncidents$3
+com/example/endpointapp/CustomPopup.java
+ com.example.endpointapp.CustomPopup
+ com.example.endpointapp.CustomPopup$1
+ com.example.endpointapp.CustomPopup$2
 com/example/endpointapp/ActivityEcrirRecapOeuf.java
  com.example.endpointapp.ActivityEcrirRecapOeuf
 com/example/endpointapp/ActivityWebHistoriqueReservationZebrafish.java
@@ -147,11 +146,11 @@ com/example/endpointapp/WriteOnSheetAccouplement.java
  com.example.endpointapp.WriteOnSheetAccouplement$1
  com.example.endpointapp.WriteOnSheetAccouplement$2
  com.example.endpointapp.WriteOnSheetAccouplement$3
-com/example/endpointapp/WriteOnSheetSignaler.java
- com.example.endpointapp.WriteOnSheetSignaler
- com.example.endpointapp.WriteOnSheetSignaler$1
- com.example.endpointapp.WriteOnSheetSignaler$2
- com.example.endpointapp.WriteOnSheetSignaler$3
+com/example/endpointapp/WriteOnSheetSouffrance.java
+ com.example.endpointapp.WriteOnSheetSouffrance
+ com.example.endpointapp.WriteOnSheetSouffrance$1
+ com.example.endpointapp.WriteOnSheetSouffrance$2
+ com.example.endpointapp.WriteOnSheetSouffrance$3
 com/example/endpointapp/ActivityHistoriqueAccouplementsPourOeufs.java
  com.example.endpointapp.ActivityHistoriqueAccouplementsPourOeufs
  com.example.endpointapp.ActivityHistoriqueAccouplementsPourOeufs$1
@@ -164,15 +163,16 @@ com/example/endpointapp/ActivityRechercheRegistre.java
  com.example.endpointapp.ActivityRechercheRegistre$3
 com/example/endpointapp/ActivityIsolement.java
  com.example.endpointapp.ActivityIsolement
-com/example/endpointapp/CustomPopup.java
- com.example.endpointapp.CustomPopup
- com.example.endpointapp.CustomPopup$1
- com.example.endpointapp.CustomPopup$2
-com/example/endpointapp/WriteOnSheetSouffrance.java
- com.example.endpointapp.WriteOnSheetSouffrance
- com.example.endpointapp.WriteOnSheetSouffrance$1
- com.example.endpointapp.WriteOnSheetSouffrance$2
- com.example.endpointapp.WriteOnSheetSouffrance$3
+com/example/endpointapp/ActivityHistoriqueIncidents.java
+ com.example.endpointapp.ActivityHistoriqueIncidents
+ com.example.endpointapp.ActivityHistoriqueIncidents$1
+ com.example.endpointapp.ActivityHistoriqueIncidents$2
+ com.example.endpointapp.ActivityHistoriqueIncidents$3
+com/example/endpointapp/WriteOnSheetSignaler.java
+ com.example.endpointapp.WriteOnSheetSignaler
+ com.example.endpointapp.WriteOnSheetSignaler$1
+ com.example.endpointapp.WriteOnSheetSignaler$2
+ com.example.endpointapp.WriteOnSheetSignaler$3
 com/example/endpointapp/ActivityEcrirRecapIncidents.java
  com.example.endpointapp.ActivityEcrirRecapIncidents
 com/example/endpointapp/ActivityMenu.java

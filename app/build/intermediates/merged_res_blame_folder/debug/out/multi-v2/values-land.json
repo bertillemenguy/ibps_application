@@ -4,17 +4,7 @@
             "outputFile": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/2fd1badfe235a86c9c4f24dc039376c6/appcompat-v7-27.1.1/res/values-land/values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,125,189,260",
-                        "endColumns": "69,63,70,67",
-                        "endOffsets": "120,184,255,323"
-                    }
-                },
-                {
-                    "source": "/Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/7672364edf7d2fb87874b79bd4922003/design-27.1.1/res/values-land/values-land.xml",
+                    "source": "/Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0617f7bd858f5f06f2522b6b261dcc51/design-27.1.1/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "9",
                         "endColumns": "12",
                         "endOffsets": "505"
+                    }
+                },
+                {
+                    "source": "/Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/16a05d0c9992fbb0439e8f0e9acda3d9/appcompat-v7-27.1.1/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
                     }
                 }
             ]

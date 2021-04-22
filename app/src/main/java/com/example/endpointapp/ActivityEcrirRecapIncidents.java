@@ -132,7 +132,7 @@ public class ActivityEcrirRecapIncidents extends AppCompatActivity {
         final String systemeaquatique = systemeaquatiqueSpinner.getSelectedItem().toString();
         final String travaux = travauxSpinner.getSelectedItem().toString();
         final String nourrissage = nourrissageSpinner.getSelectedItem().toString();
-        final String etat = "0";
+        final String etat = "En cours";
     
         WriteOnSheetSignaler.writeData(this, operateur, eaudeville, electricite, aircomprime, climatisation, eaudusysteme, systemeaquatique, travaux, nourrissage, etat);
         //CoupureEau, Panne, CoupureProg, CoupureInop, ArretAir, ArretCTA, PH, Conductivite, NO2, NO3, NH4, Temperature, ArretSysteme, Fuite, UV, Autre, Vibrations, Divers);
