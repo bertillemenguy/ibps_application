@@ -44,6 +44,7 @@
         <activity android:name=".ActivityRechercheRegistreSouffrance" />
 
         <activity android:name=".CustomPopup"/>
+        <activity android:name=".CustomPopupIncident"/>
         <activity android:name=".ActivityEcrirRecapOeuf" />
         <activity android:name=".ActivitySurveillance" />
         <activity android:name=".ActivityRas" />

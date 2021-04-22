@@ -163,6 +163,8 @@ com/example/endpointapp/ActivityRechercheRegistre.java
  com.example.endpointapp.ActivityRechercheRegistre$3
 com/example/endpointapp/ActivityIsolement.java
  com.example.endpointapp.ActivityIsolement
+com/example/endpointapp/ActivityMenu.java
+ com.example.endpointapp.ActivityMenu
 com/example/endpointapp/ActivityHistoriqueIncidents.java
  com.example.endpointapp.ActivityHistoriqueIncidents
  com.example.endpointapp.ActivityHistoriqueIncidents$1
@@ -173,7 +175,14 @@ com/example/endpointapp/WriteOnSheetSignaler.java
  com.example.endpointapp.WriteOnSheetSignaler$1
  com.example.endpointapp.WriteOnSheetSignaler$2
  com.example.endpointapp.WriteOnSheetSignaler$3
+com/example/endpointapp/WriteOnSheetIncident.java
+ com.example.endpointapp.WriteOnSheetIncident
+ com.example.endpointapp.WriteOnSheetIncident$1
+ com.example.endpointapp.WriteOnSheetIncident$2
+ com.example.endpointapp.WriteOnSheetIncident$3
+com/example/endpointapp/CustomPopupIncident.java
+ com.example.endpointapp.CustomPopupIncident
+ com.example.endpointapp.CustomPopupIncident$1
+ com.example.endpointapp.CustomPopupIncident$2
 com/example/endpointapp/ActivityEcrirRecapIncidents.java
  com.example.endpointapp.ActivityEcrirRecapIncidents
-com/example/endpointapp/ActivityMenu.java
- com.example.endpointapp.ActivityMenu

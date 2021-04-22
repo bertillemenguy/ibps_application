@@ -39,6 +39,7 @@
         <activity android:name="com.example.endpointapp.ActivityHistoriqueSouffrance" />
         <activity android:name="com.example.endpointapp.ActivityRechercheRegistreSouffrance" />
         <activity android:name="com.example.endpointapp.CustomPopup" />
+        <activity android:name="com.example.endpointapp.CustomPopupIncident" />
         <activity android:name="com.example.endpointapp.ActivityEcrirRecapOeuf" />
         <activity android:name="com.example.endpointapp.ActivitySurveillance" />
         <activity android:name="com.example.endpointapp.ActivityRas" />
