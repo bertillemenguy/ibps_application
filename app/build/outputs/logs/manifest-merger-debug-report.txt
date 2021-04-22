@@ -4,26 +4,26 @@ ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/mai
 INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-77:12
 INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-77:12
 INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-77:12
-MERGED from [com.android.support:design:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/7672364edf7d2fb87874b79bd4922003/design-27.1.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/28cefeb5fe25d9fe6341a6fa8c11c9be/smileyrating-1.6.8/AndroidManifest.xml:2:1-17:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/2fd1badfe235a86c9c4f24dc039376c6/appcompat-v7-27.1.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b86b41220db59f6c596245c4fe2b6212/constraint-layout-1.1.3/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:cardview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5307ab0fba38b9b718d3a7fb9a29b00f/cardview-v7-27.1.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.volley:volley:1.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/8791c781ef62abac7b59ad07164cf6df/volley-1.1.1/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-v4:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5cf5acdf3da09b087263a7119a17e469/support-v4-27.1.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0c19fdd807c306dfd21cf072d31f49fc/support-fragment-27.1.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/bd5453cae97d20f98ac073be86f4de3f/animated-vector-drawable-27.1.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/edf7fc6ada281b4f4b750fb58b76cc62/recyclerview-v7-27.1.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/2b701ae5ddd88240760608cc768e9784/support-core-ui-27.1.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/31b24ea2eadae461fd63b1ffead369c6/support-core-utils-27.1.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/91a417b558c859a0eac369818706bb76/support-vector-drawable-27.1.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/f9e8ed1d486995c6948dba8d8d246d3b/transition-27.1.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/e398ed70892f78b60daefba521af5cae/support-media-compat-27.1.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b5a1b086f5f1cb641bc0eaedaf84b95f/support-compat-27.1.1/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/abe20aa3392e86f8873da1ec2a4b1213/livedata-core-1.1.0/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b7997940a8f4a03292b220b77b63affe/viewmodel-1.1.0/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/6a75fc164d20e893ff704b8f5fc71219/runtime-1.1.0/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/3ebca0af94afd47abe917c2fb4525dc0/runtime-1.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:design:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0617f7bd858f5f06f2522b6b261dcc51/design-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5291d07311b707686063e55b08da0a12/smileyrating-1.6.8/AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/16a05d0c9992fbb0439e8f0e9acda3d9/appcompat-v7-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/87d3ec77b9b959dc3ab0220b7f1730e2/constraint-layout-1.1.3/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0b24721144a5a371fb39fa9ad02b978a/cardview-v7-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.volley:volley:1.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/791bae943f46ce379eb6ec75eb0b570d/volley-1.1.1/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/dca2852a6b80324fb131f71f5499d32e/support-v4-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/99368409959899124446f311a4abb770/support-fragment-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/3a5fed57637807d434263c2d0eea137d/animated-vector-drawable-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/d9e0e045dadd4393aba4fb98c88a7e17/recyclerview-v7-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0089663c92fc2a33f40f9f072f8c91db/support-core-ui-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0c28e6d2f1501cd034e28236684a9782/support-core-utils-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/ac241d151c2f46a9cd5e17fe6c05df71/support-vector-drawable-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/1d063b82ee221afbb56ad250ce64d33b/transition-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/068dc84860a1e6d61e2c4b95230360a0/support-media-compat-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/aef1b2c68bce787da6f423d0f11b09db/support-compat-27.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/893da537e3d3398b3b110768418c5112/livedata-core-1.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/15d3ffe7b88ac70edb991626b39dedad/viewmodel-1.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/45733aaea8e62e05dba3240bd17e74fd/runtime-1.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/c6468b38b30113d5c022c4e547f40a8f/runtime-1.1.0/AndroidManifest.xml:17:1-22:12
 INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-77:12
 INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-77:12
 INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-77:12
@@ -49,12 +49,12 @@ ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/mai
 		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:6:22-64
 application
 ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:8:5-75:19
-MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/28cefeb5fe25d9fe6341a6fa8c11c9be/smileyrating-1.6.8/AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/28cefeb5fe25d9fe6341a6fa8c11c9be/smileyrating-1.6.8/AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b86b41220db59f6c596245c4fe2b6212/constraint-layout-1.1.3/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b86b41220db59f6c596245c4fe2b6212/constraint-layout-1.1.3/AndroidManifest.xml:9:5-20
-MERGED from [com.android.volley:volley:1.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/8791c781ef62abac7b59ad07164cf6df/volley-1.1.1/AndroidManifest.xml:9:5-20
-MERGED from [com.android.volley:volley:1.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/8791c781ef62abac7b59ad07164cf6df/volley-1.1.1/AndroidManifest.xml:9:5-20
+MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5291d07311b707686063e55b08da0a12/smileyrating-1.6.8/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5291d07311b707686063e55b08da0a12/smileyrating-1.6.8/AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/87d3ec77b9b959dc3ab0220b7f1730e2/constraint-layout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/87d3ec77b9b959dc3ab0220b7f1730e2/constraint-layout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/791bae943f46ce379eb6ec75eb0b570d/volley-1.1.1/AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/791bae943f46ce379eb6ec75eb0b570d/volley-1.1.1/AndroidManifest.xml:9:5-20
 	android:supportsRtl
 		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:13:9-35
 	android:label
@@ -145,34 +145,38 @@ activity#com.example.endpointapp.ActivityRechercheRegistreSouffrance
 ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:44:9-73
 	android:name
 		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:44:19-70
+activity#com.example.endpointapp.CustomPopup
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:46:9-48
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:46:19-46
 activity#com.example.endpointapp.ActivityEcrirRecapOeuf
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:46:9-60
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:47:9-60
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:46:19-57
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:47:19-57
 activity#com.example.endpointapp.ActivitySurveillance
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:47:9-58
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:48:9-58
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:47:19-55
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:48:19-55
 activity#com.example.endpointapp.ActivityRas
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:48:9-49
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:49:9-49
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:48:19-46
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:49:19-46
 activity#com.example.endpointapp.ActivityIsolement
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:49:9-55
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:50:9-55
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:49:19-52
-activity#com.example.endpointapp.ActivityEuthanasie
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:50:9-56
-	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:50:19-53
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:50:19-52
 activity#com.example.endpointapp.ActivityEcrirRecapSouffrance
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:52:9-66
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:51:9-66
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:52:19-63
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:51:19-63
 activity#com.example.endpointapp.ActivityEcrirRecapMort
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:53:9-60
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:52:9-60
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:53:19-57
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:52:19-57
+activity#com.example.endpointapp.ActivityRecapitulatifMort
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:53:9-63
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:53:19-60
 activity#com.example.endpointapp.ActivityEcrirRecapIncidents
 ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:54:9-65
 	android:name
@@ -233,46 +237,46 @@ uses-sdk
 INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
 INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
-MERGED from [com.android.support:design:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/7672364edf7d2fb87874b79bd4922003/design-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/7672364edf7d2fb87874b79bd4922003/design-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/28cefeb5fe25d9fe6341a6fa8c11c9be/smileyrating-1.6.8/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/28cefeb5fe25d9fe6341a6fa8c11c9be/smileyrating-1.6.8/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/2fd1badfe235a86c9c4f24dc039376c6/appcompat-v7-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/2fd1badfe235a86c9c4f24dc039376c6/appcompat-v7-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b86b41220db59f6c596245c4fe2b6212/constraint-layout-1.1.3/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b86b41220db59f6c596245c4fe2b6212/constraint-layout-1.1.3/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:cardview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5307ab0fba38b9b718d3a7fb9a29b00f/cardview-v7-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5307ab0fba38b9b718d3a7fb9a29b00f/cardview-v7-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.volley:volley:1.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/8791c781ef62abac7b59ad07164cf6df/volley-1.1.1/AndroidManifest.xml:7:5-43
-MERGED from [com.android.volley:volley:1.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/8791c781ef62abac7b59ad07164cf6df/volley-1.1.1/AndroidManifest.xml:7:5-43
-MERGED from [com.android.support:support-v4:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5cf5acdf3da09b087263a7119a17e469/support-v4-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5cf5acdf3da09b087263a7119a17e469/support-v4-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0c19fdd807c306dfd21cf072d31f49fc/support-fragment-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0c19fdd807c306dfd21cf072d31f49fc/support-fragment-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/bd5453cae97d20f98ac073be86f4de3f/animated-vector-drawable-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/bd5453cae97d20f98ac073be86f4de3f/animated-vector-drawable-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/edf7fc6ada281b4f4b750fb58b76cc62/recyclerview-v7-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/edf7fc6ada281b4f4b750fb58b76cc62/recyclerview-v7-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/2b701ae5ddd88240760608cc768e9784/support-core-ui-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/2b701ae5ddd88240760608cc768e9784/support-core-ui-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/31b24ea2eadae461fd63b1ffead369c6/support-core-utils-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/31b24ea2eadae461fd63b1ffead369c6/support-core-utils-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/91a417b558c859a0eac369818706bb76/support-vector-drawable-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/91a417b558c859a0eac369818706bb76/support-vector-drawable-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/f9e8ed1d486995c6948dba8d8d246d3b/transition-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/f9e8ed1d486995c6948dba8d8d246d3b/transition-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/e398ed70892f78b60daefba521af5cae/support-media-compat-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/e398ed70892f78b60daefba521af5cae/support-media-compat-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b5a1b086f5f1cb641bc0eaedaf84b95f/support-compat-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b5a1b086f5f1cb641bc0eaedaf84b95f/support-compat-27.1.1/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/abe20aa3392e86f8873da1ec2a4b1213/livedata-core-1.1.0/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/abe20aa3392e86f8873da1ec2a4b1213/livedata-core-1.1.0/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b7997940a8f4a03292b220b77b63affe/viewmodel-1.1.0/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/b7997940a8f4a03292b220b77b63affe/viewmodel-1.1.0/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/6a75fc164d20e893ff704b8f5fc71219/runtime-1.1.0/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/6a75fc164d20e893ff704b8f5fc71219/runtime-1.1.0/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/3ebca0af94afd47abe917c2fb4525dc0/runtime-1.1.0/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/3ebca0af94afd47abe917c2fb4525dc0/runtime-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0617f7bd858f5f06f2522b6b261dcc51/design-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0617f7bd858f5f06f2522b6b261dcc51/design-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5291d07311b707686063e55b08da0a12/smileyrating-1.6.8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5291d07311b707686063e55b08da0a12/smileyrating-1.6.8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/16a05d0c9992fbb0439e8f0e9acda3d9/appcompat-v7-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/16a05d0c9992fbb0439e8f0e9acda3d9/appcompat-v7-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/87d3ec77b9b959dc3ab0220b7f1730e2/constraint-layout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/87d3ec77b9b959dc3ab0220b7f1730e2/constraint-layout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0b24721144a5a371fb39fa9ad02b978a/cardview-v7-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0b24721144a5a371fb39fa9ad02b978a/cardview-v7-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.volley:volley:1.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/791bae943f46ce379eb6ec75eb0b570d/volley-1.1.1/AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/791bae943f46ce379eb6ec75eb0b570d/volley-1.1.1/AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:support-v4:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/dca2852a6b80324fb131f71f5499d32e/support-v4-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/dca2852a6b80324fb131f71f5499d32e/support-v4-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/99368409959899124446f311a4abb770/support-fragment-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/99368409959899124446f311a4abb770/support-fragment-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/3a5fed57637807d434263c2d0eea137d/animated-vector-drawable-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/3a5fed57637807d434263c2d0eea137d/animated-vector-drawable-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/d9e0e045dadd4393aba4fb98c88a7e17/recyclerview-v7-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/d9e0e045dadd4393aba4fb98c88a7e17/recyclerview-v7-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0089663c92fc2a33f40f9f072f8c91db/support-core-ui-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0089663c92fc2a33f40f9f072f8c91db/support-core-ui-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0c28e6d2f1501cd034e28236684a9782/support-core-utils-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0c28e6d2f1501cd034e28236684a9782/support-core-utils-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/ac241d151c2f46a9cd5e17fe6c05df71/support-vector-drawable-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/ac241d151c2f46a9cd5e17fe6c05df71/support-vector-drawable-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/1d063b82ee221afbb56ad250ce64d33b/transition-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/1d063b82ee221afbb56ad250ce64d33b/transition-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/068dc84860a1e6d61e2c4b95230360a0/support-media-compat-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/068dc84860a1e6d61e2c4b95230360a0/support-media-compat-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/aef1b2c68bce787da6f423d0f11b09db/support-compat-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/aef1b2c68bce787da6f423d0f11b09db/support-compat-27.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/893da537e3d3398b3b110768418c5112/livedata-core-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/893da537e3d3398b3b110768418c5112/livedata-core-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/15d3ffe7b88ac70edb991626b39dedad/viewmodel-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/15d3ffe7b88ac70edb991626b39dedad/viewmodel-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/45733aaea8e62e05dba3240bd17e74fd/runtime-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/45733aaea8e62e05dba3240bd17e74fd/runtime-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/c6468b38b30113d5c022c4e547f40a8f/runtime-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/c6468b38b30113d5c022c4e547f40a8f/runtime-1.1.0/AndroidManifest.xml:20:5-44
 INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
 INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion

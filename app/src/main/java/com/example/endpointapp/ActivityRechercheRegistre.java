@@ -3,6 +3,7 @@ package com.example.endpointapp;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -10,6 +11,7 @@ import android.text.TextWatcher;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Button;
@@ -32,12 +34,15 @@ import java.util.HashMap;
 
 
 public class ActivityRechercheRegistre extends AppCompatActivity implements View.OnTouchListener, View.OnClickListener {
-    
-    
+
+
+
+
     ListView listView;
     SimpleAdapter adapter;
     ProgressDialog loading;
     EditText editTextSearchItem;
+
 
     /**
      * @param savedInstanceState
@@ -61,11 +66,15 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
         // Get the transferred data from source activity.
         //    Intent intent = getIntent();
         //  operateur = intent.getStringExtra("operateur");
-        
+
+
         getItems();
-        
+
+
+
     }
-    
+
+
     
     /**
      * charger le registre au niveau du menu. sans issu apres
@@ -108,7 +117,9 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
 
 
-    private void parseItems(String jsonResponce) {
+
+
+        private void parseItems(String jsonResponce) {
         
         //
         ArrayList<HashMap<String, String>> list = new ArrayList<>();
@@ -116,48 +127,57 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
         try {
             JSONObject jobj = new JSONObject(jsonResponce);
             JSONArray jarray = jobj.getJSONArray("items");
-            
-            
+
+
             for (int i = 0; i < jarray.length(); i++) {
-                
+
                 JSONObject jo = jarray.getJSONObject(i);
-                
+
                 String Bac = jo.getString("Bac");
                 String Lot = jo.getString("Lot");
                 String Lignee = jo.getString("Lignee");
                 String Age = jo.getString("Age");
-                String Responsable=jo.getString("Responsable");
-                String Key=jo.getString("Key");
-    
-    
+                String Responsable = jo.getString("Responsable");
+                String Key = jo.getString("Key");
+
+
                 HashMap<String, String> item = new HashMap<>();
-                
+
                 item.put("Bac", Bac);
                 item.put("Lot", Lot);
                 item.put("Lignee", Lignee);
                 item.put("Age", Age);
                 item.put("Responsable", Responsable);
                 item.put("Key", Key);
-    
+
                 list.add(item);
+            }
+        }
+
+     catch(JSONException e){
+                e.printStackTrace();
+
             }
 
 
-        } catch (JSONException e) {
-            e.printStackTrace();
-    
-        }
-    
-    
-        adapter=new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable});
-    
+
+            /* faire apparaître logo quand utilisateur = 'JH'*/
 
 
-        //assign adapter to list view
-        listView.setAdapter(adapter);
-        loading.dismiss();
-    
-        //Toast
+
+            adapter=new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable});
+
+            //ImageView icon=(ImageView) findViewById(R.id.icon_mort);
+
+            //icon.setImageDrawable(getResources().getDrawable(R.drawable.fish_bones));
+
+          //assign adapter to list view
+            listView.setAdapter(adapter);
+            loading.dismiss();
+
+
+
+            //Toast
     
     
         editTextSearchItem.addTextChangedListener(new TextWatcher() {
@@ -239,6 +259,8 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
     }
 
+
+
     @Override
     public boolean onTouch(View v, MotionEvent event) {
         return false;
@@ -250,5 +272,6 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
     // }
 
 
-}
+
+    }
 

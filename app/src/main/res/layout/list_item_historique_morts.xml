@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -106,7 +107,7 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="match_parent"
+                            android:layout_width="213dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="vertical">
@@ -117,6 +118,23 @@
                                 android:layout_height="wrap_content"
                                 android:text="TextView"
                                 android:textColor="#3F51B5" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_lot"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="TextView"
+                                android:textColor="#3F51B5" />
+
                         </LinearLayout>
 
                     </LinearLayout>
@@ -141,7 +159,7 @@
                             <TextView
                                 android:id="@+id/tv_responsable"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:text="TextView"
                                 android:textColor="#3F51B5" />
                         </LinearLayout>
@@ -153,13 +171,17 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/tv_lot"
+                                android:id="@+id/tv_bac"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="right"
                                 android:text="TextView"
-                                android:textColor="#3F51B5" />
+                                android:textColor="#3F51B5"
+                                android:textStyle="bold" />
                         </LinearLayout>
+
+
+
                     </LinearLayout>
                 </LinearLayout>
 
@@ -200,22 +222,15 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="213dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/tv_bac"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="right"
-                                android:text="TextView"
-                                android:textColor="#3F51B5"
-                                android:textStyle="bold" />
-                        </LinearLayout>
+                            android:orientation="vertical"/>
                     </LinearLayout>
                 </LinearLayout>
+
+
+
             </LinearLayout>
 
         </LinearLayout>

@@ -43,14 +43,14 @@
 
         <activity android:name=".ActivityRechercheRegistreSouffrance" />
 
+        <activity android:name=".CustomPopup"/>
         <activity android:name=".ActivityEcrirRecapOeuf" />
         <activity android:name=".ActivitySurveillance" />
         <activity android:name=".ActivityRas" />
         <activity android:name=".ActivityIsolement" />
-        <activity android:name=".ActivityEuthanasie" />
-
         <activity android:name=".ActivityEcrirRecapSouffrance" />
         <activity android:name=".ActivityEcrirRecapMort" />
+        <activity android:name=".ActivityRecapitulatifMort" />
         <activity android:name=".ActivityEcrirRecapIncidents" />
         <activity android:name=".ActivityMenu" />
 

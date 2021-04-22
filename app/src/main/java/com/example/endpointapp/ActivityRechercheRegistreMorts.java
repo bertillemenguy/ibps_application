@@ -1,20 +1,26 @@
 
 package com.example.endpointapp;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.Menu;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
-
+import android.widget.Button;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -32,17 +38,20 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ActivityRechercheRegistreMorts extends AppCompatActivity implements AdapterView.OnItemClickListener, AdapterView.OnItemSelectedListener {
+public class ActivityRechercheRegistreMorts extends AppCompatActivity implements AdapterView.OnItemClickListener{
     
     
     ListView listView;
     SimpleAdapter adapter;
     ProgressDialog loading;
     EditText editTextSearchItem;
+    Button button;
+    Image icon;
+    ImageView iconView;
 
     //  String operateur = "";
-    
-    
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,15 +59,16 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         
         listView = findViewById(R.id.lv_items);
         listView.setOnItemClickListener(this);
+        button=findViewById(R.id.btn_valider);
         editTextSearchItem = findViewById(R.id.et_search);
 
-        
         // Get the transferred data from source activity.
         Intent intent = getIntent();
         //  operateur = intent.getStringExtra("operateur");
         
         getItems();
-        
+
+
     }
 
 
@@ -103,8 +113,7 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         try {
             JSONObject jobj = new JSONObject(jsonResponce);
             JSONArray jarray = jobj.getJSONArray("items");
-            
-            
+
             for (int i = 0; i < jarray.length(); i++) {
                 
                 JSONObject jo = jarray.getJSONObject(i);
@@ -129,20 +138,15 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
                 list.add(item);
 
             }
-
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        
-        
+
         adapter=new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable});
-        
-        
+
         listView.setAdapter(adapter);
         loading.dismiss();
-        
-        
+
         editTextSearchItem.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -155,18 +159,21 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
             }
             
             @Override
-            public void afterTextChanged(Editable editable) {
-            
-            }
+            public void afterTextChanged(Editable editable) { }
         });
     }
-    
+
     /**
      * @param parent
      * @param view
      * @param position
      * @param id
      */
+
+    /*-----------------------------SELECTIONNER POISSON(S)-------------------------------*/
+    /*-----------------------------------------------------------------------------------*/
+
+
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         // Intent intent = new Intent(this, ActivityItemdetails.class);
         Intent intent = new Intent(this, ActivityEcrirRecapMort.class);
@@ -176,8 +183,8 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         String Lot = map.get("Lot").toString();
         String Lignee = map.get("Lignee").toString();
         String Age = map.get("Age").toString();
-        String Responsable=map.get("Responsable").toString();
-        String Key=map.get("Key").toString();
+        String Responsable = map.get("Responsable").toString();
+        String Key = map.get("Key").toString();
         
         
         intent.putExtra("Bac", Bac);
@@ -212,14 +219,18 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
     }
 
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String text = parent.getItemAtPosition(position).toString();
-        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+        int id= item.getItemId();
+        if (id==R.id.btn_valider){
+            String itemSelected = "Selected items: ";
+            for(int i=0; i<listView.getCount();i++){
+                if(listView.isItemChecked(i)){
+                    itemSelected +=  listView.getItemAtPosition(i);
+                }
+            }
+            Toast.makeText(this,itemSelected,Toast.LENGTH_SHORT).show();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
 }

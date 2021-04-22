@@ -67,5 +67,46 @@ public class WriteOnSheetDeclarerMort {
         RequestQueue queue = Volley.newRequestQueue(context);
         queue.add(stringRequest);
     }
+
+
+    public static void deleteData(final Context context, final String Key) {
+
+
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbziuP47HUKzO8C9SmteIivluWBMmT4xNTGnRRRssjY8g7WhQ4uPTrf4mKnxou1saQI3/exec?action=delItem&Key="+Key,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                        Toast.makeText(context, response, Toast.LENGTH_LONG).show();
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                        Toast.makeText(context, "error", Toast.LENGTH_LONG).show();
+
+                    }
+                }
+        ) {
+            /**
+             * @return /**
+             */
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> parmas = new HashMap<>();
+                parmas.put("Key", Key);
+                //....
+
+                return parmas;
+            }
+        };
+        int socketTimeOut = 50000;// u can change this .. here it is 50 seconds
+        RetryPolicy retryPolicy = new DefaultRetryPolicy(socketTimeOut, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        stringRequest.setRetryPolicy(retryPolicy);
+        RequestQueue queue = Volley.newRequestQueue(context);
+        queue.add(stringRequest);
+    }
     
 }

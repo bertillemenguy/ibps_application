@@ -827,6 +827,8 @@ drawable ic_launcher_background
 drawable ic_male_female
 drawable ic_search
 drawable icon_home
+drawable icons8_dead_emoji_96
+drawable icons8_poubelle
 drawable img_splash
 drawable imgphysique
 drawable navigation_empty_icon
@@ -903,6 +905,7 @@ id btn_return
 id btn_return4
 id btn_return5
 id btn_return8
+id btn_valider
 id button
 id button10
 id button2
@@ -912,6 +915,7 @@ id button22
 id button3
 id button4
 id button6
+id button7
 id buttonPanel
 id cancel_action
 id cbAccouplement
@@ -975,6 +979,7 @@ id home
 id homeAsUp
 id icon
 id icon_group
+id icon_mort
 id ifRoom
 id image
 id imageButton
@@ -1027,6 +1032,7 @@ id nbfemellesfeconde
 id nbmale
 id nbmalesfeconde
 id never
+id no
 id none
 id normal
 id notification_background
@@ -1118,6 +1124,7 @@ id src_over
 id standard
 id start
 id status_bar_latest_event_content
+id subTitle
 id submenuarrow
 id submit_area
 id tabMode
@@ -1275,6 +1282,7 @@ id webview
 id withText
 id wrap
 id wrap_content
+id yes
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
@@ -1356,6 +1364,7 @@ layout list_item_historique_morts
 layout list_item_historique_oeufs
 layout list_item_historique_souffrance
 layout list_item_registre
+layout my_popop_template
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -1447,6 +1456,7 @@ string ulc_re_mycose_saignement
 string zebrafish
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
+style AlertDialogTheme
 style Animation_AppCompat_Dialog
 style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip

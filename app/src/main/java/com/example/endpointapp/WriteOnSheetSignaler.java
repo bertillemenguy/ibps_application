@@ -18,13 +18,13 @@ import java.util.Map;
 
 public class WriteOnSheetSignaler {
     
-    public static void writeData(final Context context, final String operateur, final String eaudeville, final String electricite, final String aircomprime, final String climatisation, final String eaudusysteme, final String systemeaquatique, final String travaux, final String nourrissage) {
+    public static void writeData(final Context context, final String operateur, final String eaudeville, final String electricite, final String aircomprime, final String climatisation, final String eaudusysteme, final String systemeaquatique, final String travaux, final String nourrissage, final String etat) {
         
         
         //final String CoupureEau, final String Panne, final String CoupureProg, final String CoupureInop, final String ArretAir, final String ArretCTA, final String PH, final String Conductivite, final String NO2, final String NO3, final String NH4, final String Temperature, final String ArretSysteme, final String Fuite, final String UV, final String Autre, final String Vibrations, final String Divers) {
         final ProgressDialog loading = ProgressDialog.show(context, "Chargement...", "Veuillez patienter");
         
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbwVN4mJbUmjHo4MIUoJapsAlQ66MJ1BK22MXpvBp8Q6iogFYsQW/exec?action=addItem",
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbzXnqUeSu75zuuKQjPpIqY3mhS_l_GqwgDpfGYPdtIWV7D8JAIIamLx-BOAx6IkqXD3Nw/exec?action=addItem",
         
         
                 new Response.Listener<String>() {
@@ -58,8 +58,9 @@ public class WriteOnSheetSignaler {
                 parmas.put("systemeaquatique", systemeaquatique);
                 parmas.put("travaux", travaux);
                 parmas.put("nourrissage", nourrissage);
-    
-    
+                parmas.put("etat", etat);
+
+
                 /**
      
                  parmas.put("CoupureEau", CoupureEau);

@@ -38,13 +38,14 @@
         <activity android:name="com.example.endpointapp.ActivityRechercheGestionBacs" />
         <activity android:name="com.example.endpointapp.ActivityHistoriqueSouffrance" />
         <activity android:name="com.example.endpointapp.ActivityRechercheRegistreSouffrance" />
+        <activity android:name="com.example.endpointapp.CustomPopup" />
         <activity android:name="com.example.endpointapp.ActivityEcrirRecapOeuf" />
         <activity android:name="com.example.endpointapp.ActivitySurveillance" />
         <activity android:name="com.example.endpointapp.ActivityRas" />
         <activity android:name="com.example.endpointapp.ActivityIsolement" />
-        <activity android:name="com.example.endpointapp.ActivityEuthanasie" />
         <activity android:name="com.example.endpointapp.ActivityEcrirRecapSouffrance" />
         <activity android:name="com.example.endpointapp.ActivityEcrirRecapMort" />
+        <activity android:name="com.example.endpointapp.ActivityRecapitulatifMort" />
         <activity android:name="com.example.endpointapp.ActivityEcrirRecapIncidents" />
         <activity android:name="com.example.endpointapp.ActivityMenu" />
         <activity android:name="com.example.endpointapp.ActivitySplash" >
