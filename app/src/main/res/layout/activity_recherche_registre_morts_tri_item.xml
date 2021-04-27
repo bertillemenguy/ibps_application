@@ -66,11 +66,18 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
+                        <Button
+                            android:id="@+id/PDF"
+                            android:layout_width="wrap_content"
+                            android:layout_height="37dp"
+                            android:onClick="retour_tri"
+                            android:text="PDF" />
+
 
                         <Button
                             android:id="@+id/trie"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="36dp"
                             android:onClick="retour_tri"
                             android:text="Retour" />
                     </LinearLayout>
@@ -103,7 +110,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="620dp"
+                android:layout_height="600dp"
                 android:layout_weight="1"
                 android:background="@android:color/white"
                 android:orientation="vertical">
@@ -120,7 +127,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="105dp"
+                android:layout_height="10dp"
                 android:layout_weight="1"
                 android:background="@android:color/white"
                 android:orientation="vertical">

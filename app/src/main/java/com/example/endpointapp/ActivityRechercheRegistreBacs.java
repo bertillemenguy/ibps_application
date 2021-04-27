@@ -1,9 +1,16 @@
 package com.example.endpointapp;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.pdf.PdfDocument;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -26,6 +33,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -172,8 +182,41 @@ public class ActivityRechercheRegistreBacs extends AppCompatActivity implements 
         intent.putExtra("Responsable", Responsable);
         startActivity(intent);
     }
-    
-    
+
+
+    public void lancerPDF(View view){
+
+        ActivityCompat.requestPermissions(this, new String[]{
+                Manifest.permission.WRITE_EXTERNAL_STORAGE}, PackageManager.PERMISSION_GRANTED);
+
+        String format = "dd/MM/yy_H:mm:ss";
+
+        java.text.SimpleDateFormat formater = new java.text.SimpleDateFormat( format );
+        java.util.Date date = new java.util.Date();
+
+
+        PdfDocument myPdfDocument = new PdfDocument();
+        Paint myPaint = new Paint();
+
+        PdfDocument.PageInfo myPageInfo = new PdfDocument.PageInfo.Builder(250, 400, 1).create();
+        PdfDocument.Page myPage = myPdfDocument.startPage(myPageInfo);
+        Canvas canvas = myPage.getCanvas();
+
+        canvas.drawText("Hello", 40, 50, myPaint);
+        myPdfDocument.finishPage(myPage);
+
+        File file = new File(Environment.getExternalStorageDirectory(), "/Registre_Bac.pdf");
+
+        try {
+            myPdfDocument.writeTo(new FileOutputStream(file));
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+        myPdfDocument.close();
+    }
+
+
     public void fermeractivite(View view) {
         this.finish();
     }

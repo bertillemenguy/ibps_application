@@ -1,13 +1,16 @@
 
 package com.example.endpointapp;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -21,6 +24,10 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 import android.widget.Button;
+import android.graphics.pdf.PdfDocument;
+import android.graphics.Paint;
+import android.graphics.Canvas;
+import android.content.pm.PackageManager;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -35,6 +42,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -46,8 +56,9 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
     ProgressDialog loading;
     EditText editTextSearchItem;
     Button button;
-    Image icon;
-    ImageView iconView;
+
+    int[] icon ={R.drawable.fish_bones, R.drawable.zebrafish};
+
 
     //  String operateur = "";
 
@@ -67,6 +78,8 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         //  operateur = intent.getStringExtra("operateur");
         
         getItems();
+
+
 
 
     }
@@ -134,6 +147,13 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
                 item.put("Age", Age);
                 item.put("Responsable", Responsable);
                 item.put("Key", Key);
+
+
+                if (Integer.parseInt(Age)==21){
+                    item.put("image", icon[0]+"");
+                } else {
+                    item.put("image", icon[1]+"");
+                }
                 
                 list.add(item);
 
@@ -142,7 +162,7 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
             e.printStackTrace();
         }
 
-        adapter=new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable});
+        adapter=new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable", "image"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable, R.id.icon_mort});
 
         listView.setAdapter(adapter);
         loading.dismiss();
@@ -208,9 +228,35 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
 
 
     public void lancertrie(View view) {
-
         Intent intent = new Intent(this, ActivityRechercheRegistreMortsTrier.class);
         startActivity(intent);
+    }
+
+    public void lancerPDF(View view){
+
+        ActivityCompat.requestPermissions(this, new String[]{
+                Manifest.permission.WRITE_EXTERNAL_STORAGE},PackageManager.PERMISSION_GRANTED);
+
+        PdfDocument myPdfDocument = new PdfDocument();
+        Paint myPaint = new Paint();
+
+        PdfDocument.PageInfo myPageInfo = new PdfDocument.PageInfo.Builder(250, 400, 1).create();
+        PdfDocument.Page myPage = myPdfDocument.startPage(myPageInfo);
+
+        Canvas canvas = myPage.getCanvas();
+
+        canvas.drawText("Coucou", 40, 50, myPaint);
+        myPdfDocument.finishPage(myPage);
+
+        File file = new File(Environment.getExternalStorageDirectory(), "/Registre_morts.pdf");
+
+        try {
+            myPdfDocument.writeTo(new FileOutputStream(file));
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+        myPdfDocument.close();
     }
 
 

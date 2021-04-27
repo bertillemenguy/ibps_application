@@ -1,9 +1,16 @@
 package com.example.endpointapp;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.pdf.PdfDocument;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -12,6 +19,9 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
+import java.text.SimpleDateFormat;
+import android.widget.DatePicker;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -26,12 +36,16 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Date;
 
 public class ActivityRechercheRegistreSouffrance extends AppCompatActivity implements AdapterView.OnItemClickListener {
-    
-    
+
+    ArrayList<HashMap<String, String>> list_pdf = new ArrayList<>();
     ListView listView;
     SimpleAdapter adapter;
     ProgressDialog loading;
@@ -129,7 +143,8 @@ public class ActivityRechercheRegistreSouffrance extends AppCompatActivity imple
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        
+
+        list_pdf=list;
         //création ..
         adapter=new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable});
         
@@ -180,8 +195,50 @@ public class ActivityRechercheRegistreSouffrance extends AppCompatActivity imple
     
         startActivity(intent);
     }
-    
-    
+
+
+    public void lancerPDF(View view){
+        Toast.makeText(getApplicationContext(), "Chargement ... ", Toast.LENGTH_SHORT).show();
+
+        SimpleDateFormat formater = null;
+
+        Date aujourdhui = new Date();
+
+        formater = new SimpleDateFormat("dd-MM-yy_hh-mm-ss");
+        String date = formater.format(aujourdhui);
+
+        ActivityCompat.requestPermissions(this, new String[]{
+                Manifest.permission.WRITE_EXTERNAL_STORAGE}, PackageManager.PERMISSION_GRANTED);
+
+        PdfDocument myPdfDocument = new PdfDocument();
+        Paint myPaint = new Paint();
+
+        PdfDocument.PageInfo myPageInfo = new PdfDocument.PageInfo.Builder(250, 400, 1).create();
+        PdfDocument.Page myPage = myPdfDocument.startPage(myPageInfo);
+        Canvas canvas = myPage.getCanvas();
+
+        int scaledSize = getResources().getDimensionPixelSize(R.dimen.myFontSize);
+        myPaint.setTextSize(scaledSize);
+
+        for(int i = 0 ; i < list_pdf.size(); i++){
+            canvas.drawText(String.valueOf(list_pdf.get(i)), 20, 2+i*5, myPaint);
+        }
+
+        myPdfDocument.finishPage(myPage);
+
+        File file = new File(Environment.getExternalStorageDirectory(), "/Registre_Souffrance"+date+".pdf");
+
+        try {
+            myPdfDocument.writeTo(new FileOutputStream(file));
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+        myPdfDocument.close();
+        Toast.makeText(getApplicationContext(), "Pdf enregistré dans Téléchargements", Toast.LENGTH_SHORT).show();
+    }
+
+
     public void fermeractivite(View view) {
         this.finish();
     }

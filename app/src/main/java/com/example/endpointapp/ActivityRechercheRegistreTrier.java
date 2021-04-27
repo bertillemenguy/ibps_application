@@ -1,9 +1,16 @@
 package com.example.endpointapp;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.pdf.PdfDocument;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -29,6 +36,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -252,6 +262,33 @@ public class ActivityRechercheRegistreTrier extends AppCompatActivity implements
         Intent intent = new Intent(this, ActivityMenu.class);
         //  intent.putExtra("operateur", operateur);
         startActivity(intent);
+    }
+
+
+    public void lancerPDF(View view){
+
+        ActivityCompat.requestPermissions(this, new String[]{
+                Manifest.permission.WRITE_EXTERNAL_STORAGE}, PackageManager.PERMISSION_GRANTED);
+
+        PdfDocument myPdfDocument = new PdfDocument();
+        Paint myPaint = new Paint();
+
+        PdfDocument.PageInfo myPageInfo = new PdfDocument.PageInfo.Builder(250, 400, 1).create();
+        PdfDocument.Page myPage = myPdfDocument.startPage(myPageInfo);
+        Canvas canvas = myPage.getCanvas();
+
+        canvas.drawText("Coucou", 40, 50, myPaint);
+        myPdfDocument.finishPage(myPage);
+
+        File file = new File(Environment.getExternalStorageDirectory(), "/FirstPDF.pdf");
+
+        try {
+            myPdfDocument.writeTo(new FileOutputStream(file));
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+        myPdfDocument.close();
     }
 
 

@@ -9,6 +9,7 @@
         android:targetSdkVersion="27" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -37,7 +38,13 @@
         <activity android:name="com.example.endpointapp.ActivityHistoriqueMorts" />
         <activity android:name="com.example.endpointapp.ActivityRechercheGestionBacs" />
         <activity android:name="com.example.endpointapp.ActivityHistoriqueSouffrance" />
-        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreSouffrance" />
+        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreSouffrance" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name="com.example.endpointapp.CustomPopup" />
         <activity android:name="com.example.endpointapp.CustomPopupIncident" />
         <activity android:name="com.example.endpointapp.ActivityEcrirRecapOeuf" />
@@ -56,9 +63,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreMorts" />
-        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreMortsTrier" />
-        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreBacs" />
+        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreMorts" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreMortsTrier" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreBacs" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name="com.example.endpointapp.ActivityEcrirRecapBacs" />
         <activity android:name="com.example.endpointapp.ActivityDeplacerBacs" />
         <activity android:name="com.example.endpointapp.ActivityReunirBacs" />

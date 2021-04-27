@@ -706,6 +706,7 @@ dimen hint_pressed_alpha_material_light
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
+dimen myFontSize
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -866,6 +867,7 @@ id Lignee1
 id Lot
 id Lot2
 id META
+id PDF
 id SHIFT
 id SYM
 id action
@@ -1045,6 +1047,7 @@ id parallax
 id parent
 id parentPanel
 id parent_matrix
+id pdf
 id percent
 id pin
 id progress_circular
