@@ -20,6 +20,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreBacs" />
         <activity android:name="com.example.endpointapp.ActivityDupliquerBacs" />
         <activity android:name="com.example.endpointapp.ActivityHistoriqueIncidents" />
         <activity android:name="com.example.endpointapp.ActivityWebHistoriqueAnimalerieAlevins" />
@@ -39,11 +40,6 @@
         <activity android:name="com.example.endpointapp.ActivityRechercheGestionBacs" />
         <activity android:name="com.example.endpointapp.ActivityHistoriqueSouffrance" />
         <activity android:name="com.example.endpointapp.ActivityRechercheRegistreSouffrance" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="com.example.endpointapp.CustomPopup" />
         <activity android:name="com.example.endpointapp.CustomPopupIncident" />
@@ -55,6 +51,12 @@
         <activity android:name="com.example.endpointapp.ActivityEcrirRecapMort" />
         <activity android:name="com.example.endpointapp.ActivityRecapitulatifMort" />
         <activity android:name="com.example.endpointapp.ActivityEcrirRecapIncidents" />
+        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreMorts" />
+        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreMortsTrier" />
+        <activity android:name="com.example.endpointapp.ActivityEcrirRecapBacs" />
+        <activity android:name="com.example.endpointapp.ActivityDeplacerBacs" />
+        <activity android:name="com.example.endpointapp.ActivityReunirBacs" />
+        <activity android:name="com.example.endpointapp.ActivityErreur" />
         <activity android:name="com.example.endpointapp.ActivityMenu" />
         <activity android:name="com.example.endpointapp.ActivitySplash" >
             <intent-filter>
@@ -63,31 +65,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreMorts" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreMortsTrier" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreBacs" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name="com.example.endpointapp.ActivityEcrirRecapBacs" />
-        <activity android:name="com.example.endpointapp.ActivityDeplacerBacs" />
-        <activity android:name="com.example.endpointapp.ActivityReunirBacs" />
-        <activity android:name="com.example.endpointapp.ActivityErreur" />
 
         <meta-data
             android:name="preloaded_fonts"

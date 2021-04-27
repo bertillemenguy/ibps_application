@@ -70,7 +70,7 @@
                             android:id="@+id/PDF"
                             android:layout_width="wrap_content"
                             android:layout_height="37dp"
-                            android:onClick="retour_tri"
+                            android:onClick="lancerPDF"
                             android:text="PDF" />
 
 

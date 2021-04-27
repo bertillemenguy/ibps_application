@@ -46,6 +46,8 @@ import java.util.HashMap;
 
 public class ActivityRechercheRegistreMortsTrier extends AppCompatActivity implements AdapterView.OnItemClickListener, AdapterView.OnItemSelectedListener {
 
+    int[] icon ={R.drawable.fish_bones, R.drawable.zebrafish};
+
 
     ListView listView;
     SimpleAdapter adapter;
@@ -138,6 +140,14 @@ public class ActivityRechercheRegistreMortsTrier extends AppCompatActivity imple
                 item.put("Responsable", Responsable);
                 item.put("Key", Key);
 
+
+
+                if (Integer.parseInt(Age)==21){
+                    item.put("image", icon[0]+"");
+                } else {
+                    item.put("image", icon[1]+"");
+                }
+
                 list.add(item);
 
             }
@@ -174,7 +184,7 @@ public class ActivityRechercheRegistreMortsTrier extends AppCompatActivity imple
         }
 
 
-        adapter=new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable});
+        adapter=new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable", "image"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable, R.id.icon_mort});
 
 
         listView.setAdapter(adapter);

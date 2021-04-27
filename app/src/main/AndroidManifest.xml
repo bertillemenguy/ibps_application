@@ -16,6 +16,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
+        <activity android:name=".ActivityRechercheRegistreBacs"/>
 
         <activity android:name=".ActivityDupliquerBacs" />
         <activity android:name=".ActivityHistoriqueIncidents" />
@@ -44,10 +45,7 @@
         <activity android:name=".ActivityHistoriqueSouffrance" />
 
         <activity android:name=".ActivityRechercheRegistreSouffrance">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+
         </activity>
 
         <activity android:name=".CustomPopup"/>
@@ -60,7 +58,18 @@
         <activity android:name=".ActivityEcrirRecapMort" />
         <activity android:name=".ActivityRecapitulatifMort" />
         <activity android:name=".ActivityEcrirRecapIncidents" />
-        <activity android:name=".ActivityMenu" />
+
+
+        <activity android:name=".ActivityRechercheRegistreMorts"/>
+        <activity android:name=".ActivityRechercheRegistreMortsTrier"/>
+
+
+        <activity android:name=".ActivityEcrirRecapBacs" />
+        <activity android:name=".ActivityDeplacerBacs" />
+        <activity android:name=".ActivityReunirBacs" />
+        <activity android:name=".ActivityErreur" />
+
+        <activity android:name=".ActivityMenu"/>
 
         <activity android:name=".ActivitySplash">
             <intent-filter>
@@ -68,32 +77,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-        <activity android:name=".ActivityRechercheRegistreMorts">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".ActivityRechercheRegistreMortsTrier">
-            <intent-filter>
-            <action android:name="android.intent.action.MAIN"/>
-            <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-
-
-        <activity android:name=".ActivityRechercheRegistreBacs">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".ActivityEcrirRecapBacs" />
-        <activity android:name=".ActivityDeplacerBacs" />
-        <activity android:name=".ActivityReunirBacs" />
-        <activity android:name=".ActivityErreur" />
 
         <meta-data
             android:name="preloaded_fonts"
