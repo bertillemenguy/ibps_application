@@ -19,7 +19,7 @@ import java.util.Map;
 public class WriteOnSheetDupliquer {
     
     
-    public static void writeData(final Context context, final String operateur, final String nouveaubac, final String elimine, final String bac, final String lignee, final String lot, final String bac2, final String lignee2, final String lot2, final String remarqueaa, final String remarquea, final String remarqueb, final String remarquec, final String nouveaubac2, final String nouveaubac3, final String nouveaubac4) {
+    public static void writeData(final Context context, final String main_user, final String nouveaubac, final String elimine, final String bac, final String lignee, final String lot, final String bac2, final String lignee2, final String lot2, final String remarqueaa, final String remarquea, final String remarqueb, final String remarquec, final String nouveaubac2, final String nouveaubac3, final String nouveaubac4) {
         
         
         final ProgressDialog loading=ProgressDialog.show(context, "Chargement...", "Veuillez patienter");
@@ -51,7 +51,7 @@ public class WriteOnSheetDupliquer {
                 Map<String, String> parmas=new HashMap<>();
                 
                 
-                parmas.put("operateur", operateur);
+                parmas.put("operateur", main_user);
                 parmas.put("nouveaubac", nouveaubac);
                 parmas.put("elimine", elimine);
                 parmas.put("bac", bac);

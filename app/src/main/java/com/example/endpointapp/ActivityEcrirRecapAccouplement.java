@@ -47,7 +47,7 @@ public class ActivityEcrirRecapAccouplement extends AppCompatActivity implements
     
     //  String Nbac1 = "";
     // String Nbac2 = "";
-    String operateur = "";
+    String main_user = "";
     
     //Activity Recap
     
@@ -106,7 +106,7 @@ public class ActivityEcrirRecapAccouplement extends AppCompatActivity implements
         
         Intent intent=getIntent();
 
-        operateur = intent.getStringExtra("operateur");
+        main_user = intent.getStringExtra("main_user");
 
 
         Key=intent.getStringExtra("Key");
@@ -127,9 +127,7 @@ public class ActivityEcrirRecapAccouplement extends AppCompatActivity implements
         NbMale=intent.getStringExtra("NbMale");
         NbFemelle=intent.getStringExtra("NbFemelle");
         
-        
-        operateur = intent.getStringExtra("operateur");
-        
+
         Lignee=intent.getStringExtra("Lignee");
         Age=intent.getStringExtra("Age");
         Responsable=intent.getStringExtra("Responsable");
@@ -184,9 +182,9 @@ public class ActivityEcrirRecapAccouplement extends AppCompatActivity implements
         final String NbFemelle = PoissonMortSpinner7.getSelectedItem().toString();
 
     
-        WriteOnSheetAccouplement.writeData(this, operateur, NbBac, Couleur1, Couleur2, NbMale, NbFemelle, Lot, Lot2, Bac, Bac2, Lignee, Lignee2, Age, Age2, Responsable, Responsable2, Key, Key2);
+        WriteOnSheetAccouplement.writeData(this, main_user, NbBac, Couleur1, Couleur2, NbMale, NbFemelle, Lot, Lot2, Bac, Bac2, Lignee, Lignee2, Age, Age2, Responsable, Responsable2, Key, Key2);
         Intent intent = new Intent(this, ActivityMenu.class);
-        
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
     

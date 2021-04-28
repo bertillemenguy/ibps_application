@@ -10,7 +10,8 @@ import android.widget.TextView;
 
 
 public class ActivityReunificationBacs extends AppCompatActivity {
-    String operateur=" ";
+
+    String main_user=" ";
     String Date=" ";
     String Bac=" ";
     String Lot=" ";
@@ -35,7 +36,7 @@ public class ActivityReunificationBacs extends AppCompatActivity {
         
         Intent intent=getIntent();
         Bac=intent.getStringExtra("Bac");
-        operateur=intent.getStringExtra("operateur");
+        main_user=intent.getStringExtra("main_user");
         
         Lignee=intent.getStringExtra("Lignee");
         Lot=intent.getStringExtra("Lot");
@@ -62,7 +63,7 @@ public class ActivityReunificationBacs extends AppCompatActivity {
     
     public void lancermenu(View view) {
         Intent intent = new Intent(this, ActivityMenu.class);
-        intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
     
@@ -71,9 +72,9 @@ public class ActivityReunificationBacs extends AppCompatActivity {
         final String Lettre=SpinnerAlphabet.getSelectedItem().toString();
         final String NouveauBac=Lettre + Nombre;
         Action="Réunis";
-        WriteOnSheetDeplacerEliminerErreurReunir.writeData(this, operateur, NouveauBac, Action, Bac, Lignee, Lot, Bac2, Lignee2, Lot2, Key, Key2);
+        WriteOnSheetDeplacerEliminerErreurReunir.writeData(this, main_user, NouveauBac, Action, Bac, Lignee, Lot, Bac2, Lignee2, Lot2, Key, Key2);
         Intent intent=new Intent(this, ActivityMenu.class);
-        intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
 }

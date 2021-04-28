@@ -40,7 +40,7 @@ public class ActivityReunirBacs extends AppCompatActivity implements AdapterView
     String Lot = "";
     String Lignee = "";
     String Age = "";
-    String operateur="";
+    String main_user="";
     String Key="";
     
     @Override
@@ -54,7 +54,7 @@ public class ActivityReunirBacs extends AppCompatActivity implements AdapterView
         
         // Get the transferred data from source activity.
         Intent intent = getIntent();
-        operateur = intent.getStringExtra("operateur");
+        main_user = intent.getStringExtra("main_user");
         
         Bac = intent.getStringExtra("Bac");
         Lot = intent.getStringExtra("Lot");
@@ -174,7 +174,7 @@ public class ActivityReunirBacs extends AppCompatActivity implements AdapterView
         intent.putExtra("Bac", Bac);
         intent.putExtra("Lot", Lot);
         intent.putExtra("Lignee", Lignee);
-        intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         intent.putExtra("Age", Age);
         intent.putExtra("Key", Key);
         
@@ -195,7 +195,7 @@ public class ActivityReunirBacs extends AppCompatActivity implements AdapterView
     public void lancermenu(View view) {
         
         Intent intent=new Intent(this, ActivityMenu.class);
-        // intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
     

@@ -31,7 +31,7 @@ public class ActivityEcrirRecapBacs extends AppCompatActivity {
     String Lignee2="";
     String Lot2 = "";
     
-    String operateur = "";
+    String main_user = "";
 
 
     //Spinner OperateurSpinner;
@@ -75,7 +75,7 @@ public class ActivityEcrirRecapBacs extends AppCompatActivity {
         textViewResponsable.setText(Responsable);
     
         // Get the transferred data from source activity.
-        operateur = intent.getStringExtra("operateur");
+        main_user = intent.getStringExtra("main_user");
     
     
     }
@@ -87,7 +87,7 @@ public class ActivityEcrirRecapBacs extends AppCompatActivity {
     
     public void lancerreunir(View view) {
         Intent intent = new Intent(this, ActivityReunirBacs.class);
-        intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         intent.putExtra("Bac", Bac);
         intent.putExtra("Lot", Lot);
         intent.putExtra("Responsable", Responsable);
@@ -98,7 +98,7 @@ public class ActivityEcrirRecapBacs extends AppCompatActivity {
     
     public void lancerdeplacer(View view) {
         Intent intent=new Intent(this, ActivityDeplacerBacs.class);
-        intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         intent.putExtra("Bac", Bac);
         intent.putExtra("Lot", Lot);
         intent.putExtra("Responsable", Responsable);
@@ -112,7 +112,7 @@ public class ActivityEcrirRecapBacs extends AppCompatActivity {
     
     public void lancerdupliquer(View view) {
         Intent intent=new Intent(this, ActivityDupliquerBacs.class);
-        intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         intent.putExtra("Bac", Bac);
         intent.putExtra("Lot", Lot);
         intent.putExtra("Responsable", Responsable);
@@ -125,7 +125,7 @@ public class ActivityEcrirRecapBacs extends AppCompatActivity {
     
     public void lancersignaler(View view) {
         Intent intent=new Intent(this, ActivityErreur.class);
-        intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         intent.putExtra("Bac", Bac);
         intent.putExtra("Lot", Lot);
         intent.putExtra("Responsable", Responsable);
@@ -138,7 +138,7 @@ public class ActivityEcrirRecapBacs extends AppCompatActivity {
     
     public void lancereliminer(View view) {
         Intent intent=new Intent(this, ActivityMenu.class);
-        intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         intent.putExtra("Bac", Bac);
         intent.putExtra("Lot", Lot);
         intent.putExtra("Responsable", Responsable);
@@ -148,7 +148,7 @@ public class ActivityEcrirRecapBacs extends AppCompatActivity {
     
         Action="Eliminé";
     
-        WriteOnSheetDeplacerEliminerErreurReunir.writeData(this, operateur, NouveauBac, Action, Bac, Lignee, Lot, Bac2, Lignee2, Lot2, Key, Key2);
+        WriteOnSheetDeplacerEliminerErreurReunir.writeData(this, main_user, NouveauBac, Action, Bac, Lignee, Lot, Bac2, Lignee2, Lot2, Key, Key2);
         startActivity(intent);
     }
 }

@@ -210,11 +210,13 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         intent.putExtra("Bac", Bac);
         intent.putExtra("Lot", Lot);
         intent.putExtra("Lignee", Lignee);
-        intent.putExtra("main_user", main_user);
         intent.putExtra("Age", Age);
         intent.putExtra("Responsable", Responsable);
         intent.putExtra("Key", Key);
-        
+
+        intent.putExtra("main_user", main_user);
+
+
         startActivity(intent);
     }
     

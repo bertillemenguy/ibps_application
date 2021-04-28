@@ -18,7 +18,7 @@ import java.util.Map;
 
 public class WriteOnSheetDeplacerEliminerErreurReunir {
     
-    public static void writeData(final Context context, final String operateur, final String nouveaubac, final String elimine, final String bac, final String lignee, final String lot, final String bac2, final String lignee2, final String lot2, final String Key, final String Key2) {
+    public static void writeData(final Context context, final String main_user, final String nouveaubac, final String elimine, final String bac, final String lignee, final String lot, final String bac2, final String lignee2, final String lot2, final String Key, final String Key2) {
         final ProgressDialog loading=ProgressDialog.show(context, "Chargement...", "Veuillez patienter");
         
         StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbzj6b_PGo9BfgtYjQtUuIwbf07a7gvwVF5aeyJgq56XunLtwkY/exec?action=addItem",
@@ -46,7 +46,7 @@ public class WriteOnSheetDeplacerEliminerErreurReunir {
                 Map<String, String> parmas=new HashMap<>();
                 
                 
-                parmas.put("operateur", operateur);
+                parmas.put("operateur", main_user);
                 parmas.put("nouveaubac", nouveaubac);
                 parmas.put("elimine", elimine);
                 parmas.put("bac", bac);

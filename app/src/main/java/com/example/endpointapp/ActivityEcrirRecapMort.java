@@ -17,7 +17,6 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
     Spinner PoissonMortSpinner;
     
     String Bac = "";
-    String operateur = "";
     String main_user="";
     String Lignee="";
     String Lot="";
@@ -57,11 +56,9 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
         // Get the transferred data from source activity.
         Intent intent = getIntent();
 
-        operateur = intent.getStringExtra("operateur");
-
 
         Bac = intent.getStringExtra("Bac");
-        operateur = intent.getStringExtra("operateur");
+        main_user = intent.getStringExtra("main_user");
         Lot=intent.getStringExtra("Lot");
         Lignee=intent.getStringExtra("Lignee");
         Age=intent.getStringExtra("Age");
@@ -91,7 +88,7 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
     public void lancermenu(View view) {
         
         Intent intent=new Intent(this, ActivityMenu.class);
-        //   intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
     
@@ -101,9 +98,9 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
     public void lancersauvegarde(View view) {
         
         final String PoissonMort=PoissonMortSpinner.getSelectedItem().toString();
-        WriteOnSheetDeclarerMort.writeData(this, operateur, Bac, Lignee, Lot, Age, Responsable, PoissonMort, Accouplement, ControleSanitaire, Key);
+        WriteOnSheetDeclarerMort.writeData(this, main_user, Bac, Lignee, Lot, Age, Responsable, PoissonMort, Accouplement, ControleSanitaire, Key);
         Intent intent=new Intent(this, ActivityRechercheRegistreMorts.class);
-        // intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
     

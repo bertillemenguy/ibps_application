@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 
 public class ActivityErreur extends AppCompatActivity {
-    String operateur = " ";
+    String main_user = " ";
     String Date = " ";
     String Bac=" ";
     String Lot=" ";
@@ -36,7 +36,7 @@ public class ActivityErreur extends AppCompatActivity {
         
         Intent intent = getIntent();
         Bac = intent.getStringExtra("Bac");
-        operateur = intent.getStringExtra("operateur");
+        main_user = intent.getStringExtra("main_user");
         Age = intent.getStringExtra("Age");
         Lignee = intent.getStringExtra("Lignee");
         Lot = intent.getStringExtra("Lot");
@@ -59,7 +59,7 @@ public class ActivityErreur extends AppCompatActivity {
     
     public void lancermenu(View view) {
         Intent intent = new Intent(this, ActivityMenu.class);
-        //intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
     
@@ -70,10 +70,10 @@ public class ActivityErreur extends AppCompatActivity {
         Action="Erreur Place";
     
     
-        WriteOnSheetDeplacerEliminerErreurReunir.writeData(this, operateur, NouveauBac, Action, Bac, Lignee, Lot, Bac2, Lignee2, Lot2, Key, Key2);
+        WriteOnSheetDeplacerEliminerErreurReunir.writeData(this, main_user, NouveauBac, Action, Bac, Lignee, Lot, Bac2, Lignee2, Lot2, Key, Key2);
         
         Intent intent = new Intent(this, ActivityMenu.class);
-        // intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
 }

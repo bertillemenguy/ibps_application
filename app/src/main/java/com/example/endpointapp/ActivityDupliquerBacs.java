@@ -16,7 +16,7 @@ public class ActivityDupliquerBacs extends AppCompatActivity {
     EditText remarquec;
     EditText remarqued;
     
-    String operateur=" ";
+    String main_user=" ";
     String Date=" ";
     String Bac=" ";
     String Lot=" ";
@@ -72,7 +72,7 @@ public class ActivityDupliquerBacs extends AppCompatActivity {
         
         Intent intent=getIntent();
         Bac=intent.getStringExtra("Bac");
-        operateur=intent.getStringExtra("operateur");
+        main_user=intent.getStringExtra("main_user");
         Age=intent.getStringExtra("Age");
         Lignee=intent.getStringExtra("Lignee");
         Lot=intent.getStringExtra("Lot");
@@ -132,7 +132,7 @@ public class ActivityDupliquerBacs extends AppCompatActivity {
     
     public void lancermenu(View view) {
         Intent intent=new Intent(this, ActivityMenu.class);
-        // intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
     
@@ -166,10 +166,10 @@ public class ActivityDupliquerBacs extends AppCompatActivity {
     
         Action="Dupliquer";
     
-        WriteOnSheetDupliquer.writeData(this, operateur, NouveauBac, Action, Bac, Lignee, Lot, Bac2, Lignee2, Lot2, RemarqueA, RemarqueB, RemarqueC, RemarqueD, NouveauBac2, NouveauBac3, NouveauBac4);
+        WriteOnSheetDupliquer.writeData(this, main_user, NouveauBac, Action, Bac, Lignee, Lot, Bac2, Lignee2, Lot2, RemarqueA, RemarqueB, RemarqueC, RemarqueD, NouveauBac2, NouveauBac3, NouveauBac4);
         
         Intent intent=new Intent(this, ActivityMenu.class);
-        //  intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
     
