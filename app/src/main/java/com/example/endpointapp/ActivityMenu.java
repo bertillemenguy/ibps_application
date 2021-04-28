@@ -188,4 +188,11 @@ public class ActivityMenu extends AppCompatActivity {
         intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
+
+    //deconnexion avec le logo en haut à droite
+    public void deconnexion(View view){
+        Intent intent = new Intent(this, ActivityConnexion.class);
+        startActivity(intent);
+    }
+
 }
