@@ -34,7 +34,8 @@ import java.util.Locale;
 
 public class ActivityHistoriqueSouffrance extends AppCompatActivity {
     
-    
+    String main_user;
+
     ListView listView;
     SimpleAdapter adapter;
     ProgressDialog loading;
@@ -55,8 +56,8 @@ public class ActivityHistoriqueSouffrance extends AppCompatActivity {
         editTextSearchItem=findViewById(R.id.et_search);
     
         // Get the transferred data from source activity.
-        // Intent intent = getIntent();
-        //    operateur = intent.getStringExtra("operateur");
+        Intent intent = getIntent();
+        main_user = intent.getStringExtra("main_user");
     
         getItems();
     
@@ -180,7 +181,7 @@ public class ActivityHistoriqueSouffrance extends AppCompatActivity {
     public void lancermenu(View view) {
         
         Intent intent = new Intent(this, ActivityMenu.class);
-        //   intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
     

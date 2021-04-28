@@ -40,7 +40,7 @@ public class ActivityEcrirRecapIncidents extends AppCompatActivity {
     //  String Bac = "";
 
     String main_user = "";
-    Spinner OperateurSpinner;
+    //Spinner OperateurSpinner;
     //  ProgressDialog loading;
     
     Spinner eauvilleSpinner;
@@ -115,8 +115,8 @@ public class ActivityEcrirRecapIncidents extends AppCompatActivity {
         travauxSpinner.setAdapter(adapter24);
 
 
-              Intent intent = getIntent();
-              main_user= intent.getStringExtra("main_user");
+        Intent intent = getIntent();
+        main_user= intent.getStringExtra("main_user");
     }
     
     public void fermeractivite(View view) {
@@ -124,7 +124,6 @@ public class ActivityEcrirRecapIncidents extends AppCompatActivity {
     }
     
     public void lancersauvegarde(View view) {
-        final String operateur = main_user;
         final String eaudeville = eauvilleSpinner.getSelectedItem().toString();
         final String electricite = electriciteSpinner.getSelectedItem().toString();
         final String aircomprime = aircomprimeSpinner.getSelectedItem().toString();
@@ -135,11 +134,11 @@ public class ActivityEcrirRecapIncidents extends AppCompatActivity {
         final String nourrissage = nourrissageSpinner.getSelectedItem().toString();
         final String etat = "En cours";
     
-        WriteOnSheetSignaler.writeData(this, operateur, eaudeville, electricite, aircomprime, climatisation, eaudusysteme, systemeaquatique, travaux, nourrissage, etat);
+        WriteOnSheetSignaler.writeData(this, main_user, eaudeville, electricite, aircomprime, climatisation, eaudusysteme, systemeaquatique, travaux, nourrissage, etat);
         //CoupureEau, Panne, CoupureProg, CoupureInop, ArretAir, ArretCTA, PH, Conductivite, NO2, NO3, NH4, Temperature, ArretSysteme, Fuite, UV, Autre, Vibrations, Divers);
     
         Intent intent = new Intent(this, ActivityMenu.class);
-        // intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
     

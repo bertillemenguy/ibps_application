@@ -42,7 +42,7 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Ad
     ProgressDialog loading;
     EditText editTextSearchItem;
     
-    //String operateur = "";
+    String main_user = "";
     Date date = null;
     
     
@@ -58,7 +58,7 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Ad
         
         // Get the transferred data from source activity.
         Intent intent = getIntent();
-        //   operateur = intent.getStringExtra("operateur");
+        main_user= intent.getStringExtra("main_user");
         
         getItems();
         
@@ -188,7 +188,7 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Ad
     public void lancermenu(View view) {
         
         Intent intent = new Intent(this, ActivityMenu.class);
-        //intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
     
@@ -207,6 +207,7 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Ad
         HashMap map = (HashMap) parent.getItemAtPosition(position);
         String key = map.get("key").toString();
         intent.putExtra("key", key);
+        intent.putExtra("main_user", main_user);
         Toast.makeText(ActivityHistoriqueIncidents.this, key, Toast.LENGTH_SHORT).show();
 
         startActivity(intent);

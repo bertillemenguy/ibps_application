@@ -25,6 +25,7 @@ import com.android.volley.toolbox.Volley;
 
 public class CustomPopup extends AppCompatActivity  {
 
+    String main_user;
     String Key="";
 
 
@@ -51,6 +52,7 @@ public class CustomPopup extends AppCompatActivity  {
         // Get the transferred data from source activity.
         Intent intent = getIntent();
 
+        main_user=intent.getStringExtra("main_user");
         Key=intent.getStringExtra("Key");
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbz0bG0rRxAk4FQXSG1dF0Acex0wO5YojMaa72QIBFnTO8BVq_J8yt0VY0jPD4fE6__D/exec?action=delItem&Key="+ Key, new Response.Listener<String>() {
@@ -72,12 +74,14 @@ public class CustomPopup extends AppCompatActivity  {
     public void lancersauvegarde_delete(View view) {
         WriteOnSheetDeclarerMort.deleteData(this, Key);
         Intent intent=new Intent(this, ActivityHistoriqueMorts.class);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
 
 
     public void annule_delete(View view) {
         Intent intent=new Intent(this, ActivityHistoriqueMorts.class);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
 

@@ -1,5 +1,6 @@
 package com.example.endpointapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,7 +9,9 @@ import android.webkit.WebView;
 public class ActivityWebHistoriqueReservationInjection extends AppCompatActivity {
     String html = "<iframe width=\"1000\" height=\"1000\" style=\"border: 1px solid #cccccc;\"  <iframe src=\"https://calendar.google.com/calendar/embed?src=m19lag2c32onc9ogau43see96k%40group.calendar.google.com&ctz=Europe%2FParis\" style=\"border: 0\" width=\"400\" height=\"300\" frameborder=\"0\" scrolling=\"no\"></iframe>";
     // "https://docs.google.com/spreadsheets/d/e/2PACX-1vR2oO52Ut5QANevgkiopmOW1P79yZ8Eq4AwdLEd-32NzVaFRgL0zDvIRifVFWhzOpGeE0WvLlpJUuCE/pubhtml?gid=370636495&single=true&amp;headers=false\"></iframe>";
-    
+
+    String main_user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +21,9 @@ public class ActivityWebHistoriqueReservationInjection extends AppCompatActivity
         webview.getSettings().setJavaScriptEnabled(true);
         
         webview.loadData(html, "text/html", null);
+
+        Intent intent = getIntent();
+        main_user = intent.getStringExtra("main_user");
         
     }
     

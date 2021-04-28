@@ -56,7 +56,7 @@ public class ActivityRechercheRegistreMortsTrier extends AppCompatActivity imple
     ProgressDialog loading;
     EditText editTextSearchItem;
 
-    //  String operateur = "";
+    String main_user = "";
 
 
     @Override
@@ -71,7 +71,7 @@ public class ActivityRechercheRegistreMortsTrier extends AppCompatActivity imple
 
         // Get the transferred data from source activity.
         Intent intent = getIntent();
-        //  operateur = intent.getStringExtra("operateur");
+        main_user = intent.getStringExtra("main_user");
 
         getItems();
 
@@ -233,7 +233,7 @@ public class ActivityRechercheRegistreMortsTrier extends AppCompatActivity imple
         intent.putExtra("Bac", Bac);
         intent.putExtra("Lot", Lot);
         intent.putExtra("Lignee", Lignee);
-        // intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         intent.putExtra("Age", Age);
         intent.putExtra("Responsable", Responsable);
         intent.putExtra("Key", Key);
@@ -245,7 +245,7 @@ public class ActivityRechercheRegistreMortsTrier extends AppCompatActivity imple
     public void lancermenu(View view) {
 
         Intent intent = new Intent(this, ActivityMenu.class);
-        //   intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
 
@@ -290,6 +290,7 @@ public class ActivityRechercheRegistreMortsTrier extends AppCompatActivity imple
     public void retour_tri(View view) {
 
         Intent intent = new Intent(this, ActivityRechercheRegistreMorts.class);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
 

@@ -39,7 +39,7 @@ import java.util.Locale;
 
 public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity implements AdapterView.OnItemClickListener {
     
-    
+
     ListView listView;
     SimpleAdapter adapter;
     ProgressDialog loading;

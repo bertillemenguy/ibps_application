@@ -19,7 +19,7 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
     
     
     String Bac="";
-    String operateur="";
+    String main_user="";
     String Lignee="";
     String Lot="";
     String Age="";
@@ -71,7 +71,7 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
         Intent intent=getIntent();
 
         Bac=intent.getStringExtra("Bac");
-        operateur=intent.getStringExtra("operateur");
+        main_user=intent.getStringExtra("main_user");
         Age=intent.getStringExtra("Age");
         Lignee=intent.getStringExtra("Lignee");
         Responsable=intent.getStringExtra("Responsable");
@@ -138,7 +138,7 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
             intent=new Intent(this, ActivitySurveillance.class);
             Surveillance="1";
         }
-        intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         intent.putExtra("Bac", Bac);
         intent.putExtra("Lot", Lot);
         intent.putExtra("Responsable", Responsable);
@@ -158,7 +158,7 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
 
         final String PoissonSouffrance = PoissonSouffranceSpinner.getSelectedItem().toString();
         startActivity(intent);
-        WriteOnSheetSouffrance.writeData(this, operateur, Bac, Lignee, Lot, Age, Responsable, Position, Nage, Malnutrition, Prostration, Nageoire, Maigreur, Obesite, Blessure, Ulcere, Scoliose, Exophtalmie, Opercules, Couleur, Euthanasie, Isolement, Surveillance, Ras, PoissonSouffrance, Key);
+        WriteOnSheetSouffrance.writeData(this, main_user, Bac, Lignee, Lot, Age, Responsable, Position, Nage, Malnutrition, Prostration, Nageoire, Maigreur, Obesite, Blessure, Ulcere, Scoliose, Exophtalmie, Opercules, Couleur, Euthanasie, Isolement, Surveillance, Ras, PoissonSouffrance, Key);
         
         
     }
@@ -169,6 +169,7 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
     
     public void lancerrecherche(View view) {
         Intent intent = new Intent(this, ActivityRechercheRegistreMorts.class);
+        intent.putExtra("main_user", main_user);
         /**
          intent.putExtra("operateur", operateur);
          intent.putExtra("Bac", Bac);
@@ -183,8 +184,8 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
     
     public void lancermenu(View view) {
         Intent intent = new Intent(this, ActivityMenu.class);
+        intent.putExtra("main_user", main_user);
         /**
-         intent.putExtra("operateur", operateur);
          intent.putExtra("Bac", Bac);
          intent.putExtra("Lot", Lot);
          intent.putExtra("Responsable", Responsable);

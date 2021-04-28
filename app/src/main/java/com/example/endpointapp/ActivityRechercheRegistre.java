@@ -98,7 +98,7 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
         // Get the transferred data from source activity.
         Intent intent = getIntent();
-        main_user = intent.getStringExtra("user");
+        main_user = intent.getStringExtra("main_user");
 
 
         getItems();
@@ -288,14 +288,14 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
     public void lancermenu(View view) {
         
         Intent intent = new Intent(this, ActivityMenu.class);
-        //  intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
 
 
     public void lancertri(View view) {
-
         Intent intent = new Intent(this, ActivityRechercheRegistreTrier.class);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
 

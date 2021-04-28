@@ -40,7 +40,7 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity {
     ProgressDialog loading;
     EditText editTextSearchItem;
     
-  String operateur="";
+    String main_user="";
     Date date=null;
     String Elimine = "";
     
@@ -55,7 +55,7 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity {
     
         // Get the transferred data from source activity.
         Intent intent=getIntent();
-        operateur=intent.getStringExtra("operateur");
+        main_user=intent.getStringExtra("main_user");
     
         getItems();
     
@@ -203,10 +203,10 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity {
     public void lancertraiter(View view) {
         //Intent intent = new Intent(this,ActivityMenu.class);
         //intent.putExtra("operateur", operateur);
-        operateur="operateur";
+        main_user="operateur";
         Elimine="<<<<<TRAITE>>>>>";
         
-        WriteOnSheetTRAITE.writeData(this, operateur, Elimine);
+        WriteOnSheetTRAITE.writeData(this, main_user, Elimine);
         // startActivity(intent);
     }
     

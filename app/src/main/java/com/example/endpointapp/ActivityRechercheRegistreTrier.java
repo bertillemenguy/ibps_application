@@ -47,7 +47,8 @@ import java.util.HashMap;
 
 public class ActivityRechercheRegistreTrier extends AppCompatActivity implements OnTouchListener, OnClickListener {
     
-    
+    String main_user;
+
     ListView listView;
     SimpleAdapter adapter;
     ProgressDialog loading;
@@ -72,8 +73,8 @@ public class ActivityRechercheRegistreTrier extends AppCompatActivity implements
 
 
         // Get the transferred data from source activity.
-        //    Intent intent = getIntent();
-        //  operateur = intent.getStringExtra("operateur");
+        Intent intent = getIntent();
+        main_user = intent.getStringExtra("main_user");
         
         getItems();
         
@@ -260,7 +261,7 @@ public class ActivityRechercheRegistreTrier extends AppCompatActivity implements
     public void lancermenu(View view) {
         
         Intent intent = new Intent(this, ActivityMenu.class);
-        //  intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
 
@@ -293,8 +294,8 @@ public class ActivityRechercheRegistreTrier extends AppCompatActivity implements
 
 
     public void retour_tri(View view) {
-
         Intent intent = new Intent(this, ActivityRechercheRegistre.class);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
 

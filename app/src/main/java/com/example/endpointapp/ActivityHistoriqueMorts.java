@@ -46,6 +46,8 @@ import static android.app.AlertDialog.*;
 public class ActivityHistoriqueMorts extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
 
+    String main_user;
+
     ListView listView;
     SimpleAdapter adapter;
     ProgressDialog loading;
@@ -53,7 +55,6 @@ public class ActivityHistoriqueMorts extends AppCompatActivity implements Adapte
     ActivityHistoriqueMorts activity;
     //Builder myPopup;
 
-    String main_user = "";
     Date date = null;
 
 
@@ -261,6 +262,7 @@ public class ActivityHistoriqueMorts extends AppCompatActivity implements Adapte
         Intent intent = new Intent(this, CustomPopup.class);
         HashMap map = (HashMap) parent.getItemAtPosition(position);
         String Key = map.get("Key").toString();
+        intent.putExtra("main_user", main_user);
         intent.putExtra("Key", Key);
         //Toast.makeText(ActivityHistoriqueMorts.this, Key, Toast.LENGTH_SHORT).show();
 

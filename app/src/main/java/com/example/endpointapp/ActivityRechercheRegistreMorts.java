@@ -52,7 +52,8 @@ import java.util.HashMap;
 
 public class ActivityRechercheRegistreMorts extends AppCompatActivity implements AdapterView.OnItemClickListener{
     
-    
+    String main_user;
+
     ListView listView;
     SimpleAdapter adapter;
     ProgressDialog loading;
@@ -62,7 +63,6 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
     int[] icon ={R.drawable.fish_bones, R.drawable.zebrafish};
 
 
-    String main_user = "";
 
 
     @Override
@@ -210,7 +210,7 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         intent.putExtra("Bac", Bac);
         intent.putExtra("Lot", Lot);
         intent.putExtra("Lignee", Lignee);
-        intent.putExtra("operateur", main_user);
+        intent.putExtra("main_user", main_user);
         intent.putExtra("Age", Age);
         intent.putExtra("Responsable", Responsable);
         intent.putExtra("Key", Key);
@@ -222,13 +222,14 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
     public void lancermenu(View view) {
         
         Intent intent = new Intent(this, ActivityMenu.class);
-        //   intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
 
 
     public void lancertrie(View view) {
         Intent intent = new Intent(this, ActivityRechercheRegistreMortsTrier.class);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
 
