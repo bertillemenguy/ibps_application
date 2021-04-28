@@ -193,6 +193,10 @@ activity#com.example.endpointapp.ActivityEcrirRecapIncidents
 ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:60:9-65
 	android:name
 		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:60:19-62
+activity#com.example.endpointapp.ActivityConnexion
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:62:9-54
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:62:19-52
 activity#com.example.endpointapp.ActivityRechercheRegistreMorts
 ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:63:9-67
 	android:name

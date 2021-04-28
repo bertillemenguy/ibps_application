@@ -54,7 +54,7 @@ public class ActivityRechercheRegistreAccouplementsFemelle extends AppCompatActi
     ProgressDialog loading;
     EditText editTextSearchItem;
     
-    //  String operateur = "";
+    String operateur = "";
     
     
     @Override
@@ -69,7 +69,7 @@ public class ActivityRechercheRegistreAccouplementsFemelle extends AppCompatActi
         // Get the transferred data from source activity.
         Intent intent = getIntent();
         Bac = intent.getStringExtra("Bac");
-        //  operateur = intent.getStringExtra("operateur");
+        operateur = intent.getStringExtra("operateur");
         Age = intent.getStringExtra("Age");
         Lignee = intent.getStringExtra("Lignee");
         Responsable = intent.getStringExtra("Responsable");
@@ -207,7 +207,7 @@ public class ActivityRechercheRegistreAccouplementsFemelle extends AppCompatActi
         intent.putExtra("Key2", Key2);
         intent.putExtra("Age2", Age2);
         intent.putExtra("Responsable2", Responsable2);
-        //    intent.putExtra("operateur", operateur);
+        intent.putExtra("operateur", operateur);
     
     
         startActivity(intent);
@@ -221,7 +221,7 @@ public class ActivityRechercheRegistreAccouplementsFemelle extends AppCompatActi
     public void lancermenu(View view) {
         
         Intent intent = new Intent(this, ActivityMenu.class);
-        //  intent.putExtra("operateur", operateur);
+        intent.putExtra("operateur", operateur);
         startActivity(intent);
     }
     

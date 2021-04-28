@@ -45,7 +45,7 @@ public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity 
     ProgressDialog loading;
     EditText editTextSearchItem;
     
-    // String operateur = "";
+    String main_user = "";
     Date date=null;
     
     
@@ -59,8 +59,8 @@ public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity 
         editTextSearchItem=findViewById(R.id.et_search);
     
         // Get the transferred data from source activity.
-        //   Intent intent = getIntent();
-        //   operateur = intent.getStringExtra("operateur");
+        Intent intent = getIntent();
+        main_user = intent.getStringExtra("main_user");
     
         getItems();
     
@@ -234,7 +234,8 @@ public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity 
         String Key=map.get("Key").toString();
         String Key2=map.get("Key2").toString();
         
-        
+
+        intent.putExtra("main_user", main_user);
         intent.putExtra("Date", Date);
         intent.putExtra("operateur", operateur);
         intent.putExtra("LigneeM", LigneeM);
@@ -264,7 +265,7 @@ public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity 
     public void lancermenu(View view) {
         
         Intent intent=new Intent(this, ActivityMenu.class);
-        // intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
     

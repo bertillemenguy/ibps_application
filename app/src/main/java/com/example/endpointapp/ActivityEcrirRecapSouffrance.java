@@ -37,8 +37,7 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
     String Nage="0";
     String Malnutrition="0";
     String Prostration="0";
-    //  String operateur = "";
-    
+
     String Nageoire = "0";
     String Maigreur = "0";
     String Obesite = "0";
@@ -56,7 +55,7 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
     //  TextView textViewitemDate, textViewBac, textViewLigneeMale, textViewLigneeFemelle, textViewResponsable;
     TextView textViewitemLot, textViewBac, textViewLignee, textViewAge, textViewResponsable;
     //ajout
-    Spinner OperateurSpinner;
+    //Spinner OperateurSpinner;
     
     /**
      * String Position = "0";
@@ -70,6 +69,7 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ecrir_recap_souffrance);
         Intent intent=getIntent();
+
         Bac=intent.getStringExtra("Bac");
         operateur=intent.getStringExtra("operateur");
         Age=intent.getStringExtra("Age");
@@ -89,10 +89,10 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
      
          */
         // operateur
-        OperateurSpinner = findViewById(R.id.spinner1);
-        ArrayAdapter<CharSequence> adapter17 = ArrayAdapter.createFromResource(this, R.array.operateur, android.R.layout.simple_spinner_item);
-        adapter17.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        OperateurSpinner.setAdapter(adapter17);
+        //OperateurSpinner = findViewById(R.id.spinner1);
+        //ArrayAdapter<CharSequence> adapter17 = ArrayAdapter.createFromResource(this, R.array.operateur, android.R.layout.simple_spinner_item);
+        //adapter17.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //OperateurSpinner.setAdapter(adapter17);
     
         PoissonSouffranceSpinner=findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this, R.array.chiffre, android.R.layout.simple_spinner_item);
@@ -114,10 +114,7 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
         textViewLignee.setText(Lignee);
         textViewAge.setText(Age);
         textViewResponsable.setText(Responsable);
-    
-        // Get the transferred data from source activity.
-        operateur=intent.getStringExtra("operateur");
-    
+
     
     }
     
@@ -158,8 +155,7 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
         intent.putExtra("Nage", Nage);
         intent.putExtra("Malnutrition", Malnutrition);
         intent.putExtra("Prostration", Prostration);
-        
-        final String operateur = OperateurSpinner.getSelectedItem().toString();
+
         final String PoissonSouffrance = PoissonSouffranceSpinner.getSelectedItem().toString();
         startActivity(intent);
         WriteOnSheetSouffrance.writeData(this, operateur, Bac, Lignee, Lot, Age, Responsable, Position, Nage, Malnutrition, Prostration, Nageoire, Maigreur, Obesite, Blessure, Ulcere, Scoliose, Exophtalmie, Opercules, Couleur, Euthanasie, Isolement, Surveillance, Ras, PoissonSouffrance, Key);

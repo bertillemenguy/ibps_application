@@ -51,7 +51,7 @@ public class ActivityRechercheRegistreSouffrance extends AppCompatActivity imple
     ProgressDialog loading;
     EditText editTextSearchItem;
     
-    // String operateur = "";
+    String operateur = "";
     
     
     @Override
@@ -66,7 +66,7 @@ public class ActivityRechercheRegistreSouffrance extends AppCompatActivity imple
         
         // Get the transferred data from source activity.
         Intent intent = getIntent();
-        // operateur = intent.getStringExtra("operateur");
+        operateur = intent.getStringExtra("main_user");
         
         getItems();
         
@@ -187,7 +187,7 @@ public class ActivityRechercheRegistreSouffrance extends AppCompatActivity imple
         intent.putExtra("Bac", Bac);
         intent.putExtra("Lot", Lot);
         intent.putExtra("Lignee", Lignee);
-        //  intent.putExtra("operateur", operateur);
+        intent.putExtra("operateur", operateur);
         intent.putExtra("Age", Age);
         intent.putExtra("Responsable", Responsable);
         //  intent.putExtra("PointLimite", PointLimite);

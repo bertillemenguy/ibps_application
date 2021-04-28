@@ -390,51 +390,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorPrimary"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView56"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="indispensable avant de valider"
-                            android:textColor="@color/colorRed" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:orientation="vertical">
-
-                        <Spinner
-                            android:id="@+id/spoperateur"
-                            style="@android:style/Widget.Spinner.DropDown"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0"
-                        android:orientation="vertical">
+                android:gravity="right">
 
                         <ImageButton
                             android:id="@+id/imageButton"
@@ -443,8 +399,6 @@
                             android:layout_gravity="right"
                             android:onClick="lancersauvegarde"
                             app:srcCompat="@android:drawable/ic_menu_save" />
-                    </LinearLayout>
-                </LinearLayout>
 
             </LinearLayout>
 

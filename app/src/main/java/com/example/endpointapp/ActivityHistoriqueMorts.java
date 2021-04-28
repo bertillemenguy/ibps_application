@@ -53,7 +53,7 @@ public class ActivityHistoriqueMorts extends AppCompatActivity implements Adapte
     ActivityHistoriqueMorts activity;
     //Builder myPopup;
 
-    //  String operateur = "";
+    String main_user = "";
     Date date = null;
 
 
@@ -70,8 +70,8 @@ public class ActivityHistoriqueMorts extends AppCompatActivity implements Adapte
         getItems();
 
         // Get the transferred data from source activity.
-        //  Intent intent = getIntent();
-        // operateur = intent.getStringExtra("operateur");
+        Intent intent = getIntent();
+        main_user = intent.getStringExtra("main_user");
 
         activity = this;
 
@@ -242,7 +242,7 @@ public class ActivityHistoriqueMorts extends AppCompatActivity implements Adapte
     public void lancermenu(View view) {
         
         Intent intent = new Intent(this, ActivityMenu.class);
-        // intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
     

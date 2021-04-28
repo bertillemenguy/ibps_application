@@ -17,7 +17,9 @@ import com.hsalf.smilerating.SmileRating;
 public class ActivityEcrirRecapOeuf extends AppCompatActivity implements SmileRating.OnSmileySelectionListener, SmileRating.OnRatingSelectedListener {
     
     private static final String TAG="ActivityOeuf";
-    
+
+    String main_user="";
+
     // String Nbac1 = "";
     //String Nbac2 = "";
     
@@ -72,7 +74,7 @@ public class ActivityEcrirRecapOeuf extends AppCompatActivity implements SmileRa
     Spinner spnnbrefemelles;
     
     
-    Spinner OperateurSpinner;
+    //Spinner OperateurSpinner;
     private SmileRating mSmileRating;
     
     @Override
@@ -99,10 +101,10 @@ public class ActivityEcrirRecapOeuf extends AppCompatActivity implements SmileRa
         
         
         // operateur
-        OperateurSpinner = findViewById(R.id.spinner1);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.operateur, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        OperateurSpinner.setAdapter(adapter);
+       // OperateurSpinner = findViewById(R.id.spinner1);
+        //ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.operateur, android.R.layout.simple_spinner_item);
+        //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //OperateurSpinner.setAdapter(adapter);
         
         
         Intent intent = getIntent();
@@ -173,8 +175,11 @@ public class ActivityEcrirRecapOeuf extends AppCompatActivity implements SmileRa
         lot2.setText(Lot2);
         //  textView43.setText(Couleur1);
         //   textView41.setText(Couleur2);
-        
-        
+
+
+       main_user=intent.getStringExtra("main_user");
+
+
     }
     
     @Override
@@ -219,13 +224,13 @@ public class ActivityEcrirRecapOeuf extends AppCompatActivity implements SmileRa
     public void lancersauvegarde(View view) {
         final String NbMalesFeconde = spnrnbremale.getSelectedItem().toString();
         final String NbfemellesFeconde = spnnbrefemelles.getSelectedItem().toString();
-        final String operateur = OperateurSpinner.getSelectedItem().toString();
+
     
-    
-        WriteOnSheetOeuf.writeData(this, operateur, Qualite, Quantite, NbBac, NbMale, NbFemelle, Bac, Bac2, LigneeM, LigneeF, Age, Age2, Lot, Lot2, Date, NbMalesFeconde, NbfemellesFeconde, Key, Key2);
+        WriteOnSheetOeuf.writeData(this, main_user, Qualite, Quantite, NbBac, NbMale, NbFemelle, Bac, Bac2, LigneeM, LigneeF, Age, Age2, Lot, Lot2, Date, NbMalesFeconde, NbfemellesFeconde, Key, Key2);
         Intent intent = new Intent(this, ActivityMenu.class);
-        //   intent.putExtra("operateur", operateur);
+        intent.putExtra("operateur", operateur);
         intent.putExtra("Quantite", Quantite);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
         
         

@@ -47,7 +47,7 @@ public class ActivityRechercheRegistreBacs extends AppCompatActivity implements 
     ProgressDialog loading;
     EditText editTextSearchItem;
     
-    //String operateur = "";
+    String operateur = "";
     
     
     @Override
@@ -61,7 +61,7 @@ public class ActivityRechercheRegistreBacs extends AppCompatActivity implements 
         
         // Get the transferred data from source activity.
         Intent intent = getIntent();
-        // operateur = intent.getStringExtra("operateur");
+        operateur = intent.getStringExtra("main_user");
         
         getItems();
         
@@ -177,7 +177,7 @@ public class ActivityRechercheRegistreBacs extends AppCompatActivity implements 
         intent.putExtra("Bac", Bac);
         intent.putExtra("Lot", Lot);
         intent.putExtra("Lignee", Lignee);
-        // intent.putExtra("operateur", operateur);
+        intent.putExtra("operateur", operateur);
         intent.putExtra("Age", Age);
         intent.putExtra("Responsable", Responsable);
         startActivity(intent);
@@ -224,7 +224,7 @@ public class ActivityRechercheRegistreBacs extends AppCompatActivity implements 
     public void lancermenu(View view) {
         
         Intent intent = new Intent(this, ActivityMenu.class);
-        // intent.putExtra("operateur", operateur);
+        intent.putExtra("operateur", operateur);
         startActivity(intent);
     }
     

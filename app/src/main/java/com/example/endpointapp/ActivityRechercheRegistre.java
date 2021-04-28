@@ -66,9 +66,7 @@ import java.util.HashMap;
 
 public class ActivityRechercheRegistre extends AppCompatActivity implements View.OnTouchListener, View.OnClickListener {
 
-   // private String mort;
-    //private TextView mortView;
-    String resp;
+    String main_user;
     ListView listView;
     SimpleAdapter adapter;
     ProgressDialog loading;
@@ -99,8 +97,8 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
 
         // Get the transferred data from source activity.
-        //    Intent intent = getIntent();
-        //  operateur = intent.getStringExtra("operateur");
+        Intent intent = getIntent();
+        main_user = intent.getStringExtra("user");
 
 
         getItems();

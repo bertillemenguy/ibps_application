@@ -47,12 +47,12 @@ public class ActivityEcrirRecapAccouplement extends AppCompatActivity implements
     
     //  String Nbac1 = "";
     // String Nbac2 = "";
-    // String operateur = "";
+    String operateur = "";
     
     //Activity Recap
     
     // ajouter
-    // String operateur = "";
+
     
     
     @Override
@@ -62,17 +62,17 @@ public class ActivityEcrirRecapAccouplement extends AppCompatActivity implements
         
         //ajouter
         // operateur = intent.getStringExtra("operateur");
-        OperateurSpinner = findViewById(R.id.spinner1);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.operateur, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        OperateurSpinner.setAdapter(adapter);
+        //OperateurSpinner = findViewById(R.id.spinner1);
+        //ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.operateur, android.R.layout.simple_spinner_item);
+        //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //OperateurSpinner.setAdapter(adapter);
         //operateur = intent.getStringExtra("operateur");
         
         //à ajouter
         PoissonMortSpinner = findViewById(R.id.spinner3);
-        ArrayAdapter<CharSequence> adapter11 = ArrayAdapter.createFromResource(this, R.array.chiffre, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.chiffre, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        PoissonMortSpinner.setAdapter(adapter11);
+        PoissonMortSpinner.setAdapter(adapter);
         // PoissonMortSpinner.setOnItemSelectedListener(this);
         
         
@@ -105,6 +105,10 @@ public class ActivityEcrirRecapAccouplement extends AppCompatActivity implements
         
         
         Intent intent=getIntent();
+
+        operateur = intent.getStringExtra("operateur");
+
+
         Key=intent.getStringExtra("Key");
         Key2=intent.getStringExtra("Key2");
         
@@ -124,7 +128,7 @@ public class ActivityEcrirRecapAccouplement extends AppCompatActivity implements
         NbFemelle=intent.getStringExtra("NbFemelle");
         
         
-        //operateur = intent.getStringExtra("operateur");
+        operateur = intent.getStringExtra("operateur");
         
         Lignee=intent.getStringExtra("Lignee");
         Age=intent.getStringExtra("Age");
@@ -178,8 +182,7 @@ public class ActivityEcrirRecapAccouplement extends AppCompatActivity implements
         
         final String NbMale = PoissonMortSpinner10.getSelectedItem().toString();
         final String NbFemelle = PoissonMortSpinner7.getSelectedItem().toString();
-        final String operateur = OperateurSpinner.getSelectedItem().toString();
-    
+
     
         WriteOnSheetAccouplement.writeData(this, operateur, NbBac, Couleur1, Couleur2, NbMale, NbFemelle, Lot, Lot2, Bac, Bac2, Lignee, Lignee2, Age, Age2, Responsable, Responsable2, Key, Key2);
         Intent intent = new Intent(this, ActivityMenu.class);

@@ -30,7 +30,6 @@ array electricite
 array names
 array nombre
 array nourrisage
-array operateur
 array preloaded_fonts
 array systemeaquatique
 array travaux
@@ -919,6 +918,8 @@ id button4
 id button6
 id button7
 id buttonPanel
+id button_creer
+id button_valider
 id cancel_action
 id cbAccouplement
 id cbControleSanitaire
@@ -960,6 +961,7 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id divider
 id edit_query
 id end
 id end_padder
@@ -1021,12 +1023,14 @@ id linearLayout2
 id listMode
 id list_item
 id lv_items
+id main_user
 id masked
 id media_actions
 id message
 id middle
 id mini
 id multiply
+id name_user
 id navigation_header_container
 id nbbac
 id nbfemelle
@@ -1034,6 +1038,7 @@ id nbfemellesfeconde
 id nbmale
 id nbmalesfeconde
 id never
+id new_name_user
 id no
 id none
 id normal
@@ -1097,7 +1102,6 @@ id speausysteme
 id speauville
 id spelectricite
 id spinner
-id spinner1
 id spinner10
 id spinner2
 id spinner3
@@ -1116,7 +1120,6 @@ id split_action_bar
 id spnnbrefemelles
 id spnourrissage
 id spnrnbremale
-id spoperateur
 id spread
 id spread_inside
 id spsystemeaquatique
@@ -1172,14 +1175,14 @@ id textView34
 id textView35
 id textView36
 id textView37
+id textView38
 id textView39
 id textView4
 id textView40
 id textView41
 id textView42
-id textView44
-id textView45
 id textView46
+id textView47
 id textView48
 id textView49
 id textView5
@@ -1189,7 +1192,6 @@ id textView52
 id textView53
 id textView54
 id textView55
-id textView56
 id textView57
 id textView58
 id textView59
@@ -1324,6 +1326,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_connexion
 layout activity_deplacer_reunir
 layout activity_dupliquer
 layout activity_ecrir_recap_accouplement

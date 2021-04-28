@@ -34,7 +34,7 @@
     </string-array>
 
 
-    <string-array name="operateur">
+    <!--<string-array name="operateur">
         <item></item>
         <item>TEST</item>
         <item>Animalerie </item>
@@ -50,8 +50,7 @@
         <item>Sandrine Cadel</item>
         <item>Sylvie Schneider-Maunoury</item>
         <item>Autre</item>
-
-    </string-array>
+        </string-array>-->
 
     <string-array name="eaudeville">
         <item></item>

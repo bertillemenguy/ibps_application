@@ -62,7 +62,7 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
     int[] icon ={R.drawable.fish_bones, R.drawable.zebrafish};
 
 
-    //  String operateur = "";
+    String main_user = "";
 
 
     @Override
@@ -77,11 +77,9 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
 
         // Get the transferred data from source activity.
         Intent intent = getIntent();
-        //  operateur = intent.getStringExtra("operateur");
+        main_user = intent.getStringExtra("main_user");
         
         getItems();
-
-
 
 
     }
@@ -212,7 +210,7 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         intent.putExtra("Bac", Bac);
         intent.putExtra("Lot", Lot);
         intent.putExtra("Lignee", Lignee);
-        // intent.putExtra("operateur", operateur);
+        intent.putExtra("operateur", main_user);
         intent.putExtra("Age", Age);
         intent.putExtra("Responsable", Responsable);
         intent.putExtra("Key", Key);
@@ -259,7 +257,7 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         canvas.drawText("Coucou", 40, 50, myPaint);
         myPdfDocument.finishPage(myPage);
 
-        File file = new File(Environment.getExternalStorageDirectory(), "/Registre_morts.pdf");
+        File file = new File(Environment.getExternalStorageDirectory(), "/Registre_morts"+date+".pdf");
 
         try {
             myPdfDocument.writeTo(new FileOutputStream(file));

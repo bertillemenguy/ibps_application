@@ -39,9 +39,11 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.HashMap;
 
 public class ActivityRechercheRegistreMortsTrier extends AppCompatActivity implements AdapterView.OnItemClickListener, AdapterView.OnItemSelectedListener {
@@ -250,6 +252,15 @@ public class ActivityRechercheRegistreMortsTrier extends AppCompatActivity imple
 
     public void lancerPDF(View view){
 
+        Toast.makeText(getApplicationContext(), "Chargement ... ", Toast.LENGTH_SHORT).show();
+
+        SimpleDateFormat formater = null;
+
+        Date aujourdhui = new Date();
+
+        formater = new SimpleDateFormat("dd-MM-yy_hh-mm-ss");
+        String date = formater.format(aujourdhui);
+
         ActivityCompat.requestPermissions(this, new String[]{
                 Manifest.permission.WRITE_EXTERNAL_STORAGE}, PackageManager.PERMISSION_GRANTED);
 
@@ -263,7 +274,7 @@ public class ActivityRechercheRegistreMortsTrier extends AppCompatActivity imple
         canvas.drawText("Coucou", 40, 50, myPaint);
         myPdfDocument.finishPage(myPage);
 
-        File file = new File(Environment.getExternalStorageDirectory(), "/Registre_morts.pdf");
+        File file = new File(Environment.getExternalStorageDirectory(), "/Registre_morts"+date+".pdf");
 
         try {
             myPdfDocument.writeTo(new FileOutputStream(file));
@@ -272,6 +283,7 @@ public class ActivityRechercheRegistreMortsTrier extends AppCompatActivity imple
         }
 
         myPdfDocument.close();
+        Toast.makeText(getApplicationContext(), "Pdf enregistré dans Téléchargements", Toast.LENGTH_SHORT).show();
     }
 
 

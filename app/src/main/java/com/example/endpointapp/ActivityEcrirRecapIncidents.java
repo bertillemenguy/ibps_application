@@ -38,7 +38,8 @@ public class ActivityEcrirRecapIncidents extends AppCompatActivity {
      String operateur = "";
      */
     //  String Bac = "";
-    // String operateur = "";
+
+    String main_user = "";
     Spinner OperateurSpinner;
     //  ProgressDialog loading;
     
@@ -66,10 +67,10 @@ public class ActivityEcrirRecapIncidents extends AppCompatActivity {
         
         
         // operateur
-        OperateurSpinner = findViewById(R.id.spoperateur);
-        ArrayAdapter<CharSequence> adapter27 = ArrayAdapter.createFromResource(this, R.array.operateur, android.R.layout.simple_spinner_item);
-        adapter27.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        OperateurSpinner.setAdapter(adapter27);
+        //OperateurSpinner = findViewById(R.id.spoperateur);
+        //ArrayAdapter<CharSequence> adapter27 = ArrayAdapter.createFromResource(this, R.array.operateur, android.R.layout.simple_spinner_item);
+        //adapter27.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //OperateurSpinner.setAdapter(adapter27);
         
         
         // eau de ville
@@ -114,8 +115,8 @@ public class ActivityEcrirRecapIncidents extends AppCompatActivity {
         travauxSpinner.setAdapter(adapter24);
 
 
-//    Intent intent = getIntent();
-        //   operateur = intent.getStringExtra("operateur");
+              Intent intent = getIntent();
+              main_user= intent.getStringExtra("main_user");
     }
     
     public void fermeractivite(View view) {
@@ -123,7 +124,7 @@ public class ActivityEcrirRecapIncidents extends AppCompatActivity {
     }
     
     public void lancersauvegarde(View view) {
-        final String operateur = OperateurSpinner.getSelectedItem().toString();
+        final String operateur = main_user;
         final String eaudeville = eauvilleSpinner.getSelectedItem().toString();
         final String electricite = electriciteSpinner.getSelectedItem().toString();
         final String aircomprime = aircomprimeSpinner.getSelectedItem().toString();

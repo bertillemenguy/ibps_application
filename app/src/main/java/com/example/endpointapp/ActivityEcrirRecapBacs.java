@@ -32,11 +32,13 @@ public class ActivityEcrirRecapBacs extends AppCompatActivity {
     String Lot2 = "";
     
     String operateur = "";
-    
-    Spinner OperateurSpinner;
+
+
+    //Spinner OperateurSpinner;
     
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
     
         setContentView(R.layout.activity_ecrir_recap_bacs);
@@ -44,15 +46,15 @@ public class ActivityEcrirRecapBacs extends AppCompatActivity {
     
         // operateur
         // operateur = intent.getStringExtra("operateur");
-        OperateurSpinner = findViewById(R.id.spinner1);
-        ArrayAdapter<CharSequence> adapter17 = ArrayAdapter.createFromResource(this, R.array.operateur, android.R.layout.simple_spinner_item);
-        adapter17.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        OperateurSpinner.setAdapter(adapter17);
+        //OperateurSpinner = findViewById(R.id.spinner1);
+        //ArrayAdapter<CharSequence> adapter17 = ArrayAdapter.createFromResource(this, R.array.operateur, android.R.layout.simple_spinner_item);
+        //adapter17.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //OperateurSpinner.setAdapter(adapter17);
         // operateur = intent.getStringExtra("operateur");
         
         Intent intent = getIntent();
-    
-    
+
+
         Bac=intent.getStringExtra("Bac");
         Lot=intent.getStringExtra("Lot");
         Lignee=intent.getStringExtra("Lignee");
@@ -73,7 +75,7 @@ public class ActivityEcrirRecapBacs extends AppCompatActivity {
         textViewResponsable.setText(Responsable);
     
         // Get the transferred data from source activity.
-        //  operateur = intent.getStringExtra("operateur");
+        operateur = intent.getStringExtra("operateur");
     
     
     }

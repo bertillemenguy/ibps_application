@@ -18,6 +18,7 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
     
     String Bac = "";
     String operateur = "";
+    String main_user="";
     String Lignee="";
     String Lot="";
     String Age="";
@@ -32,18 +33,19 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
     TextView textViewLot, textViewBac, textViewLignee, textViewAge, textViewResponsable;
     
     
-    Spinner OperateurSpinner;
+    //Spinner OperateurSpinner;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ecrir_recap_mort);
-        
+
+
         // operateur
-        OperateurSpinner=findViewById(R.id.spinner1);
-        ArrayAdapter<CharSequence> adapter17 = ArrayAdapter.createFromResource(this, R.array.operateur, android.R.layout.simple_spinner_item);
-        adapter17.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        OperateurSpinner.setAdapter(adapter17);
+        //OperateurSpinner=findViewById(R.id.spinner1);
+        //ArrayAdapter<CharSequence> adapter17 = ArrayAdapter.createFromResource(this, R.array.operateur, android.R.layout.simple_spinner_item);
+        //adapter17.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //OperateurSpinner.setAdapter(adapter17);
         
         
         PoissonMortSpinner = findViewById(R.id.spinner2);
@@ -54,6 +56,10 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
         
         // Get the transferred data from source activity.
         Intent intent = getIntent();
+
+        operateur = intent.getStringExtra("operateur");
+
+
         Bac = intent.getStringExtra("Bac");
         operateur = intent.getStringExtra("operateur");
         Lot=intent.getStringExtra("Lot");
@@ -94,7 +100,6 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
      */
     public void lancersauvegarde(View view) {
         
-        final String operateur=OperateurSpinner.getSelectedItem().toString();
         final String PoissonMort=PoissonMortSpinner.getSelectedItem().toString();
         WriteOnSheetDeclarerMort.writeData(this, operateur, Bac, Lignee, Lot, Age, Responsable, PoissonMort, Accouplement, ControleSanitaire, Key);
         Intent intent=new Intent(this, ActivityRechercheRegistreMorts.class);
