@@ -23,6 +23,8 @@
         <activity android:name=".ActivityWebHistoriqueAnimalerieAlevins" />
         <activity android:name=".ActivityWebHistoriqueAnimalerieRemplissage" />
         <activity android:name=".ActivityHistoriqueAnimalerieAlevins" />
+        <activity android:name=".MyAdapter" />
+
 
 
         <activity android:name=".ActivityWebHistoriqueReservationZebrafish" />

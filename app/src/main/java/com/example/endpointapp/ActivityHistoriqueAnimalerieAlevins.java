@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.graphics.Color;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 import com.android.volley.DefaultRetryPolicy;
@@ -45,6 +46,8 @@ public class ActivityHistoriqueAnimalerieAlevins extends AppCompatActivity {
     String main_user = "";
     Date date = null;
 
+
+    //int[] couleur_item= {R.color.jaune, R.color.vert, R.color.violet};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -97,6 +100,9 @@ public class ActivityHistoriqueAnimalerieAlevins extends AppCompatActivity {
     private void parseItems(String jsonResponce) {
 
         ArrayList<HashMap<String, String>> list = new ArrayList<>();
+        ArrayList jaune = new ArrayList();
+        ArrayList violet = new ArrayList();
+        ArrayList vert = new ArrayList();
 
         try {
             JSONObject jobj = new JSONObject(jsonResponce);
@@ -129,10 +135,6 @@ public class ActivityHistoriqueAnimalerieAlevins extends AppCompatActivity {
                 item.put("Lot", Lot);
                 item.put("Lignee", Lignee);
 
-                //Couleur.equalsIgnoreCase("Passage au Vert")
-                //Couleur.equalsIgnoreCase("Passage au Jaune")
-                //Couleur.equalsIgnoreCase("Passage au Violet")
-
 
                 list.add(item);
             }
@@ -140,12 +142,36 @@ public class ActivityHistoriqueAnimalerieAlevins extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        //SimpleAdapter
 
-        adapter=new SimpleAdapter(this, list, R.layout.list_item_historique_alevins, new String[]{"Date","Lignee","Lot"}, new int[]{
+
+        adapter=new MyAdapter(this, list, R.layout.list_item_historique_alevins, new String[]{"Date","Lignee", "Lot", "Couleur"}, new int[]{
                 R.id.tv_date, R.id.tv_lignee, R.id.tv_lot});
 
         listView.setAdapter(adapter);
         loading.dismiss();
+
+
+
+        //listView.getChildAt(3).setBackgroundColor(Color.YELLOW);
+
+
+        //for (int i = 0; i < listView.getChildCount(); i++) {
+            //for (int j = 0; i < jaune.size(); i++){
+              //  if(j==i){
+                //}
+            //}
+            //for (int k = 0; i < vert.size(); i++){
+              //  if(k==i){
+                    //listView.getChildAt(i).setBackgroundColor(Color.GREEN);
+                //}
+            //}
+            //for (int l = 0; i < violet.size(); i++){
+              //  if(l==i){
+                   // listView.getChildAt(i).setBackgroundColor(Color.MAGENTA);
+                //}
+            //}
+        //}
 
 
         editTextSearchItem.addTextChangedListener(new TextWatcher() {

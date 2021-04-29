@@ -42,11 +42,8 @@ com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle.java
  com.example.endpointapp.ActivityRechercheRegistreAccouplementsFemelle$1
  com.example.endpointapp.ActivityRechercheRegistreAccouplementsFemelle$2
  com.example.endpointapp.ActivityRechercheRegistreAccouplementsFemelle$3
-com/example/endpointapp/WriteOnSheetSouffrance.java
- com.example.endpointapp.WriteOnSheetSouffrance
- com.example.endpointapp.WriteOnSheetSouffrance$1
- com.example.endpointapp.WriteOnSheetSouffrance$2
- com.example.endpointapp.WriteOnSheetSouffrance$3
+com/example/endpointapp/ActivityIsolement.java
+ com.example.endpointapp.ActivityIsolement
 com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale.java
  com.example.endpointapp.ActivityRechercheRegistreAccouplementsMale
  com.example.endpointapp.ActivityRechercheRegistreAccouplementsMale$1
@@ -86,8 +83,8 @@ com/example/endpointapp/WriteOnSheetSignaler.java
  com.example.endpointapp.WriteOnSheetSignaler$3
 com/example/endpointapp/ActivityEcrirRecapIncidents.java
  com.example.endpointapp.ActivityEcrirRecapIncidents
-com/example/endpointapp/ActivityIsolement.java
- com.example.endpointapp.ActivityIsolement
+com/example/endpointapp/ActivityMenu.java
+ com.example.endpointapp.ActivityMenu
 com/example/endpointapp/CustomPopup.java
  com.example.endpointapp.CustomPopup
  com.example.endpointapp.CustomPopup$1
@@ -156,6 +153,11 @@ com/example/endpointapp/WriteOnSheetTRAITE.java
  com.example.endpointapp.WriteOnSheetTRAITE$1
  com.example.endpointapp.WriteOnSheetTRAITE$2
  com.example.endpointapp.WriteOnSheetTRAITE$3
+com/example/endpointapp/WriteOnSheetSouffrance.java
+ com.example.endpointapp.WriteOnSheetSouffrance
+ com.example.endpointapp.WriteOnSheetSouffrance$1
+ com.example.endpointapp.WriteOnSheetSouffrance$2
+ com.example.endpointapp.WriteOnSheetSouffrance$3
 com/example/endpointapp/WriteOnSheetOeuf.java
  com.example.endpointapp.WriteOnSheetOeuf
  com.example.endpointapp.WriteOnSheetOeuf$1
@@ -194,10 +196,10 @@ com/example/endpointapp/ActivityRechercheRegistre.java
  com.example.endpointapp.ActivityRechercheRegistre$1
  com.example.endpointapp.ActivityRechercheRegistre$2
  com.example.endpointapp.ActivityRechercheRegistre$3
+com/example/endpointapp/MyAdapter.java
+ com.example.endpointapp.MyAdapter
 com/example/endpointapp/ActivityHistoriqueAnimalerieAlevins.java
  com.example.endpointapp.ActivityHistoriqueAnimalerieAlevins
  com.example.endpointapp.ActivityHistoriqueAnimalerieAlevins$1
  com.example.endpointapp.ActivityHistoriqueAnimalerieAlevins$2
  com.example.endpointapp.ActivityHistoriqueAnimalerieAlevins$3
-com/example/endpointapp/ActivityMenu.java
- com.example.endpointapp.ActivityMenu

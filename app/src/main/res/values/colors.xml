@@ -5,6 +5,11 @@
     <color name="colorAccent">#FFFFFF</color>
     <color name="colorRed">#FF0900</color>
 
+    <color name="jaune">#FFFACD</color>
+    <color name="violet">#D2CAEC</color>
+    <color name="vert">#9ACD32</color>
+
+
     <style name = "AlertDialogTheme" parent = "Theme.AppCompat.Light.Dialog.Alert">
         <item name = "colorAccent"> #008577 </item>
     </style>

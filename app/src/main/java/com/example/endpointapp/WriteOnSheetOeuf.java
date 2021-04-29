@@ -18,10 +18,10 @@ import java.util.Map;
 
 public class WriteOnSheetOeuf {
     
-    public static void writeData(final Context context, final String operateur, final String Qualite, final String Quantite, final String NbBac, final String NbMale, final String NbFemelle, final String Bac, final String Bac2, final String LigneeM, final String LigneeF, final String Age, final String Age2, final String Lot, final String Lot2, final String Date, final String NbMalesFeconde, final String NbfemellesFeconde, final String Key, final String Key2) {
+    public static void writeData(final Context context, final String main_user, final String Qualite, final String Quantite, final String NbBac, final String NbMale, final String NbFemelle, final String Bac, final String Bac2, final String LigneeM, final String LigneeF, final String Age, final String Age2, final String Lot, final String Lot2, final String Date, final String NbMalesFeconde, final String NbfemellesFeconde, final String Key, final String Key2) {
         final ProgressDialog loading=ProgressDialog.show(context, "Chargement...", "Veuillez patienter");
     
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbx4utLNypxiKNBO2koIrc0rI8F3LRNmvSvkn_XLRsVz-yr9KBk/exec?action=addItem",
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbwkukpVW48uFOfD8oCcZaz6eCq3NK03klA2AK-nlWfMlkH19OzXWNUGY_WL7XRQXltN/exec?action=addItem",
             
             
                 new Response.Listener<String>() {
@@ -66,7 +66,7 @@ public class WriteOnSheetOeuf {
 //ajout
     
     
-                parmas.put("operateur", operateur);
+                parmas.put("main_user", main_user);
                 parmas.put("Date", Date);
     
                 parmas.put("NbMalesFeconde", NbMalesFeconde);

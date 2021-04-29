@@ -228,7 +228,7 @@ public class ActivityEcrirRecapOeuf extends AppCompatActivity implements SmileRa
     
         WriteOnSheetOeuf.writeData(this, main_user, Qualite, Quantite, NbBac, NbMale, NbFemelle, Bac, Bac2, LigneeM, LigneeF, Age, Age2, Lot, Lot2, Date, NbMalesFeconde, NbfemellesFeconde, Key, Key2);
         Intent intent = new Intent(this, ActivityMenu.class);
-        intent.putExtra("operateur", operateur);
+        //intent.putExtra("operateur", operateur);
         intent.putExtra("Quantite", Quantite);
         intent.putExtra("main_user", main_user);
         startActivity(intent);
