@@ -132,7 +132,7 @@ public class ActivityMenu extends AppCompatActivity {
     //historique animalerie Alevins
     public void lancerhistoriqueanimaleriealevins(View view) {
         //String operateur = OperateurSpinner.getSelectedItem().toString();
-        Intent intent = new Intent(this, ActivityWebHistoriqueAnimalerieAlevins.class);
+        Intent intent = new Intent(this, ActivityHistoriqueAnimalerieAlevins.class);
         intent.putExtra("main_user", main_user);
         startActivity(intent);
     }

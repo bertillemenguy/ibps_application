@@ -28,6 +28,10 @@
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/activity_recherche_registre_morts_item.xml"
     },
     {
+        "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/mipmap-hdpi_logo_deconnexion.png.flat",
+        "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/mipmap-hdpi/logo_deconnexion.png"
+    },
+    {
         "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_activity_menu.xml.flat",
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/activity_menu.xml"
     },
@@ -148,6 +152,10 @@
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/drawable-hdpi_logo_deconnexion.png.flat",
+        "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/drawable-hdpi/logo_deconnexion.png"
+    },
+    {
         "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/color_checkbox_filter_tint.xml.flat",
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/color/checkbox_filter_tint.xml"
     },
@@ -190,6 +198,10 @@
     {
         "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_list_item_historique_alevins.xml.flat",
+        "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/list_item_historique_alevins.xml"
     },
     {
         "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_activity_ecrir_recap_souffrance.xml.flat",

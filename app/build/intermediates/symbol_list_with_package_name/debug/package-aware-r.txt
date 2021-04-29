@@ -831,6 +831,7 @@ drawable icons8_dead_emoji_96
 drawable icons8_poubelle
 drawable img_splash
 drawable imgphysique
+drawable logo_deconnexion
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -951,6 +952,7 @@ id coordinator
 id custom
 id customPanel
 id datee
+id deconnexion
 id decor_content_parent
 id default_activity_button
 id design_bottom_sheet
@@ -1365,6 +1367,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout list_item_historique_accouplement
+layout list_item_historique_alevins
 layout list_item_historique_bacs
 layout list_item_historique_incidents
 layout list_item_historique_morts
@@ -1397,6 +1400,7 @@ mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 mipmap logo_app
 mipmap logo_app_round
+mipmap logo_deconnexion
 string Malnutrition
 string NageAnormale
 string Prostration
