@@ -530,6 +530,7 @@ color dim_foreground_material_light
 color error_color_material
 color foreground_material_dark
 color foreground_material_light
+color gris
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color jaune
