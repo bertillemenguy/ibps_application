@@ -951,6 +951,7 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id color_item
+id compteur
 id container
 id contentPanel
 id coordinator
@@ -1246,6 +1247,7 @@ id tv_DupliRemarque4
 id tv_ReuniLignee2
 id tv_ReuniLot2
 id tv_RuniBac2
+id tv_SITraite
 id tv_SiAccouplement
 id tv_SiAucune_action_a_mener
 id tv_SiEuthanasie

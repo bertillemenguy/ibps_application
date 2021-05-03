@@ -740,14 +740,23 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="1"
                                         android:gravity="center"
-                                        android:orientation="vertical">
+                                        android:orientation="horizontal">
 
                                         <ImageView
                                             android:id="@+id/imageView17"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
+                                            android:layout_width="31dp"
+                                            android:layout_height="match_parent"
                                             android:onClick="lancerHistoriqueBacs"
                                             app:srcCompat="@drawable/ic_search" />
+
+                                        <TextView
+                                            android:id="@+id/compteur"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:textColor="@color/colorRed"
+                                            android:textStyle="bold"
+                                            />
+
                                     </LinearLayout>
                                 </LinearLayout>
                             </LinearLayout>

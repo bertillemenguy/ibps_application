@@ -53,7 +53,9 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Ad
         //setContentView(R.layout.activity_recherche_morts);
         
         listView = findViewById(R.id.lv_items);
+
         listView.setOnItemClickListener(this);
+
         editTextSearchItem = findViewById(R.id.et_search);
         
         // Get the transferred data from source activity.

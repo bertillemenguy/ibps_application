@@ -1,14 +1,36 @@
 package com.example.endpointapp;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.SimpleAdapter;
 import android.widget.TextClock;
 import android.widget.TextView;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.w3c.dom.Text;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Locale;
 
 
 public class ActivityMenu extends AppCompatActivity {
@@ -16,7 +38,10 @@ public class ActivityMenu extends AppCompatActivity {
     /*---------------------ACCUEIL-------------------------*/
     /*-----------------------------------------------------*/
 
-    TextView main_user_view;
+    ProgressDialog loading;
+    String compteur;
+    int int_compteur=0;
+    TextView main_user_view, compteur_view;
     String main_user = "";
 
     /**
@@ -34,6 +59,12 @@ public class ActivityMenu extends AppCompatActivity {
         this.main_user = intent.getStringExtra("main_user");
         this.main_user_view = findViewById(R.id.main_user);
 
+
+        this.compteur_view=findViewById(R.id.compteur);
+
+        //this.compteur="3";
+
+        //compteur_view.setText(compteur);
         main_user_view.setText(main_user);
 
         TextClock textClock;
@@ -41,8 +72,73 @@ public class ActivityMenu extends AppCompatActivity {
         //  textClock.setFormat12Hour(null);
         //textClock.setFormat24Hour("dd/MM/yyyy hh:mm:ss a");
         textClock.setFormat24Hour("hh:mm  EEE d MMM ");
+
+        getItems();
+
     }
-    
+
+    private void getItems() {
+
+
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbws-fhc9nsXmYFgqVL2K5UStbLoV43q9M1O_OCZ/exec?action=getItems", new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                parseItems(response);
+            }
+        },
+
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                    }
+                }
+        );
+
+       // loading = ProgressDialog.show(this, "Chargement...", " Veuillez patienter", false, true);
+
+        int socketTimeOut = 50000;
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeOut, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+
+        stringRequest.setRetryPolicy(policy);
+
+        RequestQueue queue = Volley.newRequestQueue(this);
+        queue.add(stringRequest);
+
+    }
+
+
+    private void parseItems(String jsonResponce) {
+
+        try {
+            JSONObject jobj = new JSONObject(jsonResponce);
+            JSONArray jarray = jobj.getJSONArray("items");
+
+            for (int i = 0; i < jarray.length(); i++) {
+
+                JSONObject jo = jarray.getJSONObject(i);
+
+                String SItraite=jo.getString("SItraite");
+
+                if (SItraite.equalsIgnoreCase("En cours")){
+                    int_compteur++;
+                }
+
+            }
+
+            if (int_compteur>=1){
+                this.compteur= String.valueOf(int_compteur);
+                compteur_view.setText(compteur);
+            }
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
     /**
      * @param view
      */
@@ -194,5 +290,8 @@ public class ActivityMenu extends AppCompatActivity {
         Intent intent = new Intent(this, ActivityConnexion.class);
         startActivity(intent);
     }
+
+    public void setCompteur(String compteur){this.compteur=compteur;}
+
 
 }

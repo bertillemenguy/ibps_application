@@ -8,9 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -32,7 +34,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 
-public class ActivityRechercheGestionBacs extends AppCompatActivity {
+public class ActivityRechercheGestionBacs extends AppCompatActivity  implements AdapterView.OnItemClickListener{
     
     
     ListView listView;
@@ -42,15 +44,16 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity {
     
     String main_user="";
     Date date=null;
-    String Elimine = "";
-    
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recherche_registre_item);
     
         listView=findViewById(R.id.lv_items);
-    
+        listView.setOnItemClickListener(this);
+
         editTextSearchItem=findViewById(R.id.et_search);
     
         // Get the transferred data from source activity.
@@ -65,7 +68,7 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity {
     private void getItems() {
     
     
-        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbws-fhc9nsXmYFgqVL2K5UStbLoV43q9M1O_OCZ/exec?action=getItems", new Response.Listener<String>() {
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbxr8Y48s1vLCcnRigyBOwpzZqYa5t8-E8omRRKXZtwuf6s42zgJFwXSyVcBFcWEAh0v/exec?action=getItems", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 parseItems(response);
@@ -100,19 +103,27 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity {
             JSONObject jobj = new JSONObject(jsonResponce);
             JSONArray jarray = jobj.getJSONArray("items");
             
-            
+
             for (int i = 0; i < jarray.length(); i++) {
                 
                 JSONObject jo = jarray.getJSONObject(i);
     
                 SimpleDateFormat inputFormat=new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
                 SimpleDateFormat outputFormat=new SimpleDateFormat("EEEE d MMM yyyy", Locale.FRANCE);
+                SimpleDateFormat dateFormat=new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+
                 try {
                     date = inputFormat.parse(jo.getString("Date"));
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-                String Date=outputFormat.format(date);
+
+                String Date=dateFormat.format(date);
+
+                String modif_Date=outputFormat.format(date);
+
+                String Id=jo.getString("ID");
+
                 String Actions=jo.getString("Actions");
                 String NouveauBac=jo.getString("NouveauBac");
                 String Lignee=jo.getString("Lignee");
@@ -132,7 +143,10 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity {
     
                 String Lot=jo.getString("Lot");
                 String Lot2=jo.getString("Lot2");
-    
+
+                String SItraite=jo.getString("SItraite");
+
+
                 HashMap<String, String> item=new HashMap<>();
     
                 item.put("Date", Date);
@@ -155,17 +169,21 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity {
     
                 item.put("Lot", Lot);
                 item.put("Lot2", Lot2);
-    
+
+                item.put("SItraite", SItraite);
+
+                item.put("modif_Date", modif_Date);
+                item.put("ID", Id);
+
                 list.add(item);
-    
-    
+
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
     
     
-        adapter=new SimpleAdapter(this, list, R.layout.list_item_historique_bacs, new String[]{"Date", "Actions", "NouveauBac", "Lignee", "Bac", "Lignee2", "Bac2", "remarque", "remarque2", "Bac2b", "remarque3", "Bac3", "remarque4", "Bac4", "Lot", "Lot2"}, new int[]{R.id.tv_date, R.id.tv_actions, R.id.tv_nouveaubacEtDupliBac1, R.id.tv_lignee, R.id.tv_bac, R.id.tv_ReuniLignee2, R.id.tv_RuniBac2, R.id.tv_DupliRemarque1, R.id.tv_DupliRemarque2, R.id.tv_DupliBac2, R.id.tv_DupliRemarque3, R.id.tv_DupliBac3, R.id.tv_DupliRemarque4, R.id.tv_DupliBac4, R.id.tv_lot, R.id.tv_ReuniLot2});
+        adapter=new SimpleAdapter(this, list, R.layout.list_item_historique_bacs, new String[]{"modif_Date", "Actions", "NouveauBac", "Lignee", "Bac", "Lignee2", "Bac2", "remarque", "remarque2", "Bac2b", "remarque3", "Bac3", "remarque4", "Bac4", "Lot", "Lot2", "SItraite"}, new int[]{R.id.tv_date, R.id.tv_actions, R.id.tv_nouveaubacEtDupliBac1, R.id.tv_lignee, R.id.tv_bac, R.id.tv_ReuniLignee2, R.id.tv_RuniBac2, R.id.tv_DupliRemarque1, R.id.tv_DupliRemarque2, R.id.tv_DupliBac2, R.id.tv_DupliRemarque3, R.id.tv_DupliBac3, R.id.tv_DupliRemarque4, R.id.tv_DupliBac4, R.id.tv_lot, R.id.tv_ReuniLot2, R.id.tv_SITraite});
         
         
         listView.setAdapter(adapter);
@@ -213,6 +231,21 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity {
     public void fermeractivite(View view) {
         this.finish();
     }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Intent intent = new Intent(this, CustomPopupBacs.class);
+        HashMap map = (HashMap) parent.getItemAtPosition(position);
+        String Id = map.get("ID").toString();
+        intent.putExtra("ID", Id);
+        intent.putExtra("main_user", main_user);
+        //Toast.makeText(ActivityRechercheGestionBacs.this, Date, Toast.LENGTH_SHORT).show();
+        startActivity(intent);
+    }
     
 }
 
+
+
+
+//https://script.google.com/macros/s/AKfycbxwQDJZtx2VIcjVdtnTgdWQDWiR9wBrPUSpEknEOurhhIeLP59kf-eWAvKwUUPPhOEX/exec
