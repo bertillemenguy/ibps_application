@@ -47,7 +47,7 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recherche_gestion_bacs_traite);
+        setContentView(R.layout.activity_recherche_registre_item);
     
         listView=findViewById(R.id.lv_items);
     
@@ -195,12 +195,12 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity {
     public void lancermenu(View view) {
         
         Intent intent = new Intent(this, ActivityMenu.class);
-        // intent.putExtra("operateur", operateur);
+        intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
     
     
-    public void lancertraiter(View view) {
+    /*public void lancertraiter(View view) {
         //Intent intent = new Intent(this,ActivityMenu.class);
         //intent.putExtra("operateur", operateur);
         main_user="operateur";
@@ -208,7 +208,7 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity {
         
         WriteOnSheetTRAITE.writeData(this, main_user, Elimine);
         // startActivity(intent);
-    }
+    }*/
     
     public void fermeractivite(View view) {
         this.finish();

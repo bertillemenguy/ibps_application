@@ -46,6 +46,7 @@ public class MyAdapter extends SimpleAdapter {
     List<HashMap<String, String>> data;
     int resource;
     Date date=null;
+    Date today= null;
 
     public MyAdapter(Context context, List<? extends Map<String, ?>> data, int resource, String[] from, int[] to) {
         super(context, data, resource, from, to);
@@ -76,8 +77,6 @@ public class MyAdapter extends SimpleAdapter {
         SimpleDateFormat inputFormat=new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
         SimpleDateFormat outputFormat=new SimpleDateFormat("EEEE d MMM yyyy", Locale.FRANCE);
 
-        String today = dateFormat.format(new Date());
-
 
         System.out.println(this.data.get(position));
 
@@ -104,25 +103,41 @@ public class MyAdapter extends SimpleAdapter {
                 try {
                     date = outputFormat.parse(value);
                 } catch (ParseException e) {
-                   e.printStackTrace();
+                    e.printStackTrace();
+                }
+
+                Date dt = null;
+                Date dd = null;
+
+                today= new Date();
+
+                String t=dateFormat.format(today);
+                String d=dateFormat.format(date);
+
+                try {
+                    dt = dateFormat.parse(t);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    dd = dateFormat.parse(d);
+                } catch (ParseException e) {
+                    e.printStackTrace();
                 }
 
 
-                if (dateFormat.format(date).compareTo(today)==0||(today.compareTo(dateFormat.format(date)))==-1){
+                if ((dt.compareTo(dd)==0)||(dt.compareTo(dd)==-1)){
                     this.title.setTextColor(v.getResources().getColor(R.color.cardview_dark_background));
                     this.lignee.setTextColor(v.getResources().getColor(R.color.cardview_dark_background));
                     this.lot.setTextColor(v.getResources().getColor(R.color.cardview_dark_background));
-                } else {
+               } else {
                     this.title.setTextColor(v.getResources().getColor(R.color.gris));
                     this.lignee.setTextColor(v.getResources().getColor(R.color.gris));
                     this.lot.setTextColor(v.getResources().getColor(R.color.gris));
-
                 }
             }
 
     }
-
-
 
         return v;
     }
