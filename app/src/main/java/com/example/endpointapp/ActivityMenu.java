@@ -121,6 +121,7 @@ public class ActivityMenu extends AppCompatActivity {
                 String SItraite=jo.getString("SItraite");
 
                 if (SItraite.equalsIgnoreCase("En cours")){
+                    // affectation compteur
                     int_compteur++;
                 }
 

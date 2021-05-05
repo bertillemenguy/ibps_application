@@ -92,8 +92,12 @@ public class MyAdapter extends SimpleAdapter {
                     v.setBackgroundColor(Color.YELLOW);
                 } else if (value.equalsIgnoreCase("Passage au Violet")) {
                     v.setBackgroundColor(Color.MAGENTA);
-                } else {
+                } else if (value.equalsIgnoreCase("Passage au Vert")){
                     v.setBackgroundColor(Color.GREEN);
+                } else if (value.equalsIgnoreCase("Passage à la circulation")){
+                    v.setBackgroundColor(Color.RED);
+                } else if (value.equalsIgnoreCase("Passage au Rotifers")){
+                    v.setBackgroundColor(Color.LTGRAY);
                 }
             }
 
