@@ -951,7 +951,8 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id color_item
-id compteur
+id compteur_bacs
+id compteur_incidents
 id container
 id contentPanel
 id coordinator

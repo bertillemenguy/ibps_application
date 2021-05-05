@@ -39,9 +39,12 @@ public class ActivityMenu extends AppCompatActivity {
     /*-----------------------------------------------------*/
 
     ProgressDialog loading;
-    String compteur;
-    int int_compteur=0;
-    TextView main_user_view, compteur_view;
+    String compteur_bacs;
+    String compteur_incidents;
+
+    int int_compteur_bacs=0;
+    int int_compteur_incidents=0;
+    TextView main_user_view, compteur_view_bacs, compteur_view_incidents;
     String main_user = "";
 
     /**
@@ -60,11 +63,13 @@ public class ActivityMenu extends AppCompatActivity {
         this.main_user_view = findViewById(R.id.main_user);
 
 
-        this.compteur_view=findViewById(R.id.compteur);
+        this.compteur_view_bacs=findViewById(R.id.compteur_bacs);
+        this.compteur_view_incidents=findViewById(R.id.compteur_incidents);
 
-        //this.compteur="3";
 
-        //compteur_view.setText(compteur);
+        //this.compteur_incidents="3";
+        //compteur_view_incidents.setText(compteur_incidents);
+
         main_user_view.setText(main_user);
 
         TextClock textClock;
@@ -73,71 +78,95 @@ public class ActivityMenu extends AppCompatActivity {
         //textClock.setFormat24Hour("dd/MM/yyyy hh:mm:ss a");
         textClock.setFormat24Hour("hh:mm  EEE d MMM ");
 
-        getItems();
+        getItems_bacs();
+        getItems_incidents();
 
     }
 
-    private void getItems() {
-
-
+    private void getItems_bacs() {
         StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbws-fhc9nsXmYFgqVL2K5UStbLoV43q9M1O_OCZ/exec?action=getItems", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                parseItems(response);
+                parseItems_bacs(response);
             }
         },
-
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
                     }
                 }
         );
-
        // loading = ProgressDialog.show(this, "Chargement...", " Veuillez patienter", false, true);
-
         int socketTimeOut = 50000;
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeOut, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-
         stringRequest.setRetryPolicy(policy);
-
         RequestQueue queue = Volley.newRequestQueue(this);
         queue.add(stringRequest);
-
     }
 
-
-    private void parseItems(String jsonResponce) {
-
+    private void parseItems_bacs(String jsonResponce) {
         try {
             JSONObject jobj = new JSONObject(jsonResponce);
             JSONArray jarray = jobj.getJSONArray("items");
-
             for (int i = 0; i < jarray.length(); i++) {
-
                 JSONObject jo = jarray.getJSONObject(i);
-
                 String SItraite=jo.getString("SItraite");
-
                 if (SItraite.equalsIgnoreCase("En cours")){
                     // affectation compteur
-                    int_compteur++;
+                    int_compteur_bacs++;
                 }
-
             }
-
-            if (int_compteur>=1){
-                this.compteur= String.valueOf(int_compteur);
-                compteur_view.setText(compteur);
+            if (int_compteur_bacs>=1){
+                this.compteur_bacs= String.valueOf(int_compteur_bacs);
+                compteur_view_bacs.setText(compteur_bacs);
             }
-
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
     }
 
+    private void getItems_incidents() {
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbxv_6vHp6__F0NdJ8BWtqWhhC9JgkpVcHpD0tfbT0ETgvQwunmAzXdtPfsVUqTKBYHinw/exec?action=getItems", new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                parseItems_incidents(response);
+            }
+        },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                    }
+                }
+        );
+        //loading = ProgressDialog.show(this, "Chargement...", " Veuillez patienter", false, true);
+        int socketTimeOut = 50000;
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeOut, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        stringRequest.setRetryPolicy(policy);
+        RequestQueue queue = Volley.newRequestQueue(this);
+        queue.add(stringRequest);
+    }
+
+
+    private void parseItems_incidents(String jsonResponce) {
+        try {
+            JSONObject jobj = new JSONObject(jsonResponce);
+            JSONArray jarray = jobj.getJSONArray("items");
+            for (int i = 0; i < jarray.length(); i++) {
+                JSONObject jo = jarray.getJSONObject(i);
+                String etat = jo.getString("etat");
+                if (etat.equalsIgnoreCase("En cours")){
+                    // affectation compteur
+                    int_compteur_incidents++;
+                }
+            }
+            if (int_compteur_incidents>=1){
+                this.compteur_incidents= String.valueOf(int_compteur_incidents);
+                compteur_view_incidents.setText(compteur_incidents);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
 
 
     /**
@@ -292,7 +321,7 @@ public class ActivityMenu extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void setCompteur(String compteur){this.compteur=compteur;}
+    public void setCompteur(String compteur){this.compteur_bacs=compteur_bacs;}
 
 
 }
