@@ -92,6 +92,7 @@ public class ActivityEcrirRecapBacs extends AppCompatActivity {
         intent.putExtra("Lot", Lot);
         intent.putExtra("Responsable", Responsable);
         intent.putExtra("Lignee", Lignee);
+        intent.putExtra("Age", Age);
         intent.putExtra("Key", Key);
         startActivity(intent);
     }

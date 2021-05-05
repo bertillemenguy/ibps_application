@@ -39,7 +39,7 @@ public class ActivityReunirBacs extends AppCompatActivity implements AdapterView
     String Bac = "";
     String Lot = "";
     String Lignee = "";
-    String Age = "";
+    String Age = " ";
     String main_user="";
     String Key="";
     
@@ -69,7 +69,7 @@ public class ActivityReunirBacs extends AppCompatActivity implements AdapterView
     private void getItems() {
     
     
-        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbxcAUG1cPIBZ7CBdzMWD1AHneDZ3l29JDB2qhwM-tTt4QO3ujw-Yew7zBNBsIb6SpT1/exec?action=getItems", new Response.Listener<String>() {
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbwW79QDekOymh4GqVxnHBzIIoYfPAOAQ-IrMaL2rZmFxiZbrJgKBb_SsxEvHtV4MxQJ/exec?action=getItems", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 parseItems(response);
@@ -116,7 +116,9 @@ public class ActivityReunirBacs extends AppCompatActivity implements AdapterView
                 String Responsable=jo.getString("Responsable");
                 // String PointLimite = jo.getString("PointLimite");
                 String Key=jo.getString("Key");
-    
+
+                System.out.println(Age);
+
                 HashMap<String, String> item=new HashMap<>();
     
                 item.put("Bac", Bac);

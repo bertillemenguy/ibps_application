@@ -24,9 +24,7 @@ public class WriteOnSheetBacsTraite {
                     @Override
                     public void onResponse(String response) {
 
-
                         Toast.makeText(context, response, Toast.LENGTH_LONG).show();
-
 
                     }
                 },
