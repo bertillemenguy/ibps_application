@@ -189,7 +189,7 @@ public class ActivityInscription extends AppCompatActivity {
                 String res = first+rest;
                 WriteOnSheetUser.writeData(this, chaine1, res, chaine3.toUpperCase(), chaine4, password);
                 Intent intent = new Intent(this, ActivityMenu.class);
-                intent.putExtra("main_user", res);
+                intent.putExtra("main_user", res + " "+chaine3.toUpperCase());
                 startActivity(intent);
                 loading = ProgressDialog.show(this, "Inscription...", " Veuillez patienter", false, true);
             }

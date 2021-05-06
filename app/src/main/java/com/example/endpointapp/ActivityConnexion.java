@@ -63,7 +63,6 @@ public class ActivityConnexion extends AppCompatActivity {
                 parseItems(response);
             }
         },
-
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
@@ -108,7 +107,7 @@ public class ActivityConnexion extends AppCompatActivity {
                 String mail=jo.getString("mail");
                 String pass=jo.getString("pass");
 
-                main_user=firstname;
+                main_user=firstname+" "+lastname;
                 pseudo_list.add(pseudo);
                 pass_list.add(decrypt(pass));
 
