@@ -109,6 +109,7 @@ public class ActivityConnexion extends AppCompatActivity {
 
 
                 pseudo_list.add(pseudo);
+                pass_list.add(pass);
 
                 HashMap<String, String> item=new HashMap<>();
 
