@@ -26,8 +26,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3afe4e3-bb95-40eb-9760-15c9f83c8141" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityConnexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityConnexion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +44,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_4_XL_API_30]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -346,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620320263659</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="commit connexion 2">
+      <created>1620320390478</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1620320390478</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -396,7 +412,8 @@
     <MESSAGE value="commit correction couleurs alvins" />
     <MESSAGE value="commit ajout notifiaction incidents" />
     <MESSAGE value="commit connexion" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit connexion" />
+    <MESSAGE value="commit connexion 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit connexion 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="106" y="78" width="800" height="723" key="#Intentions" timestamp="1619730326352">
@@ -432,10 +449,10 @@
       <screen x="0" y="25" width="1440" height="781" />
     </state>
     <state x="105" y="199" key="AndroidCreateResourceFileDialog/0.25.1440.781@0.25.1440.781" timestamp="1620238983705" />
-    <state x="214" y="25" width="984" height="781" key="CommitChangelistDialog2" timestamp="1620320262053">
+    <state x="214" y="25" width="984" height="781" key="CommitChangelistDialog2" timestamp="1620320390287">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
-    <state x="214" y="25" width="984" height="781" key="CommitChangelistDialog2/0.25.1440.781@0.25.1440.781" timestamp="1620320262053" />
+    <state x="214" y="25" width="984" height="781" key="CommitChangelistDialog2/0.25.1440.781@0.25.1440.781" timestamp="1620320390287" />
     <state x="456" y="25" key="CommitChangelistDialog2/0.25.1440.788@0.25.1440.788" timestamp="1620033572377" />
     <state width="781" height="113" key="GridCell.Tab.0.bottom" timestamp="1620317466489">
       <screen x="0" y="25" width="1440" height="781" />
@@ -490,10 +507,10 @@
     </state>
     <state width="500" height="476" key="SwitcherDM/0.25.1440.781@0.25.1440.781" timestamp="1618923440964" />
     <state width="500" height="445" key="SwitcherDM/0.25.1440.791@0.25.1440.791" timestamp="1618315021751" />
-    <state x="21" y="146" key="Vcs.Push.Dialog.v2" timestamp="1620320269528">
+    <state x="21" y="146" key="Vcs.Push.Dialog.v2" timestamp="1620320395578">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
-    <state x="21" y="146" key="Vcs.Push.Dialog.v2/0.25.1440.781@0.25.1440.781" timestamp="1620320269528" />
+    <state x="21" y="146" key="Vcs.Push.Dialog.v2/0.25.1440.781@0.25.1440.781" timestamp="1620320395578" />
     <state x="21" y="147" key="Vcs.Push.Dialog.v2/0.25.1440.791@0.25.1440.791" timestamp="1618316963539" />
     <state x="21" y="148" key="Vcs.Push.Dialog.v2/0.25.1440.794@0.25.1440.794" timestamp="1618318694671" />
     <state x="158" y="226" key="com.android.tools.idea.run.deployment.ModifyDeviceSetDialog" timestamp="1619532085408">
@@ -547,6 +564,11 @@
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityHistoriqueMorts.java</url>
           <line>89</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityInscription.java</url>
+          <line>147</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
