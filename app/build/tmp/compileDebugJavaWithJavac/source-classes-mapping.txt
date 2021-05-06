@@ -203,6 +203,15 @@ com/example/endpointapp/WriteOnSheetAccouplement.java
  com.example.endpointapp.WriteOnSheetAccouplement$1
  com.example.endpointapp.WriteOnSheetAccouplement$2
  com.example.endpointapp.WriteOnSheetAccouplement$3
+com/example/endpointapp/ActivityMenu.java
+ com.example.endpointapp.ActivityMenu
+ com.example.endpointapp.ActivityMenu$1
+ com.example.endpointapp.ActivityMenu$2
+ com.example.endpointapp.ActivityMenu$3
+ com.example.endpointapp.ActivityMenu$4
+com/example/endpointapp/ActivitySplash.java
+ com.example.endpointapp.ActivitySplash
+ com.example.endpointapp.ActivitySplash$1
 com/example/endpointapp/ActivityConnexion.java
  com.example.endpointapp.ActivityConnexion
  com.example.endpointapp.ActivityConnexion$1
@@ -211,12 +220,3 @@ com/example/endpointapp/ActivityInscription.java
  com.example.endpointapp.ActivityInscription
  com.example.endpointapp.ActivityInscription$1
  com.example.endpointapp.ActivityInscription$2
-com/example/endpointapp/ActivitySplash.java
- com.example.endpointapp.ActivitySplash
- com.example.endpointapp.ActivitySplash$1
-com/example/endpointapp/ActivityMenu.java
- com.example.endpointapp.ActivityMenu
- com.example.endpointapp.ActivityMenu$1
- com.example.endpointapp.ActivityMenu$2
- com.example.endpointapp.ActivityMenu$3
- com.example.endpointapp.ActivityMenu$4

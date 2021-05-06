@@ -183,9 +183,13 @@ public class ActivityInscription extends AppCompatActivity {
             }
             if (!trouve){
                 String password = encrypt(pass1);
-                WriteOnSheetUser.writeData(this, chaine1, chaine2, chaine3, chaine4, password);
+                String first = chaine2.substring(0, 1);
+                String rest = chaine2.substring(1, chaine2.length());
+                first=first.toUpperCase();
+                String res = first+rest;
+                WriteOnSheetUser.writeData(this, chaine1, res, chaine3.toUpperCase(), chaine4, password);
                 Intent intent = new Intent(this, ActivityMenu.class);
-                intent.putExtra("main_user", chaine1);
+                intent.putExtra("main_user", res);
                 startActivity(intent);
                 loading = ProgressDialog.show(this, "Inscription...", " Veuillez patienter", false, true);
             }

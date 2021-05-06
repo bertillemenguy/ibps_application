@@ -39,6 +39,7 @@ public class ActivityConnexion extends AppCompatActivity {
     ArrayList pseudo_list, pass_list;
     ProgressDialog loading;
     EditText pseudo, pass;
+    String main_user;
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -107,7 +108,7 @@ public class ActivityConnexion extends AppCompatActivity {
                 String mail=jo.getString("mail");
                 String pass=jo.getString("pass");
 
-
+                main_user=firstname;
                 pseudo_list.add(pseudo);
                 pass_list.add(decrypt(pass));
 
@@ -146,14 +147,14 @@ public class ActivityConnexion extends AppCompatActivity {
                 if (chaine1.equals(String.valueOf(pseudo_list.get(i))) &&  chaine2.equals(String.valueOf(pass_list.get(i)))) {
                     trouve = true;
                     Intent intent = new Intent(this, ActivityMenu.class);
-                    intent.putExtra("main_user", String.valueOf(pseudo_list.get(i)));
+                    intent.putExtra("main_user", main_user);
                     startActivity(intent);
                     loading = ProgressDialog.show(this, "Connexion...", " Veuillez patienter", false, true);
                 }
                 i++;
             }
             if (!trouve) {
-                Toast.makeText(getApplicationContext(), "Cet utilisateur n'existe pas", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Erreur, mot de passe ou pseudo incorrect", Toast.LENGTH_SHORT).show();
             }
         }
     }
