@@ -36,17 +36,19 @@ import java.util.HashMap;
 
 public class ActivityConnexion extends AppCompatActivity {
 
-    ArrayList user_list;
+    ArrayList pseudo_list, pass_list;
     ProgressDialog loading;
-    EditText name_user, new_name_user;
+    EditText pseudo, pass;
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
 
-        name_user = (EditText) findViewById(R.id.name_user);
-        new_name_user = (EditText) findViewById(R.id.new_name_user);
-        user_list = new ArrayList<String>();
+        pseudo = (EditText) findViewById(R.id.pseudo);
+        pass = (EditText) findViewById(R.id.mdp);
+
+        pseudo_list = new ArrayList<String>();
+        pass_list = new ArrayList<String>();
 
         getItems();
     }
@@ -54,7 +56,7 @@ public class ActivityConnexion extends AppCompatActivity {
     private void getItems() {
 
 
-        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbxuUHvxkMogaEy8mAyVKjiEr3N8ItRn9D5XCkDcW7ZcZ-aJxQgdogtVulwcGjavC4Y/exec?action=getItems", new Response.Listener<String>() {
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbxtcc-rjHk7zLyWba61dp7QHqv8i6SeOTan7NT-YUtLiNvkeqxJ-kvPPF3hsOi3mS0O/exec?action=getItems", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 parseItems(response);
@@ -99,18 +101,25 @@ public class ActivityConnexion extends AppCompatActivity {
                 JSONObject jo=jarray.getJSONObject(i);
 
                 String key=jo.getString("key");
-                String name=jo.getString("name");
+                String pseudo=jo.getString("pseudo");
+                String firstname=jo.getString("firstname");
+                String lastname=jo.getString("lastname");
+                String mail=jo.getString("mail");
+                String pass=jo.getString("pass");
 
-                user_list.add(name);
+
+                pseudo_list.add(pseudo);
 
                 HashMap<String, String> item=new HashMap<>();
 
                 item.put("key", key);
-                item.put("name", name);
+                item.put("pseudo", pseudo);
+                item.put("firstname", firstname);
+                item.put("lastname", lastname);
+                item.put("mail", mail);
+                item.put("pass", pass);
 
                 list.add(item);
-
-
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -118,54 +127,47 @@ public class ActivityConnexion extends AppCompatActivity {
 
        // listView.setAdapter(adapter);
         loading.dismiss();
-
     }
 
 
     public void connexion(View view){
+        String chaine1 = pseudo.getText().toString();
+        String chaine2 = pass.getText().toString();
 
-        String chaine = name_user.getText().toString();
         boolean trouve = false;
         int i =0;
 
-        while ((!trouve)&&(i<user_list.size())) {
-            if (chaine.equalsIgnoreCase(String.valueOf(user_list.get(i)))) {
-                trouve = true;
-                Intent intent = new Intent(this, ActivityMenu.class);
-                intent.putExtra("main_user", String.valueOf(user_list.get(i)));
-                startActivity(intent);
-                loading = ProgressDialog.show(this, "Connexion...", " Veuillez patienter", false, true);
+
+        if (chaine1.equals("") || chaine2.equals("")) {
+            Toast.makeText(getApplicationContext(), "Champ manquant", Toast.LENGTH_SHORT).show();
+        } else {
+            while ((!trouve)&&(i<pseudo_list.size())) {
+                if (chaine1.equals(String.valueOf(pseudo_list.get(i))) &&  chaine2.equals(String.valueOf(pass_list.get(i)))) {
+                    trouve = true;
+                    Intent intent = new Intent(this, ActivityMenu.class);
+                    intent.putExtra("main_user", String.valueOf(pseudo_list.get(i)));
+                    startActivity(intent);
+                    loading = ProgressDialog.show(this, "Connexion...", " Veuillez patienter", false, true);
+                }
+                i++;
             }
-            i++;
-        }
-        if (!trouve) {
-            Toast.makeText(getApplicationContext(), "Cet utilisateur n'existe pas", Toast.LENGTH_SHORT).show();
+            if (!trouve) {
+                Toast.makeText(getApplicationContext(), "Cet utilisateur n'existe pas", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
-    public void creer(View view){
-        String chaine = new_name_user.getText().toString();
-        int i =0;
-        boolean trouve = false;
-        while ((!trouve)&&(i<user_list.size())) {
-            if (chaine.equalsIgnoreCase(String.valueOf(user_list.get(i)))) {
-                Toast.makeText(getApplicationContext(), "Cet utilisateur existe déjà", Toast.LENGTH_SHORT).show();
-                trouve = true;
-            }
-            i++;
-        }
 
-        if (!trouve){
-            Intent intent=new Intent();
-            intent.putExtra("main_user", chaine);
-            WriteOnSheetUser.writeData(this, chaine);
-            intent = new Intent(this, ActivityMenu.class);
-            startActivity(intent);
-            loading = ProgressDialog.show(this, "Inscription...", " Veuillez patienter", false, true);
-        }
-
+    public void lancer_inscription(View view){
+        Intent intent=new Intent(this, ActivityInscription.class);
+        startActivity(intent);
     }
 
+    public void lancermenu(View view) {
+
+        Intent intent = new Intent(this, ActivityMenu.class);
+        startActivity(intent);
+    }
 
 
 }

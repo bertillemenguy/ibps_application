@@ -953,6 +953,8 @@ id collapseActionView
 id color_item
 id compteur_bacs
 id compteur_incidents
+id confirm_pass
+id connexion
 id container
 id contentPanel
 id coordinator
@@ -970,7 +972,6 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
-id divider
 id edit_query
 id end
 id end_padder
@@ -983,6 +984,7 @@ id expanded_menu
 id fill
 id fill_horizontal
 id fill_vertical
+id firstname
 id fixed
 id forever
 id ghost_view
@@ -1021,6 +1023,7 @@ id invisible
 id italic
 id item_touch_helper_previous_elevation
 id largeLabel
+id lastname
 id left
 id lignee
 id ligneefemelle
@@ -1032,14 +1035,15 @@ id linearLayout2
 id listMode
 id list_item
 id lv_items
+id mail
 id main_user
 id masked
+id mdp
 id media_actions
 id message
 id middle
 id mini
 id multiply
-id name_user
 id navigation_header_container
 id nbbac
 id nbfemelle
@@ -1047,7 +1051,6 @@ id nbfemellesfeconde
 id nbmale
 id nbmalesfeconde
 id never
-id new_name_user
 id no
 id none
 id normal
@@ -1061,11 +1064,13 @@ id parallax
 id parent
 id parentPanel
 id parent_matrix
+id pass
 id pdf
 id percent
 id pin
 id progress_circular
 id progress_horizontal
+id pseudo
 id qualite
 id radio
 id ratingView
@@ -1190,8 +1195,9 @@ id textView4
 id textView40
 id textView41
 id textView42
+id textView43
+id textView44
 id textView46
-id textView47
 id textView48
 id textView49
 id textView5
@@ -1346,6 +1352,7 @@ layout activity_ecrir_recap_mort
 layout activity_ecrir_recap_oeuf
 layout activity_ecrir_recap_souffrance
 layout activity_historique_item
+layout activity_inscription
 layout activity_menu
 layout activity_recap_bacs_erreur
 layout activity_recap_souffrance_euthanasie

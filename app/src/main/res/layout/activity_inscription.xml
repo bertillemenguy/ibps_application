@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ActivityInscription">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="0"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inscription"
+                    android:textSize="30dp"
+                    tools:layout_editor_absoluteX="61dp"
+                    tools:layout_editor_absoluteY="150dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/pseudo"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:ems="10"
+                        android:hint="Pseudo"
+                        android:inputType="textPersonName"
+                        tools:layout_editor_absoluteX="61dp"
+                        android:layout_marginBottom="20dp"
+                        tools:layout_editor_absoluteY="190dp"
+                        android:layout_marginRight="10dp"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/lastname"
+                            android:layout_width="180dp"
+                            android:layout_height="39dp"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:ems="10"
+                            android:hint="Nom"
+                            android:inputType="textPersonName"
+                            tools:layout_editor_absoluteX="61dp"
+                            tools:layout_editor_absoluteY="190dp"
+                            android:layout_marginRight="10dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/firstname"
+                            android:layout_width="180dp"
+                            android:layout_height="39dp"
+                            android:ems="10"
+                            android:hint="Prenom"
+                            android:inputType="textPersonName"
+                            tools:layout_editor_absoluteX="61dp"
+                            tools:layout_editor_absoluteY="190dp"
+                            android:backgroundTint="@color/colorPrimary"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp">
+
+                    <EditText
+                        android:id="@+id/mail"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:ems="10"
+                        android:hint="Adresse mail"
+                        android:inputType="textPersonName"
+                        tools:layout_editor_absoluteX="61dp"
+                        tools:layout_editor_absoluteY="190dp"
+                        android:layout_marginRight="10dp"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/pass"
+                            android:layout_width="180dp"
+                            android:layout_height="39dp"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:ems="10"
+                            android:hint="Mot de passe"
+                            android:inputType="textPassword"
+                            tools:layout_editor_absoluteX="61dp"
+                            tools:layout_editor_absoluteY="190dp"
+                            android:layout_marginRight="10dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/confirm_pass"
+                            android:layout_width="180dp"
+                            android:layout_height="39dp"
+                            android:ems="10"
+                            android:hint="Confirmation"
+                            android:inputType="textPassword"
+                            tools:layout_editor_absoluteX="61dp"
+                            tools:layout_editor_absoluteY="190dp"
+                            android:backgroundTint="@color/colorPrimary"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp">
+
+                        <Button
+                            android:id="@+id/button_creer"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:text="Créer"
+                            android:onClick="creer"
+                            tools:layout_editor_absoluteX="163dp"
+                            tools:layout_editor_absoluteY="270dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp">
+
+                        <TextView
+                            android:id="@+id/textView44"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginRight="5dp"
+                            android:text="Déjà un compte ?" />
+
+                        <TextView
+                            android:id="@+id/connexion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:linksClickable="true"
+                            android:longClickable="true"
+                            android:textColor="@color/colorPrimary"
+                            android:onClick="lancer_connexion"
+                            android:text="Connexion" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.constraint.Barrier
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="top"
+                tools:layout_editor_absoluteX="5dp"
+                tools:layout_editor_absoluteY="364dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

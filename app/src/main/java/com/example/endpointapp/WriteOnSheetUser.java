@@ -18,10 +18,10 @@ import java.util.Map;
 
 public class WriteOnSheetUser {
 
-    public static void writeData(final Context context, final String name) {
+    public static void writeData(final Context context, final String pseudo, final String firstname, final String lastname, final String mail, final String pass) {
         final ProgressDialog loading=ProgressDialog.show(context, "Création...", "Veuillez patienter");
 
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbz_ti8bjSiyzt-4LyPQtHYq2J9byortlN3RMrjiozYckTNp3JiysMQoTJdmNFMW4wIB/exec?action=addItem",
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbwHA4s8awqo9jYQ8F-UqnztXrDq34TYianSmoel4eXG3U5PsJen7BfycwW6Ahp390CJ/exec?action=addItem",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -40,7 +40,12 @@ public class WriteOnSheetUser {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> parmas=new HashMap<>();
-                parmas.put("name", name);
+                parmas.put("pseudo", pseudo);
+                parmas.put("firstname", firstname);
+                parmas.put("lastname", lastname);
+                parmas.put("mail", mail);
+                parmas.put("pass", pass);
+
 
                 return parmas;
             }

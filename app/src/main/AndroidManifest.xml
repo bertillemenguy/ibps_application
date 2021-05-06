@@ -66,6 +66,9 @@
         <activity android:name=".ActivityEcrirRecapIncidents" />
 
         <activity android:name=".ActivityConnexion"/>
+        <activity android:name=".ActivityInscription"/>
+
+
         <activity android:name=".ActivityRechercheRegistreMorts"/>
         <activity android:name=".ActivityRechercheRegistreMortsTrier"/>
 

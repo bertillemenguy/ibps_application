@@ -56,6 +56,7 @@
         <activity android:name="com.example.endpointapp.ActivityRecapitulatifMort" />
         <activity android:name="com.example.endpointapp.ActivityEcrirRecapIncidents" />
         <activity android:name="com.example.endpointapp.ActivityConnexion" />
+        <activity android:name="com.example.endpointapp.ActivityInscription" />
         <activity android:name="com.example.endpointapp.ActivityRechercheRegistreMorts" />
         <activity android:name="com.example.endpointapp.ActivityRechercheRegistreMortsTrier" />
         <activity android:name="com.example.endpointapp.ActivityEcrirRecapBacs" />
