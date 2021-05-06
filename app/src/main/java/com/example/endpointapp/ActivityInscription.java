@@ -157,7 +157,7 @@ public class ActivityInscription extends AppCompatActivity {
                 }
 
                 if (chaine4.equalsIgnoreCase(String.valueOf(mail_list.get(i)))) {
-                    Toast.makeText(getApplicationContext(), "Adresse mail non valide", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Adresse mail déjà utilisée", Toast.LENGTH_SHORT).show();
                     trouve = true;
                 }
 
@@ -166,38 +166,46 @@ public class ActivityInscription extends AppCompatActivity {
                     trouve = true;
                 }
 
-                if (chaine4.length()>9){
-                    if (!chaine4.substring(chaine4.length()-9, chaine4.length()-1).equals("@upmc.fr")){
+                if (chaine4.length()>7){
+                    if (!chaine4.substring(chaine4.length()-8, chaine4.length()-0).equals("@upmc.fr")){
+                        System.out.println(chaine4.substring(chaine4.length()-8, chaine4.length()-0));
                         Toast.makeText(getApplicationContext(), "Adresse mail non valide", Toast.LENGTH_SHORT).show();
                         trouve = true;
                 }
                 }
 
-                if (chaine4.length()<=9){
-                    Toast.makeText(getApplicationContext(), "Adresse mail non valide", Toast.LENGTH_SHORT).show();
+                if (chaine4.length()<=7){
+                    Toast.makeText(getApplicationContext(), "Adresse mail non conforme", Toast.LENGTH_SHORT).show();
                     trouve = true;
                 }
 
                 i++;
             }
             if (!trouve){
-
-                WriteOnSheetUser.writeData(this, chaine1, chaine2, chaine3, chaine4, pass1);
+                String password = encrypt(pass1);
+                WriteOnSheetUser.writeData(this, chaine1, chaine2, chaine3, chaine4, password);
                 Intent intent = new Intent(this, ActivityMenu.class);
                 intent.putExtra("main_user", chaine1);
                 startActivity(intent);
                 loading = ProgressDialog.show(this, "Inscription...", " Veuillez patienter", false, true);
             }
-
-
-
         }
-
     }
 
     public void lancer_connexion(View view){
         Intent intent=new Intent(this, ActivityConnexion.class);
         startActivity(intent);
     }
+
+    public String encrypt(String password){
+        String crypte="";
+        for (int i=0; i<password.length();i++)  {
+            int c=password.charAt(i)^48;
+            crypte=crypte+(char)c;
+        }
+        return crypte;
+    }
+
+
 
 }

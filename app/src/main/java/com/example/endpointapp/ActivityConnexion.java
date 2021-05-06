@@ -109,7 +109,7 @@ public class ActivityConnexion extends AppCompatActivity {
 
 
                 pseudo_list.add(pseudo);
-                pass_list.add(pass);
+                pass_list.add(decrypt(pass));
 
                 HashMap<String, String> item=new HashMap<>();
 
@@ -169,6 +169,16 @@ public class ActivityConnexion extends AppCompatActivity {
         Intent intent = new Intent(this, ActivityMenu.class);
         startActivity(intent);
     }
+
+    public String decrypt(String password){
+        String aCrypter="";
+        for (int i=0; i<password.length();i++)  {
+            int c=password.charAt(i)^48;
+            aCrypter=aCrypter+(char)c;
+        }
+        return aCrypter;
+    }
+
 
 
 }
