@@ -36,7 +36,7 @@ import java.util.HashMap;
 
 public class ActivityConnexion extends AppCompatActivity {
 
-    ArrayList pseudo_list, pass_list;
+    ArrayList pseudo_list, pass_list, lastname_list, firstname_list;
     ProgressDialog loading;
     EditText pseudo, pass;
     String main_user;
@@ -50,6 +50,8 @@ public class ActivityConnexion extends AppCompatActivity {
 
         pseudo_list = new ArrayList<String>();
         pass_list = new ArrayList<String>();
+        lastname_list = new ArrayList<String>();
+        firstname_list = new ArrayList<String>();
 
         getItems();
     }
@@ -107,9 +109,10 @@ public class ActivityConnexion extends AppCompatActivity {
                 String mail=jo.getString("mail");
                 String pass=jo.getString("pass");
 
-                main_user=firstname+" "+lastname;
                 pseudo_list.add(pseudo);
                 pass_list.add(decrypt(pass));
+                lastname_list.add(lastname);
+                firstname_list.add(firstname);
 
                 HashMap<String, String> item=new HashMap<>();
 
@@ -143,7 +146,8 @@ public class ActivityConnexion extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Champ manquant", Toast.LENGTH_SHORT).show();
         } else {
             while ((!trouve)&&(i<pseudo_list.size())) {
-                if (chaine1.equals(String.valueOf(pseudo_list.get(i))) &&  chaine2.equals(String.valueOf(pass_list.get(i)))) {
+                if (chaine1.equalsIgnoreCase(String.valueOf(pseudo_list.get(i))) &&  chaine2.equals(String.valueOf(pass_list.get(i)))) {
+                    main_user=firstname_list.get(i)+" "+lastname_list.get(i);
                     trouve = true;
                     Intent intent = new Intent(this, ActivityMenu.class);
                     intent.putExtra("main_user", main_user);
