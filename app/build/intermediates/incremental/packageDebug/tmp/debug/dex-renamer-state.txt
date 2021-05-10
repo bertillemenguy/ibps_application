@@ -1,4 +1,4 @@
-#Thu May 06 22:12:37 CEST 2021
+#Mon May 10 15:43:53 CEST 2021
 base.0=/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

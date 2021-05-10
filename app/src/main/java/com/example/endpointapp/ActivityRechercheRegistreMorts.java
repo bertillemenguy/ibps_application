@@ -50,8 +50,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
-public class ActivityRechercheRegistreMorts extends AppCompatActivity implements AdapterView.OnItemClickListener{
-    
+public class ActivityRechercheRegistreMorts extends AppCompatActivity implements AdapterView.OnItemClickListener {
+
+
     String main_user;
 
     ListView listView;
@@ -71,7 +72,9 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         setContentView(R.layout.activity_recherche_registre_morts_item);
         
         listView = findViewById(R.id.lv_items);
+
         listView.setOnItemClickListener(this);
+
         button=findViewById(R.id.btn_valider);
         editTextSearchItem = findViewById(R.id.et_search);
 
@@ -183,11 +186,12 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         });
     }
 
+
     /**
-     * @param parent
+     //* @param parent
      * @param view
-     * @param position
-     * @param id
+     //* @param position
+     //* @param id
      */
 
     /*-----------------------------SELECTIONNER POISSON(S)-------------------------------*/
