@@ -24,7 +24,7 @@ public class WriteOnSheetDupliquer {
         
         final ProgressDialog loading=ProgressDialog.show(context, "Chargement...", "Veuillez patienter");
         
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbzwRYa1zjkdWGtvJ4Nsbfch6k2-mxMH78gxAIvExpjf8Wse9WgjCdPzv4l_VGZjgXY3/exec?action=addItem",
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbxc7pGbmk2Ftwhb-4wmcLdv8n27IJhDjCbN1nb4FfZBtOXxC5BxeoHJQXaZc1PEifam/exec?action=addItem",
         
         
                 new Response.Listener<String>() {

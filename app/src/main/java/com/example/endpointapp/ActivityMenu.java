@@ -262,7 +262,14 @@ public class ActivityMenu extends AppCompatActivity {
         intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
-    
+
+    //historique animalerie Alevins
+    public void lancertaches(View view) {
+        //String operateur = OperateurSpinner.getSelectedItem().toString();
+        Intent intent = new Intent(this, ActivityTache.class);
+        intent.putExtra("main_user", main_user);
+        startActivity(intent);
+    }
     
     //ECRITURE
     //Ecriture un accouplements

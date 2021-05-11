@@ -1294,6 +1294,7 @@ id tv_operateurAccouplement
 id tv_responsable
 id tv_summorts
 id tv_systemeAquatique
+id tv_tache
 id tv_travaux
 id uniform
 id up
@@ -1389,6 +1390,7 @@ layout list_item_historique_morts
 layout list_item_historique_oeufs
 layout list_item_historique_souffrance
 layout list_item_registre
+layout list_item_taches
 layout my_popop_template
 layout notification_action
 layout notification_action_tombstone
