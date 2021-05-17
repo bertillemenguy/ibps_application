@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
 
+    android:layout_height="match_parent"
     tools:context="com.example.endpointapp.ActivityEcrirRecapMort">
 
     <LinearLayout
@@ -52,17 +52,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/tv_lignee"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="1dp"
-                        android:text="Lignee"
-                        android:textColor="@android:color/holo_blue_light"
-                        android:textStyle="bold" />
-                </LinearLayout>
+                    android:orientation="vertical" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -84,107 +74,19 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/tv_responsable"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:padding="1dp"
-                                    android:scrollbarSize="4dp"
-                                    android:text="Responsable" />
-
-                            </LinearLayout>
+                                android:orientation="vertical" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:orientation="horizontal">
+                                android:orientation="vertical" />
 
-                                <TextView
-                                    android:id="@+id/tv_age"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0"
-                                    android:padding="1dp"
-                                    android:text="age" />
-
-                                <TextView
-                                    android:id="@+id/textView11"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:text="mois" />
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <LinearLayout
+                            <ListView
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/tv_lot"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:padding="1dp"
-                                    android:text="Lot" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="right"
-                                android:layout_weight="1"
-                                android:gravity="right"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/tv_Bac"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="right"
-                                    android:gravity="right"
-                                    android:padding="1dp"
-                                    android:text="Bac"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
+                                android:layout_height="203dp"
+                                android:id="@+id/list_item_select"
+                                />
 
                         </LinearLayout>
 
@@ -368,7 +270,6 @@
                     android:orientation="vertical">
 
                 </LinearLayout>
-
 
 
                 <LinearLayout

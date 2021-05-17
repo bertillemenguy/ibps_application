@@ -1034,6 +1034,7 @@ id line3
 id linearLayout2
 id listMode
 id list_item
+id list_item_select
 id lv_items
 id mail
 id main_user
@@ -1410,6 +1411,7 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout simple_list_item_checked
 layout support_simple_spinner_dropdown_item
 layout web_historique
 mipmap ic_launcher

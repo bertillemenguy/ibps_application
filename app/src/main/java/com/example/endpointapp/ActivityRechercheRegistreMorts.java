@@ -8,16 +8,25 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
+import android.util.SparseBooleanArray;
+import android.view.ActionMode;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.CheckedTextView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -45,25 +54,26 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 
-public class ActivityRechercheRegistreMorts extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class ActivityRechercheRegistreMorts extends AppCompatActivity {
 
 
     String main_user;
 
+
     ListView listView;
-    SimpleAdapter adapter;
+    ArrayAdapter adapter;
     ProgressDialog loading;
     EditText editTextSearchItem;
     Button button;
 
     int[] icon ={R.drawable.fish_bones, R.drawable.zebrafish};
-
-
 
 
     @Override
@@ -73,15 +83,51 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         
         listView = findViewById(R.id.lv_items);
 
-        listView.setOnItemClickListener(this);
+        //listView.setOnItemClickListener(this);
+
+        listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+
 
         button=findViewById(R.id.btn_valider);
         editTextSearchItem = findViewById(R.id.et_search);
 
         // Get the transferred data from source activity.
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         main_user = intent.getStringExtra("main_user");
-        
+
+
+        this.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                System.out.println("onItemClick: " +position);
+                CheckedTextView v = (CheckedTextView) view;
+                boolean currentCheck = v.isChecked();
+                System.out.println(listView.getItemAtPosition(position));
+                //user.setActive(!currentCheck);
+            }
+        });
+
+
+        final Intent intent_2 = new Intent(this, ActivityEcrirRecapMort.class);
+
+
+        this.button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("Bouton cliqueé___________________");
+
+                List list_select = getSelectedItems();
+
+                System.out.println(list_select);
+
+                intent_2.putExtra("main_user", main_user);
+                intent_2.putExtra("list_select", (Serializable) list_select);
+                startActivity(intent_2);
+
+                }
+        });
+
         getItems();
 
 
@@ -124,8 +170,9 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
      */
     private void parseItems(String jsonResponce) {
         
-        ArrayList<HashMap<String, String>> list = new ArrayList<>();
-        
+        final ArrayList<HashMap<String, String>> list = new ArrayList<>();
+
+
         try {
             JSONObject jobj = new JSONObject(jsonResponce);
             JSONArray jarray = jobj.getJSONArray("items");
@@ -140,10 +187,9 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
                 String Age = jo.getString("Age");
                 String Responsable=jo.getString("Responsable");
                 String Key=jo.getString("Key");
-                
-                
+
                 HashMap<String, String> item = new HashMap<>();
-                
+
                 item.put("Bac", Bac);
                 item.put("Lot", Lot);
                 item.put("Lignee", Lignee);
@@ -157,7 +203,7 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
                 } else {
                     item.put("image", icon[1]+"");
                 }
-                
+
                 list.add(item);
 
             }
@@ -165,9 +211,10 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
             e.printStackTrace();
         }
 
-        adapter=new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable", "image"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable, R.id.icon_mort});
+        adapter=new ArrayAdapter(this, R.layout.simple_list_item_checked, list);
 
         listView.setAdapter(adapter);
+
         loading.dismiss();
 
         editTextSearchItem.addTextChangedListener(new TextWatcher() {
@@ -189,7 +236,7 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
 
     /**
      //* @param parent
-     * @param view
+     //* @param view
      //* @param position
      //* @param id
      */
@@ -198,7 +245,7 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
     /*-----------------------------------------------------------------------------------*/
 
 
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+    /*public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         // Intent intent = new Intent(this, ActivityItemdetails.class);
         Intent intent = new Intent(this, ActivityEcrirRecapMort.class);
         HashMap map = (HashMap) parent.getItemAtPosition(position);
@@ -222,7 +269,7 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
 
 
         startActivity(intent);
-    }
+    }*/
     
     
     public void lancermenu(View view) {
@@ -238,6 +285,7 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
+
 
     public void lancerPDF(View view){
 
@@ -278,23 +326,32 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
     }
 
 
+    public ArrayList getSelectedItems()  {
+
+        ArrayList<String> list = new ArrayList<>();
+
+        SparseBooleanArray sp = listView.getCheckedItemPositions();
+        StringBuilder sb= new StringBuilder();
+
+        int i;
+        for(i=0;i<sp.size();i++){
+
+            if(sp.valueAt(i)==true){
+
+                String s = ((CheckedTextView) listView.getChildAt(sp.keyAt(i))).getText().toString();
+
+                list.add(s);
+                sb = sb.append(" "+s);
+            }
+        }
+        Toast.makeText(this, "Vous avez selectionnez  "+sp.size()+" élément(s)", Toast.LENGTH_LONG).show();
+
+        return list;
+    }
+
     public void onPointerCaptureChanged(boolean hasCapture) {
     
     }
 
-
-    public boolean onOptionsItemSelected(@NonNull MenuItem item){
-        int id= item.getItemId();
-        if (id==R.id.btn_valider){
-            String itemSelected = "Selected items: ";
-            for(int i=0; i<listView.getCount();i++){
-                if(listView.isItemChecked(i)){
-                    itemSelected +=  listView.getItemAtPosition(i);
-                }
-            }
-            Toast.makeText(this,itemSelected,Toast.LENGTH_SHORT).show();
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
 }
