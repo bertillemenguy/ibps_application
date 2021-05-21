@@ -81,6 +81,9 @@
 
         <activity android:name=".ActivityMenu"/>
 
+        <activity android:name=".NettoyageBac"/>
+
+
         <activity android:name=".ActivitySplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

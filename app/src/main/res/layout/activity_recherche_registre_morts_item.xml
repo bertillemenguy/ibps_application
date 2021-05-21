@@ -126,21 +126,20 @@
                     android:layout_height="match_parent"
                     android:choiceMode="multipleChoice" />
 
+
+
             </LinearLayout>
-            <LinearLayout
+
+            <Button
+                android:id="@+id/btn_valider"
                 android:layout_width="match_parent"
-                android:layout_height="560dp"
-                android:layout_weight="1"
-                android:background="@android:color/white"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:text="Valider" />
 
 
-                <Button
-                    android:id="@+id/btn_valider"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Valider" />
-            </LinearLayout>
 
 
         </LinearLayout>

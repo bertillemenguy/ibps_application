@@ -65,6 +65,7 @@
         <activity android:name="com.example.endpointapp.ActivityReunirBacs" />
         <activity android:name="com.example.endpointapp.ActivityErreur" />
         <activity android:name="com.example.endpointapp.ActivityMenu" />
+        <activity android:name="com.example.endpointapp.NettoyageBac" />
         <activity android:name="com.example.endpointapp.ActivitySplash" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,6 +1,9 @@
 package com.example.endpointapp;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.icu.util.Calendar;
 import android.os.Build;
@@ -9,10 +12,16 @@ import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.SparseBooleanArray;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.CheckedTextView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -28,51 +37,397 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 
-public class ActivityTache extends AppCompatActivity {
+public class ActivityTache extends AppCompatActivity implements View.OnClickListener{
+
+    Button btn_lun, btn_mar, btn_mer, btn_jeu, btn_ven, btn_sam, btn_dim;
 
     String main_user = "";
-    ListView listView;
     ProgressDialog loading;
-    SimpleAdapter adapter;
+    Calendar c;
+    ListView lv;
 
-    EditText editTextSearchItem;
+    String j="";
+
+    TextView jour_semaine, num_lundi, num_mardi, num_mercredi, num_jeudi, num_vendredi, num_samedi, num_dimanche;
+    String n_lundi, n_mardi, n_mercredi, n_jeudi, n_vendredi, n_samedi, n_dimanche;
+
+    TextView mois_lundi, mois_mardi, mois_mercredi, mois_jeudi, mois_vendredi, mois_samedi, mois_dimanche;
+    String m_lundi, m_mardi, m_mercredi, m_jeudi, m_vendredi, m_samedi, m_dimanche;
+
+    TextView compteur_lundi, compteur_mardi, compteur_mercredi, compteur_jeudi, compteur_vendredi, compteur_samedi, compteur_dimanche;
+    String c_lundi, c_mardi, c_mercredi, c_jeudi, c_vendredi, c_samedi, c_dimanche;
+
+    ArrayList<String> list_taches;
     Date date=null;
 
+    private ArrayAdapter<String> adapter_tache;
 
+    AlertDialog.Builder alertDialog;
+    AlertDialog dialog;
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recherche_registre_item);
-
-        listView=findViewById(R.id.lv_items);
-        editTextSearchItem=findViewById(R.id.et_search);
-
+        setContentView(R.layout.activity_taches);
 
         Intent intent = getIntent();
         this.main_user = intent.getStringExtra("main_user");
 
-        Toast.makeText(this,main_user, Toast.LENGTH_LONG).show();
-        getItems();
+        btn_lun = (Button) findViewById(R.id.tache_lundi) ;
+        btn_lun.setOnClickListener(this);
+
+        btn_mar = (Button) findViewById(R.id.tache_mardi) ;
+        btn_mar.setOnClickListener(this);
+
+        btn_mer = (Button) findViewById(R.id.tache_mercredi) ;
+        btn_mer.setOnClickListener(this);
+
+        btn_jeu = (Button) findViewById(R.id.tache_jeudi) ;
+        btn_jeu.setOnClickListener(this);
+
+        btn_ven = (Button) findViewById(R.id.tache_vendredi) ;
+        btn_ven.setOnClickListener(this);
+
+        btn_sam = (Button) findViewById(R.id.tache_samedi) ;
+        btn_sam.setOnClickListener(this);
+
+        btn_dim = (Button) findViewById(R.id.tache_dimanche) ;
+        btn_dim.setOnClickListener(this);
+
+        Date date = new Date();
+        SimpleDateFormat jour_format=new SimpleDateFormat("d", Locale.FRANCE);
+        SimpleDateFormat mois_format=new SimpleDateFormat("MMM", Locale.FRANCE);
+        SimpleDateFormat j_format=new SimpleDateFormat("EEEE", Locale.FRANCE);
+
+        String jour = jour_format.format(date);
+        String mois= mois_format.format(date);
+        String j = j_format.format(date);
+
+        if (j.equals("lundi")){
+            this.n_lundi=jour;
+            this.m_lundi=mois;
+
+            c = Calendar.getInstance();
+            c.setTime(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_mardi=jour_format.format(date);
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_mercredi=jour_format.format(date);
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_jeudi=jour_format.format(date);
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_vendredi=jour_format.format(date);
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_samedi=jour_format.format(date);
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_dimanche=jour_format.format(date);
+        }
+
+        if (j.equals("mardi")){
+            this.n_mardi=jour;
+            this.m_mardi=mois;
+            c = Calendar.getInstance();
+            c.setTime(date);
+            c.add(Calendar.DATE, -1);
+            date = c.getTime();
+            this.n_lundi=jour_format.format(date);
+            this.m_lundi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 2);
+            date = c.getTime();
+            this.n_mercredi=jour_format.format(date);
+            this.m_mercredi=mois_format.format(date);
+
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_jeudi=jour_format.format(date);
+            this.m_jeudi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_vendredi=jour_format.format(date);
+            this.m_vendredi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_samedi=jour_format.format(date);
+            this.m_samedi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_dimanche=jour_format.format(date);
+            this.m_dimanche=mois_format.format(date);
+
+        }
+
+        if (j.equals("mercredi")){
+
+            this.n_mercredi=jour;
+            this.m_mercredi=mois;
+            c = Calendar.getInstance();
+            c.setTime(date);
+
+            c.add(Calendar.DATE, -2);
+            date = c.getTime();
+            this.n_lundi=jour_format.format(date);
+            this.m_lundi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_mardi=jour_format.format(date);
+            this.m_mardi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 2);
+            date = c.getTime();
+            this.n_jeudi=jour_format.format(date);
+            this.m_jeudi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_vendredi=jour_format.format(date);
+            this.m_vendredi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_samedi=jour_format.format(date);
+            this.m_samedi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_dimanche=jour_format.format(date);
+            this.m_dimanche=mois_format.format(date);
+        }
+
+        if (j.equals("jeudi")){
+            this.n_jeudi=jour;
+            this.m_jeudi=mois;
+            c = Calendar.getInstance();
+            c.setTime(date);
+
+            c.add(Calendar.DATE, -3);
+            date = c.getTime();
+            this.n_lundi=jour_format.format(date);
+            this.m_lundi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_mardi=jour_format.format(date);
+            this.m_mardi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_mercredi=jour_format.format(date);
+            this.m_mercredi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 2);
+            date = c.getTime();
+            this.n_vendredi=jour_format.format(date);
+            this.m_vendredi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_samedi=jour_format.format(date);
+            this.m_samedi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_dimanche=jour_format.format(date);
+            this.m_dimanche=mois_format.format(date);
+        }
+
+
+        if (j.equals("vendredi")){
+            this.n_vendredi=jour;
+            this.m_vendredi=mois;
+
+            c = Calendar.getInstance();
+            c.setTime(date);
+
+            c.add(Calendar.DATE, -4);
+            date = c.getTime();
+            this.n_lundi=jour_format.format(date);
+            this.m_lundi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_mardi=jour_format.format(date);
+            this.m_mardi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_mercredi=jour_format.format(date);
+            this.m_mercredi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_jeudi=jour_format.format(date);
+            this.m_jeudi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 2);
+            date = c.getTime();
+            this.n_samedi=jour_format.format(date);
+            this.m_samedi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_dimanche=jour_format.format(date);
+            this.m_dimanche=mois_format.format(date);
+        }
+
+        if (j.equals("samedi")){
+            this.n_samedi=jour;
+            this.m_samedi=mois;
+
+            c = Calendar.getInstance();
+            c.setTime(date);
+
+            c.add(Calendar.DATE, -5);
+            date = c.getTime();
+            this.n_lundi=jour_format.format(date);
+            this.m_lundi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_mardi=jour_format.format(date);
+            this.m_mardi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_mercredi=jour_format.format(date);
+            this.m_mercredi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_jeudi=jour_format.format(date);
+            this.m_jeudi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_vendredi=jour_format.format(date);
+            this.m_vendredi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 2);
+            date = c.getTime();
+            this.n_dimanche=jour_format.format(date);
+            this.m_dimanche=mois_format.format(date);
+        }
+
+
+
+        if (j.equals("dimanche")){
+            this.n_dimanche=jour;
+            this.m_dimanche=mois;
+
+            c = Calendar.getInstance();
+            c.setTime(date);
+
+            c.add(Calendar.DATE, -6);
+            date = c.getTime();
+            this.n_lundi=jour_format.format(date);
+            this.m_lundi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_mardi=jour_format.format(date);
+            this.m_mardi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_mercredi=jour_format.format(date);
+            this.m_mercredi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_jeudi=jour_format.format(date);
+            this.m_jeudi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_vendredi=jour_format.format(date);
+            this.m_vendredi=mois_format.format(date);
+
+            c.add(Calendar.DATE, 1);
+            date = c.getTime();
+            this.n_samedi=jour_format.format(date);
+            this.m_samedi=mois_format.format(date);
+
+        }
+
+        this.num_lundi = findViewById(R.id.num_lundi);
+        this.num_mardi = findViewById(R.id.num_mardi);
+        this.num_mercredi = findViewById(R.id.num_mercredi);
+        this.num_jeudi = findViewById(R.id.num_jeudi);
+        this.num_vendredi = findViewById(R.id.num_vendredi);
+        this.num_samedi = findViewById(R.id.num_samedi);
+        this.num_dimanche = findViewById(R.id.num_dimanche);
+
+        num_lundi.setText(n_lundi);
+        num_mardi.setText(n_mardi);
+        num_mercredi.setText(n_mercredi);
+        num_jeudi.setText(n_jeudi);
+        num_vendredi.setText(n_vendredi);
+        num_samedi.setText(n_samedi);
+        num_dimanche.setText(n_dimanche);
+
+        this.mois_lundi = findViewById(R.id.mois_lundi);
+        this.mois_mardi = findViewById(R.id.mois_mardi);
+        this.mois_mercredi = findViewById(R.id.mois_mercredi);
+        this.mois_jeudi = findViewById(R.id.mois_jeudi);
+        this.mois_vendredi = findViewById(R.id.mois_vendredi);
+        this.mois_samedi = findViewById(R.id.mois_samedi);
+        this.mois_dimanche = findViewById(R.id.mois_dimanche);
+
+
+        mois_lundi.setText(m_lundi);
+        mois_mardi.setText(m_mardi);
+        mois_mercredi.setText(m_mercredi);
+        mois_jeudi.setText(m_jeudi);
+        mois_vendredi.setText(m_vendredi);
+        mois_samedi.setText(m_samedi);
+        mois_dimanche.setText(m_dimanche);
+
+
+
+        this.compteur_lundi = findViewById(R.id.compteur_lundi);
+        this.compteur_mardi = findViewById(R.id.compteur_mardi);
+        this.compteur_mercredi = findViewById(R.id.compteur_mercredi);
+        this.compteur_jeudi = findViewById(R.id.compteur_jeudi);
+        this.compteur_vendredi = findViewById(R.id.compteur_vendredi);
+        this.compteur_samedi = findViewById(R.id.compteur_samedi);
+        this.compteur_dimanche = findViewById(R.id.compteur_dimanche);
+
+        getItemsCompteur();
+
     }
 
-    private void getItems() {
 
 
-        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbyIfpDZXf4N0zg5BiEpgpUU-iMtNJE-y38HUdrOmlK014hFw_gZ5vkvIQL0Xu5nRBqC/exec?action=getItems", new Response.Listener<String>() {
-            @RequiresApi(api= Build.VERSION_CODES.N)
+    private void getItemsCompteur() {
+
+
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycby517YZa68LQIXHkR02otOI9zSJXCHP5qDq11ZwryanmOfKUL0iSRRyaZd-SHjTrZO6/exec?action=getItems", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                parseItems(response);
+                parseItemsCompteur(response);
             }
         },
-
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
@@ -81,7 +436,6 @@ public class ActivityTache extends AppCompatActivity {
                 }
         );
         loading = ProgressDialog.show(this, "Chargement...", " Veuillez patienter", false, true);
-
         int socketTimeOut = 50000;
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeOut, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
 
@@ -89,83 +443,354 @@ public class ActivityTache extends AppCompatActivity {
 
         RequestQueue queue = Volley.newRequestQueue(this);
         queue.add(stringRequest);
+
     }
 
 
-    @RequiresApi(api=Build.VERSION_CODES.N)
-    private void parseItems(String jsonResponce) {
+    /**
+     * @param jsonResponce
+     */
+    private void parseItemsCompteur(String jsonResponce) {
 
-        ArrayList<HashMap<String, String>> list = new ArrayList<>();
+        int int_cptr_lundi=0;
+        int int_cptr_mardi=0;
+        int int_cptr_mercredi=0;
+        int int_cptr_jeudi=0;
+        int int_cptr_vendredi=0;
+        int int_cptr_samedi=0;
+        int int_cptr_dimanche=0;
+
+        list_taches = new ArrayList<>();
 
         try {
             JSONObject jobj = new JSONObject(jsonResponce);
             JSONArray jarray = jobj.getJSONArray("items");
 
+            for (int i = 0; i < jarray.length(); i++) {
+
+                JSONObject jo = jarray.getJSONObject(i);
+
+                String Jour = jo.getString("Jour");
+                String SiFait=jo.getString("SiFait");
+
+                if ("Lundi".equals(Jour)){
+                    if (SiFait.equals("En cours")){
+                        int_cptr_lundi++;
+                    }
+                    if (int_cptr_lundi==0){
+                        btn_lun.setEnabled(false);
+                    }
+                }
+
+                if ("Mardi".equals(Jour)){
+                    if (SiFait.equals("En cours")){
+                        int_cptr_mardi++;
+                    }
+                    if (int_cptr_mardi==0){
+                        btn_mar.setEnabled(false);
+                    }
+                }
+
+                if ("Mercredi".equals(Jour)){
+                    if (SiFait.equals("En cours")){
+                        int_cptr_mercredi++;
+                    }
+                    if (int_cptr_mercredi==0){
+                        btn_mer.setEnabled(false);
+                    }
+                }
+
+                if ("Jeudi".equals(Jour)){
+                    if (SiFait.equals("En cours")){
+                        int_cptr_jeudi++;
+                    }
+                    if (int_cptr_jeudi==0){
+                        btn_jeu.setEnabled(false);
+                    }
+                }
+
+                if ("Vendredi".equals(Jour)){
+                    if (SiFait.equals("En cours")){
+                        int_cptr_vendredi++;
+                    }
+                    if (int_cptr_vendredi==0){
+                        btn_ven.setEnabled(false);
+                    }
+                }
+
+                if ("Samedi".equals(Jour)){
+                    if (SiFait.equals("En cours")){
+                        int_cptr_samedi++;
+                    }
+                    if (int_cptr_samedi==0){
+                        btn_sam.setEnabled(false);
+                    }
+                }
+
+                if ("Dimanche".equals(Jour)){
+                    if (SiFait.equals("En cours")){
+                        int_cptr_dimanche++;
+                    }
+                    if (int_cptr_dimanche==0){
+                        btn_dim.setEnabled(false);
+                    }
+                }
+            }
+
+            c_lundi=int_cptr_lundi+"";
+            compteur_lundi.setText(c_lundi);
+
+            c_mardi=int_cptr_mardi+"";
+            compteur_mardi.setText(c_mardi);
+
+            c_mercredi=int_cptr_mercredi+"";
+            compteur_mercredi.setText(c_mercredi);
+
+            c_jeudi=int_cptr_jeudi+"";
+            compteur_jeudi.setText(c_jeudi);
+
+            c_vendredi=int_cptr_vendredi+"";
+            compteur_vendredi.setText(c_vendredi);
+
+            c_samedi=int_cptr_samedi+"";
+            compteur_samedi.setText(c_samedi);
+
+            c_dimanche=int_cptr_dimanche+"";
+            compteur_dimanche.setText(c_dimanche);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        loading.dismiss();
+
+    }
+
+
+    private void getItems(final String j) {
+
+
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycby517YZa68LQIXHkR02otOI9zSJXCHP5qDq11ZwryanmOfKUL0iSRRyaZd-SHjTrZO6/exec?action=getItems", new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                parseItems(response,j);
+            }
+        },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                    }
+                }
+        );
+        loading = ProgressDialog.show(this, "Chargement...", " Veuillez patienter", false, true);
+        int socketTimeOut = 50000;
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeOut, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+
+        stringRequest.setRetryPolicy(policy);
+
+        RequestQueue queue = Volley.newRequestQueue(this);
+        queue.add(stringRequest);
+
+    }
+
+
+    /**
+     * @param jsonResponce
+     */
+    private void parseItems(String jsonResponce, String j) {
+
+        list_taches = new ArrayList<>();
+
+        try {
+            JSONObject jobj = new JSONObject(jsonResponce);
+            JSONArray jarray = jobj.getJSONArray("items");
 
             for (int i = 0; i < jarray.length(); i++) {
 
                 JSONObject jo = jarray.getJSONObject(i);
 
-                SimpleDateFormat inputFormat=new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-                SimpleDateFormat outputFormat=new SimpleDateFormat("EEEE d MMM yyyy", Locale.FRANCE);
-
-                try {
-                    date=inputFormat.parse(jo.getString("Date"));
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-                String Date=outputFormat.format(date);
-                Calendar c=Calendar.getInstance();
-                c.setTime(outputFormat.parse(Date));
-                c.add(Calendar.DATE, 1);  // number of days to add
-                Date=outputFormat.format(c.getTime());  // dt is now the new date
-
-                /**  Date=new Date();
-                 Calendar c = Calendar.getInstance();
-                 c.setTime(currentDate);
-                 */
-
+                String Id = jo.getString("Id");
+                String Jour = jo.getString("Jour");
                 String Tache = jo.getString("Tache");
+                String SiFait=jo.getString("SiFait");
 
-
-                HashMap<String, String> item = new HashMap<>();
-
-                item.put("Date", Date);
-                item.put("Tache", Tache);
-
-                list.add(item);
-
+                if (j.equals(Jour)){
+                    if (SiFait.equals("En cours")){
+                        list_taches.add(Tache);
+                    }
+                }
 
             }
-        } catch (JSONException | ParseException e) {
+        } catch (JSONException e) {
             e.printStackTrace();
         }
 
 
-        adapter=new SimpleAdapter(this, list, R.layout.list_item_taches, new String[]{"Date", "Tache"}, new int[]{R.id.tv_date, R.id.tv_tache});
+        this.adapter_tache = new ArrayAdapter<String>(this, R.layout.simple_list_item_checked, list_taches);
+            lv.setAdapter(adapter_tache);
+    }
 
 
-        listView.setAdapter(adapter);
-        loading.dismiss();
+    //Click sur un jour de la semaine
 
+    @Override
+    public void onClick(View v) {
 
-        editTextSearchItem.addTextChangedListener(new TextWatcher() {
+        alertDialog = new AlertDialog.Builder(ActivityTache.this);
+
+        View row = getLayoutInflater().inflate(R.layout.row_item_taches, null);
+        lv = (ListView) row.findViewById(R.id.listView);
+
+        lv.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+
+        jour_semaine = findViewById(R.id.jour_semaine);;
+
+        System.out.println(jour_semaine);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                ActivityTache.this.adapter.getFilter().filter(charSequence);
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                System.out.println("onItemClick: " +position);
+                CheckedTextView vi = (CheckedTextView) view;
+                boolean currentCheck = vi.isChecked();
+                System.out.println(lv.getItemAtPosition(position));
+                //user.setActive(!currentCheck);
             }
         });
+
+
+        if (v==btn_lun){
+            j="Lundi";
+            getItems("Lundi");
+            alertDialog.setView(row);
+            dialog = alertDialog.create();
+            Toast.makeText(this, "Chargement ...", Toast.LENGTH_LONG).show();
+            dialog.show();
+            loading.dismiss();
+            //adapter_tache.notifyDataSetChanged();
+        }
+        else if (v==btn_mar){
+            j="Mardi";
+            getItems("Mardi");
+            alertDialog.setView(row);
+            dialog = alertDialog.create();
+            Toast.makeText(this, "Chargement ...", Toast.LENGTH_LONG).show();
+            dialog.show();
+            loading.dismiss();
+        }
+        else if (v==btn_mer){
+            j="Mercredi";
+            getItems("Mercredi");
+            alertDialog.setView(row);
+            dialog = alertDialog.create();
+            Toast.makeText(this, "Chargement ...", Toast.LENGTH_LONG).show();
+            dialog.show();
+            loading.dismiss();
+        }
+        else if (v==btn_jeu){
+            j="Jeudi";
+            getItems("Jeudi");
+            alertDialog.setView(row);
+            dialog = alertDialog.create();
+            Toast.makeText(this, "Chargement ...", Toast.LENGTH_LONG).show();
+            dialog.show();
+            loading.dismiss();
+        }
+        else if (v==btn_ven){
+            j="Vendredi";
+            getItems("Vendredi");
+            alertDialog.setView(row);
+            dialog = alertDialog.create();
+            Toast.makeText(this, "Chargement ...", Toast.LENGTH_LONG).show();
+            dialog.show();
+            loading.dismiss();
+        }
+
+        else if (v==btn_sam){
+            j="Samedi";
+            getItems("Samedi");
+            alertDialog.setView(row);
+            dialog = alertDialog.create();
+            Toast.makeText(this, "Chargement ...", Toast.LENGTH_LONG).show();
+            dialog.show();
+            loading.dismiss();
+        }
+        else {
+            j="Dimanche";
+            getItems("Dimanche");
+            alertDialog.setView(row);
+            dialog = alertDialog.create();
+            Toast.makeText(this, "Chargement ...", Toast.LENGTH_LONG).show();
+            dialog.show();
+            loading.dismiss();
+        }
+    }
+
+
+    public ArrayList getSelectedItems()  {
+
+        ArrayList<String> list = new ArrayList<>();
+        int nb = 0;
+
+        SparseBooleanArray sp = lv.getCheckedItemPositions();
+        StringBuilder sb= new StringBuilder();
+
+        int i;
+
+        for(i=0;i<sp.size();i++) {
+            if (sp.valueAt(i)) {
+                String s = ((CheckedTextView) lv.getChildAt(sp.keyAt(i))).getText().toString();
+                list.add(s);
+                sb = sb.append(" ");
+                sb = sb.append(s);
+                nb++;
+            }
+        }
+
+        Toast.makeText(this, "Vous avez selectionné  "+nb+" élément(s)", Toast.LENGTH_LONG).show();
+
+        return list;
+    }
+
+
+    // Enregistrer une tache réalisée
+
+    public void lancer_tache_sauvegarde(View v){
+
+        //final Intent intent_2 = new Intent(this, ActivityEcrirTache.class);
+        //Toast.makeText(this, "Coucou", Toast.LENGTH_LONG).show();
+
+        List list_select = getSelectedItems();
+        System.out.println(list_select);
+
+        //intent_2.putExtra("main_user", main_user);
+        //intent_2.putExtra("list_select", (Serializable) list_select);
+        //startActivity(intent_2);
+
+        for (int i=0; i<list_select.size();i++){
+
+            String s= list_select.get(i).toString();
+
+            WriteOnSheetTaches.updateData(this,  s, j);
+            WriteOnSheetTaches.writeData(this, main_user, s);
+
+            try {
+                Thread.sleep(1200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        Intent intent = new Intent(this, ActivityTache.class);
+        intent.putExtra("main_user", main_user);
+        startActivity(intent);
+        dialog.dismiss();
+
+    }
+
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
     }
 
     public void lancermenu(View view) {
@@ -176,8 +801,16 @@ public class ActivityTache extends AppCompatActivity {
     }
 
 
-    public void onPointerCaptureChanged(boolean hasCapture) {
+    public void close_popup(View view) {
+        dialog.dismiss();
+    }
 
+    public void getNettoyage(View view){
+        Intent intent = new Intent(this, NettoyageBac.class);
+        intent.putExtra("main_user", main_user);
+        startActivity(intent);
     }
 
 }
+
+

@@ -63,9 +63,7 @@ import java.util.List;
 
 public class ActivityRechercheRegistreMorts extends AppCompatActivity {
 
-
     String main_user;
-
 
     ListView listView;
     ArrayAdapter adapter;
@@ -130,7 +128,6 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity {
 
         getItems();
 
-
     }
 
 
@@ -145,7 +142,6 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity {
                 parseItems(response);
             }
         },
-        
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
@@ -329,22 +325,24 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity {
     public ArrayList getSelectedItems()  {
 
         ArrayList<String> list = new ArrayList<>();
+        int nb = 0;
 
         SparseBooleanArray sp = listView.getCheckedItemPositions();
         StringBuilder sb= new StringBuilder();
 
         int i;
+
         for(i=0;i<sp.size();i++){
-
-            if(sp.valueAt(i)==true){
-
+            if(sp.valueAt(i)){
                 String s = ((CheckedTextView) listView.getChildAt(sp.keyAt(i))).getText().toString();
-
                 list.add(s);
-                sb = sb.append(" "+s);
+                sb = sb.append(" ");
+                sb = sb.append(s);
+                nb++;
             }
         }
-        Toast.makeText(this, "Vous avez selectionnez  "+sp.size()+" élément(s)", Toast.LENGTH_LONG).show();
+
+        Toast.makeText(this, "Vous avez selectionné  "+nb+" élément(s)", Toast.LENGTH_LONG).show();
 
         return list;
     }

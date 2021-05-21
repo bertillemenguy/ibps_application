@@ -12,6 +12,10 @@
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/drawable/ic_search.png"
     },
     {
+        "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_nettoyage_bac.xml.flat",
+        "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/nettoyage_bac.xml"
+    },
+    {
         "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_logo_app.png.flat",
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/mipmap-xxhdpi/logo_app.png"
     },
@@ -128,6 +132,10 @@
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/activity_ecrir_recap_bacs.xml"
     },
     {
+        "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_activity_taches.xml.flat",
+        "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/activity_taches.xml"
+    },
+    {
         "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_activity_ecrir_recap_incidents.xml.flat",
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/activity_ecrir_recap_incidents.xml"
     },
@@ -178,10 +186,6 @@
     {
         "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/font_kadwa.xml.flat",
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/font/kadwa.xml"
-    },
-    {
-        "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_list_item_taches.xml.flat",
-        "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/list_item_taches.xml"
     },
     {
         "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_list_item_historique_accouplement.xml.flat",
@@ -250,6 +254,10 @@
     {
         "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/xml_backup_descriptor.xml.flat",
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/xml/backup_descriptor.xml"
+    },
+    {
+        "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_row_item_taches.xml.flat",
+        "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/row_item_taches.xml"
     },
     {
         "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_activity_historique_item.xml.flat",

@@ -8,11 +8,8 @@ com/example/endpointapp/ActivityHistoriqueOeufs.java
  com.example.endpointapp.ActivityHistoriqueOeufs$1
  com.example.endpointapp.ActivityHistoriqueOeufs$2
  com.example.endpointapp.ActivityHistoriqueOeufs$3
-com/example/endpointapp/WriteOnSheetSouffrance.java
- com.example.endpointapp.WriteOnSheetSouffrance
- com.example.endpointapp.WriteOnSheetSouffrance$1
- com.example.endpointapp.WriteOnSheetSouffrance$2
- com.example.endpointapp.WriteOnSheetSouffrance$3
+com/example/endpointapp/ActivityEcrirRecapMort.java
+ com.example.endpointapp.ActivityEcrirRecapMort
 com/example/endpointapp/ActivityWebHistoriqueAnimalerieRemplissage.java
  com.example.endpointapp.ActivityWebHistoriqueAnimalerieRemplissage
 com/example/endpointapp/WriteOnSheetIncident.java
@@ -39,11 +36,13 @@ com/example/endpointapp/ActivityWebHistoriqueAnimalerieAlevins.java
  com.example.endpointapp.ActivityWebHistoriqueAnimalerieAlevins$1
  com.example.endpointapp.ActivityWebHistoriqueAnimalerieAlevins$2
  com.example.endpointapp.ActivityWebHistoriqueAnimalerieAlevins$3
-com/example/endpointapp/ActivityRechercheRegistre.java
- com.example.endpointapp.ActivityRechercheRegistre
- com.example.endpointapp.ActivityRechercheRegistre$1
- com.example.endpointapp.ActivityRechercheRegistre$2
- com.example.endpointapp.ActivityRechercheRegistre$3
+com/example/endpointapp/ActivityRechercheRegistreMorts.java
+ com.example.endpointapp.ActivityRechercheRegistreMorts
+ com.example.endpointapp.ActivityRechercheRegistreMorts$1
+ com.example.endpointapp.ActivityRechercheRegistreMorts$2
+ com.example.endpointapp.ActivityRechercheRegistreMorts$3
+ com.example.endpointapp.ActivityRechercheRegistreMorts$4
+ com.example.endpointapp.ActivityRechercheRegistreMorts$5
 com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle.java
  com.example.endpointapp.ActivityRechercheRegistreAccouplementsFemelle
  com.example.endpointapp.ActivityRechercheRegistreAccouplementsFemelle$1
@@ -77,6 +76,8 @@ com/example/endpointapp/WriteOnSheetDupliquer.java
  com.example.endpointapp.WriteOnSheetDupliquer$1
  com.example.endpointapp.WriteOnSheetDupliquer$2
  com.example.endpointapp.WriteOnSheetDupliquer$3
+com/example/endpointapp/NettoyageBac.java
+ com.example.endpointapp.NettoyageBac
 com/example/endpointapp/ActivityHistoriqueAccouplements.java
  com.example.endpointapp.ActivityHistoriqueAccouplements
  com.example.endpointapp.ActivityHistoriqueAccouplements$1
@@ -93,17 +94,18 @@ com/example/endpointapp/WriteOnSheetSignaler.java
  com.example.endpointapp.WriteOnSheetSignaler$3
 com/example/endpointapp/ActivityEcrirRecapIncidents.java
  com.example.endpointapp.ActivityEcrirRecapIncidents
-com/example/endpointapp/ActivityHistoriqueAccouplementsPourOeufs.java
- com.example.endpointapp.ActivityHistoriqueAccouplementsPourOeufs
- com.example.endpointapp.ActivityHistoriqueAccouplementsPourOeufs$1
- com.example.endpointapp.ActivityHistoriqueAccouplementsPourOeufs$2
- com.example.endpointapp.ActivityHistoriqueAccouplementsPourOeufs$3
+com/example/endpointapp/ActivityIsolement.java
+ com.example.endpointapp.ActivityIsolement
 com/example/endpointapp/CustomPopup.java
  com.example.endpointapp.CustomPopup
  com.example.endpointapp.CustomPopup$1
  com.example.endpointapp.CustomPopup$2
-com/example/endpointapp/ActivityIsolement.java
- com.example.endpointapp.ActivityIsolement
+com/example/endpointapp/ActivityRechercheRegistreMortsTrier.java
+ com.example.endpointapp.ActivityRechercheRegistreMortsTrier
+ com.example.endpointapp.ActivityRechercheRegistreMortsTrier$1
+ com.example.endpointapp.ActivityRechercheRegistreMortsTrier$2
+ com.example.endpointapp.ActivityRechercheRegistreMortsTrier$3
+ com.example.endpointapp.ActivityRechercheRegistreMortsTrier$4
 com/example/endpointapp/ActivityRechercheRegistreSouffrance.java
  com.example.endpointapp.ActivityRechercheRegistreSouffrance
  com.example.endpointapp.ActivityRechercheRegistreSouffrance$1
@@ -118,6 +120,14 @@ com/example/endpointapp/ActivityRechercheRegistreBacs.java
  com.example.endpointapp.ActivityRechercheRegistreBacs$3
 com/example/endpointapp/ActivityReunificationBacs.java
  com.example.endpointapp.ActivityReunificationBacs
+com/example/endpointapp/WriteOnSheetTaches.java
+ com.example.endpointapp.WriteOnSheetTaches
+ com.example.endpointapp.WriteOnSheetTaches$1
+ com.example.endpointapp.WriteOnSheetTaches$2
+ com.example.endpointapp.WriteOnSheetTaches$3
+ com.example.endpointapp.WriteOnSheetTaches$4
+ com.example.endpointapp.WriteOnSheetTaches$5
+ com.example.endpointapp.WriteOnSheetTaches$6
 com/example/endpointapp/ActivityWebHistoriqueReservationInjection.java
  com.example.endpointapp.ActivityWebHistoriqueReservationInjection
 com/example/endpointapp/ActivitySurveillance.java
@@ -138,11 +148,8 @@ com/example/endpointapp/ActivityInscription.java
 com/example/endpointapp/ActivitySplash.java
  com.example.endpointapp.ActivitySplash
  com.example.endpointapp.ActivitySplash$1
-com/example/endpointapp/ActivityTache.java
- com.example.endpointapp.ActivityTache
- com.example.endpointapp.ActivityTache$1
- com.example.endpointapp.ActivityTache$2
- com.example.endpointapp.ActivityTache$3
+com/example/endpointapp/ActivityEcrirRecapSouffrance.java
+ com.example.endpointapp.ActivityEcrirRecapSouffrance
 com/example/endpointapp/ActivityRas.java
  com.example.endpointapp.ActivityRas
 com/example/endpointapp/ActivityRechercheRegistreTrier.java
@@ -204,23 +211,28 @@ com/example/endpointapp/WriteOnSheetAccouplement.java
  com.example.endpointapp.WriteOnSheetAccouplement$1
  com.example.endpointapp.WriteOnSheetAccouplement$2
  com.example.endpointapp.WriteOnSheetAccouplement$3
-com/example/endpointapp/ActivityEcrirRecapMort.java
- com.example.endpointapp.ActivityEcrirRecapMort
-com/example/endpointapp/ActivityRechercheRegistreMortsTrier.java
- com.example.endpointapp.ActivityRechercheRegistreMortsTrier
- com.example.endpointapp.ActivityRechercheRegistreMortsTrier$1
- com.example.endpointapp.ActivityRechercheRegistreMortsTrier$2
- com.example.endpointapp.ActivityRechercheRegistreMortsTrier$3
- com.example.endpointapp.ActivityRechercheRegistreMortsTrier$4
-com/example/endpointapp/ActivityEcrirRecapSouffrance.java
- com.example.endpointapp.ActivityEcrirRecapSouffrance
-com/example/endpointapp/ActivityRechercheRegistreMorts.java
- com.example.endpointapp.ActivityRechercheRegistreMorts
- com.example.endpointapp.ActivityRechercheRegistreMorts$1
- com.example.endpointapp.ActivityRechercheRegistreMorts$2
- com.example.endpointapp.ActivityRechercheRegistreMorts$3
- com.example.endpointapp.ActivityRechercheRegistreMorts$4
- com.example.endpointapp.ActivityRechercheRegistreMorts$5
+com/example/endpointapp/ActivityHistoriqueAccouplementsPourOeufs.java
+ com.example.endpointapp.ActivityHistoriqueAccouplementsPourOeufs
+ com.example.endpointapp.ActivityHistoriqueAccouplementsPourOeufs$1
+ com.example.endpointapp.ActivityHistoriqueAccouplementsPourOeufs$2
+ com.example.endpointapp.ActivityHistoriqueAccouplementsPourOeufs$3
+com/example/endpointapp/ActivityRechercheRegistre.java
+ com.example.endpointapp.ActivityRechercheRegistre
+ com.example.endpointapp.ActivityRechercheRegistre$1
+ com.example.endpointapp.ActivityRechercheRegistre$2
+ com.example.endpointapp.ActivityRechercheRegistre$3
+com/example/endpointapp/WriteOnSheetSouffrance.java
+ com.example.endpointapp.WriteOnSheetSouffrance
+ com.example.endpointapp.WriteOnSheetSouffrance$1
+ com.example.endpointapp.WriteOnSheetSouffrance$2
+ com.example.endpointapp.WriteOnSheetSouffrance$3
+com/example/endpointapp/ActivityTache.java
+ com.example.endpointapp.ActivityTache
+ com.example.endpointapp.ActivityTache$1
+ com.example.endpointapp.ActivityTache$2
+ com.example.endpointapp.ActivityTache$3
+ com.example.endpointapp.ActivityTache$4
+ com.example.endpointapp.ActivityTache$5
 com/example/endpointapp/ActivityMenu.java
  com.example.endpointapp.ActivityMenu
  com.example.endpointapp.ActivityMenu$1

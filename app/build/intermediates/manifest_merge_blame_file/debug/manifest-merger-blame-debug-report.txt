@@ -21,7 +21,7 @@
 13-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:8:22-78
 14
 15    <application
-15-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:11:5-94:19
+15-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:11:5-97:19
 16        android:allowBackup="true"
 16-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:12:9-35
 17        android:debuggable="true"
@@ -166,27 +166,30 @@
 67        <activity android:name="com.example.endpointapp.ActivityMenu" />
 67-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:82:9-49
 67-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:82:19-47
-68        <activity android:name="com.example.endpointapp.ActivitySplash" >
-68-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:84:9-89:20
-68-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:84:19-49
-69            <intent-filter>
-69-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:85:13-88:29
-70                <action android:name="android.intent.action.MAIN" />
-70-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:86:17-69
-70-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:86:25-66
-71
-72                <category android:name="android.intent.category.LAUNCHER" />
-72-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:87:17-77
-72-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:87:27-74
-73            </intent-filter>
-74        </activity>
-75
-76        <meta-data
-76-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:91:9-93:57
-77            android:name="preloaded_fonts"
-77-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:92:13-43
-78            android:resource="@array/preloaded_fonts" />
-78-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:93:13-54
-79    </application>
-80
-81</manifest>
+68        <activity android:name="com.example.endpointapp.NettoyageBac" />
+68-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:84:9-49
+68-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:84:19-47
+69        <activity android:name="com.example.endpointapp.ActivitySplash" >
+69-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:87:9-92:20
+69-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:87:19-49
+70            <intent-filter>
+70-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:88:13-91:29
+71                <action android:name="android.intent.action.MAIN" />
+71-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:89:17-69
+71-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:89:25-66
+72
+73                <category android:name="android.intent.category.LAUNCHER" />
+73-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:90:17-77
+73-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:90:27-74
+74            </intent-filter>
+75        </activity>
+76
+77        <meta-data
+77-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:94:9-96:57
+78            android:name="preloaded_fonts"
+78-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:95:13-43
+79            android:resource="@array/preloaded_fonts" />
+79-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:96:13-54
+80    </application>
+81
+82</manifest>

@@ -176,6 +176,8 @@ public class ActivityRechercheRegistreMortsTrier extends AppCompatActivity imple
             };
 
             // And then sort it using collections.sort().
+
+
             Collections.sort(list, ageComparator);
 
 

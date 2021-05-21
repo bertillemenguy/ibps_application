@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:focusableInTouchMode="true"
+    tools:context=".ActivityTache"
+    tools:layout_editor_absoluteY="81dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#009688"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="51dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="right">
+
+
+                        <ImageButton
+                            android:id="@+id/btn_return"
+                            style="@android:style/Widget.Holo.Light.ImageButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="false"
+                            android:layout_alignParentBottom="false"
+                            android:onClick="lancermenu"
+                            app:srcCompat="@drawable/icon_home"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="105dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <Button
+                        android:id="@+id/nettoyage_bac"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#CDDC39"
+                        android:backgroundTint="#CDDC39"
+                        android:onClick="getNettoyage"
+                        android:text="nettoyage bacs"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#959595"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:background="#F3F3F3"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="79dp"
+                            android:layout_height="79dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@android:color/darker_gray">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="0"
+                                android:background="@android:color/background_light">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/jour_semaine"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Lundi"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/num_lundi"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="15"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/mois_lundi"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="mai"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="right"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right">
+
+                                        <TextView
+                                            android:id="@+id/compteur_lundi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="1"
+                                            android:layout_marginRight="3dp"/>
+
+                                        <TextView
+                                            android:id="@+id/txt_lundi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:text="tache(s)"
+                                            android:layout_marginRight="7dp"/>
+
+                                    </LinearLayout>
+
+                                    <Button
+                                        android:id="@+id/tache_lundi"
+                                        android:layout_width="60dp"
+                                        android:layout_height="40dp"
+                                        android:backgroundTint="#98DAD4"
+                                        android:text="Voir"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#959595"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:background="#F3F3F3"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="79dp"
+                            android:layout_height="79dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@android:color/darker_gray">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="0"
+                                android:background="@android:color/background_light">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="Mardi"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/num_mardi"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="15"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/mois_mardi"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="mai"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="right"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right">
+
+                                        <TextView
+                                            android:id="@+id/compteur_mardi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="1"
+                                            android:layout_marginRight="3dp"/>
+
+                                        <TextView
+                                            android:id="@+id/txt_mardi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:text="tache(s)"
+                                            android:layout_marginRight="7dp"/>
+
+                                    </LinearLayout>
+
+                                    <Button
+                                        android:id="@+id/tache_mardi"
+                                        android:layout_width="60dp"
+                                        android:layout_height="40dp"
+                                        android:backgroundTint="#98DAD4"
+                                        android:text="Voir"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#959595"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:background="#F3F3F3"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="79dp"
+                            android:layout_height="79dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@android:color/darker_gray">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="0"
+                                android:background="@android:color/background_light">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="Mercredi"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/num_mercredi"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="15"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/mois_mercredi"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="mai"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="right"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right">
+
+                                        <TextView
+                                            android:id="@+id/compteur_mercredi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="1"
+                                            android:layout_marginRight="3dp"/>
+
+                                        <TextView
+                                            android:id="@+id/txt_mercredi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:text="tache(s)"
+                                            android:layout_marginRight="7dp"/>
+
+                                    </LinearLayout>
+
+                                    <Button
+                                        android:id="@+id/tache_mercredi"
+                                        android:layout_width="60dp"
+                                        android:layout_height="40dp"
+                                        android:backgroundTint="#98DAD4"
+                                        android:text="Voir"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#959595"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:background="#F3F3F3"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="79dp"
+                            android:layout_height="79dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@android:color/darker_gray">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="0"
+                                android:background="@android:color/background_light">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="Jeudi"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/num_jeudi"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="15"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/mois_jeudi"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="mai"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="right"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right">
+
+                                        <TextView
+                                            android:id="@+id/compteur_jeudi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="1"
+                                            android:layout_marginRight="3dp"/>
+
+                                        <TextView
+                                            android:id="@+id/txt_jeudi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:text="tache(s)"
+                                            android:layout_marginRight="7dp"/>
+
+                                    </LinearLayout>
+
+                                    <Button
+                                        android:id="@+id/tache_jeudi"
+                                        android:layout_width="60dp"
+                                        android:layout_height="40dp"
+                                        android:backgroundTint="#98DAD4"
+                                        android:text="Voir"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#959595"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:background="#F3F3F3"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="79dp"
+                            android:layout_height="79dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@android:color/darker_gray">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="0"
+                                android:background="@android:color/background_light">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="Vendredi"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/num_vendredi"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="15"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/mois_vendredi"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="mai"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="right"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right">
+
+                                        <TextView
+                                            android:id="@+id/compteur_vendredi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="1"
+                                            android:layout_marginRight="3dp"/>
+
+                                        <TextView
+                                            android:id="@+id/txt_vendredi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:text="tache(s)"
+                                            android:layout_marginRight="7dp"/>
+
+                                    </LinearLayout>
+                                    <Button
+                                        android:id="@+id/tache_vendredi"
+                                        android:layout_width="60dp"
+                                        android:layout_height="40dp"
+                                        android:backgroundTint="#98DAD4"
+                                        android:text="Voir"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#959595"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:background="#F3F3F3"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="79dp"
+                            android:layout_height="79dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@android:color/darker_gray">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="0"
+                                android:background="@android:color/background_light">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="Samedi"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/num_samedi"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="15"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/mois_samedi"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="mai"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="right"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right">
+
+                                        <TextView
+                                            android:id="@+id/compteur_samedi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="1"
+                                            android:layout_marginRight="3dp"/>
+
+                                        <TextView
+                                            android:id="@+id/txt_samedi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:text="tache(s)"
+                                            android:layout_marginRight="7dp"/>
+
+                                    </LinearLayout>
+
+                                    <Button
+                                        android:id="@+id/tache_samedi"
+                                        android:layout_width="60dp"
+                                        android:layout_height="40dp"
+                                        android:backgroundTint="#98DAD4"
+                                        android:text="Voir"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#959595"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:background="#F3F3F3"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="79dp"
+                            android:layout_height="79dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@android:color/darker_gray">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="0"
+                                android:background="@android:color/background_light">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="Dimanche"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/num_dimanche"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="15"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/mois_dimanche"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="mai"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="right"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right">
+
+                                        <TextView
+                                            android:id="@+id/compteur_dimanche"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="1"
+                                            android:layout_marginRight="3dp"/>
+
+                                        <TextView
+                                            android:id="@+id/txt_dimanche"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:text="tache(s)"
+                                            android:layout_marginRight="7dp"/>
+
+                                    </LinearLayout>
+                                    <Button
+                                        android:id="@+id/tache_dimanche"
+                                        android:layout_width="60dp"
+                                        android:layout_height="40dp"
+                                        android:backgroundTint="#98DAD4"
+                                        android:text="Voir"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
