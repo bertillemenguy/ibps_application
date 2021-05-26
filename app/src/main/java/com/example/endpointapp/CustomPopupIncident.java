@@ -61,7 +61,8 @@ public class CustomPopupIncident extends AppCompatActivity  {
 
 
     public void lancersauvegarde_delete(View view) {
-        WriteOnSheetBacsTraite.updateData(this, key);
+        WriteOnSheetIncident.updateData(this, key);
+
         Intent intent=new Intent(this, ActivityHistoriqueIncidents.class);
         startActivity(intent);
     }

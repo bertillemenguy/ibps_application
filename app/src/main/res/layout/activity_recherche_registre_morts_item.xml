@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
 
     android:focusableInTouchMode="true"
-    tools:context=".ActivityRechercheRegistreMorts"
     tools:layout_editor_absoluteY="81dp">
 
     <LinearLayout
@@ -124,8 +123,7 @@
                     android:id="@+id/lv_items"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:choiceMode="multipleChoice" />
-
+                    />
 
 
             </LinearLayout>
@@ -138,8 +136,6 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:text="Valider" />
-
-
 
 
         </LinearLayout>

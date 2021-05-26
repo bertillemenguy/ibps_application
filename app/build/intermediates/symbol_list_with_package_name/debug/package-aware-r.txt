@@ -33,6 +33,7 @@ array nourrisage
 array preloaded_fonts
 array systemeaquatique
 array travaux
+array tris
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -849,6 +850,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable pencil
 drawable sync_proble
 drawable tag
 drawable tooltip_frame_dark
@@ -907,6 +909,13 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btn_com_dimanche
+id btn_com_jeudi
+id btn_com_lundi
+id btn_com_mardi
+id btn_com_mercredi
+id btn_com_samedi
+id btn_com_vendredi
 id btn_return
 id btn_return4
 id btn_return5
@@ -951,6 +960,14 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id color_item
+id comment
+id commentaire_dimanche
+id commentaire_jeudi
+id commentaire_lundi
+id commentaire_mardi
+id commentaire_mercredi
+id commentaire_samedi
+id commentaire_vendredi
 id compteur_bacs
 id compteur_dimanche
 id compteur_incidents
@@ -1054,6 +1071,7 @@ id media_actions
 id message
 id middle
 id mini
+id modif_comment
 id mois_dimanche
 id mois_jeudi
 id mois_lundi
@@ -1153,6 +1171,7 @@ id spinner3
 id spinner5
 id spinner6
 id spinner7
+id spinner_tris
 id spinnera
 id spinnerb
 id spinnerc
@@ -1454,6 +1473,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout popup_comment
 layout row_item_taches
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
@@ -1508,6 +1528,7 @@ string changement_de_couleur
 string character_counter_pattern
 string choisiraltcomportementale
 string choisiraltphysique
+string choisirtri
 string exophtalmie_d_formation_faciale
 string maigreur
 string ob_sit

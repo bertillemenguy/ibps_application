@@ -40,8 +40,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ActivityRechercheRegistreBacs extends AppCompatActivity implements AdapterView.OnItemClickListener {
-    
-    
+
+
+    // tri actuellement choisi
+    int mTriChoisi = 0;
+
     ListView listView;
     SimpleAdapter adapter;
     ProgressDialog loading;
@@ -53,10 +56,11 @@ public class ActivityRechercheRegistreBacs extends AppCompatActivity implements 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recherche_registre_morts_item);
+        setContentView(R.layout.activity_recherche_registre_item);
         
         listView = findViewById(R.id.lv_items);
         listView.setOnItemClickListener(this);
+
         editTextSearchItem = findViewById(R.id.et_search);
         
         // Get the transferred data from source activity.
@@ -160,30 +164,7 @@ public class ActivityRechercheRegistreBacs extends AppCompatActivity implements 
             }
         });
     }
-    
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Intent intent=new Intent(this, ActivityEcrirRecapBacs.class);
-        HashMap map=(HashMap) parent.getItemAtPosition(position);
-    
-        String Bac=map.get("Bac").toString();
-        String Lot=map.get("Lot").toString();
-        String Lignee=map.get("Lignee").toString();
-        String Age=map.get("Age").toString();
-        String Responsable=map.get("Responsable").toString();
-        String Key=map.get("Key").toString();
-    
-    
-        intent.putExtra("Key", Key);
-        intent.putExtra("Bac", Bac);
-        intent.putExtra("Lot", Lot);
-        intent.putExtra("Lignee", Lignee);
-        intent.putExtra("Age", Age);
-        intent.putExtra("Responsable", Responsable);
 
-        intent.putExtra("main_user", main_user);
-
-        startActivity(intent);
-    }
 
 
     public void lancerPDF(View view){
@@ -233,6 +214,31 @@ public class ActivityRechercheRegistreBacs extends AppCompatActivity implements 
     
     public void onPointerCaptureChanged(boolean hasCapture) {
     
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Intent intent=new Intent(this, ActivityEcrirRecapBacs.class);
+        HashMap map=(HashMap) parent.getItemAtPosition(position);
+
+        String Bac=map.get("Bac").toString();
+        String Lot=map.get("Lot").toString();
+        String Lignee=map.get("Lignee").toString();
+        String Age=map.get("Age").toString();
+        String Responsable=map.get("Responsable").toString();
+        String Key=map.get("Key").toString();
+
+
+        intent.putExtra("Key", Key);
+        intent.putExtra("Bac", Bac);
+        intent.putExtra("Lot", Lot);
+        intent.putExtra("Lignee", Lignee);
+        intent.putExtra("Age", Age);
+        intent.putExtra("Responsable", Responsable);
+
+        intent.putExtra("main_user", main_user);
+
+        startActivity(intent);
     }
 }
 

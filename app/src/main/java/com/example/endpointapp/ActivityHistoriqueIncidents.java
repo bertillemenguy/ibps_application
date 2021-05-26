@@ -210,8 +210,7 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Ad
         String key = map.get("key").toString();
         intent.putExtra("key", key);
         intent.putExtra("main_user", main_user);
-        Toast.makeText(ActivityHistoriqueIncidents.this, key, Toast.LENGTH_SHORT).show();
-
+        //Toast.makeText(ActivityHistoriqueIncidents.this, key, Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
 }

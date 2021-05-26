@@ -85,6 +85,9 @@
 
                 </LinearLayout>
 
+
+                <!--  ___________________  LUNDI  _________________  -->
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -98,6 +101,10 @@
                         android:layout_marginBottom="1dp"
                         android:background="#F3F3F3"
                         android:orientation="horizontal">
+
+
+                        <!--     __________  DEBUT LUNDI AFFICHAGE DATE ___________  -->
+
 
                         <LinearLayout
                             android:layout_width="79dp"
@@ -154,6 +161,12 @@
                         </LinearLayout>
 
 
+                        <!--     __________  FIN LUNDI AFFICHAGE DATE ___________  -->
+
+
+
+                        <!--     __________  DEBUT LUNDI AFFICHAGE COMMENTAIRES + NB TACHES + BOUTON VOIR ___________  -->
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -164,41 +177,97 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
+
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:gravity="right"
-                                    android:orientation="vertical">
+                                    android:orientation="horizontal">
+
 
                                     <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:gravity="right">
+                                        android:layout_width="240dp"
+                                        android:layout_height="match_parent">
 
-                                        <TextView
-                                            android:id="@+id/compteur_lundi"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="1"
-                                            android:layout_marginRight="3dp"/>
 
-                                        <TextView
-                                            android:id="@+id/txt_lundi"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="horizontal"
-                                            android:text="tache(s)"
-                                            android:layout_marginRight="7dp"/>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center"
+                                                android:orientation="horizontal">
+
+
+
+
+                                            <TextView
+                                                android:id="@+id/commentaire_lundi"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textSize="10dp"
+                                                android:gravity="center" />
+
+                                                <ImageButton
+                                                    android:id="@+id/btn_com_lundi"
+                                                    style="@android:style/Widget.Holo.Light.ImageButton"
+                                                    android:layout_width="15dp"
+                                                    android:layout_height="15dp"
+                                                    android:adjustViewBounds="true"
+                                                    android:background="@android:drawable/ic_menu_edit"
+                                                    android:onClick="getCommentLundi"
+                                                    android:scaleType="centerInside"
+                                                    android:layout_marginLeft="6dp"/>
+
+
+                                            </LinearLayout>
 
                                     </LinearLayout>
 
-                                    <Button
-                                        android:id="@+id/tache_lundi"
-                                        android:layout_width="60dp"
-                                        android:layout_height="40dp"
-                                        android:backgroundTint="#98DAD4"
-                                        android:text="Voir"
-                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+
+                                 <LinearLayout
+                                    android:layout_width="80dp"
+                                     android:layout_height="match_parent"
+                                     android:orientation="vertical">
+
+
+                                     <LinearLayout
+                                         android:layout_width="match_parent"
+                                         android:layout_height="wrap_content">
+
+                                         <TextView
+                                             android:id="@+id/compteur_lundi"
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="wrap_content"
+                                             android:layout_marginRight="3dp"/>
+
+                                         <TextView
+                                             android:id="@+id/txt_lundi"
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="wrap_content"
+                                             android:orientation="horizontal"
+                                             android:text="tache(s)"
+                                             android:layout_marginRight="7dp"/>
+
+                                     </LinearLayout>
+
+
+                                     <LinearLayout
+                                         android:layout_width="match_parent"
+                                         android:layout_height="match_parent"
+                                         android:orientation="horizontal">
+
+
+                                         <Button
+                                             android:id="@+id/tache_lundi"
+                                             android:layout_width="70dp"
+                                             android:layout_height="40dp"
+                                             android:backgroundTint="#98DAD4"
+                                             android:text="Voir"
+                                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                                     </LinearLayout>
+
+                                 </LinearLayout>
 
 
                                 </LinearLayout>
@@ -206,8 +275,13 @@
                             </LinearLayout>
                         </LinearLayout>
 
+                        <!-- _____________  FIN LUNDI AFFICHAGE COMMENTAIRES + NB TACHES + BOUTON VOIR ___________  -->
+
+
                     </LinearLayout>
                 </LinearLayout>
+
+                <!-- _____________  FIN LUNDI  ___________  -->
 
 
                 <LinearLayout
@@ -277,6 +351,10 @@
                             </LinearLayout>
                         </LinearLayout>
 
+
+
+                        <!-- _____________ DEBUT MARDI AFFICHAGE COMMENTAIRES + NB TACHES + BOUTON VOIR  _________  -->
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -285,48 +363,105 @@
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                >
+                                android:layout_height="match_parent">
+
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:gravity="right"
-                                    android:orientation="vertical">
+                                    android:orientation="horizontal">
+
 
                                     <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:gravity="right">
+                                        android:layout_width="240dp"
+                                        android:layout_height="match_parent">
 
-                                        <TextView
-                                            android:id="@+id/compteur_mardi"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="1"
-                                            android:layout_marginRight="3dp"/>
 
-                                        <TextView
-                                            android:id="@+id/txt_mardi"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="horizontal"
-                                            android:text="tache(s)"
-                                            android:layout_marginRight="7dp"/>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+
+                                            <TextView
+                                                android:id="@+id/commentaire_mardi"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:textSize="10dp"/>
+
+                                            <ImageButton
+                                                android:id="@+id/btn_com_mardi"
+                                                style="@android:style/Widget.Holo.Light.ImageButton"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:adjustViewBounds="true"
+                                                android:background="@android:drawable/ic_menu_edit"
+                                                android:onClick="getCommentMardi"
+                                                android:scaleType="centerInside"
+                                                android:layout_marginLeft="6dp"/>
+
+                                        </LinearLayout>
 
                                     </LinearLayout>
 
-                                    <Button
-                                        android:id="@+id/tache_mardi"
-                                        android:layout_width="60dp"
-                                        android:layout_height="40dp"
-                                        android:backgroundTint="#98DAD4"
-                                        android:text="Voir"
-                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="80dp"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:id="@+id/compteur_mardi"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginRight="3dp"/>
+
+                                            <TextView
+                                                android:id="@+id/txt_mardi"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:text="tache(s)"
+                                                android:layout_marginRight="7dp"/>
+
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+
+                                            <Button
+                                                android:id="@+id/tache_mardi"
+                                                android:layout_width="70dp"
+                                                android:layout_height="40dp"
+                                                android:backgroundTint="#98DAD4"
+                                                android:text="Voir"
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
 
                                 </LinearLayout>
+
                             </LinearLayout>
                         </LinearLayout>
+
+                        <!-- _____________ FIN MARDI AFFICHAGE COMMENTAIRES + NB TACHES + BOUTON VOIR  _________  -->
+
                     </LinearLayout>
 
 
@@ -399,6 +534,10 @@
                             </LinearLayout>
                         </LinearLayout>
 
+
+
+                        <!-- _____________ DEBUT MERCREDI AFFICHAGE COMMENTAIRES + NB TACHES + BOUTON VOIR  _________  -->
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -409,49 +548,112 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
+
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:gravity="right"
-                                    android:orientation="vertical">
+                                    android:orientation="horizontal">
+
 
                                     <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:gravity="right">
+                                        android:layout_width="250dp"
+                                        android:layout_height="match_parent">
 
-                                        <TextView
-                                            android:id="@+id/compteur_mercredi"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="1"
-                                            android:layout_marginRight="3dp"/>
 
-                                        <TextView
-                                            android:id="@+id/txt_mercredi"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="horizontal"
-                                            android:text="tache(s)"
-                                            android:layout_marginRight="7dp"/>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/commentaire_mercredi"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:textSize="10dp"/>
+
+                                            <ImageButton
+                                                android:id="@+id/btn_com_mercredi"
+                                                style="@android:style/Widget.Holo.Light.ImageButton"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:adjustViewBounds="true"
+                                                android:background="@android:drawable/ic_menu_edit"
+                                                android:onClick="getCommentMercredi"
+                                                android:scaleType="centerInside"
+                                                android:layout_marginLeft="6dp"/>
+
+                                        </LinearLayout>
 
                                     </LinearLayout>
 
-                                    <Button
-                                        android:id="@+id/tache_mercredi"
-                                        android:layout_width="60dp"
-                                        android:layout_height="40dp"
-                                        android:backgroundTint="#98DAD4"
-                                        android:text="Voir"
-                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+
+                                    <LinearLayout
+                                        android:layout_width="80dp"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:id="@+id/compteur_mercredi"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginRight="3dp"/>
+
+                                            <TextView
+                                                android:id="@+id/txt_mercredi"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:text="tache(s)"
+                                                android:layout_marginRight="7dp"/>
+
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+
+                                            <Button
+                                                android:id="@+id/tache_mercredi"
+                                                android:layout_width="70dp"
+                                                android:layout_height="40dp"
+                                                android:backgroundTint="#98DAD4"
+                                                android:text="Voir"
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
 
                                 </LinearLayout>
+
                             </LinearLayout>
                         </LinearLayout>
+
+                        <!-- _____________ FIN MERCREDI AFFICHAGE COMMENTAIRES + NB TACHES + BOUTON VOIR  _________  -->
+
+
+
+
                     </LinearLayout>
 
 
                 </LinearLayout>
+
+
+                <!-- ________________ DEBUT JEUDI _________________ -->
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -466,6 +668,8 @@
                         android:layout_marginBottom="1dp"
                         android:background="#F3F3F3"
                         android:orientation="horizontal">
+
+
 
                         <LinearLayout
                             android:layout_width="79dp"
@@ -520,6 +724,8 @@
                             </LinearLayout>
                         </LinearLayout>
 
+                        <!-- _____________ DEBUT JEUDI AFFICHAGE COMMENTAIRES + NB TACHES + BOUTON VOIR  _________  -->
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -530,47 +736,108 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
+
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:gravity="right"
-                                    android:orientation="vertical">
+                                    android:orientation="horizontal">
+
 
                                     <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:gravity="right">
+                                        android:layout_width="250dp"
+                                        android:layout_height="match_parent">
 
-                                        <TextView
-                                            android:id="@+id/compteur_jeudi"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="1"
-                                            android:layout_marginRight="3dp"/>
 
-                                        <TextView
-                                            android:id="@+id/txt_jeudi"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="horizontal"
-                                            android:text="tache(s)"
-                                            android:layout_marginRight="7dp"/>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+
+
+                                            <TextView
+                                                android:id="@+id/commentaire_jeudi"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:textSize="10dp"/>
+
+                                            <ImageButton
+                                                android:id="@+id/btn_com_jeudi"
+                                                style="@android:style/Widget.Holo.Light.ImageButton"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:adjustViewBounds="true"
+                                                android:background="@android:drawable/ic_menu_edit"
+                                                android:onClick="getCommentJeudi"
+                                                android:scaleType="centerInside"
+                                                android:layout_marginLeft="6dp"/>
+
+                                        </LinearLayout>
 
                                     </LinearLayout>
 
-                                    <Button
-                                        android:id="@+id/tache_jeudi"
-                                        android:layout_width="60dp"
-                                        android:layout_height="40dp"
-                                        android:backgroundTint="#98DAD4"
-                                        android:text="Voir"
-                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="80dp"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:id="@+id/compteur_jeudi"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginRight="3dp"/>
+
+                                            <TextView
+                                                android:id="@+id/txt_jeudi"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:text="tache(s)"
+                                                android:layout_marginRight="7dp"/>
+
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="right"
+                                            android:orientation="horizontal">
+
+
+                                            <Button
+                                                android:id="@+id/tache_jeudi"
+                                                android:layout_width="70dp"
+                                                android:layout_height="40dp"
+                                                android:backgroundTint="#98DAD4"
+                                                android:text="Voir"
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
 
                                 </LinearLayout>
+
                             </LinearLayout>
                         </LinearLayout>
-                    </LinearLayout>
 
+                        <!-- _____________ FIN JEUDI AFFICHAGE COMMENTAIRES + NB TACHES + BOUTON VOIR  _________  -->
+
+
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -641,6 +908,9 @@
                             </LinearLayout>
                         </LinearLayout>
 
+
+                        <!-- _____________ DEBUT VENDREDI AFFICHAGE COMMENTAIRES + NB TACHES + BOUTON VOIR  _________  -->
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -651,44 +921,101 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
+
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:gravity="right"
-                                    android:orientation="vertical">
+                                    android:orientation="horizontal">
+
 
                                     <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:gravity="right">
+                                        android:layout_width="250dp"
+                                        android:layout_height="match_parent">
 
-                                        <TextView
-                                            android:id="@+id/compteur_vendredi"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="1"
-                                            android:layout_marginRight="3dp"/>
 
-                                        <TextView
-                                            android:id="@+id/txt_vendredi"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="horizontal"
-                                            android:text="tache(s)"
-                                            android:layout_marginRight="7dp"/>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/commentaire_vendredi"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:textSize="10dp"/>
+
+                                            <ImageButton
+                                                android:id="@+id/btn_com_vendredi"
+                                                style="@android:style/Widget.Holo.Light.ImageButton"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:adjustViewBounds="true"
+                                                android:background="@android:drawable/ic_menu_edit"
+                                                android:onClick="getCommentVendredi"
+                                                android:scaleType="centerInside"
+                                                android:layout_marginLeft="6dp"/>
+
+                                        </LinearLayout>
 
                                     </LinearLayout>
-                                    <Button
-                                        android:id="@+id/tache_vendredi"
-                                        android:layout_width="60dp"
-                                        android:layout_height="40dp"
-                                        android:backgroundTint="#98DAD4"
-                                        android:text="Voir"
-                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+
+
+                                    <LinearLayout
+                                        android:layout_width="80dp"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:id="@+id/compteur_vendredi"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginRight="3dp"/>
+
+                                            <TextView
+                                                android:id="@+id/txt_vendredi"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:text="tache(s)"
+                                                android:layout_marginRight="7dp"/>
+
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+
+                                            <Button
+                                                android:id="@+id/tache_vendredi"
+                                                android:layout_width="70dp"
+                                                android:layout_height="40dp"
+                                                android:backgroundTint="#98DAD4"
+                                                android:text="Voir"
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
 
                                 </LinearLayout>
+
                             </LinearLayout>
                         </LinearLayout>
+
+                        <!-- _____________ FIN VENDREDI AFFICHAGE COMMENTAIRES + NB TACHES + BOUTON VOIR  _________  -->
 
 
                     </LinearLayout>
@@ -764,6 +1091,9 @@
                             </LinearLayout>
                         </LinearLayout>
 
+
+                        <!-- _____________ DEBUT SAMEDI AFFICHAGE COMMENTAIRES + NB TACHES + BOUTON VOIR  _________  -->
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -774,45 +1104,100 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
+
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:gravity="right"
-                                    android:orientation="vertical">
+                                    android:orientation="horizontal">
+
 
                                     <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:gravity="right">
+                                        android:layout_width="250dp"
+                                        android:layout_height="match_parent">
 
-                                        <TextView
-                                            android:id="@+id/compteur_samedi"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="1"
-                                            android:layout_marginRight="3dp"/>
 
-                                        <TextView
-                                            android:id="@+id/txt_samedi"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="horizontal"
-                                            android:text="tache(s)"
-                                            android:layout_marginRight="7dp"/>
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/commentaire_samedi"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:textSize="10dp" />
+
+                                            <ImageButton
+                                                android:id="@+id/btn_com_samedi"
+                                                style="@android:style/Widget.Holo.Light.ImageButton"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:adjustViewBounds="true"
+                                                android:background="@android:drawable/ic_menu_edit"
+                                                android:onClick="getCommentSamedi"
+                                                android:scaleType="centerInside"
+                                                android:layout_marginLeft="6dp"/>
+
+                                        </LinearLayout>
 
                                     </LinearLayout>
 
-                                    <Button
-                                        android:id="@+id/tache_samedi"
-                                        android:layout_width="60dp"
-                                        android:layout_height="40dp"
-                                        android:backgroundTint="#98DAD4"
-                                        android:text="Voir"
-                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="80dp"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:id="@+id/compteur_samedi"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginRight="3dp"/>
+
+                                            <TextView
+                                                android:id="@+id/txt_samedi"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:text="tache(s)"
+                                                android:layout_marginRight="7dp"/>
+
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+
+                                            <Button
+                                                android:id="@+id/tache_samedi"
+                                                android:layout_width="70dp"
+                                                android:layout_height="40dp"
+                                                android:backgroundTint="#98DAD4"
+                                                android:text="Voir"
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
 
                                 </LinearLayout>
+
                             </LinearLayout>
                         </LinearLayout>
+
+                        <!-- _____________ FIN SAMEDI AFFICHAGE COMMENTAIRES + NB TACHES + BOUTON VOIR  _________  -->
 
 
                     </LinearLayout>
@@ -887,6 +1272,9 @@
                             </LinearLayout>
                         </LinearLayout>
 
+
+                        <!-- _____________ DEBUT DIMANCHE AFFICHAGE COMMENTAIRES + NB TACHES + BOUTON VOIR  _________  -->
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -897,48 +1285,110 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
+
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:gravity="right"
-                                    android:orientation="vertical">
+                                    android:orientation="horizontal">
+
 
                                     <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:gravity="right">
+                                        android:layout_width="250dp"
+                                        android:layout_height="match_parent">
 
-                                        <TextView
-                                            android:id="@+id/compteur_dimanche"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="1"
-                                            android:layout_marginRight="3dp"/>
 
-                                        <TextView
-                                            android:id="@+id/txt_dimanche"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="horizontal"
-                                            android:text="tache(s)"
-                                            android:layout_marginRight="7dp"/>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/commentaire_dimanche"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:textSize="10dp"/>
+
+                                            <ImageButton
+                                                android:id="@+id/btn_com_dimanche"
+                                                style="@android:style/Widget.Holo.Light.ImageButton"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:adjustViewBounds="true"
+                                                android:background="@android:drawable/ic_menu_edit"
+                                                android:onClick="getCommentDimanche"
+                                                android:scaleType="centerInside"
+                                                android:layout_marginLeft="6dp"/>
+
+                                        </LinearLayout>
 
                                     </LinearLayout>
-                                    <Button
-                                        android:id="@+id/tache_dimanche"
-                                        android:layout_width="60dp"
-                                        android:layout_height="40dp"
-                                        android:backgroundTint="#98DAD4"
-                                        android:text="Voir"
-                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+
+
+                                    <LinearLayout
+                                        android:layout_width="80dp"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:id="@+id/compteur_dimanche"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="1"
+                                                android:layout_marginRight="3dp"/>
+
+                                            <TextView
+                                                android:id="@+id/txt_dimanche"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:text="tache(s)"
+                                                android:layout_marginRight="7dp"/>
+
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+
+                                            <Button
+                                                android:id="@+id/tache_dimanche"
+                                                android:layout_width="70dp"
+                                                android:layout_height="40dp"
+                                                android:backgroundTint="#98DAD4"
+                                                android:text="Voir"
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
 
                                 </LinearLayout>
+
                             </LinearLayout>
                         </LinearLayout>
+
+                        <!-- _____________ FIN DIMANCHE AFFICHAGE COMMENTAIRES + NB TACHES + BOUTON VOIR  _________  -->
+
+
+
+
                     </LinearLayout>
                 </LinearLayout>
                 </LinearLayout>
+                </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

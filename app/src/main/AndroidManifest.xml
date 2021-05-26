@@ -42,7 +42,6 @@
 
 
         <activity android:name=".ActivityRechercheRegistre"/>
-        <activity android:name=".ActivityRechercheRegistreTrier"/>
         <activity android:name=".ActivityHistoriqueMorts" />
 
         <activity android:name=".ActivityRechercheGestionBacs" />

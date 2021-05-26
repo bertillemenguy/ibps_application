@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.icu.util.Calendar;
 import android.os.Build;
 import android.os.Bundle;
@@ -54,8 +55,15 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
     ProgressDialog loading;
     Calendar c;
     ListView lv;
+    TextView tv;
 
     String j="";
+
+    EditText edit_lundi, edit_mardi, edit_mercredi, edit_jeudi, edit_vendredi, edit_samedi, edit_dimanche;
+
+    TextView commentaire_lundi, commentaire_mardi, commentaire_mercredi, commentaire_jeudi, commentaire_vendredi, commentaire_samedi, commentaire_dimanche;
+    String comment_lundi, comment_mardi, comment_mercredi, comment_jeudi, comment_vendredi, comment_samedi, comment_dimanche;
+
 
     TextView jour_semaine, num_lundi, num_mardi, num_mercredi, num_jeudi, num_vendredi, num_samedi, num_dimanche;
     String n_lundi, n_mardi, n_mercredi, n_jeudi, n_vendredi, n_samedi, n_dimanche;
@@ -71,8 +79,8 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
 
     private ArrayAdapter<String> adapter_tache;
 
-    AlertDialog.Builder alertDialog;
-    AlertDialog dialog;
+    AlertDialog.Builder alertDialog, alert_comment;
+    AlertDialog dialog, dialog_comment;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +89,8 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
 
         Intent intent = getIntent();
         this.main_user = intent.getStringExtra("main_user");
+
+
 
         btn_lun = (Button) findViewById(R.id.tache_lundi) ;
         btn_lun.setOnClickListener(this);
@@ -370,6 +380,16 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
 
         }
 
+
+        this.commentaire_lundi=findViewById(R.id.commentaire_lundi);
+        this.commentaire_mardi=findViewById(R.id.commentaire_mardi);
+        this.commentaire_mercredi=findViewById(R.id.commentaire_mercredi);
+        this.commentaire_jeudi=findViewById(R.id.commentaire_jeudi);
+        this.commentaire_vendredi=findViewById(R.id.commentaire_vendredi);
+        this.commentaire_samedi=findViewById(R.id.commentaire_samedi);
+        this.commentaire_dimanche=findViewById(R.id.commentaire_dimanche);
+
+
         this.num_lundi = findViewById(R.id.num_lundi);
         this.num_mardi = findViewById(R.id.num_mardi);
         this.num_mercredi = findViewById(R.id.num_mercredi);
@@ -413,6 +433,7 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
         this.compteur_samedi = findViewById(R.id.compteur_samedi);
         this.compteur_dimanche = findViewById(R.id.compteur_dimanche);
 
+
         getItemsCompteur();
 
     }
@@ -422,7 +443,7 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
     private void getItemsCompteur() {
 
 
-        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycby517YZa68LQIXHkR02otOI9zSJXCHP5qDq11ZwryanmOfKUL0iSRRyaZd-SHjTrZO6/exec?action=getItems", new Response.Listener<String>() {
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbzXzAJsDJ9uldFU7iYWnTEDBH4RqhjGKtRUv9QfRl8xWv5mrTep19P5DI3s42AxD8FO/exec?action=getItems", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 parseItemsCompteur(response);
@@ -472,70 +493,90 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
 
                 String Jour = jo.getString("Jour");
                 String SiFait=jo.getString("SiFait");
+                String Commentaire= jo.getString("Commentaire");
 
                 if ("Lundi".equals(Jour)){
                     if (SiFait.equals("En cours")){
                         int_cptr_lundi++;
                     }
-                    if (int_cptr_lundi==0){
-                        btn_lun.setEnabled(false);
-                    }
+                    comment_lundi=Commentaire;
                 }
 
                 if ("Mardi".equals(Jour)){
                     if (SiFait.equals("En cours")){
                         int_cptr_mardi++;
                     }
-                    if (int_cptr_mardi==0){
-                        btn_mar.setEnabled(false);
-                    }
+                    comment_mardi=Commentaire;
                 }
 
                 if ("Mercredi".equals(Jour)){
                     if (SiFait.equals("En cours")){
                         int_cptr_mercredi++;
                     }
-                    if (int_cptr_mercredi==0){
-                        btn_mer.setEnabled(false);
-                    }
+                    comment_mercredi=Commentaire;
                 }
 
                 if ("Jeudi".equals(Jour)){
                     if (SiFait.equals("En cours")){
                         int_cptr_jeudi++;
                     }
-                    if (int_cptr_jeudi==0){
-                        btn_jeu.setEnabled(false);
-                    }
+                    comment_jeudi=Commentaire;
                 }
 
                 if ("Vendredi".equals(Jour)){
                     if (SiFait.equals("En cours")){
                         int_cptr_vendredi++;
                     }
-                    if (int_cptr_vendredi==0){
-                        btn_ven.setEnabled(false);
-                    }
+                    comment_vendredi=Commentaire;
                 }
 
                 if ("Samedi".equals(Jour)){
                     if (SiFait.equals("En cours")){
                         int_cptr_samedi++;
                     }
-                    if (int_cptr_samedi==0){
-                        btn_sam.setEnabled(false);
-                    }
+                    comment_samedi=Commentaire;
                 }
 
                 if ("Dimanche".equals(Jour)){
                     if (SiFait.equals("En cours")){
                         int_cptr_dimanche++;
                     }
-                    if (int_cptr_dimanche==0){
-                        btn_dim.setEnabled(false);
-                    }
+                    comment_dimanche=Commentaire;
                 }
             }
+
+
+
+            if (int_cptr_lundi==0){
+                btn_lun.setEnabled(false);
+            }
+            if (int_cptr_mardi==0){
+                btn_mar.setEnabled(false);
+            }
+            if (int_cptr_mercredi==0){
+                btn_mer.setEnabled(false);
+            }
+            if (int_cptr_jeudi==0){
+                btn_jeu.setEnabled(false);
+            }
+            if (int_cptr_vendredi==0){
+                btn_ven.setEnabled(false);
+            }
+            if (int_cptr_samedi==0){
+                btn_sam.setEnabled(false);
+            }
+            if (int_cptr_dimanche==0){
+                btn_dim.setEnabled(false);
+            }
+
+
+            commentaire_lundi.setText(comment_lundi);
+            commentaire_mardi.setText(comment_mardi);
+            commentaire_mercredi.setText(comment_mercredi);
+            commentaire_jeudi.setText(comment_jeudi);
+            commentaire_vendredi.setText(comment_vendredi);
+            commentaire_samedi.setText(comment_samedi);
+            commentaire_dimanche.setText(comment_dimanche);
 
             c_lundi=int_cptr_lundi+"";
             compteur_lundi.setText(c_lundi);
@@ -582,7 +623,9 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
                     }
                 }
         );
+
         loading = ProgressDialog.show(this, "Chargement...", " Veuillez patienter", false, true);
+
         int socketTimeOut = 50000;
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeOut, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
 
@@ -794,15 +837,160 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
     }
 
     public void lancermenu(View view) {
-
         Intent intent = new Intent(this, ActivityMenu.class);
         intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
 
+    public void getCommentLundi(View view){
+        j="Lundi";
+        alert_comment = new AlertDialog.Builder(ActivityTache.this);
+        View row = getLayoutInflater().inflate(R.layout.popup_comment, null);
+        edit_lundi =(EditText) row.findViewById(R.id.comment);
+        if (comment_lundi.equals("Ecrire commentaire")){
+            comment_lundi="";
+        }
+        edit_lundi.setText(comment_lundi);
+        alert_comment.setView(row);
+        dialog_comment = alert_comment.create();
+        dialog_comment.show();
+        loading.dismiss();
+    }
+
+    public void getCommentMardi(View view){
+        j="Mardi";
+        System.out.println(comment_mardi);
+        alert_comment = new AlertDialog.Builder(ActivityTache.this);
+        View row = getLayoutInflater().inflate(R.layout.popup_comment, null);
+        edit_mardi =(EditText) row.findViewById(R.id.comment);
+        if (comment_mardi.equals("Ecrire commentaire")){
+            comment_mardi="";
+        }
+        edit_mardi.setText(comment_mardi);
+        alert_comment.setView(row);
+        dialog_comment = alert_comment.create();
+        dialog_comment.show();
+        loading.dismiss();
+    }
+
+    public void getCommentMercredi(View view){
+        j="Mercredi";
+        System.out.println(comment_mercredi);
+        alert_comment = new AlertDialog.Builder(ActivityTache.this);
+        View row = getLayoutInflater().inflate(R.layout.popup_comment, null);
+        edit_mercredi =(EditText) row.findViewById(R.id.comment);
+        if (comment_mercredi.equals("Ecrire commentaire")){
+            comment_mercredi="";
+        }
+        edit_mercredi.setText(comment_mercredi);
+        alert_comment.setView(row);
+        dialog_comment = alert_comment.create();
+        dialog_comment.show();
+        loading.dismiss();    }
+
+    public void getCommentJeudi(View view){
+        j="Jeudi";
+        System.out.println(comment_jeudi);
+        alert_comment = new AlertDialog.Builder(ActivityTache.this);
+        View row = getLayoutInflater().inflate(R.layout.popup_comment, null);
+        edit_jeudi =(EditText) row.findViewById(R.id.comment);
+        if (comment_jeudi.equals("Ecrire commentaire")){
+            comment_jeudi="";
+        }
+        edit_jeudi.setText(comment_jeudi);
+        alert_comment.setView(row);
+        dialog_comment = alert_comment.create();
+        dialog_comment.show();
+        loading.dismiss();
+    }
+    public void getCommentVendredi(View view){
+        j="Vendredi";
+        System.out.println(comment_vendredi);
+        alert_comment = new AlertDialog.Builder(ActivityTache.this);
+        View row = getLayoutInflater().inflate(R.layout.popup_comment, null);
+        edit_vendredi =(EditText) row.findViewById(R.id.comment);
+        if (comment_vendredi.equals("Ecrire commentaire")){
+            comment_vendredi="";
+        }
+        edit_vendredi.setText(comment_vendredi);
+        alert_comment.setView(row);
+        dialog_comment = alert_comment.create();
+        dialog_comment.show();
+        loading.dismiss();
+    }
+    public void getCommentSamedi(View view){
+        j="Samedi";
+        System.out.println(comment_samedi);
+        alert_comment = new AlertDialog.Builder(ActivityTache.this);
+        View row = getLayoutInflater().inflate(R.layout.popup_comment, null);
+        edit_samedi =(EditText) row.findViewById(R.id.comment);
+        if (comment_samedi.equals("Ecrire commentaire")){
+            comment_samedi="";
+        }
+        edit_samedi.setText(comment_samedi);
+        alert_comment.setView(row);
+        dialog_comment = alert_comment.create();
+        dialog_comment.show();
+        loading.dismiss();    }
+
+    public void getCommentDimanche(View view){
+        j="Dimanche";
+        System.out.println(comment_dimanche);
+        alert_comment = new AlertDialog.Builder(ActivityTache.this);
+        View row = getLayoutInflater().inflate(R.layout.popup_comment, null);
+        edit_dimanche =(EditText) row.findViewById(R.id.comment);
+        if (comment_dimanche.equals("Ecrire commentaire")){
+            comment_dimanche="";
+        }
+        edit_dimanche.setText(comment_dimanche);
+        alert_comment.setView(row);
+        dialog_comment = alert_comment.create();
+        dialog_comment.show();
+        loading.dismiss();
+    }
 
     public void close_popup(View view) {
         dialog.dismiss();
+    }
+
+    public void close_popup_comment(View view) {
+        dialog_comment.dismiss();
+    }
+
+    public void lancer_comment_sauvegarde(View view){
+
+        String chaine="";
+
+        if (j.equals("Lundi")){
+            chaine = edit_lundi.getText().toString();
+        } else if (j.equals("Mardi")){
+            chaine = edit_mardi.getText().toString();
+        } else if (j.equals("Mercredi")){
+            chaine = edit_mercredi.getText().toString();
+        } else if (j.equals("Jeudi")){
+            chaine = edit_jeudi.getText().toString();
+        } else if (j.equals("Vendredi")){
+            chaine = edit_vendredi.getText().toString();
+        } else if (j.equals("Samedi")){
+            chaine = edit_samedi.getText().toString();
+        } else if (j.equals("Dimanche")){
+            chaine = edit_dimanche.getText().toString();
+        }
+
+        WriteOnSheetTaches.updateComment(this, chaine,j);
+
+        Intent intent = new Intent(this, ActivityTache.class);
+        intent.putExtra("main_user", main_user);
+        dialog_comment.dismiss();
+
+
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        startActivity(intent);
+
     }
 
     public void getNettoyage(View view){

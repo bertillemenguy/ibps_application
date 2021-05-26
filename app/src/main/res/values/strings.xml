@@ -23,6 +23,8 @@
     <string name="exophtalmie_d_formation_faciale">5. Exophtalmie/Déformation faciale</string>
     <string name="changement_de_couleur">8. Changement de couleur</string>
 
+    <string name="choisirtri">Choisir un tri</string>
+
 
 
     <string-array name="nourrisage">
@@ -69,6 +71,14 @@
         <item>CD </item>
 
 
+    </string-array>
+
+
+    <string-array name="tris">
+        <item>aucun</item>
+        <item>lignée</item>
+        <item>âge</item>
+        <item>bacs</item>
     </string-array>
 
     <string-array name="systemeaquatique">

@@ -38,7 +38,6 @@
         <activity android:name="com.example.endpointapp.ActivityRechercheRegistreAccouplementsFemelle" />
         <activity android:name="com.example.endpointapp.ActivityRechercheRegistreAccouplementsMale" />
         <activity android:name="com.example.endpointapp.ActivityRechercheRegistre" />
-        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreTrier" />
         <activity android:name="com.example.endpointapp.ActivityHistoriqueMorts" />
         <activity android:name="com.example.endpointapp.ActivityRechercheGestionBacs" />
         <activity android:name="com.example.endpointapp.ActivityTache" />
