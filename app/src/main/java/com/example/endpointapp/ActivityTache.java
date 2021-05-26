@@ -623,9 +623,7 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
                     }
                 }
         );
-
         loading = ProgressDialog.show(this, "Chargement...", " Veuillez patienter", false, true);
-
         int socketTimeOut = 50000;
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeOut, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
 
@@ -981,15 +979,13 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
 
         Intent intent = new Intent(this, ActivityTache.class);
         intent.putExtra("main_user", main_user);
-        dialog_comment.dismiss();
-
-
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         startActivity(intent);
+        dialog_comment.dismiss();
 
     }
 
