@@ -21,7 +21,6 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 import java.text.SimpleDateFormat;
-import android.widget.DatePicker;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -146,7 +145,7 @@ public class ActivityRechercheRegistreSouffrance extends AppCompatActivity imple
 
         list_pdf=list;
         //création ..
-        adapter=new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable});
+        adapter=new SimpleAdapter(this, list, R.layout.list_item_registre_checked, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable});
         
         
         listView.setAdapter(adapter);

@@ -1117,11 +1117,6 @@ id progress_horizontal
 id pseudo
 id qualite
 id radio
-id radioButton1
-id radioButton2
-id radioButton3
-id radioButton4
-id radioGroup_chiffre
 id ratingView
 id remarque2
 id remarquea
@@ -1254,9 +1249,7 @@ id textView41
 id textView42
 id textView43
 id textView44
-id textView45
 id textView46
-id textView47
 id textView48
 id textView49
 id textView5
@@ -1326,6 +1319,7 @@ id tv_age2
 id tv_aircomprime
 id tv_bac
 id tv_bac2
+id tv_checkbox
 id tv_climatisation
 id tv_couleur1
 id tv_couleur2
@@ -1456,6 +1450,7 @@ layout list_item_historique_morts
 layout list_item_historique_oeufs
 layout list_item_historique_souffrance
 layout list_item_registre
+layout list_item_registre_checked
 layout my_popop_template
 layout nettoyage_bac
 layout notification_action

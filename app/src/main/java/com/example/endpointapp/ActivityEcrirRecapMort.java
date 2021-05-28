@@ -20,11 +20,13 @@ import com.android.volley.RetryPolicy;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
 public class ActivityEcrirRecapMort extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    
+
+
     Spinner PoissonMortSpinner;
     
     String Bac = "";
@@ -34,18 +36,18 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
     String Age="";
     String Responsable="";
     String Key="";
+    Integer Image;
 
     ProgressDialog loading;
     EditText editTextSearchItem;
 
-    ArrayList<Map<String, String>> list_poissons_select;
+    ArrayList<Poisson> list_poisson;
 
 
     //String PointLimite;
     String Accouplement="";
     String ControleSanitaire="";
 
-    ArrayList list_select;
 
 
 
@@ -61,15 +63,25 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ecrir_recap_mort);
+
         listView = findViewById(R.id.list_item_select);
+
+
+        Bundle extra = getIntent().getBundleExtra("extra");
+        main_user = getIntent().getStringExtra("main_user");
+
+
+        list_poisson = (ArrayList<Poisson>) extra.getSerializable("list_select");
 
         // operateur
         //OperateurSpinner=findViewById(R.id.spinner1);
         //ArrayAdapter<CharSequence> adapter17 = ArrayAdapter.createFromResource(this, R.array.operateur, android.R.layout.simple_spinner_item);
         //adapter17.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //OperateurSpinner.setAdapter(adapter17);
-        editTextSearchItem = findViewById(R.id.et_search);
 
+
+
+        editTextSearchItem = findViewById(R.id.et_search);
 
         PoissonMortSpinner = findViewById(R.id.spinner2);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.chiffre, android.R.layout.simple_spinner_item);
@@ -78,42 +90,57 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
         PoissonMortSpinner.setOnItemSelectedListener(this);
         
         // Get the transferred data from source activity.
-        Intent intent = getIntent();
+        //Intent intent = getIntent();
 
-        list_select = intent.getStringArrayListExtra("list_select");
+        //list_select = intent.getStringArrayListExtra("list_select");
 
-        ArrayList<Map<String, String>> list = new ArrayList<>();
+        List<HashMap<String, String>> list = new ArrayList<>();
 
-        int i;
-        for (i =0; i<list_select.size(); i++){
 
-            String s = String.valueOf(list_select.get(i));
-            s=s.substring(1, s.length()-1);
-            String[] pairs = s.split(", ");
+        for (int i =0; i<list_poisson.size(); i++){
 
-            Map<String, String> map = new HashMap<>();
+            Poisson poisson= list_poisson.get(i);
+            //String s = String.valueOf(list_select.get(i));
+            //s=s.substring(1, s.length()-1);
+            //String[] pairs = s.split(", ");
 
-            for (String pair:pairs){
+            HashMap<String, String> map = new HashMap<>();
 
-                String[] entry = pair.split("=");
-                map.put(entry[0].trim(), entry[1].trim());
-                System.out.println(entry[0]+"="+entry[1]);
 
-            }
+                Bac = poisson.getBac();
+                Lot = poisson.getLot();
+                Lignee = poisson.getLignee();
+                Age = poisson.getAge();
+                Responsable=poisson.getResponsable();
+                Key=poisson.getKey();
+                Image=poisson.getImage();
+
+                map.put("Bac", Bac);
+                map.put("Lot", Lot);
+                map.put("Lignee", Lignee);
+                map.put("Age", Age);
+                map.put("Responsable", Responsable);
+                map.put("Key", Key);
+                map.put("Image", Image+"");
+
+
+           // for (String pair:pairs){
+
+                //String[] entry = pair.split("=");
+                //map.put(entry[0].trim(), entry[1].trim());
+                //System.out.println(entry[0]+"="+entry[1]);
+
+            //}
 
             list.add(map);
 
-            list_poissons_select=list;
         }
 
-        SimpleAdapter sadapter =new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable});
+        SimpleAdapter sadapter =new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable", "Image"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable, R.id.icon_mort});
 
         listView.setAdapter(sadapter);
 
     }
-
-
-
 
 
 
@@ -154,23 +181,24 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
      */
     public void lancersauvegarde(View view) {
 
-
         loading = ProgressDialog.show(this, "Chargement...", " Veuillez patienter", false, true);
 
         final String PoissonMort=PoissonMortSpinner.getSelectedItem().toString();
 
-        System.out.println("TAILE DEUX ____"+list_poissons_select.size());
-        for (int i=0; i<list_poissons_select.size();i++){
-            Map<String, String> map = list_poissons_select.get(i);
+        System.out.println("Sauvegarde lancé __________="+list_poisson);
 
-            for (Map.Entry entry : map.entrySet()){
-                if (entry.getKey().equals("Bac")){ this.Bac= (String) entry.getValue(); }
-                if (entry.getKey().equals("Lignee")){ this.Lignee= (String) entry.getValue(); }
-                if (entry.getKey().equals("Responsable")){ this.Responsable= (String) entry.getValue(); }
-                if (entry.getKey().equals("Lot")){ this.Lot= (String) entry.getValue(); }
-                if (entry.getKey().equals("Age")){ this.Age= (String) entry.getValue(); }
-                if (entry.getKey().equals("Key")){ this.Key= (String) entry.getValue(); }
-            }
+        for (int i=0; i<list_poisson.size();i++){
+
+           // Map<String, String> map = list_poissons_select.get(i);
+
+           // for (Map.Entry entry : map.entrySet()){
+             //   if (entry.getKey().equals("Bac")){ this.Bac= (String) entry.getValue(); }
+               // if (entry.getKey().equals("Lignee")){ this.Lignee= (String) entry.getValue(); }
+               // if (entry.getKey().equals("Responsable")){ this.Responsable= (String) entry.getValue(); }
+               // if (entry.getKey().equals("Lot")){ this.Lot= (String) entry.getValue(); }
+               // if (entry.getKey().equals("Age")){ this.Age= (String) entry.getValue(); }
+               // if (entry.getKey().equals("Key")){ this.Key= (String) entry.getValue(); }
+            //}
 
             WriteOnSheetDeclarerMort.writeData(this, main_user, Bac, Lignee, Lot, Age, Responsable, PoissonMort, Accouplement, ControleSanitaire, Key);
 
@@ -194,19 +222,20 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
     public void fermeractivite(View view) {
         this.finish();
     }
-    
-    
+
+
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
     
     }
-    
+
+
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
     
     }
     
-    
+
     public void onCheckboxClicked(View view) {
         // Is the view now checked?
         
@@ -226,8 +255,7 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
                     ControleSanitaire = "";
                 break;
         }
-    }
     
 }
 
-
+}

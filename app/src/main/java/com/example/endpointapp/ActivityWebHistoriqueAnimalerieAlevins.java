@@ -1,8 +1,6 @@
 package com.example.endpointapp;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,11 +10,8 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.PopupMenu;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
-import android.widget.AdapterView;
-import android.widget.Button;
 
 
 import com.android.volley.DefaultRetryPolicy;
@@ -32,27 +27,18 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Locale;
 
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Locale;
 import android.Manifest;
-import android.app.ProgressDialog;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.pdf.PdfDocument;
-import android.os.Bundle;
 import android.os.Environment;
-import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 
 
@@ -170,7 +156,7 @@ public class ActivityWebHistoriqueAnimalerieAlevins extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        adapter=new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{ "Lot", "Lignee"}, new int[]{R.id.tv_lot, R.id.tv_lignee});
+        adapter=new SimpleAdapter(this, list, R.layout.list_item_registre_checked, new String[]{ "Lot", "Lignee"}, new int[]{R.id.tv_lot, R.id.tv_lignee});
 
         listView.setAdapter(adapter);
         loading.dismiss();

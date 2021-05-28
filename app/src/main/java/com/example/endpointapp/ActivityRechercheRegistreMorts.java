@@ -4,6 +4,7 @@ package com.example.endpointapp;
 import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
@@ -19,18 +20,22 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.ActionMode;
+import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.CheckedTextView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Button;
 import android.graphics.pdf.PdfDocument;
@@ -61,12 +66,20 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
-public class ActivityRechercheRegistreMorts extends AppCompatActivity {
+public class ActivityRechercheRegistreMorts extends AppCompatActivity implements Serializable{
+
+
+    Intent intent_2 ;
+
+
+    List<Poisson> list_select;
 
     String main_user;
 
+    PoissonAdapter adapter_poisson;
     ListView listView;
-    ArrayAdapter adapter;
+
+
     ProgressDialog loading;
     EditText editTextSearchItem;
     Button button;
@@ -78,15 +91,15 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recherche_registre_morts_item);
-        
+
         listView = findViewById(R.id.lv_items);
 
-        //listView.setOnItemClickListener(this);
+        //  listView.setOnItemClickListener((AdapterView.OnItemClickListener) this);
 
-        listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        //  listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
 
-        button=findViewById(R.id.btn_valider);
+        button = findViewById(R.id.btn_valider);
         editTextSearchItem = findViewById(R.id.et_search);
 
         // Get the transferred data from source activity.
@@ -94,7 +107,8 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity {
         main_user = intent.getStringExtra("main_user");
 
 
-        this.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+        /*this.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -104,32 +118,14 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity {
                 System.out.println(listView.getItemAtPosition(position));
                 //user.setActive(!currentCheck);
             }
-        });
+        });*/
 
 
-        final Intent intent_2 = new Intent(this, ActivityEcrirRecapMort.class);
-
-
-        this.button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("Bouton cliqueé___________________");
-
-                List list_select = getSelectedItems();
-
-                System.out.println(list_select);
-
-                intent_2.putExtra("main_user", main_user);
-                intent_2.putExtra("list_select", (Serializable) list_select);
-                startActivity(intent_2);
-
-                }
-        });
-
+        intent_2 = new Intent(this, ActivityEcrirRecapMort.class);
         getItems();
 
-    }
 
+    }
 
 
 
@@ -165,7 +161,9 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity {
      * @param jsonResponce
      */
     private void parseItems(String jsonResponce) {
-        
+
+        List<Poisson> data = new ArrayList<>();
+
         final ArrayList<HashMap<String, String>> list = new ArrayList<>();
 
 
@@ -184,7 +182,23 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity {
                 String Responsable=jo.getString("Responsable");
                 String Key=jo.getString("Key");
 
+                Integer Image;
+
+                if (Integer.parseInt(Age)==22){
+                    Image=icon[0];
+                } else {
+                    Image=icon[1];
+                }
+
+
+                data.add(new Poisson(Lot,Bac,Responsable,Lignee,Age,Key,Image));
+
+
+                /*
+
                 HashMap<String, String> item = new HashMap<>();
+
+
 
                 item.put("Bac", Bac);
                 item.put("Lot", Lot);
@@ -193,23 +207,33 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity {
                 item.put("Responsable", Responsable);
                 item.put("Key", Key);
 
-
-                if (Integer.parseInt(Age)==21){
-                    item.put("image", icon[0]+"");
-                } else {
-                    item.put("image", icon[1]+"");
-                }
-
                 list.add(item);
+                */
+
 
             }
+
+            System.out.println(data);
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        adapter=new ArrayAdapter(this, R.layout.simple_list_item_checked, list);
+      /*  adapter=new ArrayAdapter(this, R.layout.simple_list_item_checked, list);
 
         listView.setAdapter(adapter);
+*/
+
+        adapter_poisson=new PoissonAdapter(this, data);
+        listView.setAdapter(adapter_poisson);
+
+        Log.e("APPLI", "je suis ici et je fais ça");
+        // clics sur les éléments, on les envoie à l'adaptateur
+        listView.setOnItemClickListener((adapterView, view, pos, l) -> adapter_poisson.toggle(pos));
+
+        Log.e("APPLI", "Apres");
+
+
 
         loading.dismiss();
 
@@ -221,12 +245,47 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity {
             
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                ActivityRechercheRegistreMorts.this.adapter.getFilter().filter(charSequence);
+                ActivityRechercheRegistreMorts.this.adapter_poisson.getFilter().filter(charSequence);
             }
             
             @Override
             public void afterTextChanged(Editable editable) { }
         });
+
+
+        this.button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                System.out.println("Bouton cliqué___________________");
+
+                System.out.println(adapter_poisson.getSelected());
+
+                list_select = adapter_poisson.getSelected();
+
+                System.out.println(list_select);
+
+                intent_2.putExtra("main_user", main_user);
+
+                Bundle extra = new Bundle();
+
+                extra.putSerializable("list_select", (Serializable) list_select);
+
+                intent_2.putExtra("extra", extra);
+
+                //intent_2.putExtra("list_select", (Serializable) list_select);
+
+                startActivity(intent_2);
+
+               // Toast.makeText(this, "Vous avez selectionné  "+list_select.size()+" élément(s)", Toast.LENGTH_LONG).show();
+
+            }
+
+        });
+
+
+
     }
 
 
@@ -322,7 +381,7 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity {
     }
 
 
-    public ArrayList getSelectedItems()  {
+    /*public ArrayList getSelectedItems()  {
 
         ArrayList<String> list = new ArrayList<>();
         int nb = 0;
@@ -345,11 +404,12 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity {
         Toast.makeText(this, "Vous avez selectionné  "+nb+" élément(s)", Toast.LENGTH_LONG).show();
 
         return list;
-    }
+    }*/
 
     public void onPointerCaptureChanged(boolean hasCapture) {
     
     }
+
 
 
 }
