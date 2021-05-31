@@ -74,10 +74,10 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
     TextView compteur_lundi, compteur_mardi, compteur_mercredi, compteur_jeudi, compteur_vendredi, compteur_samedi, compteur_dimanche;
     String c_lundi, c_mardi, c_mercredi, c_jeudi, c_vendredi, c_samedi, c_dimanche;
 
-    ArrayList<String> list_taches;
+    ArrayList<Tache> list_taches;
     Date date=null;
 
-    private ArrayAdapter<String> adapter_tache;
+    TacheAdapter adapter_tache;
 
     AlertDialog.Builder alertDialog, alert_comment;
     AlertDialog dialog, dialog_comment;
@@ -132,21 +132,32 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
             c.add(Calendar.DATE, 1);
             date = c.getTime();
             this.n_mardi=jour_format.format(date);
+            this.m_mardi=mois_format.format(date);
+
             c.add(Calendar.DATE, 1);
             date = c.getTime();
             this.n_mercredi=jour_format.format(date);
+            this.m_mercredi=mois_format.format(date);
+
             c.add(Calendar.DATE, 1);
             date = c.getTime();
             this.n_jeudi=jour_format.format(date);
+            this.m_jeudi=mois_format.format(date);
+
             c.add(Calendar.DATE, 1);
             date = c.getTime();
             this.n_vendredi=jour_format.format(date);
+            this.m_vendredi=mois_format.format(date);
+
             c.add(Calendar.DATE, 1);
             date = c.getTime();
             this.n_samedi=jour_format.format(date);
+            this.m_samedi=mois_format.format(date);
+
             c.add(Calendar.DATE, 1);
             date = c.getTime();
             this.n_dimanche=jour_format.format(date);
+            this.m_dimanche=mois_format.format(date);
         }
 
         if (j.equals("mardi")){
@@ -657,7 +668,7 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
 
                 if (j.equals(Jour)){
                     if (SiFait.equals("En cours")){
-                        list_taches.add(Tache);
+                        list_taches.add(new Tache(Jour, Id, Tache,SiFait));
                     }
                 }
 
@@ -667,8 +678,10 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
         }
 
 
-        this.adapter_tache = new ArrayAdapter<String>(this, R.layout.simple_list_item_checked, list_taches);
-            lv.setAdapter(adapter_tache);
+        this.adapter_tache = new TacheAdapter(this,  list_taches);
+        lv.setAdapter(this.adapter_tache);
+        lv.setOnItemClickListener((adapterView, view, pos, l) -> this.adapter_tache.toggle(pos));
+
     }
 
 
@@ -771,20 +784,20 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
 
     public ArrayList getSelectedItems()  {
 
-        ArrayList<String> list = new ArrayList<>();
+        ArrayList<Tache> list = new ArrayList<>();
         int nb = 0;
 
         SparseBooleanArray sp = lv.getCheckedItemPositions();
         StringBuilder sb= new StringBuilder();
 
-        int i;
 
-        for(i=0;i<sp.size();i++) {
+        for(int i=0;i<sp.size();i++) {
             if (sp.valueAt(i)) {
-                String s = ((CheckedTextView) lv.getChildAt(sp.keyAt(i))).getText().toString();
-                list.add(s);
+                Tache tache = (Tache) lv.getItemAtPosition(i);
+
+                list.add(tache);
                 sb = sb.append(" ");
-                sb = sb.append(s);
+                sb = sb.append(tache);
                 nb++;
             }
         }
@@ -802,7 +815,10 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
         //final Intent intent_2 = new Intent(this, ActivityEcrirTache.class);
         //Toast.makeText(this, "Coucou", Toast.LENGTH_LONG).show();
 
-        List list_select = getSelectedItems();
+        List<Tache> list_select;
+
+        list_select = adapter_tache.getSelected();
+
         System.out.println(list_select);
 
         //intent_2.putExtra("main_user", main_user);
@@ -811,10 +827,10 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
 
         for (int i=0; i<list_select.size();i++){
 
-            String s= list_select.get(i).toString();
+            Tache tache = list_select.get(i);
 
-            WriteOnSheetTaches.updateData(this,  s, j);
-            WriteOnSheetTaches.writeData(this, main_user, s);
+            WriteOnSheetTaches.updateData(this,  tache.getTache(), j);
+            WriteOnSheetTaches.writeData(this, main_user, tache.getTache());
 
             try {
                 Thread.sleep(1200);

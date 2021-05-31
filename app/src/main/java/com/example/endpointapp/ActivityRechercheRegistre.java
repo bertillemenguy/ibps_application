@@ -74,14 +74,12 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
         editTextSearchItem=findViewById(R.id.et_search);
 
 
-
         // Get the transferred data from source activity.
         Intent intent = getIntent();
         main_user = intent.getStringExtra("main_user");
 
 
         //getItems();
-
 
 
     }
@@ -128,9 +126,6 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
      */
 
 
-
-
-
         private void parseItems(String jsonResponce) {
         
 
@@ -165,7 +160,7 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
                 /*---------------------METTRE IMAGE POISSON MORT---------------------*/
                 /*-------------------------------------------------------------------*/
 
-                if (Integer.parseInt(Age)==21){
+                if (Integer.parseInt(Age)==15){
                     item.put("image", icon[0]+"");
                 } else {
                     item.put("image", icon[1]+"");
@@ -185,7 +180,7 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
 
 
-            adapter=new SimpleAdapter(this, list, R.layout.list_item_registre_checked, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable", "image"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable, R.id.icon_mort});
+            adapter=new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable", "image"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable, R.id.icon_mort});
 
             //listView.getId(3).setImage(R.drawable.fish_bones);
 
@@ -290,19 +285,16 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
         switch (position){
             case 0:
-                getItems();
+                getItems_tri(3);
+                Toast.makeText(parent.getContext(), "Trié par bacs", Toast.LENGTH_SHORT).show();
                 break;
             case 1:
                 getItems_tri(1);
-                Toast.makeText(parent.getContext(), "Trié par lignee", Toast.LENGTH_SHORT).show();
+                Toast.makeText(parent.getContext(), "Trié par lignée", Toast.LENGTH_SHORT).show();
                 break;
             case 2:
                 getItems_tri(2);
-                Toast.makeText(parent.getContext(), "Trié par âge", Toast.LENGTH_SHORT).show();
-                break;
-            case 3:
-                getItems_tri(3);
-                Toast.makeText(parent.getContext(), "Trier par bac", Toast.LENGTH_SHORT).show();
+                Toast.makeText(parent.getContext(), "Trier par âge", Toast.LENGTH_SHORT).show();
                 break;
 
         }
@@ -394,7 +386,21 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
                 item.put("Responsable", Responsable);
                 item.put("Key", Key);
 
+
+                /*---------------------METTRE IMAGE POISSON MORT---------------------*/
+                /*-------------------------------------------------------------------*/
+
+
+                if (Integer.parseInt(Age)==15){
+                    item.put("image", icon[0]+"");
+                } else {
+                    item.put("image", icon[1]+"");
+                }
+
+
+
                 list.add(item);
+
             }
 
 
@@ -422,19 +428,23 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
                     @Override
                     public int compare(HashMap<String, String> o1, HashMap<String, String> o2) {
-                        // Get the Age and compare the Age.
-                        Integer age1 = Integer.parseInt(o1.get("Age"));
-                        Integer age2 = Integer.parseInt(o2.get("Age"));
 
                         /* Trie par odre alphabétique */
-                        if (age1==age2){
 
-                            /*mettre en majuscule pour trier les majuscules et les minuscules*/
-                            return (o1.get("Lignee").toUpperCase()).compareTo((o2.get("Lignee")).toUpperCase());
+                        String resp1 = o1.get("Responsable");
+                        String resp2 = o2.get("Responsable");
 
+                        if (resp1.equals(resp2)){
+
+                            // Get the Age and compare the Age.
+                            Integer age1 = Integer.parseInt(o1.get("Age"));
+                            Integer age2 = Integer.parseInt(o2.get("Age"));
+
+                            return age1.compareTo(age2);
                         } else {
-                            return age2.compareTo(age1);
+                            return (resp1.toUpperCase()).compareTo(resp2.toUpperCase());
                         }
+
                     }
                 };
 
@@ -466,7 +476,9 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
         }
 
 
-        adapter=new SimpleAdapter(this, list, R.layout.list_item_registre_checked, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable});
+
+
+        adapter=new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable", "image"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable, R.id.icon_mort});
 
 
 

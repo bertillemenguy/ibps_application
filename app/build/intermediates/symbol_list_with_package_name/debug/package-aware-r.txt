@@ -1193,6 +1193,7 @@ id subTitle
 id submenuarrow
 id submit_area
 id tabMode
+id tache
 id tache_dimanche
 id tache_jeudi
 id tache_lundi
@@ -1451,6 +1452,7 @@ layout list_item_historique_oeufs
 layout list_item_historique_souffrance
 layout list_item_registre
 layout list_item_registre_checked
+layout liste_tache_checked
 layout my_popop_template
 layout nettoyage_bac
 layout notification_action
@@ -1473,7 +1475,6 @@ layout row_item_taches
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
-layout simple_list_item_checked
 layout support_simple_spinner_dropdown_item
 layout web_historique
 mipmap ic_launcher

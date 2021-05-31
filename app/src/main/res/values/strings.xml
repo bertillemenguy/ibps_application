@@ -75,10 +75,9 @@
 
 
     <string-array name="tris">
-        <item>aucun</item>
+        <item>bacs</item>
         <item>lignée</item>
         <item>âge</item>
-        <item>bacs</item>
     </string-array>
 
     <string-array name="systemeaquatique">
