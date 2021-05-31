@@ -8,8 +8,10 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -27,21 +29,31 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 
-public class ActivityHistoriqueIncidents extends AppCompatActivity implements AdapterView.OnItemClickListener{
+public class ActivityHistoriqueIncidents extends AppCompatActivity implements Serializable{
     
     
     ListView listView;
     SimpleAdapter adapter;
     ProgressDialog loading;
     EditText editTextSearchItem;
-    
+
+
+    // élément checkbox
+    Intent intent_2 ;
+    List<Incident> list_select;
+    IncidentAdapter adapter_incident;
+    Button button;
+
+
     String main_user = "";
     Date date = null;
     
@@ -49,19 +61,25 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Ad
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_historique_item);
+        setContentView(R.layout.activity_recherche_registre_morts_item);
         //setContentView(R.layout.activity_recherche_morts);
         
         listView = findViewById(R.id.lv_items);
 
-        listView.setOnItemClickListener(this);
+        //listView.setOnItemClickListener(this);
 
         editTextSearchItem = findViewById(R.id.et_search);
-        
+
+        //élément checkbox
+        button = findViewById(R.id.btn_valider);
+        intent_2 = new Intent(this, CustomPopupIncident.class);
+
+
         // Get the transferred data from source activity.
         Intent intent = getIntent();
         main_user= intent.getStringExtra("main_user");
-        
+
+
         getItems();
         
     }
@@ -99,7 +117,7 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Ad
     
     private void parseItems(String jsonResponce) {
         
-        ArrayList<HashMap<String, String>> list = new ArrayList<>();
+        List<Incident> data = new ArrayList<>();
         
         try {
             JSONObject jobj = new JSONObject(jsonResponce);
@@ -120,7 +138,8 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Ad
                 }
                 String Date = outputFormat.format(date);
                 
-                String operateur = jo.getString("operateur");
+                String Operateur = jo.getString("operateur");
+                String Etat = jo.getString("etat");
                 String eaudeville = jo.getString("eaudeville");
                 String electricite = jo.getString("electricite");
                 String aircomprime = jo.getString("aircomprime");
@@ -129,41 +148,28 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Ad
                 String systemeaquatique = jo.getString("systemeaquatique");
                 String travaux = jo.getString("travaux");
                 String nourrissage = jo.getString("nourrissage");
-                String etat = jo.getString("etat");
                 String key = jo.getString("key");
 
 
+                // élément checkbox
+                data.add(new Incident(Date,Operateur,Etat, eaudeville, electricite, aircomprime, climatisation, eaudusysteme, systemeaquatique, travaux, nourrissage, key));
 
-                HashMap<String, String> item = new HashMap<>();
-                
-                item.put("Date", Date);
-                
-                
-                item.put("operateur", operateur);
-                item.put("eaudeville", eaudeville);
-                item.put("electricite", electricite);
-                item.put("aircomprime", aircomprime);
-                item.put("climatisation", climatisation);
-                item.put("eaudusysteme", eaudusysteme);
-                item.put("systemeaquatique", systemeaquatique);
-                item.put("travaux", travaux);
-                item.put("nourrissage", nourrissage);
-                item.put("etat", etat);
-                item.put("key", key);
 
-                list.add(item);
-    
-    
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
-    
-    
-        adapter=new SimpleAdapter(this, list, R.layout.list_item_historique_incidents, new String[]{"Date", "operateur", "eaudeville", "electricite", "aircomprime", "climatisation", "eaudusysteme", "systemeaquatique", "travaux", "nourrissage", "etat"}, new int[]{
-                R.id.tv_date, R.id.tv_operateur, R.id.tv_eaudeville, R.id.tv_electricite, R.id.tv_aircomprime, R.id.tv_climatisation, R.id.tv_eaudusysteme, R.id.tv_systemeAquatique, R.id.tv_travaux, R.id.tv_nourrissage, R.id.tv_etat});
-    
-        listView.setAdapter(adapter);
+
+
+        // élément checkbox
+        adapter_incident=new IncidentAdapter(this, data);
+        listView.setAdapter(adapter_incident);
+
+        // clics sur les éléments, on les envoie à l'adaptateur
+        listView.setOnItemClickListener((adapterView, view, pos, l) -> adapter_incident.toggle(pos));
+
+
+
         loading.dismiss();
     
     
@@ -175,7 +181,7 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Ad
             
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                ActivityHistoriqueIncidents.this.adapter.getFilter().filter(charSequence);
+                ActivityHistoriqueIncidents.this.adapter_incident.getFilter().filter(charSequence);
             }
             
             @Override
@@ -184,6 +190,40 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Ad
                 
             }
         });
+
+
+
+        this.button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                System.out.println("Bouton cliqué___________________");
+
+                System.out.println(adapter_incident.getSelected());
+
+                list_select = adapter_incident.getSelected();
+
+                System.out.println(list_select);
+
+                intent_2.putExtra("main_user", main_user);
+
+                Bundle extra = new Bundle();
+
+                extra.putSerializable("list_select", (Serializable) list_select);
+
+                intent_2.putExtra("extra", extra);
+
+                //intent_2.putExtra("list_select", (Serializable) list_select);
+
+                startActivity(intent_2);
+
+                // Toast.makeText(this, "Vous avez selectionné  "+list_select.size()+" élément(s)", Toast.LENGTH_LONG).show();
+
+            }
+
+        });
+
+
     }
     
     
@@ -203,7 +243,7 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Ad
         this.finish();
     }
 
-    @Override
+   /* @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent(this, CustomPopupIncident.class);
         HashMap map = (HashMap) parent.getItemAtPosition(position);
@@ -212,7 +252,7 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Ad
         intent.putExtra("main_user", main_user);
         //Toast.makeText(ActivityHistoriqueIncidents.this, key, Toast.LENGTH_SHORT).show();
         startActivity(intent);
-    }
+    }*/
 }
     
     

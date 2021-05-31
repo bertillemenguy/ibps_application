@@ -69,20 +69,20 @@ import java.util.List;
 public class ActivityRechercheRegistreMorts extends AppCompatActivity implements Serializable{
 
 
+
+    // élément checkbox
     Intent intent_2 ;
-
-
     List<Poisson> list_select;
+    PoissonAdapter adapter_poisson;
+    Button button;
 
     String main_user;
 
-    PoissonAdapter adapter_poisson;
     ListView listView;
 
 
     ProgressDialog loading;
     EditText editTextSearchItem;
-    Button button;
 
     int[] icon ={R.drawable.fish_bones, R.drawable.zebrafish};
 
