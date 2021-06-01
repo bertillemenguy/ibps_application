@@ -33,6 +33,8 @@ import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -122,7 +124,10 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
     private void parseItems(String jsonResponce) {
         
         List<Incident> data = new ArrayList<>();
-        
+        List<Incident> tete = new ArrayList<>();
+        List<Incident> queue = new ArrayList<>();
+
+
         try {
             JSONObject jobj = new JSONObject(jsonResponce);
             JSONArray jarray = jobj.getJSONArray("items");
@@ -155,13 +160,60 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
                 String key = jo.getString("key");
 
 
+                if (Etat.equals("En cours")){
+                    tete.add(new Incident(Date,Operateur,Etat, eaudeville, electricite, aircomprime, climatisation, eaudusysteme, systemeaquatique, travaux, nourrissage, key));
+                } else {
+                    queue.add(new Incident(Date,Operateur,Etat, eaudeville, electricite, aircomprime, climatisation, eaudusysteme, systemeaquatique, travaux, nourrissage, key));
+                }
+
                 // élément checkbox
-                data.add(new Incident(Date,Operateur,Etat, eaudeville, electricite, aircomprime, climatisation, eaudusysteme, systemeaquatique, travaux, nourrissage, key));
+                //data.add(new Incident(Date,Operateur,Etat, eaudeville, electricite, aircomprime, climatisation, eaudusysteme, systemeaquatique, travaux, nourrissage, key));
 
 
             }
         } catch (JSONException e) {
             e.printStackTrace();
+        }
+
+
+
+
+        //trier incident
+        /*Trie par ordre alphabétique bac*/
+        Comparator<Incident> incidentComparator = new Comparator<Incident>() {
+
+
+            @Override
+            public int compare(Incident o1, Incident o2) {
+
+
+                Date date_1=null;
+                Date date_2=null;
+                try {
+                    date_1 = new SimpleDateFormat("EEEE d MMM yyyy", Locale.FRANCE).parse(o1.getDate());
+                    date_2 = new SimpleDateFormat("EEEE d MMM yyyy", Locale.FRANCE).parse(o2.getDate());
+
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+                return (date_1.compareTo((date_2)));
+            }
+        };
+
+
+        // And then sort it using collections.sort().
+        Collections.sort(tete, incidentComparator);
+        Collections.sort(queue, incidentComparator);
+
+        Collections.reverse(tete);
+        Collections.reverse(queue);
+
+
+        data=tete;
+
+        for (int i=0; i<queue.size(); i++){
+            data.add(queue.get(i));
         }
 
 

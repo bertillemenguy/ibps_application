@@ -3,6 +3,9 @@ package com.example.endpointapp;
 import android.graphics.Path;
 
 import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Incident implements Serializable {
 
@@ -49,6 +52,8 @@ public class Incident implements Serializable {
     public String getDate(){
         return Date;
     }
+
+
     public String getOperateur(){
         return Operateur;
     }

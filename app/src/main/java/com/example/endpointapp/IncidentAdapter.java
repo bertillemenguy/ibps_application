@@ -75,6 +75,8 @@ public class IncidentAdapter extends ArrayAdapter<Incident> implements Serializa
 
             holder.checkbox = (CheckBox) convertView.findViewById(R.id.checkbox);
 
+
+
             convertView.setTag(holder);
         } else {
             holder = (IncidentAdapter.IncidentViewHolder) convertView.getTag();

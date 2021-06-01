@@ -32,6 +32,8 @@ import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -118,7 +120,9 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
     
     private void parseItems(String jsonResponce) {
 
-        List<Bac> data = new ArrayList<Bac>();
+        List<Bac> data = new ArrayList<>();
+        List<Bac> tete = new ArrayList<>();
+        List<Bac> queue = new ArrayList<Bac>();
 
 
         //ArrayList<HashMap<String, String>> list = new ArrayList<>();
@@ -171,7 +175,15 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
                 String SItraite=jo.getString("SItraite");
 
 
-                data.add(new Bac(modif_Date, Id, Actions, NouveauBac, Lignee, Bac, Lignee2, Bac2, remarque, remarque2, Bac2b, remarque3, Bac3, remarque4, Bac4, Lot, Lot2, SItraite));
+
+                if (SItraite.equals("En cours")){
+                    tete.add(new Bac(modif_Date, Id, Actions, NouveauBac, Lignee, Bac, Lignee2, Bac2, remarque, remarque2, Bac2b, remarque3, Bac3, remarque4, Bac4, Lot, Lot2, SItraite));
+                } else {
+                    queue.add(new Bac(modif_Date, Id, Actions, NouveauBac, Lignee, Bac, Lignee2, Bac2, remarque, remarque2, Bac2b, remarque3, Bac3, remarque4, Bac4, Lot, Lot2, SItraite));
+                }
+
+
+                //data.add(new Bac(modif_Date, Id, Actions, NouveauBac, Lignee, Bac, Lignee2, Bac2, remarque, remarque2, Bac2b, remarque3, Bac3, remarque4, Bac4, Lot, Lot2, SItraite));
 
                 /*HashMap<String, String> item=new HashMap<>();
     
@@ -207,8 +219,50 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-    
-    
+
+
+
+
+
+
+        //trier incident
+        /*Trie par ordre alphabétique bac*/
+        Comparator<Bac> incidentComparator = new Comparator<Bac>() {
+
+
+            @Override
+            public int compare(Bac o1, Bac o2) {
+
+
+                Date date_1=null;
+                Date date_2=null;
+                try {
+                    date_1 = new SimpleDateFormat("EEEE d MMM yyyy", Locale.FRANCE).parse(o1.getDate());
+                    date_2 = new SimpleDateFormat("EEEE d MMM yyyy", Locale.FRANCE).parse(o2.getDate());
+
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+                return (date_1.compareTo((date_2)));
+            }
+        };
+
+
+        // And then sort it using collections.sort().
+        Collections.sort(tete, incidentComparator);
+        Collections.sort(queue, incidentComparator);
+
+        Collections.reverse(tete);
+        Collections.reverse(queue);
+
+
+        data=tete;
+
+        for (int i =0; i<queue.size(); i++){
+            data.add(queue.get(i));
+        }
+
 
         adapter_bac=new BacAdapter(this, data);
         
