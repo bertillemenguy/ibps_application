@@ -9,6 +9,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -27,16 +28,30 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 
-public class ActivityRechercheGestionBacs extends AppCompatActivity  implements AdapterView.OnItemClickListener{
+public class ActivityRechercheGestionBacs extends AppCompatActivity  {
     
-    
+    //implements AdapterView.OnItemClickListener
+
+
+
+    // élément checkbox
+    Intent intent_2 ;
+    List<Bac> list_select;
+    Button button;
+    BacAdapter adapter_bac;
+
+
+
+
     ListView listView;
     SimpleAdapter adapter;
     ProgressDialog loading;
@@ -49,17 +64,23 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  implements 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recherche_registre_item);
+        setContentView(R.layout.activity_recherche_registre_morts_item);
     
         listView=findViewById(R.id.lv_items);
-        listView.setOnItemClickListener(this);
+        //listView.setOnItemClickListener(this);
 
         editTextSearchItem=findViewById(R.id.et_search);
     
         // Get the transferred data from source activity.
         Intent intent=getIntent();
         main_user=intent.getStringExtra("main_user");
-    
+
+        button = findViewById(R.id.btn_valider);
+
+        button.setText("Traité");
+        intent_2 = new Intent(this, ActivityRechercheGestionBacs.class);
+
+
         getItems();
     
     }
@@ -96,8 +117,11 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  implements 
     
     
     private void parseItems(String jsonResponce) {
-        
-        ArrayList<HashMap<String, String>> list = new ArrayList<>();
+
+        List<Bac> data = new ArrayList<Bac>();
+
+
+        //ArrayList<HashMap<String, String>> list = new ArrayList<>();
         
         try {
             JSONObject jobj = new JSONObject(jsonResponce);
@@ -147,7 +171,9 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  implements 
                 String SItraite=jo.getString("SItraite");
 
 
-                HashMap<String, String> item=new HashMap<>();
+                data.add(new Bac(modif_Date, Id, Actions, NouveauBac, Lignee, Bac, Lignee2, Bac2, remarque, remarque2, Bac2b, remarque3, Bac3, remarque4, Bac4, Lot, Lot2, SItraite));
+
+                /*HashMap<String, String> item=new HashMap<>();
     
                 item.put("Date", Date);
                 item.put("Actions", Actions);
@@ -175,7 +201,7 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  implements 
                 item.put("modif_Date", modif_Date);
                 item.put("ID", Id);
 
-                list.add(item);
+                list.add(item);*/
 
             }
         } catch (JSONException e) {
@@ -183,10 +209,18 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  implements 
         }
     
     
-        adapter=new SimpleAdapter(this, list, R.layout.list_item_historique_bacs, new String[]{"modif_Date", "Actions", "NouveauBac", "Lignee", "Bac", "Lignee2", "Bac2", "remarque", "remarque2", "Bac2b", "remarque3", "Bac3", "remarque4", "Bac4", "Lot", "Lot2", "SItraite"}, new int[]{R.id.tv_date, R.id.tv_actions, R.id.tv_nouveaubacEtDupliBac1, R.id.tv_lignee, R.id.tv_bac, R.id.tv_ReuniLignee2, R.id.tv_RuniBac2, R.id.tv_DupliRemarque1, R.id.tv_DupliRemarque2, R.id.tv_DupliBac2, R.id.tv_DupliRemarque3, R.id.tv_DupliBac3, R.id.tv_DupliRemarque4, R.id.tv_DupliBac4, R.id.tv_lot, R.id.tv_ReuniLot2, R.id.tv_SITraite});
+
+        adapter_bac=new BacAdapter(this, data);
         
-        
-        listView.setAdapter(adapter);
+
+        listView.setAdapter(adapter_bac);
+
+        // clics sur les éléments, on les envoie à l'adaptateur
+        listView.setOnItemClickListener((adapterView, view, pos, l) -> adapter_bac.toggle(pos));
+
+
+
+
         loading.dismiss();
         
         
@@ -207,7 +241,46 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  implements 
             
             }
         });
+
+
+
+        this.button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                System.out.println("Bouton cliqué___________________");
+
+                System.out.println(adapter_bac.getSelected());
+
+                list_select = adapter_bac.getSelected();
+
+                System.out.println(list_select);
+
+                lancersauvregarde();
+
+
+
+                //Bundle extra = new Bundle();
+
+                //extra.putSerializable("list_select", (Serializable) list_select);
+
+                //intent_2.putExtra("extra", extra);
+
+                //intent_2.putExtra("list_select", (Serializable) list_select);
+
+                intent_2.putExtra("main_user", main_user);
+                startActivity(intent_2);
+
+                // Toast.makeText(this, "Vous avez selectionné  "+list_select.size()+" élément(s)", Toast.LENGTH_LONG).show();
+
+            }
+
+        });
+
+
     }
+
+
     
     
     public void lancermenu(View view) {
@@ -232,7 +305,12 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  implements 
         this.finish();
     }
 
-    @Override
+
+
+
+
+
+    /*@Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent(this, CustomPopupBacs.class);
         HashMap map = (HashMap) parent.getItemAtPosition(position);
@@ -241,7 +319,26 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  implements 
         intent.putExtra("main_user", main_user);
         //Toast.makeText(ActivityRechercheGestionBacs.this, Date, Toast.LENGTH_SHORT).show();
         startActivity(intent);
+    }*/
+
+
+    public void lancersauvregarde(){
+        for (int i=0; i<list_select.size(); i++) {
+
+            System.out.println("COUCOU valider:"+list_select.get(i));
+
+            String key = list_select.get(i).getId();
+            WriteOnSheetBacsTraite.updateData(this, key);
+
+            //Temps d'attente !!! IMPORTANT
+            try {
+                Thread.sleep(1500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
+
     
 }
 

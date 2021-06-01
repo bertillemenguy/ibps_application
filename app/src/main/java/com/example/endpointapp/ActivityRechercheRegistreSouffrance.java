@@ -56,7 +56,7 @@ public class ActivityRechercheRegistreSouffrance extends AppCompatActivity imple
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recherche_registre_morts_item);
+        setContentView(R.layout.activity_recherche_registre_item);
         
         
         listView = findViewById(R.id.lv_items);
@@ -145,7 +145,7 @@ public class ActivityRechercheRegistreSouffrance extends AppCompatActivity imple
 
         list_pdf=list;
         //création ..
-        adapter=new SimpleAdapter(this, list, R.layout.list_item_registre_checked, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable});
+        adapter=new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable});
         
         
         listView.setAdapter(adapter);

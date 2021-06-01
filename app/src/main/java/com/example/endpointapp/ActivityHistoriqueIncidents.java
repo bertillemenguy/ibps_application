@@ -53,7 +53,6 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
     IncidentAdapter adapter_incident;
     Button button;
 
-
     String main_user = "";
     Date date = null;
     
@@ -72,11 +71,16 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
 
         //élément checkbox
         button = findViewById(R.id.btn_valider);
-        intent_2 = new Intent(this, CustomPopupIncident.class);
+        intent_2 = new Intent(this, ActivityHistoriqueIncidents.class);
 
+        button.setText("Traité");
 
         // Get the transferred data from source activity.
         Intent intent = getIntent();
+
+        intent_2 = getIntent();
+
+
         main_user= intent.getStringExtra("main_user");
 
 
@@ -205,19 +209,34 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
 
                 System.out.println(list_select);
 
-                intent_2.putExtra("main_user", main_user);
+                //intent_2.putExtra("main_user", main_user);
 
-                Bundle extra = new Bundle();
+                //Bundle extra = new Bundle();
 
-                extra.putSerializable("list_select", (Serializable) list_select);
+                //extra.putSerializable("list_select", (Serializable) list_select);
 
-                intent_2.putExtra("extra", extra);
+
+                lancersauvregard();
+
+
+                //intent_2.putExtra("extra", extra);
 
                 //intent_2.putExtra("list_select", (Serializable) list_select);
 
-                startActivity(intent_2);
+                //startActivity(intent_2);
 
                 // Toast.makeText(this, "Vous avez selectionné  "+list_select.size()+" élément(s)", Toast.LENGTH_LONG).show();
+
+
+                //Temps d'attente !!! IMPORTANT
+                try {
+                    Thread.sleep(1200);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+                intent_2.putExtra("main_user", main_user);
+                startActivity(intent_2);
 
             }
 
@@ -253,6 +272,24 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
         //Toast.makeText(ActivityHistoriqueIncidents.this, key, Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }*/
+
+
+     public void lancersauvregard(){
+         for (int i=0; i<list_select.size(); i++) {
+
+             System.out.println("COUCOU valider:"+list_select.get(i));
+
+             String key = list_select.get(i).getKey();
+             WriteOnSheetIncident.updateData(this, key);
+
+             //Temps d'attente !!! IMPORTANT
+             try {
+                 Thread.sleep(1500);
+             } catch (InterruptedException e) {
+                 e.printStackTrace();
+             }
+         }
+     }
 }
     
     

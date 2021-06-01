@@ -150,6 +150,15 @@ public class ActivityEcrirRecapBacs extends AppCompatActivity {
         Action="Eliminé";
     
         WriteOnSheetDeplacerEliminerErreurReunir.writeData(this, main_user, NouveauBac, Action, Bac, Lignee, Lot, Bac2, Lignee2, Lot2, Key, Key2);
+
+
+        //Temps d'attente !!! IMPORTANT
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         startActivity(intent);
     }
 }

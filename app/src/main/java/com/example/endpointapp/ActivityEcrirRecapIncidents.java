@@ -136,7 +136,14 @@ public class ActivityEcrirRecapIncidents extends AppCompatActivity {
     
         WriteOnSheetSignaler.writeData(this, main_user, eaudeville, electricite, aircomprime, climatisation, eaudusysteme, systemeaquatique, travaux, nourrissage, etat);
         //CoupureEau, Panne, CoupureProg, CoupureInop, ArretAir, ArretCTA, PH, Conductivite, NO2, NO3, NH4, Temperature, ArretSysteme, Fuite, UV, Autre, Vibrations, Divers);
-    
+
+        //Temps d'attente !!! IMPORTANT
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         Intent intent = new Intent(this, ActivityMenu.class);
         intent.putExtra("main_user", main_user);
         startActivity(intent);

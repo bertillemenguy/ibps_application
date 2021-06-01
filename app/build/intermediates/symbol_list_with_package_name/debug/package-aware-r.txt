@@ -1429,6 +1429,7 @@ layout activity_rechercheregistreaccouplementfemelle
 layout activity_rechercheregistreaccouplmentmale
 layout activity_splash
 layout activity_taches
+layout cardview_item_bac
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar

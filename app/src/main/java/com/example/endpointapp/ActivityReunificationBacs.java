@@ -73,6 +73,13 @@ public class ActivityReunificationBacs extends AppCompatActivity {
         final String NouveauBac=Lettre + Nombre;
         Action="Réunis";
         WriteOnSheetDeplacerEliminerErreurReunir.writeData(this, main_user, NouveauBac, Action, Bac, Lignee, Lot, Bac2, Lignee2, Lot2, Key, Key2);
+
+        //Temps d'attente !!! IMPORTANT
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Intent intent=new Intent(this, ActivityMenu.class);
         intent.putExtra("main_user", main_user);
         startActivity(intent);
