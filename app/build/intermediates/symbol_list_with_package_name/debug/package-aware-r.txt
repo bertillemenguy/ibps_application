@@ -27,6 +27,7 @@ array couleurs
 array eaudeville
 array eausysteme
 array electricite
+array lettre_bac
 array names
 array nombre
 array nourrisage

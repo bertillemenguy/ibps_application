@@ -83,11 +83,10 @@ com/example/endpointapp/WriteOnSheetDupliquer.java
  com.example.endpointapp.WriteOnSheetDupliquer$1
  com.example.endpointapp.WriteOnSheetDupliquer$2
  com.example.endpointapp.WriteOnSheetDupliquer$3
-com/example/endpointapp/WriteOnSheetSouffrance.java
- com.example.endpointapp.WriteOnSheetSouffrance
- com.example.endpointapp.WriteOnSheetSouffrance$1
- com.example.endpointapp.WriteOnSheetSouffrance$2
- com.example.endpointapp.WriteOnSheetSouffrance$3
+com/example/endpointapp/BacAdapter.java
+ com.example.endpointapp.BacAdapter
+ com.example.endpointapp.BacAdapter$1
+ com.example.endpointapp.BacAdapter$BacViewHolder
 com/example/endpointapp/ActivityHistoriqueAccouplements.java
  com.example.endpointapp.ActivityHistoriqueAccouplements
  com.example.endpointapp.ActivityHistoriqueAccouplements$1
@@ -175,10 +174,11 @@ com/example/endpointapp/ActivityEcrirRecapSouffrance.java
  com.example.endpointapp.ActivityEcrirRecapSouffrance
 com/example/endpointapp/ActivityRas.java
  com.example.endpointapp.ActivityRas
-com/example/endpointapp/BacAdapter.java
- com.example.endpointapp.BacAdapter
- com.example.endpointapp.BacAdapter$1
- com.example.endpointapp.BacAdapter$BacViewHolder
+com/example/endpointapp/RecyclerViewAdapter.java
+ com.example.endpointapp.RecyclerViewAdapter
+ com.example.endpointapp.RecyclerViewAdapter$1
+ com.example.endpointapp.RecyclerViewAdapter$2
+ com.example.endpointapp.RecyclerViewAdapter$MyViewHolder
 com/example/endpointapp/WriteOnSheetDeclarerMort.java
  com.example.endpointapp.WriteOnSheetDeclarerMort
  com.example.endpointapp.WriteOnSheetDeclarerMort$1
@@ -206,6 +206,8 @@ com/example/endpointapp/WriteOnSheetOeuf.java
  com.example.endpointapp.WriteOnSheetOeuf$1
  com.example.endpointapp.WriteOnSheetOeuf$2
  com.example.endpointapp.WriteOnSheetOeuf$3
+com/example/endpointapp/ActivityIsolement.java
+ com.example.endpointapp.ActivityIsolement
 com/example/endpointapp/WriteOnSheetBacsTraite.java
  com.example.endpointapp.WriteOnSheetBacsTraite
  com.example.endpointapp.WriteOnSheetBacsTraite$1
@@ -258,13 +260,11 @@ com/example/endpointapp/ActivityRechercheRegistre.java
  com.example.endpointapp.ActivityRechercheRegistre$7
  com.example.endpointapp.ActivityRechercheRegistre$8
  com.example.endpointapp.ActivityRechercheRegistre$9
-com/example/endpointapp/ActivityIsolement.java
- com.example.endpointapp.ActivityIsolement
-com/example/endpointapp/RecyclerViewAdapter.java
- com.example.endpointapp.RecyclerViewAdapter
- com.example.endpointapp.RecyclerViewAdapter$1
- com.example.endpointapp.RecyclerViewAdapter$2
- com.example.endpointapp.RecyclerViewAdapter$MyViewHolder
+com/example/endpointapp/WriteOnSheetSouffrance.java
+ com.example.endpointapp.WriteOnSheetSouffrance
+ com.example.endpointapp.WriteOnSheetSouffrance$1
+ com.example.endpointapp.WriteOnSheetSouffrance$2
+ com.example.endpointapp.WriteOnSheetSouffrance$3
 com/example/endpointapp/ActivityTache.java
  com.example.endpointapp.ActivityTache
  com.example.endpointapp.ActivityTache$1

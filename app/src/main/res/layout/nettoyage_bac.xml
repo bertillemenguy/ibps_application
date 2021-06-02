@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
-
 
     <ImageButton
         android:id="@+id/btn_return"
@@ -14,17 +13,26 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+
+        android:layout_gravity="right"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="10dp"
         android:onClick="lancermenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icon_home"
-        android:layout_gravity="right"/>
+        app:srcCompat="@drawable/icon_home" />
 
-   <android.support.v7.widget.RecyclerView
+    <android.support.v7.widget.RecyclerView
        android:id="@+id/recyclerView"
        android:layout_width="match_parent"
-       android:layout_height="700dp">
+       android:layout_marginTop="60dp"
+       android:layout_marginLeft="5dp"
+       android:layout_marginRight="5dp"
+       android:layout_above="@+id/btn_valider"
+       android:layout_height="match_parent">
    </android.support.v7.widget.RecyclerView>
 
 
@@ -38,4 +46,4 @@
         android:onClick="lancer_laver"
         android:text="Laver" />
 
-</LinearLayout>
+</RelativeLayout>

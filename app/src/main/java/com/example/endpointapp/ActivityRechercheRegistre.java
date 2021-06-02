@@ -73,11 +73,9 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
         editTextSearchItem=findViewById(R.id.et_search);
 
-
         // Get the transferred data from source activity.
         Intent intent = getIntent();
         main_user = intent.getStringExtra("main_user");
-
 
         //getItems();
 

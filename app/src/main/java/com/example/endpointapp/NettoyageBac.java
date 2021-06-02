@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -40,6 +41,7 @@ public class NettoyageBac extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nettoyage_bac);
+
 
         editTextSearchItem = findViewById(R.id.et_search);
 
@@ -124,18 +126,18 @@ public class NettoyageBac extends AppCompatActivity {
 
     public void lancer_laver(View view){
 
-        List<String> list_key = new ArrayList<>();
+        List<BacRegistre> list_key = new ArrayList<>();
 
             for (int i=0; i<list_bac.size();i++){
                 if (list_bac.get(i).isSelected()){
-                    list_key.add(list_bac.get(i).getKey());
+                    list_key.add(list_bac.get(i));
                     System.out.println(list_bac.get(i).getNum());
                 }
             }
 
 
             for (int j=0;j<list_key.size();j++){
-                WriteOnSheetBacLaver.updateData(this, list_key.get(j));
+                WriteOnSheetBacLaver.updateData(this, list_key.get(j).getKey(), main_user);
                 //Temps d'attente !!! IMPORTANT
                 try {
                     Thread.sleep(1200);

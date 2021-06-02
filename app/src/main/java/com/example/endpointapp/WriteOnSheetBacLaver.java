@@ -20,7 +20,7 @@ import java.util.Map;
 
 public class WriteOnSheetBacLaver {
 
-    public static void updateData(final Context context, final String key) {
+    public static void updateData(final Context context, final String key, final String operateur) {
 
         Date date = new Date();
 
@@ -28,7 +28,8 @@ public class WriteOnSheetBacLaver {
 
         String dateToStr = dateFormat.format(date);
 
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbxCfkfHpW2z_NUzl0LIXCB_1B0Cgp_-OQvGUUJYwVbF6rsb1tcFZHH2RhrC-VEVnDcWBg/exec?action=updateItem&key="+key+"&date="+dateToStr,
+
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbwxovNi2s-p4w0OWFRxfkmxNSDth9b4xWId2WHq1NNQ-wKcDXAp0RWDhnUMUr-1TVMngQ/exec?action=updateItem&key="+key+"&date="+dateToStr+"&operateur="+operateur,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
