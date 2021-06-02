@@ -1094,6 +1094,7 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id num_bac
 id num_dimanche
 id num_jeudi
 id num_lundi
@@ -1118,6 +1119,7 @@ id pseudo
 id qualite
 id radio
 id ratingView
+id recyclerView
 id remarque2
 id remarquea
 id remarquec
