@@ -67,8 +67,7 @@ public class ActivityReunirBacs extends AppCompatActivity implements AdapterView
     
     
     private void getItems() {
-    
-    
+
         StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbwqCJJWqCBXyVIatCzuiST50A0_kcxPXL-GH9BEYtBfk6y-aEHX/exec?action=getItems", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

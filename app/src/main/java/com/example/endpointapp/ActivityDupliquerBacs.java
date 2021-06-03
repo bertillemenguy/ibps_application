@@ -9,24 +9,34 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ActivityDupliquerBacs extends AppCompatActivity {
-    
+
+
+    // élément checkbox
+    List<Poisson> list_select;
+    PoissonAdapter adapter_poisson;
+
     EditText remarquea;
     EditText remarqueb;
     EditText remarquec;
     EditText remarqued;
     
-    String main_user=" ";
-    String Date=" ";
-    String Bac=" ";
-    String Lot=" ";
-    String Lignee=" ";
-    String Age=" ";
+    String main_user="";
+    String Date="";
+    String Bac="";
+    String Lot="";
+    String Lignee="";
+    String Age="";
     String Action="";
     String Bac2="";
     String Lignee2="";
     String Lot2="";
     String NouveauBac="";
+    String operateur;
+
     TextView textViewitemName, textViewBac, textViewprice, textViewAge, textViewResponsable;
     
     Spinner SpinnerAlphabet;
@@ -38,7 +48,9 @@ public class ActivityDupliquerBacs extends AppCompatActivity {
     Spinner SpinnerNombre2;
     Spinner SpinnerNombre3;
     Spinner SpinnerNombre4;
-    
+
+
+    TextView tv_Lignee, tv_Lot, tv_Bac, tv_Responsable, tv_Age;
     
     //  Spinner SpinnerAlphabet;
     //   Spinner SpinnerNombre;
@@ -68,15 +80,12 @@ public class ActivityDupliquerBacs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dupliquer);
-        
-        
+
+
+
         Intent intent=getIntent();
-        Bac=intent.getStringExtra("Bac");
         main_user=intent.getStringExtra("main_user");
-        Age=intent.getStringExtra("Age");
-        Lignee=intent.getStringExtra("Lignee");
-        Lot=intent.getStringExtra("Lot");
-        Date=intent.getStringExtra("Date");
+
         
         //   String remarquea= remarquea.getText().toString();
         
@@ -87,8 +96,37 @@ public class ActivityDupliquerBacs extends AppCompatActivity {
         remarqueb=(EditText) findViewById(R.id.remarque2);
         remarquec=(EditText) findViewById(R.id.remarquec);
         remarqued=(EditText) findViewById(R.id.remarqued);
-        
-        
+
+
+        // récupération des poissons séléctionnés
+        Bundle extra = getIntent().getBundleExtra("extra");
+
+        list_select = (ArrayList<Poisson>) extra.getSerializable("list_select");
+
+
+
+        Bac=list_select.get(0).getBac();
+        Age=list_select.get(0).getAge();
+        Lignee=list_select.get(0).getLignee();
+        Lot=list_select.get(0).getLot();
+        Date=list_select.get(0).getAge();
+        operateur=list_select.get(0).getResponsable();
+
+
+
+
+        tv_Lignee = findViewById(R.id.tv_lignee);
+        tv_Lot= findViewById(R.id.tv_lot);
+        tv_Bac= findViewById(R.id.tv_bac);
+        tv_Responsable=findViewById(R.id.tv_responsable);
+        tv_Age= findViewById(R.id.tv_age);
+
+        tv_Age.setText(Age);
+        tv_Lot.setText(Lot);
+        tv_Bac.setText(Bac);
+        tv_Responsable.setText(operateur);
+        tv_Lignee.setText(Lignee);
+
         SpinnerAlphabet=findViewById(R.id.spinnera);
         ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this, R.array.alphabet, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -166,9 +204,9 @@ public class ActivityDupliquerBacs extends AppCompatActivity {
     
         Action="Dupliquer";
     
-        WriteOnSheetDupliquer.writeData(this, main_user, NouveauBac, Action, Bac, Lignee, Lot, Bac2, Lignee2, Lot2, RemarqueA, RemarqueB, RemarqueC, RemarqueD, NouveauBac2, NouveauBac3, NouveauBac4);
+        WriteOnSheetDupliquer.writeData(this, main_user, NouveauBac, Action, list_select.get(0).getBac(), list_select.get(0).getLignee(), list_select.get(0).getLot(), Bac2, Lignee2, Lot2, RemarqueA, RemarqueB, RemarqueC, RemarqueD, NouveauBac2, NouveauBac3, NouveauBac4);
         
-        Intent intent=new Intent(this, ActivityMenu.class);
+        Intent intent=new Intent(this, ActivityEcrirRecapBacs.class);
         intent.putExtra("main_user", main_user);
         startActivity(intent);
     }

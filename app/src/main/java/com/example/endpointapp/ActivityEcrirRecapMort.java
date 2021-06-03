@@ -41,6 +41,8 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
     ProgressDialog loading;
     EditText editTextSearchItem;
 
+
+    //recupérer list poisson selctionné
     ArrayList<Poisson> list_poisson;
 
 
@@ -67,9 +69,11 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
         listView = findViewById(R.id.list_item_select);
 
 
-        Bundle extra = getIntent().getBundleExtra("extra");
         main_user = getIntent().getStringExtra("main_user");
 
+
+        // récupération des poissons séléctionnés
+        Bundle extra = getIntent().getBundleExtra("extra");
 
         list_poisson = (ArrayList<Poisson>) extra.getSerializable("list_select");
 

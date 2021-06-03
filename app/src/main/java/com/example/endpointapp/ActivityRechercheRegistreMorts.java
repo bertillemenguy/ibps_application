@@ -69,7 +69,6 @@ import java.util.List;
 public class ActivityRechercheRegistreMorts extends AppCompatActivity implements Serializable{
 
 
-
     // élément checkbox
     Intent intent_2 ;
     List<Poisson> list_select;
@@ -79,7 +78,6 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
     String main_user;
 
     ListView listView;
-
 
     ProgressDialog loading;
     EditText editTextSearchItem;
@@ -107,7 +105,6 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         main_user = intent.getStringExtra("main_user");
 
 
-
         /*this.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
@@ -121,17 +118,16 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         });*/
 
 
+        //élément checkbox
         intent_2 = new Intent(this, ActivityEcrirRecapMort.class);
         getItems();
-
 
     }
 
 
 
     private void getItems() {
-        
-        
+
         StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbwqCJJWqCBXyVIatCzuiST50A0_kcxPXL-GH9BEYtBfk6y-aEHX/exec?action=getItems", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -233,8 +229,6 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
 
         Log.e("APPLI", "Apres");
 
-
-
         loading.dismiss();
 
         editTextSearchItem.addTextChangedListener(new TextWatcher() {
@@ -257,21 +251,13 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
 
-
                 System.out.println("Bouton cliqué___________________");
-
                 System.out.println(adapter_poisson.getSelected());
-
                 list_select = adapter_poisson.getSelected();
-
                 System.out.println(list_select);
-
                 intent_2.putExtra("main_user", main_user);
-
                 Bundle extra = new Bundle();
-
                 extra.putSerializable("list_select", (Serializable) list_select);
-
                 intent_2.putExtra("extra", extra);
 
                 //intent_2.putExtra("list_select", (Serializable) list_select);
@@ -281,11 +267,7 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
                // Toast.makeText(this, "Vous avez selectionné  "+list_select.size()+" élément(s)", Toast.LENGTH_LONG).show();
 
             }
-
         });
-
-
-
     }
 
 

@@ -130,6 +130,7 @@ public class ActivityRechercheRegistreBacs extends AppCompatActivity implements 
                 item.put("Age", Age);
                 item.put("Responsable", Responsable);
                 item.put("Key", Key);
+
                 list.add(item);
     
     
@@ -137,8 +138,10 @@ public class ActivityRechercheRegistreBacs extends AppCompatActivity implements 
         } catch (JSONException e) {
             e.printStackTrace();
         }
-    
-    
+
+
+        System.out.println(list);
+
         adapter=new SimpleAdapter(this, list, R.layout.list_item_registre_checked, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable});
     
     

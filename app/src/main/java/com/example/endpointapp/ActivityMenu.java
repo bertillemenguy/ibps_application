@@ -307,7 +307,7 @@ public class ActivityMenu extends AppCompatActivity {
     //Ecriture Gestion des Bacs
     public void lancerBacs(View view) {
         // String operateur = OperateurSpinner.getSelectedItem().toString();
-        Intent intent = new Intent(this, ActivityRechercheRegistreBacs.class);
+        Intent intent = new Intent(this, ActivityEcrirRecapBacs.class);
         intent.putExtra("main_user", main_user);
         startActivity(intent);
         

@@ -924,7 +924,6 @@ id btn_return8
 id btn_valider
 id button
 id button10
-id button2
 id button20
 id button21
 id button22
@@ -1220,7 +1219,6 @@ id textView14
 id textView14km
 id textView15
 id textView16
-id textView17
 id textView18
 id textView19
 id textView2
