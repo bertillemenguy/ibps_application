@@ -269,8 +269,6 @@ com/example/endpointapp/BacAdapter.java
  com.example.endpointapp.BacAdapter
  com.example.endpointapp.BacAdapter$1
  com.example.endpointapp.BacAdapter$BacViewHolder
-com/example/endpointapp/PopupRecapBacs.java
- com.example.endpointapp.PopupRecapBacs
 com/example/endpointapp/ActivityTache.java
  com.example.endpointapp.ActivityTache
  com.example.endpointapp.ActivityTache$1
@@ -278,6 +276,8 @@ com/example/endpointapp/ActivityTache.java
  com.example.endpointapp.ActivityTache$3
  com.example.endpointapp.ActivityTache$4
  com.example.endpointapp.ActivityTache$5
+com/example/endpointapp/PopupRecapBacs.java
+ com.example.endpointapp.PopupRecapBacs
 com/example/endpointapp/NettoyageBac.java
  com.example.endpointapp.NettoyageBac
  com.example.endpointapp.NettoyageBac$1

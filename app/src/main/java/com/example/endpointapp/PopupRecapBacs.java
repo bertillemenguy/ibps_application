@@ -34,6 +34,8 @@ public class PopupRecapBacs extends Dialog {
         this.list=list;
         setContentView(R.layout.template__popup_recap_bac);
         this.listView=findViewById(R.id.listView);
+        listView.setSelector(android.R.color.transparent);
+
     }
 
 
