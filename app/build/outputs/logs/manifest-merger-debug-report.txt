@@ -173,10 +173,10 @@ activity#com.example.endpointapp.CustomPopupIncident
 ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:56:9-56
 	android:name
 		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:56:19-54
-activity#com.example.endpointapp.CustomPopupBacs
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:57:9-52
+activity#com.example.endpointapp.PopupRecapBacs
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:57:9-51
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:57:19-50
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:57:19-49
 activity#com.example.endpointapp.ActivityEcrirRecapOeuf
 ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:59:9-60
 	android:name

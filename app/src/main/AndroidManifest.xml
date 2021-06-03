@@ -54,7 +54,7 @@
 
         <activity android:name=".CustomPopup"/>
         <activity android:name=".CustomPopupIncident"/>
-        <activity android:name=".CustomPopupBacs"/>
+        <activity android:name=".PopupRecapBacs"/>
 
         <activity android:name=".ActivityEcrirRecapOeuf" />
         <activity android:name=".ActivitySurveillance" />

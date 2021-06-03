@@ -28,10 +28,6 @@ com/example/endpointapp/ActivityHistoriqueSouffrance.java
  com.example.endpointapp.ActivityHistoriqueSouffrance$1
  com.example.endpointapp.ActivityHistoriqueSouffrance$2
  com.example.endpointapp.ActivityHistoriqueSouffrance$3
-com/example/endpointapp/CustomPopupBacs.java
- com.example.endpointapp.CustomPopupBacs
- com.example.endpointapp.CustomPopupBacs$1
- com.example.endpointapp.CustomPopupBacs$2
 com/example/endpointapp/WriteOnSheetUser.java
  com.example.endpointapp.WriteOnSheetUser
  com.example.endpointapp.WriteOnSheetUser$1
@@ -69,6 +65,11 @@ com/example/endpointapp/CustomPopupIncident.java
  com.example.endpointapp.CustomPopupIncident
 com/example/endpointapp/ActivityEcrirRecapAccouplement.java
  com.example.endpointapp.ActivityEcrirRecapAccouplement
+com/example/endpointapp/WriteOnSheetSouffrance.java
+ com.example.endpointapp.WriteOnSheetSouffrance
+ com.example.endpointapp.WriteOnSheetSouffrance$1
+ com.example.endpointapp.WriteOnSheetSouffrance$2
+ com.example.endpointapp.WriteOnSheetSouffrance$3
 com/example/endpointapp/ActivityRechercheGestionBacs.java
  com.example.endpointapp.ActivityRechercheGestionBacs
  com.example.endpointapp.ActivityRechercheGestionBacs$1
@@ -83,10 +84,8 @@ com/example/endpointapp/WriteOnSheetDupliquer.java
  com.example.endpointapp.WriteOnSheetDupliquer$1
  com.example.endpointapp.WriteOnSheetDupliquer$2
  com.example.endpointapp.WriteOnSheetDupliquer$3
-com/example/endpointapp/BacAdapter.java
- com.example.endpointapp.BacAdapter
- com.example.endpointapp.BacAdapter$1
- com.example.endpointapp.BacAdapter$BacViewHolder
+com/example/endpointapp/ActivityIsolement.java
+ com.example.endpointapp.ActivityIsolement
 com/example/endpointapp/ActivityHistoriqueAccouplements.java
  com.example.endpointapp.ActivityHistoriqueAccouplements
  com.example.endpointapp.ActivityHistoriqueAccouplements$1
@@ -206,8 +205,14 @@ com/example/endpointapp/WriteOnSheetOeuf.java
  com.example.endpointapp.WriteOnSheetOeuf$1
  com.example.endpointapp.WriteOnSheetOeuf$2
  com.example.endpointapp.WriteOnSheetOeuf$3
-com/example/endpointapp/ActivityIsolement.java
- com.example.endpointapp.ActivityIsolement
+com/example/endpointapp/WriteOnSheetBacLaver.java
+ com.example.endpointapp.WriteOnSheetBacLaver
+ com.example.endpointapp.WriteOnSheetBacLaver$1
+ com.example.endpointapp.WriteOnSheetBacLaver$2
+ com.example.endpointapp.WriteOnSheetBacLaver$3
+ com.example.endpointapp.WriteOnSheetBacLaver$4
+ com.example.endpointapp.WriteOnSheetBacLaver$5
+ com.example.endpointapp.WriteOnSheetBacLaver$6
 com/example/endpointapp/WriteOnSheetBacsTraite.java
  com.example.endpointapp.WriteOnSheetBacsTraite
  com.example.endpointapp.WriteOnSheetBacsTraite$1
@@ -260,11 +265,12 @@ com/example/endpointapp/ActivityRechercheRegistre.java
  com.example.endpointapp.ActivityRechercheRegistre$7
  com.example.endpointapp.ActivityRechercheRegistre$8
  com.example.endpointapp.ActivityRechercheRegistre$9
-com/example/endpointapp/WriteOnSheetSouffrance.java
- com.example.endpointapp.WriteOnSheetSouffrance
- com.example.endpointapp.WriteOnSheetSouffrance$1
- com.example.endpointapp.WriteOnSheetSouffrance$2
- com.example.endpointapp.WriteOnSheetSouffrance$3
+com/example/endpointapp/BacAdapter.java
+ com.example.endpointapp.BacAdapter
+ com.example.endpointapp.BacAdapter$1
+ com.example.endpointapp.BacAdapter$BacViewHolder
+com/example/endpointapp/PopupRecapBacs.java
+ com.example.endpointapp.PopupRecapBacs
 com/example/endpointapp/ActivityTache.java
  com.example.endpointapp.ActivityTache
  com.example.endpointapp.ActivityTache$1
@@ -272,12 +278,9 @@ com/example/endpointapp/ActivityTache.java
  com.example.endpointapp.ActivityTache$3
  com.example.endpointapp.ActivityTache$4
  com.example.endpointapp.ActivityTache$5
-com/example/endpointapp/WriteOnSheetBacLaver.java
- com.example.endpointapp.WriteOnSheetBacLaver
- com.example.endpointapp.WriteOnSheetBacLaver$1
- com.example.endpointapp.WriteOnSheetBacLaver$2
- com.example.endpointapp.WriteOnSheetBacLaver$3
 com/example/endpointapp/NettoyageBac.java
  com.example.endpointapp.NettoyageBac
  com.example.endpointapp.NettoyageBac$1
  com.example.endpointapp.NettoyageBac$2
+ com.example.endpointapp.NettoyageBac$3
+ com.example.endpointapp.NettoyageBac$4

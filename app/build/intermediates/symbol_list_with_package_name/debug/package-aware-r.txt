@@ -1341,6 +1341,7 @@ id tv_ligneefemelle
 id tv_ligneemale
 id tv_lot
 id tv_lot2
+id tv_nb_lavage
 id tv_nbbac
 id tv_nbfemelle
 id tv_nbmale
@@ -1364,6 +1365,7 @@ id up
 id useLogo
 id view_offset_helper
 id visible
+id voir_recap
 id webview
 id withText
 id wrap
@@ -1454,6 +1456,7 @@ layout list_item_historique_incidents
 layout list_item_historique_morts
 layout list_item_historique_oeufs
 layout list_item_historique_souffrance
+layout list_item_recap_bac
 layout list_item_registre
 layout list_item_registre_checked
 layout liste_tache_checked
@@ -1480,6 +1483,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout template__popup_recap_bac
 layout web_historique
 mipmap ic_launcher
 mipmap ic_launcher_foreground

@@ -48,7 +48,6 @@ public class CustomPopup extends AppCompatActivity  {
         subTitleView.setText(sub_title);
 
 
-
         // Get the transferred data from source activity.
         Intent intent = getIntent();
 
