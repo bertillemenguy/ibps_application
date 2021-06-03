@@ -148,7 +148,9 @@ public class ActivityEcrirRecapIncidents extends AppCompatActivity {
         intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
-    
+
+
+
     /**
     public void onCheckboxClicked(View view) {
         // Is the view now checked?
@@ -268,4 +270,6 @@ public class ActivityEcrirRecapIncidents extends AppCompatActivity {
      
      }
      */
+
+
 }

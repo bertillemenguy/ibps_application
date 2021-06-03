@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -49,6 +50,7 @@ public class ActivityDupliquerBacs extends AppCompatActivity {
     Spinner SpinnerNombre3;
     Spinner SpinnerNombre4;
 
+    ImageView icon_mort;
 
     TextView tv_Lignee, tv_Lot, tv_Bac, tv_Responsable, tv_Age;
     
@@ -76,6 +78,10 @@ public class ActivityDupliquerBacs extends AppCompatActivity {
      * String NouveauBac="";
      * TextView textViewitemName, textViewBac, textViewprice, textViewAge, textViewResponsable;
      */
+
+    int[] icon ={R.drawable.fish_bones, R.drawable.zebrafish};
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,8 +109,6 @@ public class ActivityDupliquerBacs extends AppCompatActivity {
 
         list_select = (ArrayList<Poisson>) extra.getSerializable("list_select");
 
-
-
         Bac=list_select.get(0).getBac();
         Age=list_select.get(0).getAge();
         Lignee=list_select.get(0).getLignee();
@@ -113,8 +117,7 @@ public class ActivityDupliquerBacs extends AppCompatActivity {
         operateur=list_select.get(0).getResponsable();
 
 
-
-
+        icon_mort=findViewById(R.id.icon_mort);
         tv_Lignee = findViewById(R.id.tv_lignee);
         tv_Lot= findViewById(R.id.tv_lot);
         tv_Bac= findViewById(R.id.tv_bac);
@@ -126,6 +129,14 @@ public class ActivityDupliquerBacs extends AppCompatActivity {
         tv_Bac.setText(Bac);
         tv_Responsable.setText(operateur);
         tv_Lignee.setText(Lignee);
+
+        if (Integer.parseInt(Age)==22){
+            icon_mort.setImageResource(icon[0]);
+        } else {
+            icon_mort.setImageResource(icon[1]);
+        }
+
+
 
         SpinnerAlphabet=findViewById(R.id.spinnera);
         ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this, R.array.alphabet, android.R.layout.simple_spinner_item);
@@ -213,6 +224,12 @@ public class ActivityDupliquerBacs extends AppCompatActivity {
     
     //private String getRemarquea(String remarquea) {
     // return remarquea;
+
+    public void fermeractivite(View view) {
+        this.finish();
+    }
+
+
 }
 
 

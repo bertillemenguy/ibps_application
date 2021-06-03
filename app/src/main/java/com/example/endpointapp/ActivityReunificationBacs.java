@@ -152,4 +152,9 @@ public class ActivityReunificationBacs extends AppCompatActivity {
         intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
+
+    public void fermeractivite(View view) {
+        this.finish();
+    }
+
 }
