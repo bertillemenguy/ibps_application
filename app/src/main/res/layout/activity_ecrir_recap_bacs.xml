@@ -19,8 +19,6 @@
             android:orientation="vertical">
 
 
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -35,20 +33,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginBottom="5dp"
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/btn_return4"
+                        android:id="@+id/btn_return"
                         style="@android:style/Widget.Holo.Light.ImageButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="false"
                         android:layout_alignParentBottom="false"
-                        android:onClick="fermeractivite"
-                        app:srcCompat="@android:drawable/ic_menu_revert" />
+                        android:onClick="lancermenu"
+                        app:srcCompat="@drawable/icon_home" />
 
                 </LinearLayout>
 
@@ -143,6 +139,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="lancerdupliquer"
                     android:text="DUPLIQUER" />
+
 
 
             </LinearLayout>

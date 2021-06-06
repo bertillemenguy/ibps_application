@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -26,11 +28,15 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Text;
 
+import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 
 public class ActivityMenu extends AppCompatActivity {
@@ -38,7 +44,8 @@ public class ActivityMenu extends AppCompatActivity {
     /*---------------------ACCUEIL-------------------------*/
     /*-----------------------------------------------------*/
 
-    ProgressDialog loading;
+    ProgressDialog loading_1;
+    ProgressDialog loading_2;
     String compteur_bacs;
     String compteur_incidents;
 
@@ -96,12 +103,13 @@ public class ActivityMenu extends AppCompatActivity {
                     }
                 }
         );
-       // loading = ProgressDialog.show(this, "Chargement...", " Veuillez patienter", false, true);
+        //loading_1 = ProgressDialog.show(this, "Chargement...", " Veuillez patienter", false, true);
         int socketTimeOut = 50000;
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeOut, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
         stringRequest.setRetryPolicy(policy);
         RequestQueue queue = Volley.newRequestQueue(this);
         queue.add(stringRequest);
+
     }
 
     private void parseItems_bacs(String jsonResponce) {
@@ -129,7 +137,8 @@ public class ActivityMenu extends AppCompatActivity {
         StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbxv_6vHp6__F0NdJ8BWtqWhhC9JgkpVcHpD0tfbT0ETgvQwunmAzXdtPfsVUqTKBYHinw/exec?action=getItems", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                parseItems_incidents(response);
+
+                    parseItems_incidents(response);
             }
         },
                 new Response.ErrorListener() {
@@ -138,7 +147,7 @@ public class ActivityMenu extends AppCompatActivity {
                     }
                 }
         );
-        //loading = ProgressDialog.show(this, "Chargement...", " Veuillez patienter", false, true);
+        //loading_2 = ProgressDialog.show(this, "Chargement...", " Veuillez patienter", false, true);
         int socketTimeOut = 50000;
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeOut, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
         stringRequest.setRetryPolicy(policy);

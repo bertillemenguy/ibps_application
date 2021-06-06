@@ -33,20 +33,35 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 
 public class ActivityRechercheRegistre extends AppCompatActivity implements View.OnTouchListener, View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     String main_user;
     ListView listView;
-    SimpleAdapter adapter;
+    PoissonAdapter2 adapter;
     ProgressDialog loading;
     EditText editTextSearchItem;
 
+
+
+
+    String[] SpecialChars = { "<", "(" ,"[" ,"{" ,"\\" , "^" , "-","=","$","!" ,"|" ,"]" ,"}" ,")","?","*","+",".",">",";"};
+    // Convertir le tableau en liste
+    List<String> list = Arrays.asList(SpecialChars);
+
+
+
     int[] icon ={R.drawable.fish_bones, R.drawable.zebrafish};
+    //int[] color ={R.drawable.liseret_rouge};
+
 
     /**
      * @param savedInstanceState
@@ -83,139 +98,16 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
     }
 
 
-    
-    /**
-     * charger le registre au niveau du menu. sans issu apres
-     */
-    
-    private void getItems() {
-        
-        
-        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbwqCJJWqCBXyVIatCzuiST50A0_kcxPXL-GH9BEYtBfk6y-aEHX/exec?action=getItems", new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                parseItems(response);
-            }
-        },
-        
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                    
-                    }
-                }
-        );
-        loading = ProgressDialog.show(this, "Chargement...", " Veuillez patienter", false, true);
-        
-        int socketTimeOut = 50000;
-        RetryPolicy policy = new DefaultRetryPolicy(socketTimeOut, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-        
-        stringRequest.setRetryPolicy(policy);
-        
-        RequestQueue queue = Volley.newRequestQueue(this);
-        queue.add(stringRequest);
-        
+    static boolean contains(String T[], String val) {
+        for (int i = 0; i < T.length; i++) {
+            if (val.equals(T[i]))
+                //retourner la position courante
+                return true;
+        }return false;
     }
     
-    /**
-     * formater les donnees dans un nouveau layout (list_item_row)
-     *
-     * @param jsonResponce
-     */
 
 
-        private void parseItems(String jsonResponce) {
-        
-
-        ArrayList<HashMap<String, String>> list = new ArrayList<>();
-        
-        try {
-            JSONObject jobj = new JSONObject(jsonResponce);
-            JSONArray jarray = jobj.getJSONArray("items");
-
-
-            for (int i = 0; i < jarray.length(); i++) {
-
-                JSONObject jo = jarray.getJSONObject(i);
-
-                String Bac = jo.getString("Bac");
-                String Lot = jo.getString("Lot");
-                String Lignee = jo.getString("Lignee");
-                String Age = jo.getString("Age");
-                String Responsable = jo.getString("Responsable");
-                String Key = jo.getString("Key");
-
-
-                HashMap<String, String> item = new HashMap<>();
-
-                item.put("Bac", Bac);
-                item.put("Lot", Lot);
-                item.put("Lignee", Lignee);
-                item.put("Age", Age);
-                item.put("Responsable", Responsable);
-                item.put("Key", Key);
-
-                /*---------------------METTRE IMAGE POISSON MORT---------------------*/
-                /*-------------------------------------------------------------------*/
-
-                if (Integer.parseInt(Age)==15){
-                    item.put("image", icon[0]+"");
-                } else {
-                    item.put("image", icon[1]+"");
-                }
-
-                list.add(item);
-            }
-        }
-
-     catch(JSONException e){
-                e.printStackTrace();
-
-            }
-
-            /* faire apparaître logo quand utilisateur = 'JH'*/
-
-
-
-
-            adapter=new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable", "image"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable, R.id.icon_mort});
-
-            //listView.getId(3).setImage(R.drawable.fish_bones);
-
-
-            //ImageView icon=(ImageView) findViewById(R.id.icon_mort);
-
-            //icon.setImageDrawable(getResources().getDrawable(R.drawable.fish_bones));
-
-          //assign adapter to list view
-
-            listView.setAdapter(adapter);
-            loading.dismiss();
-
-
-
-            //Toast
-    
-    
-        editTextSearchItem.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            
-            }
-            
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                ActivityRechercheRegistre.this.adapter.getFilter().filter(charSequence);
-            }
-            
-            @Override
-            public void afterTextChanged(Editable editable) {
-            
-            
-            }
-        });
-    }
-    
     /**
      * public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
      * Intent intent = new Intent(this, ActivityItemdetails3.class);
@@ -258,7 +150,6 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
 
     public void lancermenu(View view) {
-        
         Intent intent = new Intent(this, ActivityMenu.class);
         intent.putExtra("main_user", main_user);
         startActivity(intent);
@@ -294,9 +185,11 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
                 getItems_tri(2);
                 Toast.makeText(parent.getContext(), "Trier par âge", Toast.LENGTH_SHORT).show();
                 break;
-
+            case 3:
+                getItems_tri(4);
+                Toast.makeText(parent.getContext(), "Lignée en péril", Toast.LENGTH_SHORT).show();
+                break;
         }
-
 
     }
 
@@ -355,8 +248,9 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
     private void parseItems_tri(String jsonResponce, int num_tri) {
 
-        //
-        ArrayList<HashMap<String, String>> list = new ArrayList<>();
+        ArrayList<Poisson> age_sup_24 = new ArrayList<>();
+        ArrayList<Poisson> age_inf_24 = new ArrayList<>();
+        ArrayList<Poisson> data = new ArrayList<>();
 
         try {
             JSONObject jobj = new JSONObject(jsonResponce);
@@ -375,68 +269,154 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
                 String Key=jo.getString("Key");
 
 
-                HashMap<String, String> item = new HashMap<>();
+
+                /*HashMap<String, String> item = new HashMap<>();
 
                 item.put("Bac", Bac);
                 item.put("Lot", Lot);
                 item.put("Lignee", Lignee);
                 item.put("Age", Age);
                 item.put("Responsable", Responsable);
-                item.put("Key", Key);
+                item.put("Key", Key);*/
 
 
                 /*---------------------METTRE IMAGE POISSON MORT---------------------*/
                 /*-------------------------------------------------------------------*/
 
-
-                if (Integer.parseInt(Age)==15){
-                    item.put("image", icon[0]+"");
+                // enlever les bugs quand les poissons sont trop agé
+                Integer Image;
+                if (Integer.parseInt(Age)==22){
+                    Image=icon[0];
                 } else {
-                    item.put("image", icon[1]+"");
+                    Image=icon[1];
                 }
 
+                Integer Color=0;
 
+                if(24<=Integer.parseInt(Age)){
+                    age_sup_24.add(new Poisson(Lot, Bac,  Responsable, Lignee,  Age, Key,  Image, Color));
+                } else {
+                    age_inf_24.add(new Poisson(Lot, Bac,  Responsable, Lignee,  Age, Key,  Image, Color));
+                }
 
-                list.add(item);
-
+                if (Integer.parseInt(Age)<1000){
+                    data.add(new Poisson( Lot, Bac, Responsable, Lignee, Age, Key, Image, Color));
+                }
             }
 
 
+
+            // mettre liseret rouge si lignee en péril
+
+                for (int i =0;i<age_sup_24.size();i++){
+                    int ok=0;
+                    for (int j=0;j<age_inf_24.size();j++){
+                        if (age_sup_24.get(i).getLignee().equals(age_inf_24.get(j).getLignee())){
+                            ok=1;
+                        }
+                    }
+                    if (ok==0){
+
+                        for (int k=0;k<data.size();k++){
+                            if (data.get(k).getKey()==age_sup_24.get(i).getKey()){
+                                data.get(k).setLiseret(R.drawable.liseret_rouge);
+                            }
+                        }
+                    }
+                }
+
             if (num_tri==1){
-                /*Trie par ordre alphabétique de lignee*/
-                Comparator<HashMap<String, String>> ligneeComparator = new Comparator<HashMap<String,String>>() {
+                /*Tri par ordre alphabétique de lignee*/
+                Comparator<Poisson> ligneeComparator = new Comparator<Poisson>() {
 
                     @Override
-                    public int compare(HashMap<String, String> o1, HashMap<String, String> o2) {
+                    public int compare(Poisson o1, Poisson o2) {
 
-                            return (o1.get("Lignee").toUpperCase()).compareTo((o2.get("Lignee")).toUpperCase());
+                        String lignee1=o1.getLignee().toUpperCase();
+                        String prem_1=lignee1.substring(0, 1);
+                        String rest_1=lignee1.substring(1, lignee1.length());
 
+                        String lignee2=o2.getLignee().toUpperCase();
+                        String prem_2=lignee2.substring(0, 1);
+                        String rest_2=lignee2.substring(1, lignee2.length());
+
+
+                        if (prem_1.equals(" ")) {
+                            if (prem_2.equals(" ")){
+                                return (rest_1.compareTo(rest_2));
+                            }
+                            if (contains(SpecialChars, prem_2)){
+                                return (rest_1.compareTo(rest_2));
+                            }
+                            return (rest_1.compareTo(lignee2));
+                        }
+
+                        else if (contains(SpecialChars, prem_1)) {
+
+                            if (contains(SpecialChars, prem_2)){
+                                return (rest_1.compareTo(rest_2));
+                            }
+                            if (prem_2.equals(" ")){
+                                return (rest_1.compareTo(rest_2));
+                            }
+
+                            return (rest_1.compareTo(lignee2));
+                        }
+
+
+                        /*if (prem_2.equals(" ")) {
+                            if (prem_1.equals(" ")){
+                                return (rest_2.compareTo(rest_1));
+                            }
+                            if (contains(SpecialChars, prem_1)){
+                                return (rest_2.compareTo(rest_1));
+                            }
+                            return (rest_2.compareTo(lignee1));
+                        }
+
+                        if (contains(SpecialChars, prem_2)) {
+
+                            if (contains(SpecialChars, prem_1)){
+                                return (rest_2.compareTo(rest_1));
+                            }
+                            if (prem_1.equals(" ")){
+                                return (rest_2.compareTo(rest_1));
+                            }
+
+                            return (rest_2.compareTo(lignee1));
+                        }*/
+
+
+
+                        else {
+                            return (lignee1.compareTo(lignee2));
+                        }
                     }
                 };
 
                 // And then sort it using collections.sort().
-                Collections.sort(list, ligneeComparator);
+                Collections.sort(data, ligneeComparator);
 
             }
 
 
             if (num_tri==2){
-                /*Trie par ordre décroissant l'Age*/
-                Comparator<HashMap<String, String>> ageComparator = new Comparator<HashMap<String,String>>() {
+                /*Tri par ordre décroissant l'Age*/
+                Comparator<Poisson> ageComparator = new Comparator<Poisson>() {
 
                     @Override
-                    public int compare(HashMap<String, String> o1, HashMap<String, String> o2) {
+                    public int compare(Poisson o1, Poisson o2) {
 
-                        /* Trie par odre alphabétique */
+                        /* Tri par odre alphabétique */
 
-                        String resp1 = o1.get("Responsable");
-                        String resp2 = o2.get("Responsable");
+                        String resp1 = o1.getResponsable();
+                        String resp2 = o2.getResponsable();
 
                         if (resp1.equals(resp2)){
 
                             // Get the Age and compare the Age.
-                            Integer age1 = Integer.parseInt(o1.get("Age"));
-                            Integer age2 = Integer.parseInt(o2.get("Age"));
+                            Integer age1 = Integer.parseInt(o1.getAge());
+                            Integer age2 = Integer.parseInt(o2.getAge());
 
                             return age1.compareTo(age2);
                         } else {
@@ -447,36 +427,52 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
                 };
 
                 // And then sort it using collections.sort().
-                Collections.sort(list, ageComparator);
+                Collections.sort(data, ageComparator);
 
             }
 
 
             if (num_tri==3){
-                /*Trie par ordre alphabétique bac*/
-                Comparator<HashMap<String, String>> bacComparator = new Comparator<HashMap<String,String>>() {
+                /*Tri par ordre alphabétique bac*/
+                Comparator<Poisson> bacComparator = new Comparator<Poisson>() {
 
                     @Override
-                    public int compare(HashMap<String, String> o1, HashMap<String, String> o2) {
-                            return (o1.get("Bac").toUpperCase()).compareTo((o2.get("Bac")).toUpperCase());
+                    public int compare(Poisson o1, Poisson o2) {
+                            return (o1.getBac().toUpperCase()).compareTo((o2.getBac()).toUpperCase());
                     }
                 };
 
                 // And then sort it using collections.sort().
-                Collections.sort(list, bacComparator);
+                Collections.sort(data, bacComparator);
+
+            }
+
+
+            if (num_tri==4){
+                /*Récupérer les lignées en péril*/
+
+
+
+                /*Comparator<HashMap<String, String>> bacComparator = new Comparator<HashMap<String,String>>() {
+
+                    @Override
+                    public int compare(HashMap<String, String> o1, HashMap<String, String> o2) {
+                        return (o1.get("Bac").toUpperCase()).compareTo((o2.get("Bac")).toUpperCase());
+                    }
+                };
+
+                // And then sort it using collections.sort().
+                Collections.sort(list, bacComparator);*/
 
             }
 
 
         } catch (JSONException e) {
             e.printStackTrace();
-
         }
 
 
-
-
-        adapter=new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable", "image"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable, R.id.icon_mort});
+        adapter=new PoissonAdapter2(this, data);
 
 
 

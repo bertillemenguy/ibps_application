@@ -101,6 +101,8 @@ public class BacAdapter extends ArrayAdapter<Bac> implements Serializable {
        // holder.Id.setText(bac.getId());
         holder.Actions.setText(bac.getActions());
         holder.NouveauBac.setText(bac.getNouveauBac());
+        holder.Lignee.setText(bac.getLignee());
+        holder.Bac.setText(bac.getBac());
         holder.Lignee2.setText(bac.getLignee2());
         holder.Bac2.setText(bac.getBac2());
         holder.remarque.setText(bac.getRemarque());

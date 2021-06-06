@@ -3,6 +3,7 @@ package com.example.endpointapp;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -303,6 +304,13 @@ public class ActivityEcrirRecapBacs extends AppCompatActivity implements Seriali
                     Image=icon[1];
                 }
 
+                Integer Color;
+                if (Integer.parseInt(Age)==22){
+                    Color= R.drawable.liseret_rouge;
+                } else {
+                    Color=0;
+                }
+
               /*  HashMap<String, String> item=new HashMap<>();
 
                 item.put("Bac", Bac);
@@ -313,7 +321,7 @@ public class ActivityEcrirRecapBacs extends AppCompatActivity implements Seriali
                 item.put("Key", Key);
                 list.add(item);*/
 
-                data.add(new Poisson(Lot,Bac,Responsable,Lignee,Age,Key,Image));
+                data.add(new Poisson(Lot,Bac,Responsable,Lignee,Age,Key,Image, Color));
 
 
 
@@ -334,10 +342,16 @@ public class ActivityEcrirRecapBacs extends AppCompatActivity implements Seriali
         // clics sur les éléments, on les envoie à l'adaptateur
         listView.setOnItemClickListener((adapterView, view, pos, l) -> adapter_poisson.toggle(pos));
 
-
         loading.dismiss();
 
+    }
 
+
+    public void lancermenu(View view) {
+
+        Intent intent = new Intent(this, ActivityMenu.class);
+        intent.putExtra("main_user", main_user);
+        startActivity(intent);
     }
 
 

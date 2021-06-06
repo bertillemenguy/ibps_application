@@ -84,7 +84,7 @@ public class Bac implements Serializable {
     public String getRemarque4(){ return Remarque4; }
     public String getBac4(){ return Bac4; }
     public String getLot(){ return Lot; }
-    public String getLot2(){ return Lot; }
+    public String getLot2(){ return Lot2; }
     public String getSiTraite(){ return SiTraite; }
 
 

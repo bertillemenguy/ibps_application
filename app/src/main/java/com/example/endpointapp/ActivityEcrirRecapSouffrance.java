@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
@@ -121,7 +122,7 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
     /**
      * @param view
      */
-    public void lancerresultat(View view) {
+    /*public void lancerresultat(View view) {
         int PL=Integer.parseInt(PointLimite);
         Intent intent=new Intent();
         score=Integer.parseInt(Position) + Integer.parseInt(Nage) + Integer.parseInt(Malnutrition) + Integer.parseInt(Prostration) + Integer.parseInt(Nageoire) + Integer.parseInt(Maigreur) + Integer.parseInt(Obesite) + Integer.parseInt(Blessure) + Integer.parseInt(Ulcere) + Integer.parseInt(Scoliose) + Integer.parseInt(Exophtalmie) + Integer.parseInt(Opercules) + Integer.parseInt(Couleur);
@@ -161,6 +162,17 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
         WriteOnSheetSouffrance.writeData(this, main_user, Bac, Lignee, Lot, Age, Responsable, Position, Nage, Malnutrition, Prostration, Nageoire, Maigreur, Obesite, Blessure, Ulcere, Scoliose, Exophtalmie, Opercules, Couleur, Euthanasie, Isolement, Surveillance, Ras, PoissonSouffrance, Key);
         
         
+    }*/
+
+
+    public void valider(View view){
+        final String PoissonSouffrance = PoissonSouffranceSpinner.getSelectedItem().toString();
+        if (PoissonSouffrance.equals("")){
+            Toast.makeText(getApplicationContext(), "Champ manquant", Toast.LENGTH_SHORT).show();
+        } else {
+            System.out.println("Vous avez séléectionné : "+PoissonSouffrance+" poissons");
+        }
+
     }
     
     public void fermeractivite(View view) {
@@ -197,7 +209,7 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
     }
     
     
-    public void onCheckboxClicked(View view) {
+    /*public void onCheckboxClicked(View view) {
         // Is the view now checked?
         
         boolean checked = ((CheckBox) view).isChecked();
@@ -283,5 +295,5 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
                     Prostration = "";
                 break;
         }
-    }
+    }*/
 }

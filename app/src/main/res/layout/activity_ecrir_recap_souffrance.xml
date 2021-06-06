@@ -24,6 +24,17 @@
                 android:orientation="vertical"
                 tools:ignore="MissingConstraints">
 
+                <ImageButton
+                    android:id="@+id/btn_return8"
+                    android:layout_width="42dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="16dp"
+                    android:onClick="fermeractivite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@android:drawable/ic_menu_revert" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -254,7 +265,7 @@
 
                 </LinearLayout>
 
-                <LinearLayout
+               <!-- <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -674,9 +685,11 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
                                 app:srcCompat="@drawable/imgphysique" />
-                        </LinearLayout>
 
+
+                        </LinearLayout>
                     </LinearLayout>
+                    -->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -696,16 +709,7 @@
                                 android:layout_weight="0"
                                 android:orientation="vertical">
 
-                                <ImageButton
-                                    android:id="@+id/btn_return8"
-                                    android:layout_width="42dp"
-                                    android:layout_height="46dp"
-                                    android:layout_marginStart="30dp"
-                                    android:layout_marginEnd="16dp"
-                                    android:onClick="fermeractivite"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:srcCompat="@android:drawable/ic_menu_revert" />
+
                             </LinearLayout>
 
                             <LinearLayout
@@ -715,21 +719,23 @@
                                 android:gravity="center"
                                 android:orientation="vertical"/>
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
 
-                                <Button
-                                    android:id="@+id/button"
-                                    android:layout_width="107dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="right"
-                                    android:layout_marginEnd="30dp"
-                                    android:onClick="lancerresultat"
-                                    android:text="Valider" />
-                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/button"
+                                android:layout_width="107dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="right"
+                                android:layout_marginEnd="30dp"
+                                android:onClick="valider"
+                                android:text="Valider" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -737,7 +743,6 @@
                 </LinearLayout>
 
             </LinearLayout>
-        </LinearLayout>
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

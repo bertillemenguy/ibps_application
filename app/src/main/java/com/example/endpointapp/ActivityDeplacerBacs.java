@@ -2,6 +2,7 @@
 
 package com.example.endpointapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -130,7 +131,9 @@ public class ActivityDeplacerBacs extends AppCompatActivity {
     
     
         WriteOnSheetDeplacerEliminerErreurReunir.writeData(this, main_user, NouveauBac, Action, list_poisson.get(0).getBac(), list_poisson.get(0).getLignee(), list_poisson.get(0).getLot(), Bac2, Lignee2, Lot2, list_poisson.get(0).getKey(), Key2);
-        
+
+                                                //             context,   main_user,  nouveaubac,  elimine,     bac,                            lignee,                            lot,      bac2, lignee2,  lot2,       Key                   Key2
+
         Intent intent = new Intent(this, ActivityEcrirRecapBacs.class);
         intent.putExtra("main_user", main_user);
         startActivity(intent);

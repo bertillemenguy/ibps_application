@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.Image;
 import android.os.Bundle;
 import android.os.Environment;
@@ -186,15 +187,19 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
                     Image=icon[1];
                 }
 
+                Integer Color;
+                if (Integer.parseInt(Age)==22){
+                    Color= R.drawable.liseret_rouge;
+                } else {
+                    Color=0;
+                }
 
-                data.add(new Poisson(Lot,Bac,Responsable,Lignee,Age,Key,Image));
+
+                data.add(new Poisson(Lot,Bac,Responsable,Lignee,Age,Key,Image,Color));
 
 
                 /*
-
                 HashMap<String, String> item = new HashMap<>();
-
-
 
                 item.put("Bac", Bac);
                 item.put("Lot", Lot);
@@ -205,8 +210,6 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
 
                 list.add(item);
                 */
-
-
             }
 
             System.out.println(data);

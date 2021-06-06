@@ -1,6 +1,7 @@
 package com.example.endpointapp;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Poisson implements Serializable {
    private final String Lot;
@@ -10,8 +11,10 @@ public class Poisson implements Serializable {
    private final String Age;
    private final String Key;
    private final Integer Image;
+   private Integer Liseret;
 
-   public Poisson(String Lot, String Bac, String Responsable, String Lignee, String Age, String Key, Integer Image){
+
+    public Poisson(String Lot, String Bac, String Responsable, String Lignee, String Age, String Key, Integer Image, Integer Liseret){
        this.Lot=Lot;
        this.Responsable=Responsable;
        this.Bac=Bac;
@@ -19,6 +22,7 @@ public class Poisson implements Serializable {
        this.Age=Age;
        this.Key=Key;
        this.Image=Image;
+       this.Liseret=Liseret;
    }
 
 
@@ -46,4 +50,7 @@ public class Poisson implements Serializable {
        return Key;
    }
    public Integer getImage(){ return Image; }
+    public Integer getColor(){ return Liseret; }
+    public void setLiseret(Integer Liseret){ this.Liseret=Liseret; }
+
 }

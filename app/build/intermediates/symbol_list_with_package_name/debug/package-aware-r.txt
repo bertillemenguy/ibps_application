@@ -820,6 +820,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable couleur_rouge
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -837,6 +838,7 @@ drawable icons8_dead_emoji_96
 drawable icons8_poubelle
 drawable img_splash
 drawable imgphysique
+drawable liseret_rouge
 drawable logo_deconnexion
 drawable navigation_empty_icon
 drawable notification_action_background
@@ -942,24 +944,12 @@ id center_horizontal
 id center_vertical
 id chains
 id checkbox
-id checkboxalterationnageoire
-id checkboxblessurelesion
-id checkboxchangementdecouleur
-id checkboxexophtalmiedeformation
-id checkboxmaigreur
-id checkboxmalnutrition
-id checkboxnageanormale
-id checkboxobesite
-id checkboxoperculeouverte
-id checkboxpositioninhabituelle
-id checkboxprostration
-id checkboxscoliose
-id checkboxulceremycosesaignement
 id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
 id color_item
+id color_poisson_peril
 id comment
 id commentaire_dimanche
 id commentaire_jeudi
@@ -1037,7 +1027,6 @@ id imageView18
 id imageView19
 id imageView2
 id imageView3
-id imageView4
 id imageView5
 id imageView6
 id imageView7
@@ -1231,7 +1220,6 @@ id textView24km
 id textView25
 id textView26
 id textView26k
-id textView27
 id textView28
 id textView29
 id textView3
@@ -1240,7 +1228,6 @@ id textView31
 id textView32
 id textView33
 id textView34
-id textView35
 id textView36
 id textView37
 id textView38
