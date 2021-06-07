@@ -448,6 +448,7 @@ public class ActivityRechercheRegistreAccouplementsFemelle extends AppCompatActi
 
                 // And then sort it using collections.sort().
                 Collections.sort(data, ageComparator);
+                Collections.reverse(data);
 
             }
 
