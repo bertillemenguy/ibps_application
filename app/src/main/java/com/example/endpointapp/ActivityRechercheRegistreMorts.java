@@ -77,7 +77,7 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
     // élément checkbox
     Intent intent_2 ;
     List<Poisson> list_select;
-    PoissonAdapter adapter;
+    PoissonAdapter2 adapter;
     Button button;
 
     String main_user;
@@ -92,7 +92,6 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
 
 
 
-
     String[] SpecialChars = { "<", "(" ,"[" ,"{" ,"\\" , "^" , "-","=","$","!" ,"|" ,"]" ,"}" ,")","?","*","+",".",">",";"};
     // Convertir le tableau en liste
     List<String> list = Arrays.asList(SpecialChars);
@@ -102,11 +101,12 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recherche_registre_morts_item);
+        setContentView(R.layout.activity_recherche_registre_item);
 
         listView = findViewById(R.id.lv_items);
 
-        //  listView.setOnItemClickListener((AdapterView.OnItemClickListener) this);
+
+       // listView.setOnItemClickListener((AdapterView.OnItemClickListener) this);
 
         //  listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
@@ -115,10 +115,13 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         ArrayAdapter<CharSequence> adapter_tris= ArrayAdapter.createFromResource(this, R.array.tris, android.R.layout.simple_spinner_item);
         adapter_tris.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
+        listView.setOnItemSelectedListener(this);
+
+
         spinner.setAdapter(adapter_tris);
         spinner.setOnItemSelectedListener(this);
 
-        button = findViewById(R.id.btn_valider);
+        //button = findViewById(R.id.btn_valider);
         editTextSearchItem = findViewById(R.id.et_search);
 
         // Get the transferred data from source activity.
@@ -126,21 +129,44 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         main_user = intent.getStringExtra("main_user");
 
 
-        /*this.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        //élément checkbox
+        intent_2 = new Intent(this, ActivityEcrirRecapMort.class);
+
+        this.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 System.out.println("onItemClick: " +position);
-                CheckedTextView v = (CheckedTextView) view;
-                boolean currentCheck = v.isChecked();
-                System.out.println(listView.getItemAtPosition(position));
-                //user.setActive(!currentCheck);
+
+
+                Poisson poisson = (Poisson) listView.getItemAtPosition(position);
+
+                System.out.println(poisson);
+
+                intent_2.putExtra("main_user", main_user);
+                Bundle extra = new Bundle();
+                extra.putSerializable("poisson", (Serializable) poisson);
+                intent_2.putExtra("extra", extra);
+
+                startActivity(intent_2);
+
+
+               /* System.out.println(adapter.getSelected());
+
+                list_select = listView.getItemAtPosition(position);
+                System.out.println(list_select);
+
+                //intent_2.putExtra("list_select", (Serializable) list_select);
+
+
+                // Toast.makeText(this, "Vous avez selectionné  "+list_select.size()+" élément(s)", Toast.LENGTH_LONG).show();
+*/
+
             }
-        });*/
+        });
 
 
-        //élément checkbox
-        intent_2 = new Intent(this, ActivityEcrirRecapMort.class);
+
        // getItems();
 
     }
@@ -301,7 +327,6 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
 
     /*-----------------------------SELECTIONNER POISSON(S)-------------------------------*/
     /*-----------------------------------------------------------------------------------*/
-
 
 
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -637,6 +662,7 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
 
                 // And then sort it using collections.sort().
                 Collections.sort(data, ageComparator);
+                Collections.reverse(data);
 
             }
 
@@ -685,14 +711,14 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
         }
 
 
-        adapter=new PoissonAdapter(this, data);
+        adapter=new PoissonAdapter2(this, data);
 
 
 
         //assign adapter to list view
         listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener((adapterView, view, pos, l) -> adapter.toggle(pos));
+        //listView.setOnItemClickListener((adapterView, view, pos, l) -> adapter.toggle(pos));
 
 
         loading.dismiss();
@@ -718,7 +744,7 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
             }
         });
 
-        this.button.setOnClickListener(new View.OnClickListener() {
+/*        this.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -738,7 +764,7 @@ public class ActivityRechercheRegistreMorts extends AppCompatActivity implements
                 // Toast.makeText(this, "Vous avez selectionné  "+list_select.size()+" élément(s)", Toast.LENGTH_LONG).show();
 
             }
-        });
+        });*/
 
     }
 

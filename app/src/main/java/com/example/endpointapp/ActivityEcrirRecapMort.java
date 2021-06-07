@@ -40,6 +40,7 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
     Integer Image;
     Integer Liseret;
 
+    Poisson poisson;
 
     ProgressDialog loading;
     EditText editTextSearchItem;
@@ -78,7 +79,7 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
         // récupération des poissons séléctionnés
         Bundle extra = getIntent().getBundleExtra("extra");
 
-        list_poisson = (ArrayList<Poisson>) extra.getSerializable("list_select");
+        poisson = (Poisson) extra.getSerializable("poisson");
 
         // operateur
         //OperateurSpinner=findViewById(R.id.spinner1);
@@ -101,17 +102,7 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
 
         //list_select = intent.getStringArrayListExtra("list_select");
 
-        List<HashMap<String, String>> list = new ArrayList<>();
-
-
-        for (int i =0; i<list_poisson.size(); i++){
-
-            Poisson poisson= list_poisson.get(i);
-            //String s = String.valueOf(list_select.get(i));
-            //s=s.substring(1, s.length()-1);
-            //String[] pairs = s.split(", ");
-
-            HashMap<String, String> map = new HashMap<>();
+            List<HashMap<String, String>> list = new ArrayList<>();
 
 
                 Bac = poisson.getBac();
@@ -123,8 +114,9 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
                 Image=poisson.getImage();
                 Liseret=poisson.getColor();
 
+                HashMap<String,String> map= new HashMap<>();
 
-            map.put("Bac", Bac);
+                map.put("Bac", Bac);
                 map.put("Lot", Lot);
                 map.put("Lignee", Lignee);
                 map.put("Age", Age);
@@ -144,7 +136,6 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
 
             list.add(map);
 
-        }
 
         SimpleAdapter sadapter =new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable", "Image", "Liseret"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable, R.id.icon_mort, R.id.color_poisson_peril});
 
@@ -197,7 +188,7 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
 
         System.out.println("Sauvegarde lancé __________="+list_poisson);
 
-        for (int i=0; i<list_poisson.size();i++){
+        //for (int i=0; i<list_poisson.size();i++){
 
            // Map<String, String> map = list_poissons_select.get(i);
 
@@ -212,7 +203,6 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
 
             WriteOnSheetDeclarerMort.writeData(this, main_user, Bac, Lignee, Lot, Age, Responsable, PoissonMort, Accouplement, ControleSanitaire, Key);
 
-
             //Temps d'attente !!! IMPORTANT
             try {
                 Thread.sleep(1200);
@@ -221,7 +211,7 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
             }
             loading.dismiss();
 
-        }
+       // }
 
         Intent intent=new Intent(this, ActivityRechercheRegistreMorts.class);
         intent.putExtra("main_user", main_user);

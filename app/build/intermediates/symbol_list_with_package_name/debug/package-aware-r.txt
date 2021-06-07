@@ -1041,7 +1041,6 @@ id jour_semaine
 id largeLabel
 id lastname
 id left
-id lignee
 id ligneefemelle
 id ligneemale
 id lignne2

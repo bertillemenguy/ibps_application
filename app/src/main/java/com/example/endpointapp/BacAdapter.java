@@ -1,8 +1,14 @@
 package com.example.endpointapp;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.CompoundButtonCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -87,16 +93,17 @@ public class BacAdapter extends ArrayAdapter<Bac> implements Serializable {
             holder.Lot = (TextView) convertView.findViewById(R.id.tv_lot);
             holder.Lot2 = (TextView) convertView.findViewById(R.id.tv_ReuniLot2);
             holder.SiTraite = (TextView) convertView.findViewById(R.id.tv_SITraite);
-
             holder.checkbox = (CheckBox) convertView.findViewById(R.id.checkbox);
 
             convertView.setTag(holder);
+
         } else {
             holder = (BacAdapter.BacViewHolder) convertView.getTag();
         }
 
         // remplir le ViewHolder avec les infos en cet emplacement de la liste
         Bac bac = liste.get(position);
+
         holder.Date.setText(bac.getDate());
        // holder.Id.setText(bac.getId());
         holder.Actions.setText(bac.getActions());
@@ -118,7 +125,18 @@ public class BacAdapter extends ArrayAdapter<Bac> implements Serializable {
         holder.SiTraite.setText(bac.getSiTraite());
 
 
-        holder.checkbox.setChecked(selected.contains(bac));
+        //ColorFilter colorFilter = new PorterDuffColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
+        //Drawable drawable = CompoundButtonCompat.getButtonDrawable(holder.checkbox);
+
+
+        //if (bac.getSiTraite().equals("En cours")){
+            holder.checkbox.setEnabled(selected.contains(bac));
+
+       // if (bac.getSiTraite().equals("Traité")){
+           // holder.checkbox.setEnabled(false);
+            //drawable.setColorFilter(colorFilter);
+        //}
+
 
         return convertView;
     }

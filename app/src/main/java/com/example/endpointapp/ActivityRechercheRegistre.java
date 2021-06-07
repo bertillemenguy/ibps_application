@@ -51,8 +51,6 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
     EditText editTextSearchItem;
 
 
-
-
     String[] SpecialChars = { "<", "(" ,"[" ,"{" ,"\\" , "^" , "-","=","$","!" ,"|" ,"]" ,"}" ,")","?","*","+",".",">",";"};
     // Convertir le tableau en liste
     List<String> list = Arrays.asList(SpecialChars);
@@ -439,6 +437,7 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
                 // And then sort it using collections.sort().
                 Collections.sort(data, ageComparator);
+                Collections.reverse(data);
 
             }
 

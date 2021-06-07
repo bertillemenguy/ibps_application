@@ -1,15 +1,26 @@
 package com.example.endpointapp;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 
 public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
@@ -48,13 +59,23 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
     String Exophtalmie="0";
     String Opercules="0";
     String Couleur="0";
-    
+
+    Poisson poisson;
+
+
     int score=0;
     
     //ajout
     
     //  TextView textViewitemDate, textViewBac, textViewLigneeMale, textViewLigneeFemelle, textViewResponsable;
     TextView textViewitemLot, textViewBac, textViewLignee, textViewAge, textViewResponsable;
+    Integer Icon;
+    Integer Liseret;
+
+    Context context;
+
+    ListView listView;
+
     //ajout
     //Spinner OperateurSpinner;
     
@@ -69,15 +90,28 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ecrir_recap_souffrance);
+
+
+        context=this;
         Intent intent=getIntent();
 
-        Bac=intent.getStringExtra("Bac");
+        main_user = getIntent().getStringExtra("main_user");
+
+
+        // récupération des poissons séléctionnés
+        Bundle extra = getIntent().getBundleExtra("extra");
+
+        poisson = (Poisson) extra.getSerializable("poisson");
+
+        listView = findViewById(R.id.list_item_select);
+
+        /*Bac=intent.getStringExtra("Bac");
         main_user=intent.getStringExtra("main_user");
         Age=intent.getStringExtra("Age");
         Lignee=intent.getStringExtra("Lignee");
         Responsable=intent.getStringExtra("Responsable");
         Lot=intent.getStringExtra("Lot");
-        Key=intent.getStringExtra("Key");
+        Key=intent.getStringExtra("Key");*/
     
         // PointLimite = intent.getStringExtra("PointLimite");
     
@@ -100,25 +134,59 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         PoissonSouffranceSpinner.setAdapter(adapter);
         //  PoissonSouffranceSpinner.setOnItemSelectedListener(this);
-    
-    
-        //ajout
-        textViewitemLot=findViewById(R.id.tv_lot);
-        textViewBac=findViewById(R.id.tv_Bac);
-        textViewLignee=findViewById(R.id.lignee);
-        textViewAge=findViewById(R.id.tv_age);
-        textViewResponsable=findViewById(R.id.tv_responsable);
-    
-    
-        textViewitemLot.setText(Lot);
-        textViewBac.setText(Bac);
-        textViewLignee.setText(Lignee);
-        textViewAge.setText(Age);
-        textViewResponsable.setText(Responsable);
 
+
+
+        //System.out.println("Bonjour ici l'image : "+poisson.getImage() );
+
+
+        //Drawable drawable = getResources().getDrawable(poisson.getImage());
+        //Icon.setImageDrawable(drawable);
+
+        //Liseret.setImageDrawable(R.drawable.liseret_rouge);
+
+
+        List<HashMap<String, String>> list = new ArrayList<>();
+
+
+        Bac = poisson.getBac();
+        Lot = poisson.getLot();
+        Lignee = poisson.getLignee();
+        Age = poisson.getAge();
+        Responsable=poisson.getResponsable();
+        Key=poisson.getKey();
+        Icon=poisson.getImage();
+        Liseret=poisson.getColor();
+
+        HashMap<String,String> map= new HashMap<>();
+
+        map.put("Bac", Bac);
+        map.put("Lot", Lot);
+        map.put("Lignee", Lignee);
+        map.put("Age", Age);
+        map.put("Responsable", Responsable);
+        map.put("Key", Key);
+        map.put("Image", Icon+"");
+        map.put("Liseret", Liseret +"");
+
+
+        // for (String pair:pairs){
+
+        //String[] entry = pair.split("=");
+        //map.put(entry[0].trim(), entry[1].trim());
+        //System.out.println(entry[0]+"="+entry[1]);
+
+        //}
+
+        list.add(map);
+
+
+        SimpleAdapter sadapter =new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable", "Image", "Liseret"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable, R.id.icon_mort, R.id.color_poisson_peril});
+
+        listView.setAdapter(sadapter);
     
     }
-    
+
     /**
      * @param view
      */

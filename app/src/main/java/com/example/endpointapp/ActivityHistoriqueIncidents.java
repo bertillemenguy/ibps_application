@@ -46,6 +46,7 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
     ListView listView;
     SimpleAdapter adapter;
     ProgressDialog loading;
+    Button button_tri;
     EditText editTextSearchItem;
 
 
@@ -62,7 +63,7 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recherche_registre_morts_item);
+        setContentView(R.layout.activity_historique_item_traite);
         //setContentView(R.layout.activity_recherche_morts);
         
         listView = findViewById(R.id.lv_items);
@@ -75,6 +76,8 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
         button = findViewById(R.id.btn_valider);
         intent_2 = new Intent(this, ActivityHistoriqueIncidents.class);
 
+        button_tri=findViewById(R.id.afficher_tout);
+
         button.setText("Traité");
 
         // Get the transferred data from source activity.
@@ -86,18 +89,18 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
         main_user= intent.getStringExtra("main_user");
 
 
-        getItems();
+        getItems(1);
         
     }
     
     
-    private void getItems() {
+    private void getItems(int type_affichage) {
         
         
         StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbxv_6vHp6__F0NdJ8BWtqWhhC9JgkpVcHpD0tfbT0ETgvQwunmAzXdtPfsVUqTKBYHinw/exec?action=getItems", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                parseItems(response);
+                parseItems(response, type_affichage);
             }
         },
         
@@ -121,7 +124,7 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
     }
     
     
-    private void parseItems(String jsonResponce) {
+    private void parseItems(String jsonResponce, int type_affichage) {
         
         List<Incident> data = new ArrayList<>();
         List<Incident> tete = new ArrayList<>();
@@ -166,16 +169,15 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
                     queue.add(new Incident(Date,Operateur,Etat, eaudeville, electricite, aircomprime, climatisation, eaudusysteme, systemeaquatique, travaux, nourrissage, key));
                 }
 
-                // élément checkbox
-                //data.add(new Incident(Date,Operateur,Etat, eaudeville, electricite, aircomprime, climatisation, eaudusysteme, systemeaquatique, travaux, nourrissage, key));
+                if (type_affichage==2){
+                    data.add(new Incident(Date,Operateur,Etat, eaudeville, electricite, aircomprime, climatisation, eaudusysteme, systemeaquatique, travaux, nourrissage, key));
+                }
 
 
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-
 
 
         //trier incident
@@ -202,19 +204,29 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
         };
 
 
-        // And then sort it using collections.sort().
-        Collections.sort(tete, incidentComparator);
-        Collections.sort(queue, incidentComparator);
 
-        Collections.reverse(tete);
-        Collections.reverse(queue);
+        if (type_affichage==1){
+            // And then sort it using collections.sort().
+            Collections.sort(tete, incidentComparator);
+            Collections.sort(queue, incidentComparator);
+
+            Collections.reverse(tete);
+            Collections.reverse(queue);
 
 
-        data=tete;
+            data=tete;
 
-        for (int i=0; i<queue.size(); i++){
+       /* for (int i =0; i<queue.size(); i++){
             data.add(queue.get(i));
+        }*/
         }
+
+        if (type_affichage==2){
+            Collections.sort(data, incidentComparator);
+            Collections.reverse(data);
+
+        }
+
 
 
         // élément checkbox
@@ -249,36 +261,40 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
 
 
 
+        this.button_tri.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               if(button_tri.getText().equals("Tout")){
+                   button_tri.setText("En cours");
+                   getItems(2);
+               } else {
+                   getItems(1);
+                   button_tri.setText("Tout");
+               }
+            }
+        });
+
+
         this.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 System.out.println("Bouton cliqué___________________");
-
                 System.out.println(adapter_incident.getSelected());
-
                 list_select = adapter_incident.getSelected();
-
                 System.out.println(list_select);
-
                 //intent_2.putExtra("main_user", main_user);
 
                 //Bundle extra = new Bundle();
 
                 //extra.putSerializable("list_select", (Serializable) list_select);
 
-
                 lancersauvregard();
 
-
                 //intent_2.putExtra("extra", extra);
-
                 //intent_2.putExtra("list_select", (Serializable) list_select);
-
                 //startActivity(intent_2);
-
                 // Toast.makeText(this, "Vous avez selectionné  "+list_select.size()+" élément(s)", Toast.LENGTH_LONG).show();
-
 
                 //Temps d'attente !!! IMPORTANT
                 try {
@@ -289,12 +305,8 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
 
                 intent_2.putExtra("main_user", main_user);
                 startActivity(intent_2);
-
             }
-
         });
-
-
     }
     
     
@@ -329,7 +341,6 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
      public void lancersauvregard(){
          for (int i=0; i<list_select.size(); i++) {
 
-             System.out.println("COUCOU valider:"+list_select.get(i));
 
              String key = list_select.get(i).getKey();
              WriteOnSheetIncident.updateData(this, key);
@@ -342,6 +353,12 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
              }
          }
      }
+
+
+    public void tout_afficher(View view) {
+
+        getItems(2);
+    }
 }
     
     

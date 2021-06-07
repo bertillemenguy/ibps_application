@@ -48,6 +48,7 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
     Intent intent_2 ;
     List<Bac> list_select;
     Button button;
+    Button button_tri;
     BacAdapter adapter_bac;
 
 
@@ -77,6 +78,8 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
         button = findViewById(R.id.btn_valider);
 
         button.setText("Traité");
+
+        button_tri=findViewById(R.id.afficher_tout);
         intent_2 = new Intent(this, ActivityRechercheGestionBacs.class);
 
 
@@ -226,7 +229,7 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
 
         //trier incident
         /*Trie par ordre alphabétique bac*/
-        Comparator<Bac> incidentComparator = new Comparator<Bac>() {
+        Comparator<Bac> bacComparator = new Comparator<Bac>() {
 
 
             @Override
@@ -251,8 +254,8 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
 
         if (type_affichage==1){
             // And then sort it using collections.sort().
-            Collections.sort(tete, incidentComparator);
-            Collections.sort(queue, incidentComparator);
+            Collections.sort(tete, bacComparator);
+            Collections.sort(queue, bacComparator);
 
             Collections.reverse(tete);
             Collections.reverse(queue);
@@ -263,10 +266,11 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
        /* for (int i =0; i<queue.size(); i++){
             data.add(queue.get(i));
         }*/
+
         }
 
         if (type_affichage==2){
-            Collections.sort(data, incidentComparator);
+            Collections.sort(data, bacComparator);
             Collections.reverse(data);
 
         }
@@ -307,28 +311,35 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
 
 
 
-        this.button.setOnClickListener(new View.OnClickListener() {
+        this.button_tri.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(button_tri.getText().equals("Tout")){
+                    button_tri.setText("En cours");
+                    getItems(2);
+                } else {
+                    getItems(1);
+                    button_tri.setText("Tout");
+                }
+            }
+
+        });
+
+
+        /*this.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 System.out.println("Bouton cliqué___________________");
-
                 System.out.println(adapter_bac.getSelected());
-
                 list_select = adapter_bac.getSelected();
-
                 System.out.println(list_select);
-
                 lancersauvregarde();
 
 
-
                 //Bundle extra = new Bundle();
-
                 //extra.putSerializable("list_select", (Serializable) list_select);
-
                 //intent_2.putExtra("extra", extra);
-
                 //intent_2.putExtra("list_select", (Serializable) list_select);
 
                 intent_2.putExtra("main_user", main_user);
@@ -338,7 +349,7 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
 
             }
 
-        });
+        });*/
 
 
     }
@@ -354,10 +365,7 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
     }
 
 
-    public void tout_afficher(View view) {
 
-        getItems(2);
-    }
     
     /*public void lancertraiter(View view) {
         //Intent intent = new Intent(this,ActivityMenu.class);

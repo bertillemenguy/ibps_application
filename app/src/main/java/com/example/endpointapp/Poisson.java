@@ -1,7 +1,10 @@
 package com.example.endpointapp;
 
+import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
+
 import java.io.Serializable;
-import java.util.List;
 
 public class Poisson implements Serializable {
    private final String Lot;
@@ -23,7 +26,8 @@ public class Poisson implements Serializable {
        this.Key=Key;
        this.Image=Image;
        this.Liseret=Liseret;
-   }
+
+    }
 
 
     @Override
@@ -51,6 +55,8 @@ public class Poisson implements Serializable {
    }
    public Integer getImage(){ return Image; }
     public Integer getColor(){ return Liseret; }
+
+
     public void setLiseret(Integer Liseret){ this.Liseret=Liseret; }
 
 }

@@ -1,8 +1,15 @@
 package com.example.endpointapp;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.CompoundButtonCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -78,12 +85,14 @@ public class IncidentAdapter extends ArrayAdapter<Incident> implements Serializa
 
 
             convertView.setTag(holder);
+
         } else {
             holder = (IncidentAdapter.IncidentViewHolder) convertView.getTag();
         }
 
         // remplir le ViewHolder avec les infos en cet emplacement de la liste
         Incident incident = liste.get(position);
+
         holder.Date.setText(incident.getDate());
         holder.Operateur.setText(incident.getOperateur());
         holder.Etat.setText(incident.getEtat());
@@ -97,8 +106,17 @@ public class IncidentAdapter extends ArrayAdapter<Incident> implements Serializa
         holder.travaux.setText(incident.getTravaux());
         holder.nourrissage.setText(incident.getNourrissage());
 
+        ColorFilter colorFilter = new PorterDuffColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
+        Drawable drawable = CompoundButtonCompat.getButtonDrawable(holder.checkbox);
 
-        holder.checkbox.setChecked(selected.contains(incident));
+        if (incident.getEtat().equals("En cours")){
+            holder.checkbox.setChecked(selected.contains(incident));
+        } else {
+            drawable.setColorFilter(colorFilter);
+        }
+
+
+
 
         return convertView;
     }
