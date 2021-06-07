@@ -44,14 +44,11 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
     //implements AdapterView.OnItemClickListener
 
 
-
     // élément checkbox
     Intent intent_2 ;
     List<Bac> list_select;
     Button button;
     BacAdapter adapter_bac;
-
-
 
 
     ListView listView;
@@ -66,7 +63,7 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recherche_registre_morts_item);
+        setContentView(R.layout.activity_historique_item_traite);
     
         listView=findViewById(R.id.lv_items);
         //listView.setOnItemClickListener(this);
@@ -83,18 +80,18 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
         intent_2 = new Intent(this, ActivityRechercheGestionBacs.class);
 
 
-        getItems();
+        getItems(1);
     
     }
     
     
-    private void getItems() {
+    private void getItems(int type_affichage) {
     
     
         StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbxr8Y48s1vLCcnRigyBOwpzZqYa5t8-E8omRRKXZtwuf6s42zgJFwXSyVcBFcWEAh0v/exec?action=getItems", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                parseItems(response);
+                parseItems(response, type_affichage);
             }
         },
             
@@ -118,7 +115,7 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
     }
     
     
-    private void parseItems(String jsonResponce) {
+    private void parseItems(String jsonResponce, int type_affichage) {
 
         List<Bac> data = new ArrayList<>();
         List<Bac> tete = new ArrayList<>();
@@ -183,7 +180,9 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
                 }
 
 
-                //data.add(new Bac(modif_Date, Id, Actions, NouveauBac, Lignee, Bac, Lignee2, Bac2, remarque, remarque2, Bac2b, remarque3, Bac3, remarque4, Bac4, Lot, Lot2, SItraite));
+                if (type_affichage==2){
+                    data.add(new Bac(modif_Date, Id, Actions, NouveauBac, Lignee, Bac, Lignee2, Bac2, remarque, remarque2, Bac2b, remarque3, Bac3, remarque4, Bac4, Lot, Lot2, SItraite));
+                }
 
                 /*HashMap<String, String> item=new HashMap<>();
     
@@ -249,19 +248,29 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
         };
 
 
-        // And then sort it using collections.sort().
-        Collections.sort(tete, incidentComparator);
-        Collections.sort(queue, incidentComparator);
 
-        Collections.reverse(tete);
-        Collections.reverse(queue);
+        if (type_affichage==1){
+            // And then sort it using collections.sort().
+            Collections.sort(tete, incidentComparator);
+            Collections.sort(queue, incidentComparator);
+
+            Collections.reverse(tete);
+            Collections.reverse(queue);
 
 
-        data=tete;
+            data=tete;
 
-        for (int i =0; i<queue.size(); i++){
+       /* for (int i =0; i<queue.size(); i++){
             data.add(queue.get(i));
+        }*/
         }
+
+        if (type_affichage==2){
+            Collections.sort(data, incidentComparator);
+            Collections.reverse(data);
+
+        }
+
 
 
         adapter_bac=new BacAdapter(this, data);
@@ -343,7 +352,12 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
         intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
-    
+
+
+    public void tout_afficher(View view) {
+
+        getItems(2);
+    }
     
     /*public void lancertraiter(View view) {
         //Intent intent = new Intent(this,ActivityMenu.class);

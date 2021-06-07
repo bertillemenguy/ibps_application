@@ -901,6 +901,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id afficher_tout
 id alertTitle
 id all
 id always
@@ -1403,6 +1404,7 @@ layout activity_ecrir_recap_mort
 layout activity_ecrir_recap_oeuf
 layout activity_ecrir_recap_souffrance
 layout activity_historique_item
+layout activity_historique_item_traite
 layout activity_inscription
 layout activity_menu
 layout activity_recap_bacs_erreur

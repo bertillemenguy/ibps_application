@@ -220,9 +220,20 @@ public class ActivityEcrirRecapAccouplement extends AppCompatActivity implements
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
     
     }
-    
+
+    public void fermeractivite(View view) {
+        this.finish();
+    }
+
+
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
     
+    }
+
+    public void lancermenu(View view) {
+        Intent intent = new Intent(this, ActivityMenu.class);
+        intent.putExtra("main_user", main_user);
+        startActivity(intent);
     }
 }

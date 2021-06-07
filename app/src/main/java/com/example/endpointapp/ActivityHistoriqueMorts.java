@@ -75,11 +75,7 @@ public class ActivityHistoriqueMorts extends AppCompatActivity implements Adapte
         main_user = intent.getStringExtra("main_user");
 
         activity = this;
-
-
-
     }
-
 
 
 

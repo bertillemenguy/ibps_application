@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
@@ -37,6 +38,8 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
     String Responsable="";
     String Key="";
     Integer Image;
+    Integer Liseret;
+
 
     ProgressDialog loading;
     EditText editTextSearchItem;
@@ -118,14 +121,17 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
                 Responsable=poisson.getResponsable();
                 Key=poisson.getKey();
                 Image=poisson.getImage();
+                Liseret=poisson.getColor();
 
-                map.put("Bac", Bac);
+
+            map.put("Bac", Bac);
                 map.put("Lot", Lot);
                 map.put("Lignee", Lignee);
                 map.put("Age", Age);
                 map.put("Responsable", Responsable);
                 map.put("Key", Key);
                 map.put("Image", Image+"");
+                map.put("Liseret", Liseret +"");
 
 
            // for (String pair:pairs){
@@ -140,7 +146,7 @@ public class ActivityEcrirRecapMort extends AppCompatActivity implements Adapter
 
         }
 
-        SimpleAdapter sadapter =new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable", "Image"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable, R.id.icon_mort});
+        SimpleAdapter sadapter =new SimpleAdapter(this, list, R.layout.list_item_registre, new String[]{"Bac", "Lot", "Lignee", "Age", "Responsable", "Image", "Liseret"}, new int[]{R.id.tv_bac, R.id.tv_lot, R.id.tv_lignee, R.id.tv_age, R.id.tv_responsable, R.id.icon_mort, R.id.color_poisson_peril});
 
         listView.setAdapter(sadapter);
 

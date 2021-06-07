@@ -224,6 +224,10 @@
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/nettoyage_bac.xml"
     },
     {
+        "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_activity_historique_item_traite.xml.flat",
+        "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/activity_historique_item_traite.xml"
+    },
+    {
         "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_activity_recherche_registre_morts_item.xml.flat",
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/activity_recherche_registre_morts_item.xml"
     },

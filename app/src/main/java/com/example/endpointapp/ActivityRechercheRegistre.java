@@ -306,6 +306,10 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
 
 
+            ArrayList<Poisson> list_poisson_peril=new ArrayList<>();
+            ArrayList<Poisson> list_poisson_ok=new ArrayList<>();
+
+
             // mettre liseret rouge si lignee en péril
 
                 for (int i =0;i<age_sup_24.size();i++){
@@ -320,8 +324,15 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
                         for (int k=0;k<data.size();k++){
                             if (data.get(k).getKey()==age_sup_24.get(i).getKey()){
                                 data.get(k).setLiseret(R.drawable.liseret_rouge);
+                                list_poisson_peril.add(data.get(k));
                             }
                         }
+                    }
+                }
+
+                for (int i=0;i<data.size();i++){
+                    if (data.get(i).getColor()==0){
+                        list_poisson_ok.add(data.get(i));
                     }
                 }
 
@@ -451,7 +462,11 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
             if (num_tri==4){
                 /*Récupérer les lignées en péril*/
 
+                data=list_poisson_peril;
 
+                for (int i=0; i<list_poisson_ok.size();i++){
+                    data.add(list_poisson_ok.get(i));
+                }
 
                 /*Comparator<HashMap<String, String>> bacComparator = new Comparator<HashMap<String,String>>() {
 

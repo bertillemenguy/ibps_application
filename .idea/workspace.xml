@@ -26,9 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3afe4e3-bb95-40eb-9760-15c9f83c8141" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/PoissonAdapter2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/couleur_rouge.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/liseret_rouge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_historique_item_traite.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -60,18 +58,28 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueAccouplements.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueAccouplements.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueAccouplementsPourOeufs.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueAccouplementsPourOeufs.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueIncidents.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueIncidents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueMorts$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueMorts$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueMorts$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueMorts$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueMorts$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueMorts$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueMorts.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueMorts.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueOeufs.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueOeufs.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueSouffrance.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityHistoriqueSouffrance.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityIsolement.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityIsolement.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRas.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheGestionBacs$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheGestionBacs$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheGestionBacs$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheGestionBacs$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheGestionBacs$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheGestionBacs$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheGestionBacs.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheGestionBacs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistre$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistre$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistre$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistre$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistre$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistre$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistre.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistre.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreBacs.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreBacs.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreMorts$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreMorts$1.class" afterDir="false" />
@@ -81,13 +89,12 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreSouffrance.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityRechercheRegistreSouffrance.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityReunificationBacs.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityReunificationBacs.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityReunirBacs.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityReunirBacs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivitySplash.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivitySplash.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivitySurveillance.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivitySurveillance.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityWebHistoriqueAnimalerieAlevins.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityWebHistoriqueAnimalerieAlevins.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityWebHistoriqueAnimalerieRemplissage.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityWebHistoriqueAnimalerieRemplissage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityWebHistoriqueReservationInjection.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityWebHistoriqueReservationInjection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityWebHistoriqueReservationZebrafish.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/endpointapp/ActivityWebHistoriqueReservationZebrafish.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityDeplacerBacs.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityDeplacerBacs.dex" afterDir="false" />
@@ -103,18 +110,28 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueAccouplements.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueAccouplements.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueAccouplementsPourOeufs.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueAccouplementsPourOeufs.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueIncidents.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueIncidents.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueMorts$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueMorts$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueMorts$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueMorts$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueMorts$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueMorts$3.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueMorts.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueMorts.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueOeufs.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueOeufs.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueSouffrance.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityHistoriqueSouffrance.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityIsolement.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityIsolement.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityMenu.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityMenu.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRas.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRas.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheGestionBacs$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheGestionBacs$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheGestionBacs$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheGestionBacs$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheGestionBacs$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheGestionBacs$3.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheGestionBacs.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheGestionBacs.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistre$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistre$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistre$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistre$2.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistre$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistre$3.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistre.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistre.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle$3.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale$3.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreBacs.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreBacs.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreMorts$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityRechercheRegistreMorts$1.dex" afterDir="false" />
@@ -129,33 +146,29 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityWebHistoriqueAnimalerieRemplissage.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityWebHistoriqueAnimalerieRemplissage.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityWebHistoriqueReservationInjection.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityWebHistoriqueReservationInjection.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityWebHistoriqueReservationZebrafish.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/endpointapp/ActivityWebHistoriqueReservationZebrafish.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_deplacer_reunir.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_deplacer_reunir.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_ecrir_recap_bacs.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_ecrir_recap_bacs.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_ecrir_recap_incidents.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_ecrir_recap_incidents.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_ecrir_recap_souffrance.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_ecrir_recap_souffrance.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_recherche_registre_item.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_recherche_registre_item.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_list_item_historique_bacs.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_list_item_historique_bacs.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_ecrir_recap_accouplement.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_ecrir_recap_accouplement.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_rechercheregistreaccouplementfemelle.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_rechercheregistreaccouplementfemelle.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_rechercheregistreaccouplmentmale.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_rechercheregistreaccouplmentmale.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_list_item_registre.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_list_item_registre.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityDeplacerBacs.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityDeplacerBacs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityEcrirRecapBacs.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityEcrirRecapBacs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityEcrirRecapSouffrance.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityEcrirRecapSouffrance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityEcrirRecapAccouplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityEcrirRecapAccouplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityEcrirRecapMort.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityEcrirRecapMort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityHistoriqueMorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityHistoriqueMorts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityRechercheGestionBacs.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityRechercheGestionBacs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityRechercheRegistre.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityRechercheRegistre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityRechercheRegistreAccouplementsFemelle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityRechercheRegistreAccouplementsMale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityRechercheRegistreMorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/ActivityRechercheRegistreMorts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/Bac.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/Bac.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/BacAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/BacAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/Poisson.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/Poisson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ecrir_recap_bacs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_ecrir_recap_bacs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ecrir_recap_souffrance.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_ecrir_recap_souffrance.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_recherche_registre_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_recherche_registre_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_historique_bacs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_historique_bacs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/PoissonAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/endpointapp/PoissonAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ecrir_recap_accouplement.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_ecrir_recap_accouplement.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_recherche_registre_morts_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_recherche_registre_morts_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_rechercheregistreaccouplementfemelle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_rechercheregistreaccouplementfemelle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_rechercheregistreaccouplmentmale.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_rechercheregistreaccouplmentmale.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_registre.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_registre.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_registre_checked.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_registre_checked.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,9 +231,8 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.endpointapp" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
@@ -228,8 +240,9 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.endpointapp" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.endpointapp" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
     </key>
   </component>
   <component name="RunManager">
@@ -638,7 +651,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622752389513</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="commit liseret rouge pour lignée en danger">
+      <created>1623012134853</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1623012134853</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -666,7 +686,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="commit ajout notifiaction incidents" />
     <MESSAGE value="commit connexion" />
     <MESSAGE value="commit connexion 2" />
     <MESSAGE value="commit connexion 3" />
@@ -691,7 +710,8 @@
     <MESSAGE value="commit récapitulatif lavage bac list" />
     <MESSAGE value="commit simplification des Bacs" />
     <MESSAGE value="commit ajout retour+image et menu bouton pour les bacs" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit ajout retour+image et menu bouton pour les bacs" />
+    <MESSAGE value="commit liseret rouge pour lignée en danger" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit liseret rouge pour lignée en danger" />
   </component>
   <component name="WindowStateProjectService">
     <state x="106" y="78" width="800" height="723" key="#Intentions" timestamp="1619730326352">
@@ -739,43 +759,43 @@
       <screen x="0" y="25" width="1440" height="781" />
     </state>
     <state x="176" y="193" key="AndroidCreateXmlResourceDialog/0.25.1440.781@0.25.1440.781" timestamp="1622581092782" />
-    <state x="43" y="25" width="984" height="781" key="CommitChangelistDialog2" timestamp="1622752388758">
+    <state x="43" y="25" width="984" height="781" key="CommitChangelistDialog2" timestamp="1623012132614">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
-    <state x="43" y="25" width="984" height="781" key="CommitChangelistDialog2/0.25.1440.781@0.25.1440.781" timestamp="1622752388758" />
+    <state x="43" y="25" width="984" height="781" key="CommitChangelistDialog2/0.25.1440.781@0.25.1440.781" timestamp="1623012132614" />
     <state x="0" y="25" key="CommitChangelistDialog2/0.25.1440.788@0.25.1440.788" timestamp="1621259443813" />
-    <state width="672" height="150" key="GridCell.Tab.0.bottom" timestamp="1623006176631">
+    <state width="1054" height="150" key="GridCell.Tab.0.bottom" timestamp="1623055937407">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
     <state width="1398" height="180" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1619689680097" />
-    <state width="672" height="150" key="GridCell.Tab.0.bottom/0.25.1440.781@0.25.1440.781" timestamp="1623006176631" />
+    <state width="1054" height="150" key="GridCell.Tab.0.bottom/0.25.1440.781@0.25.1440.781" timestamp="1623055937407" />
     <state width="603" height="109" key="GridCell.Tab.0.bottom/0.25.1440.785@0.25.1440.785" timestamp="1621452586825" />
     <state width="769" height="92" key="GridCell.Tab.0.bottom/0.25.1440.788@0.25.1440.788" timestamp="1621455985354" />
     <state width="829" height="109" key="GridCell.Tab.0.bottom/0.25.1440.791@0.25.1440.791" timestamp="1621434701527" />
     <state width="890" height="110" key="GridCell.Tab.0.bottom/0.25.1440.794@0.25.1440.794" timestamp="1621426147255" />
-    <state width="672" height="150" key="GridCell.Tab.0.center" timestamp="1623006176630">
+    <state width="1054" height="150" key="GridCell.Tab.0.center" timestamp="1623055937406">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
     <state width="1398" height="180" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1619689680096" />
-    <state width="672" height="150" key="GridCell.Tab.0.center/0.25.1440.781@0.25.1440.781" timestamp="1623006176630" />
+    <state width="1054" height="150" key="GridCell.Tab.0.center/0.25.1440.781@0.25.1440.781" timestamp="1623055937406" />
     <state width="603" height="109" key="GridCell.Tab.0.center/0.25.1440.785@0.25.1440.785" timestamp="1621452586824" />
     <state width="769" height="92" key="GridCell.Tab.0.center/0.25.1440.788@0.25.1440.788" timestamp="1621455985353" />
     <state width="829" height="109" key="GridCell.Tab.0.center/0.25.1440.791@0.25.1440.791" timestamp="1621434701527" />
     <state width="890" height="110" key="GridCell.Tab.0.center/0.25.1440.794@0.25.1440.794" timestamp="1621426147255" />
-    <state width="672" height="150" key="GridCell.Tab.0.left" timestamp="1623006176630">
+    <state width="1054" height="150" key="GridCell.Tab.0.left" timestamp="1623055937406">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
     <state width="1398" height="180" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1619689680096" />
-    <state width="672" height="150" key="GridCell.Tab.0.left/0.25.1440.781@0.25.1440.781" timestamp="1623006176630" />
+    <state width="1054" height="150" key="GridCell.Tab.0.left/0.25.1440.781@0.25.1440.781" timestamp="1623055937406" />
     <state width="603" height="109" key="GridCell.Tab.0.left/0.25.1440.785@0.25.1440.785" timestamp="1621452586824" />
     <state width="769" height="92" key="GridCell.Tab.0.left/0.25.1440.788@0.25.1440.788" timestamp="1621455985353" />
     <state width="829" height="109" key="GridCell.Tab.0.left/0.25.1440.791@0.25.1440.791" timestamp="1621434701527" />
     <state width="890" height="110" key="GridCell.Tab.0.left/0.25.1440.794@0.25.1440.794" timestamp="1621426147254" />
-    <state width="672" height="150" key="GridCell.Tab.0.right" timestamp="1623006176630">
+    <state width="1054" height="150" key="GridCell.Tab.0.right" timestamp="1623055937406">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
     <state width="1398" height="180" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1619689680097" />
-    <state width="672" height="150" key="GridCell.Tab.0.right/0.25.1440.781@0.25.1440.781" timestamp="1623006176630" />
+    <state width="1054" height="150" key="GridCell.Tab.0.right/0.25.1440.781@0.25.1440.781" timestamp="1623055937406" />
     <state width="603" height="109" key="GridCell.Tab.0.right/0.25.1440.785@0.25.1440.785" timestamp="1621452586825" />
     <state width="769" height="92" key="GridCell.Tab.0.right/0.25.1440.788@0.25.1440.788" timestamp="1621455985354" />
     <state width="829" height="109" key="GridCell.Tab.0.right/0.25.1440.791@0.25.1440.791" timestamp="1621434701527" />
@@ -821,10 +841,10 @@
     </state>
     <state width="500" height="476" key="SwitcherDM/0.25.1440.781@0.25.1440.781" timestamp="1622467645536" />
     <state width="500" height="445" key="SwitcherDM/0.25.1440.791@0.25.1440.791" timestamp="1618315021751" />
-    <state x="21" y="146" key="Vcs.Push.Dialog.v2" timestamp="1622752398211">
+    <state x="21" y="146" key="Vcs.Push.Dialog.v2" timestamp="1623012141253">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
-    <state x="21" y="146" key="Vcs.Push.Dialog.v2/0.25.1440.781@0.25.1440.781" timestamp="1622752398211" />
+    <state x="21" y="146" key="Vcs.Push.Dialog.v2/0.25.1440.781@0.25.1440.781" timestamp="1623012141253" />
     <state x="21" y="147" key="Vcs.Push.Dialog.v2/0.25.1440.788@0.25.1440.788" timestamp="1621259454968" />
     <state x="21" y="147" key="Vcs.Push.Dialog.v2/0.25.1440.791@0.25.1440.791" timestamp="1618316963539" />
     <state x="21" y="148" key="Vcs.Push.Dialog.v2/0.25.1440.794@0.25.1440.794" timestamp="1618318694671" />

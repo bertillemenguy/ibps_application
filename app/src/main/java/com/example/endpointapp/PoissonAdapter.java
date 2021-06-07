@@ -36,6 +36,7 @@ class PoissonAdapter extends ArrayAdapter<Poisson> implements Serializable {
         TextView Responsable;
         TextView Bac;
         ImageView Image;
+        ImageView Liseret;
         CheckBox checkbox;
     }
 
@@ -60,6 +61,9 @@ class PoissonAdapter extends ArrayAdapter<Poisson> implements Serializable {
             holder.Responsable = (TextView) convertView.findViewById(R.id.tv_responsable);
             holder.Bac = (TextView) convertView.findViewById(R.id.tv_bac);
 
+            holder.Liseret = (ImageView) convertView.findViewById(R.id.color_poisson_peril);
+
+
             holder.Image =(ImageView) convertView.findViewById(R.id.icon_mort);
 
             holder.checkbox = (CheckBox) convertView.findViewById(R.id.tv_checkbox);
@@ -77,6 +81,7 @@ class PoissonAdapter extends ArrayAdapter<Poisson> implements Serializable {
         holder.Responsable.setText(poisson.getResponsable());
         holder.Bac.setText(poisson.getBac());
         holder.Image.setImageResource(poisson.getImage());
+        holder.Liseret.setImageResource(poisson.getColor());
         holder.checkbox.setChecked(selected.contains(poisson));
 
         return convertView;

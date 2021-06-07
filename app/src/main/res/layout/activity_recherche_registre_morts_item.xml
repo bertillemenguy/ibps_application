@@ -79,12 +79,11 @@
                             android:text="PDF" />
 
 
-                        <Button
-                            android:id="@+id/trie"
-                            android:layout_width="73dp"
-                            android:layout_height="36dp"
-                            android:onClick="lancertrie"
-                            android:text="Trier" />
+
+                        <Spinner
+                            android:id="@+id/spinner_tris"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
 
                     </LinearLayout>
 
@@ -114,8 +113,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1118dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="@android:color/white"
                 android:orientation="vertical">
