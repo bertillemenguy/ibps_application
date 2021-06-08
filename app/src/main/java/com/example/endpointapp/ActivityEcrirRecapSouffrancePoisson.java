@@ -30,6 +30,7 @@ public class ActivityEcrirRecapSouffrancePoisson extends AppCompatActivity {
     String Responsable="";
     String Key="";
 
+    String Id;
 
     Integer Icon , Liseret;
 
@@ -65,6 +66,7 @@ public class ActivityEcrirRecapSouffrancePoisson extends AppCompatActivity {
         Intent intent = getIntent();
         main_user = intent.getStringExtra("main_user");
         num = intent.getStringExtra("num");
+        Id = intent.getStringExtra("Id");
 
         Valider = findViewById(R.id.btn_valider);
         textView = findViewById(R.id.numero_poisson);
@@ -145,6 +147,7 @@ public class ActivityEcrirRecapSouffrancePoisson extends AppCompatActivity {
             Surveillance="1";
         }
 
+
         /*intent.putExtra("main_user", main_user);
         intent.putExtra("Bac", Bac);
         intent.putExtra("Lot", Lot);
@@ -164,7 +167,7 @@ public class ActivityEcrirRecapSouffrancePoisson extends AppCompatActivity {
         intent.putExtra("Prostration", Prostration);*/
 
         //startActivity(intent);
-       // WriteOnSheetSouffrance.writeData(this, main_user, Bac, Lignee, Lot, Age, Responsable, Position, Nage, Malnutrition, Prostration, Nageoire, Maigreur, Obesite, Blessure, Ulcere, Scoliose, Exophtalmie, Opercules, Couleur, Euthanasie, Isolement, Surveillance, Ras, num, Key);
+       WriteOnSheetSouffrance.writeData(this, main_user, Bac, Lignee, Lot, Age, Responsable, Position, Nage, Malnutrition, Prostration, Nageoire, Maigreur, Obesite, Blessure, Ulcere, Scoliose, Exophtalmie, Opercules, Couleur, Euthanasie, Isolement, Surveillance, Ras, num, Key, Id);
 
     }
 

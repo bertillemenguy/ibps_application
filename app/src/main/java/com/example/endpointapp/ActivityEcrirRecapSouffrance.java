@@ -24,6 +24,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 
 public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
@@ -188,9 +189,27 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
                 } else {
                     Toast.makeText(getApplicationContext(), "Vous avez séléctionné : "+PoissonSouffrance+" poissons", Toast.LENGTH_SHORT).show();
 
+
+
+                    String caracteres = "0123456789abcdefghijklmnopqrstuvwxyz";
+                    int longueur = 6;
+
+                    StringBuilder Id = new StringBuilder(longueur);
+
+                    Id.append("SO");
+
+                    for (int j = 0; j < longueur; j++) {
+                        int index = (int)(caracteres.length() * Math.random());
+                        Id.append(caracteres.charAt(index));
+                    }
+
+                    System.out.println("ID:"+Id);
+
+
                     while(1<=i){
                         intent.putExtra("num", i+"");
                         intent.putExtra("main_user", main_user);
+                        intent.putExtra("Id", (CharSequence) Id);
 
                         Bundle extra = new Bundle();
                         extra.putSerializable("poisson", (Serializable) poisson);
