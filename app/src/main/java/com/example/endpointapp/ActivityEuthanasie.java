@@ -19,7 +19,7 @@ public class ActivityEuthanasie extends AppCompatActivity {
         setContentView(R.layout.activity_recap_souffrance_euthanasie);
         
         Intent intent = getIntent();
-        Bac = intent.getStringExtra("Bac");
+        /*Bac = intent.getStringExtra("Bac");
         operateur = intent.getStringExtra("operateur");
         Age = intent.getStringExtra("Age");
         Lignee = intent.getStringExtra("Lignee");
@@ -37,7 +37,7 @@ public class ActivityEuthanasie extends AppCompatActivity {
         textViewBac.setText(Bac);
         textViewprice.setText(Lignee);
         textViewAge.setText(Age);
-        textViewResponsable.setText(Responsable);
+        textViewResponsable.setText(Responsable);*/
         
         
     }

@@ -18,7 +18,7 @@ public class ActivityRas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recap_souffrance_ras);
         Intent intent = getIntent();
-        Bac = intent.getStringExtra("Bac");
+        /*Bac = intent.getStringExtra("Bac");
         operateur = intent.getStringExtra("operateur");
         Age = intent.getStringExtra("Age");
         Lignee = intent.getStringExtra("Lignee");
@@ -39,7 +39,7 @@ public class ActivityRas extends AppCompatActivity {
         textViewBac.setText(Bac);
         textViewprice.setText(Lignee);
         textViewAge.setText(Age);
-        textViewResponsable.setText(Responsable);
+        textViewResponsable.setText(Responsable);*/
         
     }
     

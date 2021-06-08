@@ -24,6 +24,7 @@
         <activity android:name=".ActivityWebHistoriqueAnimalerieAlevins" />
         <activity android:name=".ActivityWebHistoriqueAnimalerieRemplissage" />
         <activity android:name=".ActivityHistoriqueAnimalerieAlevins" />
+        <activity android:name=".ActivityEcrirRecapSouffrancePoisson" />
         <activity android:name=".MyAdapter" />
 
 
@@ -46,6 +47,10 @@
 
         <activity android:name=".ActivityRechercheGestionBacs" />
         <activity android:name=".ActivityTache" />
+
+        <activity android:name=".ActivityEuthanasie" />
+
+
         <activity android:name=".ActivityHistoriqueSouffrance" />
 
         <activity android:name=".ActivityRechercheRegistreSouffrance">

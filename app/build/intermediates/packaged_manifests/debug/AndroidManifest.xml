@@ -27,6 +27,7 @@
         <activity android:name="com.example.endpointapp.ActivityWebHistoriqueAnimalerieAlevins" />
         <activity android:name="com.example.endpointapp.ActivityWebHistoriqueAnimalerieRemplissage" />
         <activity android:name="com.example.endpointapp.ActivityHistoriqueAnimalerieAlevins" />
+        <activity android:name="com.example.endpointapp.ActivityEcrirRecapSouffrancePoisson" />
         <activity android:name="com.example.endpointapp.MyAdapter" />
         <activity android:name="com.example.endpointapp.ActivityWebHistoriqueReservationZebrafish" />
         <activity android:name="com.example.endpointapp.ActivityWebHistoriqueReservationInjection" />
@@ -41,6 +42,7 @@
         <activity android:name="com.example.endpointapp.ActivityHistoriqueMorts" />
         <activity android:name="com.example.endpointapp.ActivityRechercheGestionBacs" />
         <activity android:name="com.example.endpointapp.ActivityTache" />
+        <activity android:name="com.example.endpointapp.ActivityEuthanasie" />
         <activity android:name="com.example.endpointapp.ActivityHistoriqueSouffrance" />
         <activity android:name="com.example.endpointapp.ActivityRechercheRegistreSouffrance" >
         </activity>

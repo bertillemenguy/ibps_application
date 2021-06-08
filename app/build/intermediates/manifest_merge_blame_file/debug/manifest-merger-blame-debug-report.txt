@@ -21,7 +21,7 @@
 13-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:8:22-78
 14
 15    <application
-15-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:11:5-96:19
+15-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:11:5-101:19
 16        android:allowBackup="true"
 16-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:12:9-35
 17        android:debuggable="true"
@@ -54,139 +54,145 @@
 29        <activity android:name="com.example.endpointapp.ActivityHistoriqueAnimalerieAlevins" />
 29-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:26:9-73
 29-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:26:19-70
-30        <activity android:name="com.example.endpointapp.MyAdapter" />
-30-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:27:9-47
-30-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:27:19-44
-31        <activity android:name="com.example.endpointapp.ActivityWebHistoriqueReservationZebrafish" />
-31-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:31:9-79
-31-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:31:19-76
-32        <activity android:name="com.example.endpointapp.ActivityWebHistoriqueReservationInjection" />
+30        <activity android:name="com.example.endpointapp.ActivityEcrirRecapSouffrancePoisson" />
+30-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:27:9-73
+30-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:27:19-70
+31        <activity android:name="com.example.endpointapp.MyAdapter" />
+31-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:28:9-47
+31-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:28:19-44
+32        <activity android:name="com.example.endpointapp.ActivityWebHistoriqueReservationZebrafish" />
 32-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:32:9-79
 32-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:32:19-76
-33        <activity android:name="com.example.endpointapp.ActivityReunificationBacs" />
-33-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:34:9-63
-33-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:34:19-60
-34        <activity android:name="com.example.endpointapp.ActivityHistoriqueOeufs" />
-34-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:35:9-61
-34-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:35:19-58
-35        <activity android:name="com.example.endpointapp.ActivityHistoriqueAccouplementsPourOeufs" />
-35-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:36:9-78
-35-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:36:19-75
-36        <activity android:name="com.example.endpointapp.ActivityHistoriqueAccouplements" />
-36-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:37:9-69
-36-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:37:19-66
-37        <activity android:name="com.example.endpointapp.ActivityEcrirRecapAccouplement" />
-37-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:39:9-68
-37-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:39:19-65
-38        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreAccouplementsFemelle" />
-38-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:40:9-83
-38-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:40:19-80
-39        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreAccouplementsMale" />
-39-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:41:9-80
-39-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:41:19-77
-40        <activity android:name="com.example.endpointapp.ActivityRechercheRegistre" />
-40-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:44:9-62
-40-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:44:19-60
-41        <activity android:name="com.example.endpointapp.ActivityHistoriqueMorts" />
-41-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:45:9-61
-41-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:45:19-58
-42        <activity android:name="com.example.endpointapp.ActivityRechercheGestionBacs" />
-42-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:47:9-66
-42-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:47:19-63
-43        <activity android:name="com.example.endpointapp.ActivityTache" />
-43-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:48:9-51
-43-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:48:19-48
-44        <activity android:name="com.example.endpointapp.ActivityHistoriqueSouffrance" />
-44-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:49:9-66
-44-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:49:19-63
-45        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreSouffrance" >
-45-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:51:9-53:20
-45-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:51:19-70
-46        </activity>
-47        <activity android:name="com.example.endpointapp.CustomPopup" />
-47-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:55:9-48
-47-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:55:19-46
-48        <activity android:name="com.example.endpointapp.CustomPopupIncident" />
-48-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:56:9-56
-48-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:56:19-54
-49        <activity android:name="com.example.endpointapp.PopupRecapBacs" />
-49-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:57:9-51
-49-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:57:19-49
-50        <activity android:name="com.example.endpointapp.ActivityEcrirRecapOeuf" />
-50-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:59:9-60
-50-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:59:19-57
-51        <activity android:name="com.example.endpointapp.ActivitySurveillance" />
-51-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:60:9-58
-51-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:60:19-55
-52        <activity android:name="com.example.endpointapp.ActivityRas" />
-52-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:61:9-49
-52-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:61:19-46
-53        <activity android:name="com.example.endpointapp.ActivityIsolement" />
-53-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:62:9-55
-53-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:62:19-52
-54        <activity android:name="com.example.endpointapp.ActivityEcrirRecapSouffrance" />
-54-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:63:9-66
-54-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:63:19-63
-55        <activity android:name="com.example.endpointapp.ActivityEcrirRecapMort" />
-55-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:64:9-60
-55-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:64:19-57
-56        <activity android:name="com.example.endpointapp.ActivityRecapitulatifMort" />
-56-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:65:9-63
-56-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:65:19-60
-57        <activity android:name="com.example.endpointapp.ActivityEcrirRecapIncidents" />
-57-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:66:9-65
-57-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:66:19-62
-58        <activity android:name="com.example.endpointapp.ActivityConnexion" />
-58-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:68:9-54
-58-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:68:19-52
-59        <activity android:name="com.example.endpointapp.ActivityInscription" />
-59-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:69:9-56
-59-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:69:19-54
-60        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreMorts" />
-60-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:72:9-67
-60-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:72:19-65
-61        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreMortsTrier" />
-61-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:73:9-72
-61-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:73:19-70
-62        <activity android:name="com.example.endpointapp.ActivityEcrirRecapBacs" />
-62-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:76:9-60
-62-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:76:19-57
-63        <activity android:name="com.example.endpointapp.ActivityDeplacerBacs" />
-63-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:77:9-58
-63-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:77:19-55
-64        <activity android:name="com.example.endpointapp.ActivityReunirBacs" />
-64-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:78:9-56
-64-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:78:19-53
-65        <activity android:name="com.example.endpointapp.ActivityErreur" />
-65-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:79:9-52
-65-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:79:19-49
-66        <activity android:name="com.example.endpointapp.ActivityMenu" />
-66-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:81:9-49
-66-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:81:19-47
-67        <activity android:name="com.example.endpointapp.NettoyageBac" />
-67-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:83:9-49
-67-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:83:19-47
-68        <activity android:name="com.example.endpointapp.ActivitySplash" >
-68-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:86:9-91:20
-68-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:86:19-49
-69            <intent-filter>
-69-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:87:13-90:29
-70                <action android:name="android.intent.action.MAIN" />
-70-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:88:17-69
-70-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:88:25-66
-71
-72                <category android:name="android.intent.category.LAUNCHER" />
-72-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:89:17-77
-72-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:89:27-74
-73            </intent-filter>
-74        </activity>
-75
-76        <meta-data
-76-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:93:9-95:57
-77            android:name="preloaded_fonts"
-77-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:94:13-43
-78            android:resource="@array/preloaded_fonts" />
-78-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:95:13-54
-79    </application>
-80
-81</manifest>
+33        <activity android:name="com.example.endpointapp.ActivityWebHistoriqueReservationInjection" />
+33-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:33:9-79
+33-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:33:19-76
+34        <activity android:name="com.example.endpointapp.ActivityReunificationBacs" />
+34-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:35:9-63
+34-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:35:19-60
+35        <activity android:name="com.example.endpointapp.ActivityHistoriqueOeufs" />
+35-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:36:9-61
+35-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:36:19-58
+36        <activity android:name="com.example.endpointapp.ActivityHistoriqueAccouplementsPourOeufs" />
+36-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:37:9-78
+36-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:37:19-75
+37        <activity android:name="com.example.endpointapp.ActivityHistoriqueAccouplements" />
+37-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:38:9-69
+37-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:38:19-66
+38        <activity android:name="com.example.endpointapp.ActivityEcrirRecapAccouplement" />
+38-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:40:9-68
+38-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:40:19-65
+39        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreAccouplementsFemelle" />
+39-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:41:9-83
+39-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:41:19-80
+40        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreAccouplementsMale" />
+40-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:42:9-80
+40-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:42:19-77
+41        <activity android:name="com.example.endpointapp.ActivityRechercheRegistre" />
+41-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:45:9-62
+41-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:45:19-60
+42        <activity android:name="com.example.endpointapp.ActivityHistoriqueMorts" />
+42-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:46:9-61
+42-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:46:19-58
+43        <activity android:name="com.example.endpointapp.ActivityRechercheGestionBacs" />
+43-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:48:9-66
+43-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:48:19-63
+44        <activity android:name="com.example.endpointapp.ActivityTache" />
+44-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:49:9-51
+44-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:49:19-48
+45        <activity android:name="com.example.endpointapp.ActivityEuthanasie" />
+45-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:51:9-56
+45-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:51:19-53
+46        <activity android:name="com.example.endpointapp.ActivityHistoriqueSouffrance" />
+46-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:54:9-66
+46-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:54:19-63
+47        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreSouffrance" >
+47-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:56:9-58:20
+47-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:56:19-70
+48        </activity>
+49        <activity android:name="com.example.endpointapp.CustomPopup" />
+49-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:60:9-48
+49-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:60:19-46
+50        <activity android:name="com.example.endpointapp.CustomPopupIncident" />
+50-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:61:9-56
+50-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:61:19-54
+51        <activity android:name="com.example.endpointapp.PopupRecapBacs" />
+51-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:62:9-51
+51-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:62:19-49
+52        <activity android:name="com.example.endpointapp.ActivityEcrirRecapOeuf" />
+52-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:64:9-60
+52-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:64:19-57
+53        <activity android:name="com.example.endpointapp.ActivitySurveillance" />
+53-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:65:9-58
+53-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:65:19-55
+54        <activity android:name="com.example.endpointapp.ActivityRas" />
+54-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:66:9-49
+54-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:66:19-46
+55        <activity android:name="com.example.endpointapp.ActivityIsolement" />
+55-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:67:9-55
+55-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:67:19-52
+56        <activity android:name="com.example.endpointapp.ActivityEcrirRecapSouffrance" />
+56-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:68:9-66
+56-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:68:19-63
+57        <activity android:name="com.example.endpointapp.ActivityEcrirRecapMort" />
+57-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:69:9-60
+57-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:69:19-57
+58        <activity android:name="com.example.endpointapp.ActivityRecapitulatifMort" />
+58-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:70:9-63
+58-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:70:19-60
+59        <activity android:name="com.example.endpointapp.ActivityEcrirRecapIncidents" />
+59-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:71:9-65
+59-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:71:19-62
+60        <activity android:name="com.example.endpointapp.ActivityConnexion" />
+60-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:73:9-54
+60-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:73:19-52
+61        <activity android:name="com.example.endpointapp.ActivityInscription" />
+61-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:74:9-56
+61-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:74:19-54
+62        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreMorts" />
+62-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:77:9-67
+62-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:77:19-65
+63        <activity android:name="com.example.endpointapp.ActivityRechercheRegistreMortsTrier" />
+63-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:78:9-72
+63-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:78:19-70
+64        <activity android:name="com.example.endpointapp.ActivityEcrirRecapBacs" />
+64-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:81:9-60
+64-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:81:19-57
+65        <activity android:name="com.example.endpointapp.ActivityDeplacerBacs" />
+65-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:82:9-58
+65-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:82:19-55
+66        <activity android:name="com.example.endpointapp.ActivityReunirBacs" />
+66-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:83:9-56
+66-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:83:19-53
+67        <activity android:name="com.example.endpointapp.ActivityErreur" />
+67-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:84:9-52
+67-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:84:19-49
+68        <activity android:name="com.example.endpointapp.ActivityMenu" />
+68-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:86:9-49
+68-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:86:19-47
+69        <activity android:name="com.example.endpointapp.NettoyageBac" />
+69-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:88:9-49
+69-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:88:19-47
+70        <activity android:name="com.example.endpointapp.ActivitySplash" >
+70-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:91:9-96:20
+70-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:91:19-49
+71            <intent-filter>
+71-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:92:13-95:29
+72                <action android:name="android.intent.action.MAIN" />
+72-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:93:17-69
+72-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:93:25-66
+73
+74                <category android:name="android.intent.category.LAUNCHER" />
+74-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:94:17-77
+74-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:94:27-74
+75            </intent-filter>
+76        </activity>
+77
+78        <meta-data
+78-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:98:9-100:57
+79            android:name="preloaded_fonts"
+79-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:99:13-43
+80            android:resource="@array/preloaded_fonts" />
+80-->/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:100:13-54
+81    </application>
+82
+83</manifest>

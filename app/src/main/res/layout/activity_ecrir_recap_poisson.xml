@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+                <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1381dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5sp"
+                                android:layout_marginTop="10sp"
+                                android:layout_marginRight="5sp"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/numero_poisson"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="20dp"/>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/darker_gray"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:layout_marginBottom="2dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/colorAccent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="63dp"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_marginRight="2dp"
+                                        android:layout_marginBottom="2dp"
+                                        android:layout_weight="1"
+                                        android:background="@color/colorAccent"
+                                        android:orientation="vertical">
+
+                                        <ListView
+                                            android:id="@+id/list_item_select"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5sp"
+                                android:layout_marginTop="10sp"
+                                android:layout_marginRight="5sp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@android:color/holo_green_light"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView35"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="ALTERATIONS COMORTEMENTALES"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/cardview_dark_background"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5sp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5sp"
+                                android:layout_marginBottom="30dp"
+                                android:layout_weight="0"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0"
+                                    android:orientation="vertical" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2sp"
+                                    android:layout_weight="0"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <CheckBox
+                                        android:id="@+id/checkboxnageanormale"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:button="@null"
+                                        android:buttonTint="@color/colorPrimaryDark"
+                                        android:onClick="onCheckboxClicked"
+                                        android:text="@string/NageAnormale"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/checkbox_filter_tint"
+                                        android:textColorLink="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <CheckBox
+                                        android:id="@+id/checkboxprostration"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:button="@null"
+                                        android:buttonTint="@color/cardview_dark_background"
+                                        android:checked="false"
+                                        android:onClick="onCheckboxClicked"
+                                        android:padding="0dp"
+                                        android:text="@string/Prostration"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/checkbox_filter_tint"
+                                        android:textColorLink="@color/cardview_dark_background"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <CheckBox
+                                        android:id="@+id/checkboxmalnutrition"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:button="@null"
+                                        android:checked="false"
+                                        android:onClick="onCheckboxClicked"
+                                        android:padding="0dp"
+                                        android:text="@string/Malnutrition"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/checkbox_filter_tint"
+                                        android:textColorLink="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <CheckBox
+                                        android:id="@+id/checkboxpositioninhabituelle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:button="@null"
+                                        android:buttonTint="@color/colorPrimaryDark"
+                                        android:checked="false"
+                                        android:onClick="onCheckboxClicked"
+                                        android:padding="0dp"
+                                        android:text="@string/positionInhabituelle"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/checkbox_filter_tint"
+                                        android:textColorLink="@color/colorPrimaryDark"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5sp"
+                                android:layout_marginTop="10sp"
+                                android:layout_marginRight="5sp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@android:color/holo_green_light"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView27"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="ALTERATIONS PHYSIQUES"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/cardview_dark_background"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="2sp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <CheckBox
+                                                android:id="@+id/checkboxscoliose"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:button="@null"
+                                                android:buttonTint="@color/colorPrimaryDark"
+                                                android:onClick="onCheckboxClicked"
+                                                android:text="@string/scoliose"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/checkbox_filter_tint"
+                                                android:textSize="12sp"
+                                                android:textStyle="bold" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <CheckBox
+                                                android:id="@+id/checkboxalterationnageoire"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:button="@null"
+                                                android:buttonTint="@color/colorPrimaryDark"
+                                                android:onClick="onCheckboxClicked"
+                                                android:text="@string/alteration_nageoire"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/checkbox_filter_tint"
+                                                android:textColorLink="@android:color/holo_red_dark"
+                                                android:textSize="12sp"
+                                                android:textStyle="bold" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <CheckBox
+                                                android:id="@+id/checkboxblessurelesion"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+
+                                                android:button="@null"
+
+                                                android:buttonTint="@color/colorPrimaryDark"
+                                                android:onClick="onCheckboxClicked"
+                                                android:text="@string/blessure_lesion"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/checkbox_filter_tint"
+                                                android:textSize="12sp"
+                                                android:textStyle="bold"
+                                                android:visibility="visible" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <CheckBox
+                                                android:id="@+id/checkboxulceremycosesaignement"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="2sp"
+
+                                                android:button="@null"
+                                                android:buttonTint="@color/colorPrimaryDark"
+                                                android:onClick="onCheckboxClicked"
+                                                android:text="@string/ulc_re_mycose_saignement"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/checkbox_filter_tint"
+                                                android:textSize="12sp"
+                                                android:textStyle="bold" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <CheckBox
+                                                android:id="@+id/checkboxexophtalmiedeformation"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="2sp"
+                                                android:button="@null"
+                                                android:buttonTint="@color/colorPrimaryDark"
+
+                                                android:onClick="onCheckboxClicked"
+                                                android:text="@string/exophtalmie_d_formation_faciale"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/checkbox_filter_tint"
+                                                android:textSize="12sp"
+                                                android:textStyle="bold" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <CheckBox
+                                                android:id="@+id/checkboxmaigreur"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:button="@null"
+                                                android:buttonTint="@color/colorPrimaryDark"
+                                                android:onClick="onCheckboxClicked"
+                                                android:text="@string/maigreur"
+                                                android:textColor="@color/checkbox_filter_tint"
+                                                android:textSize="12sp"
+                                                android:textStyle="bold" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <CheckBox
+                                                android:id="@+id/checkboxoperculeouverte"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:button="@null"
+                                                android:buttonTint="@color/colorPrimaryDark"
+                                                android:onClick="onCheckboxClicked"
+                                                android:text="@string/opercules_ouvertes"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/checkbox_filter_tint"
+                                                android:textSize="12sp"
+                                                android:textStyle="bold" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <CheckBox
+                                                android:id="@+id/checkboxchangementdecouleur"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="2sp"
+
+                                                android:button="@null"
+                                                android:buttonTint="@color/colorPrimaryDark"
+                                                android:onClick="onCheckboxClicked"
+                                                android:text="@string/changement_de_couleur"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/checkbox_filter_tint"
+                                                android:textSize="12sp"
+                                                android:textStyle="bold" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_marginBottom="20dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <CheckBox
+                                                android:id="@+id/checkboxobesite"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:button="@null"
+                                                android:buttonTint="@color/colorPrimaryDark"
+                                                android:onClick="onCheckboxClicked"
+                                                android:text="@string/ob_sit"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/checkbox_filter_tint"
+                                                android:textSize="12sp"
+                                                android:textStyle="bold" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_weight="0"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/imageView4"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            app:srcCompat="@drawable/imgphysique" />
+
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content">
+
+
+                           <Button
+                               android:id="@+id/btn_valider"
+                               android:layout_width="match_parent"
+                               android:layout_height="50dp"
+                               android:layout_alignParentStart="true"
+                               android:layout_alignParentEnd="true"
+                               android:layout_alignParentBottom="true"
+                               android:text="Valider">
+                           </Button>
+
+                       </LinearLayout>
+
+               </LinearLayout>
+                </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

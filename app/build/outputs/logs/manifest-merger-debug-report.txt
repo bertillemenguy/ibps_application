@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-98:12
-INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-98:12
-INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-98:12
-INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-98:12
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-103:12
+INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-103:12
+INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-103:12
+INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-103:12
 MERGED from [com.android.support:design:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/0617f7bd858f5f06f2522b6b261dcc51/design-27.1.1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5291d07311b707686063e55b08da0a12/smileyrating-1.6.8/AndroidManifest.xml:2:1-17:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/16a05d0c9992fbb0439e8f0e9acda3d9/appcompat-v7-27.1.1/AndroidManifest.xml:17:1-22:12
@@ -24,22 +24,22 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/bertillemenguy/.
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/15d3ffe7b88ac70edb991626b39dedad/viewmodel-1.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/45733aaea8e62e05dba3240bd17e74fd/runtime-1.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/c6468b38b30113d5c022c4e547f40a8f/runtime-1.1.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-98:12
-INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-98:12
-INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-98:12
+INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-103:12
+INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-103:12
+INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-103:12
 	package
 		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:4:5-38
 		INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-98:12
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-103:12
 		INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-98:12
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:1-103:12
 		INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:2:11-69
@@ -56,7 +56,7 @@ ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/mai
 	android:name
 		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:8:22-78
 application
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:11:5-96:19
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:11:5-101:19
 MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5291d07311b707686063e55b08da0a12/smileyrating-1.6.8/AndroidManifest.xml:11:5-15:19
 MERGED from [com.github.sujithkanna:smileyrating:1.6.8] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/5291d07311b707686063e55b08da0a12/smileyrating-1.6.8/AndroidManifest.xml:11:5-15:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bertillemenguy/.gradle/caches/transforms-2/files-2.1/87d3ec77b9b959dc3ab0220b7f1730e2/constraint-layout-1.1.3/AndroidManifest.xml:9:5-20
@@ -101,174 +101,182 @@ activity#com.example.endpointapp.ActivityHistoriqueAnimalerieAlevins
 ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:26:9-73
 	android:name
 		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:26:19-70
+activity#com.example.endpointapp.ActivityEcrirRecapSouffrancePoisson
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:27:9-73
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:27:19-70
 activity#com.example.endpointapp.MyAdapter
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:27:9-47
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:28:9-47
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:27:19-44
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:28:19-44
 activity#com.example.endpointapp.ActivityWebHistoriqueReservationZebrafish
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:31:9-79
-	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:31:19-76
-activity#com.example.endpointapp.ActivityWebHistoriqueReservationInjection
 ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:32:9-79
 	android:name
 		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:32:19-76
+activity#com.example.endpointapp.ActivityWebHistoriqueReservationInjection
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:33:9-79
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:33:19-76
 activity#com.example.endpointapp.ActivityReunificationBacs
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:34:9-63
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:35:9-63
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:34:19-60
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:35:19-60
 activity#com.example.endpointapp.ActivityHistoriqueOeufs
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:35:9-61
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:36:9-61
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:35:19-58
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:36:19-58
 activity#com.example.endpointapp.ActivityHistoriqueAccouplementsPourOeufs
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:36:9-78
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:37:9-78
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:36:19-75
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:37:19-75
 activity#com.example.endpointapp.ActivityHistoriqueAccouplements
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:37:9-69
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:38:9-69
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:37:19-66
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:38:19-66
 activity#com.example.endpointapp.ActivityEcrirRecapAccouplement
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:39:9-68
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:40:9-68
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:39:19-65
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:40:19-65
 activity#com.example.endpointapp.ActivityRechercheRegistreAccouplementsFemelle
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:40:9-83
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:41:9-83
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:40:19-80
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:41:19-80
 activity#com.example.endpointapp.ActivityRechercheRegistreAccouplementsMale
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:41:9-80
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:42:9-80
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:41:19-77
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:42:19-77
 activity#com.example.endpointapp.ActivityRechercheRegistre
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:44:9-62
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:45:9-62
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:44:19-60
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:45:19-60
 activity#com.example.endpointapp.ActivityHistoriqueMorts
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:45:9-61
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:46:9-61
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:45:19-58
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:46:19-58
 activity#com.example.endpointapp.ActivityRechercheGestionBacs
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:47:9-66
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:48:9-66
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:47:19-63
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:48:19-63
 activity#com.example.endpointapp.ActivityTache
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:48:9-51
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:49:9-51
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:48:19-48
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:49:19-48
+activity#com.example.endpointapp.ActivityEuthanasie
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:51:9-56
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:51:19-53
 activity#com.example.endpointapp.ActivityHistoriqueSouffrance
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:49:9-66
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:54:9-66
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:49:19-63
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:54:19-63
 activity#com.example.endpointapp.ActivityRechercheRegistreSouffrance
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:51:9-53:20
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:56:9-58:20
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:51:19-70
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:56:19-70
 activity#com.example.endpointapp.CustomPopup
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:55:9-48
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:60:9-48
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:55:19-46
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:60:19-46
 activity#com.example.endpointapp.CustomPopupIncident
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:56:9-56
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:61:9-56
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:56:19-54
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:61:19-54
 activity#com.example.endpointapp.PopupRecapBacs
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:57:9-51
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:62:9-51
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:57:19-49
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:62:19-49
 activity#com.example.endpointapp.ActivityEcrirRecapOeuf
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:59:9-60
-	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:59:19-57
-activity#com.example.endpointapp.ActivitySurveillance
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:60:9-58
-	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:60:19-55
-activity#com.example.endpointapp.ActivityRas
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:61:9-49
-	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:61:19-46
-activity#com.example.endpointapp.ActivityIsolement
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:62:9-55
-	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:62:19-52
-activity#com.example.endpointapp.ActivityEcrirRecapSouffrance
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:63:9-66
-	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:63:19-63
-activity#com.example.endpointapp.ActivityEcrirRecapMort
 ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:64:9-60
 	android:name
 		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:64:19-57
+activity#com.example.endpointapp.ActivitySurveillance
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:65:9-58
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:65:19-55
+activity#com.example.endpointapp.ActivityRas
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:66:9-49
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:66:19-46
+activity#com.example.endpointapp.ActivityIsolement
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:67:9-55
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:67:19-52
+activity#com.example.endpointapp.ActivityEcrirRecapSouffrance
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:68:9-66
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:68:19-63
+activity#com.example.endpointapp.ActivityEcrirRecapMort
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:69:9-60
+	android:name
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:69:19-57
 activity#com.example.endpointapp.ActivityRecapitulatifMort
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:65:9-63
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:70:9-63
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:65:19-60
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:70:19-60
 activity#com.example.endpointapp.ActivityEcrirRecapIncidents
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:66:9-65
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:71:9-65
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:66:19-62
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:71:19-62
 activity#com.example.endpointapp.ActivityConnexion
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:68:9-54
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:73:9-54
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:68:19-52
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:73:19-52
 activity#com.example.endpointapp.ActivityInscription
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:69:9-56
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:74:9-56
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:69:19-54
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:74:19-54
 activity#com.example.endpointapp.ActivityRechercheRegistreMorts
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:72:9-67
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:77:9-67
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:72:19-65
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:77:19-65
 activity#com.example.endpointapp.ActivityRechercheRegistreMortsTrier
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:73:9-72
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:78:9-72
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:73:19-70
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:78:19-70
 activity#com.example.endpointapp.ActivityEcrirRecapBacs
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:76:9-60
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:81:9-60
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:76:19-57
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:81:19-57
 activity#com.example.endpointapp.ActivityDeplacerBacs
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:77:9-58
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:82:9-58
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:77:19-55
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:82:19-55
 activity#com.example.endpointapp.ActivityReunirBacs
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:78:9-56
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:83:9-56
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:78:19-53
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:83:19-53
 activity#com.example.endpointapp.ActivityErreur
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:79:9-52
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:84:9-52
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:79:19-49
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:84:19-49
 activity#com.example.endpointapp.ActivityMenu
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:81:9-49
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:86:9-49
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:81:19-47
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:86:19-47
 activity#com.example.endpointapp.NettoyageBac
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:83:9-49
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:88:9-49
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:83:19-47
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:88:19-47
 activity#com.example.endpointapp.ActivitySplash
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:86:9-91:20
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:91:9-96:20
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:86:19-49
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:91:19-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:87:13-90:29
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:92:13-95:29
 action#android.intent.action.MAIN
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:88:17-69
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:93:17-69
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:88:25-66
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:93:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:89:17-77
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:94:17-77
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:89:27-74
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:94:27-74
 meta-data#preloaded_fonts
-ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:93:9-95:57
+ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:98:9-100:57
 	android:resource
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:95:13-54
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:100:13-54
 	android:name
-		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:94:13-43
+		ADDED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml:99:13-43
 uses-sdk
 INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/AndroidManifest.xml

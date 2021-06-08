@@ -117,8 +117,8 @@ public class ActivityRechercheRegistreSouffrance extends AppCompatActivity imple
                 Bundle extra = new Bundle();
                 extra.putSerializable("poisson", (Serializable) poisson);
                 intent_2.putExtra("extra", extra);
-
                 startActivity(intent_2);
+
 
 
             }

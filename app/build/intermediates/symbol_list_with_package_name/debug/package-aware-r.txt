@@ -936,6 +936,7 @@ id button6
 id button7
 id buttonPanel
 id button_creer
+id button_souffrance
 id button_valider
 id cancel_action
 id cbAccouplement
@@ -945,6 +946,19 @@ id center_horizontal
 id center_vertical
 id chains
 id checkbox
+id checkboxalterationnageoire
+id checkboxblessurelesion
+id checkboxchangementdecouleur
+id checkboxexophtalmiedeformation
+id checkboxmaigreur
+id checkboxmalnutrition
+id checkboxnageanormale
+id checkboxobesite
+id checkboxoperculeouverte
+id checkboxpositioninhabituelle
+id checkboxprostration
+id checkboxscoliose
+id checkboxulceremycosesaignement
 id chronometer
 id clip_horizontal
 id clip_vertical
@@ -1028,6 +1042,7 @@ id imageView18
 id imageView19
 id imageView2
 id imageView3
+id imageView4
 id imageView5
 id imageView6
 id imageView7
@@ -1051,6 +1066,7 @@ id listMode
 id listView
 id list_item
 id list_item_select
+id list_poisson
 id lv_items
 id mail
 id main_user
@@ -1091,6 +1107,7 @@ id num_mardi
 id num_mercredi
 id num_samedi
 id num_vendredi
+id numero_poisson
 id oeuf2
 id operateur
 id packed
@@ -1220,6 +1237,7 @@ id textView24km
 id textView25
 id textView26
 id textView26k
+id textView27
 id textView28
 id textView29
 id textView3
@@ -1228,6 +1246,7 @@ id textView31
 id textView32
 id textView33
 id textView34
+id textView35
 id textView36
 id textView37
 id textView38
@@ -1401,6 +1420,7 @@ layout activity_ecrir_recap_bacs
 layout activity_ecrir_recap_incidents
 layout activity_ecrir_recap_mort
 layout activity_ecrir_recap_oeuf
+layout activity_ecrir_recap_poisson
 layout activity_ecrir_recap_souffrance
 layout activity_historique_item
 layout activity_historique_item_traite

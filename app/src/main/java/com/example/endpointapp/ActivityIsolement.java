@@ -18,7 +18,7 @@ public class ActivityIsolement extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recap_souffrance_isolement);
         Intent intent = getIntent();
-        Bac = intent.getStringExtra("Bac");
+        /*Bac = intent.getStringExtra("Bac");
         operateur = intent.getStringExtra("operateur");
         Age = intent.getStringExtra("Age");
         Lignee = intent.getStringExtra("Lignee");
@@ -36,7 +36,7 @@ public class ActivityIsolement extends AppCompatActivity {
         textViewBac.setText(Bac);
         textViewprice.setText(Lignee);
         textViewAge.setText(Age);
-        textViewResponsable.setText(Responsable);
+        textViewResponsable.setText(Responsable);*/
         
         
     }
