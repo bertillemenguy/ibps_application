@@ -903,6 +903,8 @@ id actions
 id activity_chooser_view_content
 id add
 id afficher_tout
+id agefemelle
+id agemale
 id alertTitle
 id all
 id always
@@ -1125,6 +1127,7 @@ id progress_circular
 id progress_horizontal
 id pseudo
 id qualite
+id quantite
 id radio
 id ratingView
 id recyclerView
@@ -1234,13 +1237,10 @@ id textView20
 id textView21
 id textView22
 id textView23
-id textView24
 id textView24km
-id textView25
 id textView26
 id textView26k
 id textView27
-id textView28
 id textView29
 id textView3
 id textView30

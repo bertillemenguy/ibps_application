@@ -2,57 +2,115 @@ package com.example.endpointapp;
 
 public class Oeuf {
 
-    private final String Lot;
-    private final String Bac;
-    private final String Responsable;
-    private final String Lignee;
-    private final String Age;
-    private final String Key;
-    private final Integer Image;
-    private Integer Liseret;
+    String Date;
+    String operateur;
+    String LigneeM;
+    String LigneeF;
+    String BacM;
+    String BacF;
+    String NbBac;
+    String NbMale;
+    String NbFemelle;
+    String AgeM;
+    String AgeF;
+    String quantite;
+    String qualite;
+    String LotM;
+    String LotF;
+    String NbMalesFeconde;
+    String NbfemellesFeconde;
+    String Id;
 
-
-    public Poisson(String Lot, String Bac, String Responsable, String Lignee, String Age, String Key, Integer Image, Integer Liseret){
-        this.Lot=Lot;
-        this.Responsable=Responsable;
-        this.Bac=Bac;
-        this.Lignee=Lignee;
-        this.Age=Age;
-        this.Key=Key;
-        this.Image=Image;
-        this.Liseret=Liseret;
-
+    public Oeuf(String Date, String operateur, String ligneeM, String ligneeF, String bacM, String bacF, String nbBac, String nbMale, String nbFemelle, String ageM, String ageF, String quantite, String qualite, String lotM, String lotF, String nbMalesFeconde, String nbfemellesFeconde, String Id) {
+        this.Id=Id;
+        this.Date=Date;
+        this.operateur = operateur;
+        LigneeM = ligneeM;
+        LigneeF = ligneeF;
+        BacM = bacM;
+        BacF = bacF;
+        NbBac = nbBac;
+        NbMale = nbMale;
+        NbFemelle = nbFemelle;
+        AgeM = ageM;
+        AgeF = ageF;
+        this.quantite = quantite;
+        this.qualite = qualite;
+        LotM = lotM;
+        LotF = lotF;
+        NbMalesFeconde = nbMalesFeconde;
+        NbfemellesFeconde = nbfemellesFeconde;
     }
 
-
-    @Override
-    public String toString() {
-        return "{"+"Lot='"+Lot+"'"+", Responsable='"+Responsable+"'"+", Bac='"+Bac+"'"+", Lignee='"+Lignee+"'"+", Age='"+Age+"'"+", Key='"+Key+"'}";
+    public String getDate() {
+        return Date;
     }
 
-    public String getLot(){
-        return Lot;
+    public String getId() {
+        return Id;
     }
-    public String getResponsable(){
-        return Responsable;
-    }
-    public String getBac(){
-        return Bac;
-    }
-    public String getLignee(){
-        return Lignee;
-    }
-    public String getAge(){
-        return Age;
-    }
-    public String getKey(){
-        return Key;
-    }
-    public Integer getImage(){ return Image; }
-    public Integer getColor(){ return Liseret; }
 
+    public String getLotF() {
+        return LotF;
+    }
 
-    public void setLiseret(Integer Liseret){ this.Liseret=Liseret; }
+    public String getNbMalesFeconde() {
+        return NbMalesFeconde;
+    }
 
+    public String getNbfemellesFeconde() {
+        return NbfemellesFeconde;
+    }
 
+    public String getOperateur() {
+        return operateur;
+    }
+
+    public String getLigneeM() {
+        return LigneeM;
+    }
+
+    public String getLigneeF() {
+        return LigneeF;
+    }
+
+    public String getBacM() {
+        return BacM;
+    }
+
+    public String getBacF() {
+        return BacF;
+    }
+
+    public String getNbBac() {
+        return NbBac;
+    }
+
+    public String getNbMale() {
+        return NbMale;
+    }
+
+    public String getNbFemelle() {
+        return NbFemelle;
+    }
+
+    public String getAgeM() {
+        return AgeM;
+    }
+
+    public String getAgeF() {
+        return AgeF;
+    }
+
+    public String getQuantite() {
+        return quantite;
+    }
+
+    public String getQualite() {
+        return qualite;
+    }
+
+    public String getLotM() {
+        return LotM;
+    }
 }

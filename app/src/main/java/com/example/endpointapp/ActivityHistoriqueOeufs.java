@@ -40,7 +40,7 @@ public class ActivityHistoriqueOeufs extends AppCompatActivity {
     String main_user;
 
     ListView listView;
-    SimpleAdapter adapter;
+    OeufAdapter adapter;
     ProgressDialog loading;
     EditText editTextSearchItem;
     
@@ -99,7 +99,10 @@ public class ActivityHistoriqueOeufs extends AppCompatActivity {
     
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void parseItems(String jsonResponce) {
-        
+
+
+        ArrayList<Oeuf> list_oeufs = new ArrayList<>();
+
         ArrayList<HashMap<String, String>> list = new ArrayList<>();
         
         try {
@@ -154,8 +157,12 @@ public class ActivityHistoriqueOeufs extends AppCompatActivity {
                 String LotF=jo.getString("LotF");
                 String NbMalesFeconde=jo.getString("NbMalesFeconde");
                 String NbfemellesFeconde=jo.getString("NbfemellesFeconde");
-    
-    
+                String Id=jo.getString("Id");
+
+
+
+                list_oeufs.add(new Oeuf(Date,operateur,LigneeM, LigneeF,BacM,BacF,NbBac, NbMale,  NbFemelle, AgeM, AgeF, quantite, qualite, LotM, LotF,  NbMalesFeconde, NbfemellesFeconde, Id));
+
                 HashMap<String, String> item=new HashMap<>();
     
                 item.put("Date", Date);
@@ -185,7 +192,7 @@ public class ActivityHistoriqueOeufs extends AppCompatActivity {
         }
     
     
-        adapter=new SimpleAdapter(this, list, R.layout.list_item_historique_oeufs, new String[]{"Date", "operateur", "LigneeM", "LigneeF", "BacM", "BacF", "NbBac", "NbMale", "NbFemelle", "qualite", "AgeM", "AgeF", "LotM", "LotF", "NbMalesFeconde", "NbfemellesFeconde"}, new int[]{R.id.datee, R.id.operateur, R.id.ligneemale, R.id.ligneefemelle, R.id.bacmale, R.id.bacfemelle, R.id.nbbac, R.id.nbmale, R.id.nbfemelle, R.id.qualite, R.id.textView25, R.id.textView28, R.id.tv_item_lotM, R.id.tv_item_LotF, R.id.nbmalesfeconde, R.id.nbfemellesfeconde});
+        adapter=new OeufAdapter(this, list_oeufs);
         
         
         listView.setAdapter(adapter);
