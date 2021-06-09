@@ -120,6 +120,10 @@
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
     },
     {
+        "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/drawable-v24_poubelle.png.flat",
+        "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/drawable-v24/poubelle.png"
+    },
+    {
         "merged": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/build/intermediates/res/merged/debug/layout_list_item_historique_alevins.xml.flat",
         "source": "/Users/bertillemenguy/IUT/S4/Stage_IUT/projet/Application/app/src/main/res/layout/list_item_historique_alevins.xml"
     },

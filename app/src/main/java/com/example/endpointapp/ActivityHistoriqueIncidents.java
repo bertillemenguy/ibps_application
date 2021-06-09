@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -55,6 +56,7 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
     List<Incident> list_select;
     IncidentAdapter adapter_incident;
     Button button;
+    ImageButton button_delete;
 
     String main_user = "";
     Date date = null;
@@ -74,6 +76,10 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
 
         //élément checkbox
         button = findViewById(R.id.btn_valider);
+
+        button_delete = findViewById(R.id.btn_delete);
+
+
         intent_2 = new Intent(this, ActivityHistoriqueIncidents.class);
 
         button_tri=findViewById(R.id.afficher_tout);
@@ -258,6 +264,33 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
             }
         });
 
+
+
+        this.button_delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                list_select = adapter_incident.getSelected();
+
+                if (list_select.size()>1){
+                    Toast.makeText(ActivityHistoriqueIncidents.this, "Vous devez selectionner 1 élément ", Toast.LENGTH_SHORT).show();
+                } else {
+                    String key = list_select.get(0).getKey();
+                    System.out.println("KEY____"+key);
+                    WriteOnSheetIncident.deleteData(ActivityHistoriqueIncidents.this, key);
+                    //Temps d'attente !!! IMPORTANT
+                    try {
+                        Thread.sleep(1200);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    intent_2.putExtra("main_user", main_user);
+                    startActivity(intent_2);
+                }
+
+
+            }
+        });
 
 
         this.button_tri.setOnClickListener(new View.OnClickListener() {

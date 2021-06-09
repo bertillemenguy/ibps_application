@@ -127,7 +127,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
@@ -138,21 +138,21 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
+                android:layout_weight="1"
                 android:text="Valider" />
 
 
             <ImageButton
                 android:id="@+id/btn_delete"
-                android:layout_width="70dp"
+                android:src="@drawable/poubelle"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:text="Valider"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:src="@dra"/>
+                android:scaleType="fitCenter" />
 
             </LinearLayout>
 

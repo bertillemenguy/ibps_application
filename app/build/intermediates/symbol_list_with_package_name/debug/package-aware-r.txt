@@ -854,6 +854,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable pencil
+drawable poubelle
 drawable sync_proble
 drawable tag
 drawable tooltip_frame_dark
@@ -920,6 +921,7 @@ id btn_com_mardi
 id btn_com_mercredi
 id btn_com_samedi
 id btn_com_vendredi
+id btn_delete
 id btn_return
 id btn_return4
 id btn_return5

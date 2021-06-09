@@ -57,4 +57,43 @@ public class WriteOnSheetBacsTraite {
     }
 
 
+    public static void deleteData(final Context context, final String Id) {
+
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycby4a947yXSki-QQUDGj8o-B7BiAYy8DL6ZdK-5nZx8crP9nWarv6nhZwf5Ta-Dhe09G/exec?action=delItem&ID"+Id,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                        Toast.makeText(context, response, Toast.LENGTH_LONG).show();
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                        Toast.makeText(context, "error", Toast.LENGTH_LONG).show();
+
+                    }
+                }
+        ) {
+            /**
+             * @return /**
+             */
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> parmas = new HashMap<>();
+                parmas.put("ID", Id);
+                //....
+
+                return parmas;
+            }
+        };
+        int socketTimeOut = 50000;// u can change this .. here it is 50 seconds
+        RetryPolicy retryPolicy = new DefaultRetryPolicy(socketTimeOut, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        stringRequest.setRetryPolicy(retryPolicy);
+        RequestQueue queue = Volley.newRequestQueue(context);
+        queue.add(stringRequest);
+    }
+
 }

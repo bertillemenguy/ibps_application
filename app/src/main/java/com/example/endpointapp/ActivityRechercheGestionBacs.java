@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -51,6 +52,7 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
     Button button_tri;
     BacAdapter adapter_bac;
 
+    ImageButton button_delete;
 
     ListView listView;
     SimpleAdapter adapter;
@@ -76,6 +78,8 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
         main_user=intent.getStringExtra("main_user");
 
         button = findViewById(R.id.btn_valider);
+
+        button_delete=findViewById(R.id.btn_delete);
 
         button.setText("Traité");
 
@@ -309,6 +313,33 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
             }
         });
 
+
+
+        this.button_delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                list_select = adapter_bac.getSelected();
+
+                if (list_select.size()>1){
+                    Toast.makeText(ActivityRechercheGestionBacs.this, "Vous devez selectionner 1 élément ", Toast.LENGTH_SHORT).show();
+                } else {
+                    String key = list_select.get(0).getId();
+                    System.out.println("KEY____"+key);
+                    WriteOnSheetBacsTraite.deleteData(ActivityRechercheGestionBacs.this, key);
+                    //Temps d'attente !!! IMPORTANT
+                    try {
+                        Thread.sleep(1200);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    intent_2.putExtra("main_user", main_user);
+                    startActivity(intent_2);
+                }
+
+
+            }
+        });
 
 
         this.button_tri.setOnClickListener(new View.OnClickListener() {
