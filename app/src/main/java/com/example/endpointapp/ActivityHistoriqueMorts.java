@@ -49,7 +49,7 @@ public class ActivityHistoriqueMorts extends AppCompatActivity implements Adapte
     String main_user;
 
     ListView listView;
-    SimpleAdapter adapter;
+    AdapterHistoriqueMort adapter;
     ProgressDialog loading;
     EditText editTextSearchItem;
     ActivityHistoriqueMorts activity;
@@ -115,6 +115,7 @@ public class ActivityHistoriqueMorts extends AppCompatActivity implements Adapte
     private void parseItems(String jsonResponce) {
 
         ArrayList<HashMap<String, String>> list = new ArrayList<>();
+        ArrayList<PoissonMort> list_poisson = new ArrayList<>();
 
         try {
             JSONObject jobj = new JSONObject(jsonResponce);
@@ -135,6 +136,7 @@ public class ActivityHistoriqueMorts extends AppCompatActivity implements Adapte
                 }
                 String Date = outputFormat.format(date);
 
+                String Id = jo.getString("Id");
                 String Age = jo.getString("Age");
                 String Bac = jo.getString("Bac");
                 String Lignee = jo.getString("Lignee");
@@ -143,6 +145,8 @@ public class ActivityHistoriqueMorts extends AppCompatActivity implements Adapte
                 String SiAccouplement = jo.getString("SiAccouplement");
                 String SumMorts = jo.getString("SumMorts");
                 String Key = jo.getString("Key");
+
+                list_poisson.add(new PoissonMort(Id, Date,Age,Bac,Lignee,Lot,Responsable,SiAccouplement,SumMorts,Key));
 
                 HashMap<String, String> item = new HashMap<>();
 
@@ -164,7 +168,7 @@ public class ActivityHistoriqueMorts extends AppCompatActivity implements Adapte
         }
 
 
-        adapter = new SimpleAdapter(this, list, R.layout.list_item_historique_morts, new String[]{"Date", "Age", "Bac", "Lignee", "Lot", "Responsable", "SiAccouplement", "SumMorts"}, new int[]{R.id.tv_date, R.id.tv_age, R.id.tv_bac, R.id.tv_lignee, R.id.tv_lot, R.id.tv_responsable, R.id.tv_SiAccouplement, R.id.tv_summorts});
+        adapter = new AdapterHistoriqueMort(this, list_poisson);
 
         listView.setAdapter(adapter);
         loading.dismiss();

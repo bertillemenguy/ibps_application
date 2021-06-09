@@ -288,7 +288,6 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
                     startActivity(intent_2);
                 }
 
-
             }
         });
 

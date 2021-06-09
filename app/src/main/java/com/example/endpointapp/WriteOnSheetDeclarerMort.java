@@ -72,7 +72,7 @@ public class WriteOnSheetDeclarerMort {
     public static void deleteData(final Context context, final String Key) {
 
 
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbziuP47HUKzO8C9SmteIivluWBMmT4xNTGnRRRssjY8g7WhQ4uPTrf4mKnxou1saQI3/exec?action=delItem&Key="+Key,
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbxEngL5GBSRRbYDuzm_6TXZaYPLG2R3B4g33JmILYkx07m4mYsQ7qSrDMUqxjA2c3_O/exec?action=delItem&key="+Key,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
