@@ -20,7 +20,7 @@ public class ActivityEcrirRecapSouffrancePoisson extends AppCompatActivity {
     String main_user="";
     Button Valider;
     TextView textView;
-    String num;
+    String num, nb_poisson_mort;
 
 
     String Bac="";
@@ -34,10 +34,10 @@ public class ActivityEcrirRecapSouffrancePoisson extends AppCompatActivity {
 
     Integer Icon , Liseret;
 
-    String Euthanasie="";
-    String Surveillance="";
-    String Isolement="";
-    String Ras="";
+    String Euthanasie="0";
+    String Surveillance="0";
+    String Isolement="0";
+    String Ras="0";
     int PointLimite=3;
 
     String Position="0";
@@ -66,6 +66,7 @@ public class ActivityEcrirRecapSouffrancePoisson extends AppCompatActivity {
         Intent intent = getIntent();
         main_user = intent.getStringExtra("main_user");
         num = intent.getStringExtra("num");
+        nb_poisson_mort = intent.getStringExtra("nb_poisson_mort");
         Id = intent.getStringExtra("Id");
 
         Valider = findViewById(R.id.btn_valider);
@@ -167,7 +168,7 @@ public class ActivityEcrirRecapSouffrancePoisson extends AppCompatActivity {
         intent.putExtra("Prostration", Prostration);*/
 
         //startActivity(intent);
-       WriteOnSheetSouffrance.writeData(this, main_user, Bac, Lignee, Lot, Age, Responsable, Position, Nage, Malnutrition, Prostration, Nageoire, Maigreur, Obesite, Blessure, Ulcere, Scoliose, Exophtalmie, Opercules, Couleur, Euthanasie, Isolement, Surveillance, Ras, num, Key, Id);
+       WriteOnSheetSouffrance.writeData(this, main_user, Bac, Lignee, Lot, Age, Responsable, Position, Nage, Malnutrition, Prostration, Nageoire, Maigreur, Obesite, Blessure, Ulcere, Scoliose, Exophtalmie, Opercules, Couleur, Euthanasie, Isolement, Surveillance, Ras, nb_poisson_mort, Key, Id);
 
     }
 

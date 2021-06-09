@@ -93,6 +93,7 @@ public class BacAdapter extends ArrayAdapter<Bac> implements Serializable {
             holder.Lot = (TextView) convertView.findViewById(R.id.tv_lot);
             holder.Lot2 = (TextView) convertView.findViewById(R.id.tv_ReuniLot2);
             holder.SiTraite = (TextView) convertView.findViewById(R.id.tv_SITraite);
+
             holder.checkbox = (CheckBox) convertView.findViewById(R.id.checkbox);
 
             convertView.setTag(holder);
@@ -121,21 +122,15 @@ public class BacAdapter extends ArrayAdapter<Bac> implements Serializable {
         holder.Bac4.setText(bac.getBac4());
         holder.Lot.setText(bac.getLot());
         holder.Lot2.setText(bac.getLot2());
-
         holder.SiTraite.setText(bac.getSiTraite());
 
 
-        //ColorFilter colorFilter = new PorterDuffColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
-        //Drawable drawable = CompoundButtonCompat.getButtonDrawable(holder.checkbox);
 
-
-        //if (bac.getSiTraite().equals("En cours")){
-            holder.checkbox.setEnabled(selected.contains(bac));
-
-       // if (bac.getSiTraite().equals("Traité")){
-           // holder.checkbox.setEnabled(false);
-            //drawable.setColorFilter(colorFilter);
-        //}
+        if (bac.getSiTraite().equals("En cours")){
+            holder.checkbox.setChecked(selected.contains(bac));
+        } else {
+            holder.checkbox.setVisibility(View.INVISIBLE);
+        }
 
 
         return convertView;

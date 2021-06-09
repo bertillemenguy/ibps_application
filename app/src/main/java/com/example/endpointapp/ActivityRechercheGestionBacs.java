@@ -326,7 +326,7 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
         });
 
 
-        /*this.button.setOnClickListener(new View.OnClickListener() {
+        this.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -334,22 +334,31 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
                 System.out.println(adapter_bac.getSelected());
                 list_select = adapter_bac.getSelected();
                 System.out.println(list_select);
-                lancersauvregarde();
+
+                for (int i=0; i<list_select.size(); i++) {
+
+                    System.out.println("COUCOU valider:"+list_select.get(i));
+
+                    if(list_select.get(i).getSiTraite().equals("En cours")) {
+                        lancersauvregarde(list_select.get(i).getId());
+                    }
+
+                }
 
 
+
+                intent_2.putExtra("main_user", main_user);
+                startActivity(intent_2);
                 //Bundle extra = new Bundle();
                 //extra.putSerializable("list_select", (Serializable) list_select);
                 //intent_2.putExtra("extra", extra);
                 //intent_2.putExtra("list_select", (Serializable) list_select);
 
-                intent_2.putExtra("main_user", main_user);
-                startActivity(intent_2);
-
                 // Toast.makeText(this, "Vous avez selectionné  "+list_select.size()+" élément(s)", Toast.LENGTH_LONG).show();
 
             }
 
-        });*/
+        });
 
 
     }
@@ -398,21 +407,20 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
     }*/
 
 
-    public void lancersauvregarde(){
-        for (int i=0; i<list_select.size(); i++) {
+    public void lancersauvregarde(String key){
 
-            System.out.println("COUCOU valider:"+list_select.get(i));
 
-            String key = list_select.get(i).getId();
-            WriteOnSheetBacsTraite.updateData(this, key);
+                WriteOnSheetBacsTraite.updateData(this, key);
 
-            //Temps d'attente !!! IMPORTANT
-            try {
-                Thread.sleep(1500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+                //Temps d'attente !!! IMPORTANT
+                try {
+                    Thread.sleep(1500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+
+
     }
 
     

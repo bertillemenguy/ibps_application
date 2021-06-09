@@ -184,6 +184,8 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
             public void onClick(View v) {
                 final String PoissonSouffrance = PoissonSouffranceSpinner.getSelectedItem().toString();
                 int i=Integer.parseInt(PoissonSouffrance);
+                int nb_poisson_mort=Integer.parseInt(PoissonSouffrance);
+
                 if (PoissonSouffrance.equals("")){
                     Toast.makeText(getApplicationContext(), "Champ manquant", Toast.LENGTH_SHORT).show();
                 } else {
@@ -208,6 +210,8 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
 
                     while(1<=i){
                         intent.putExtra("num", i+"");
+
+                        intent.putExtra("nb_poisson_mort", nb_poisson_mort+"");
                         intent.putExtra("main_user", main_user);
                         intent.putExtra("Id", (CharSequence) Id);
 
@@ -218,6 +222,7 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
                         startActivity(intent);
                         i--;
                     }
+
                 }
             }
         });

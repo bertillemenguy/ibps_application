@@ -19,23 +19,22 @@ import java.util.Map;
 public class WriteOnSheetSouffrance {
     
     public static void writeData(final Context context, final String operateur, final String Bac, final String Lignee, final String Lot, final String Age, final String Responsable, final String Position, final String Nage, final String Malnutrition, final String Prostration, final String Nageoire, final String Maigreur, final String Obesite, final String Blessure, final String Ulcere, final String Scoliose, final String Exophtalmie, final String Opercules, final String Couleur, final String Euthanasie, final String Isolement, final String Surveillance, final String Ras, final String PoissonSouffrance, final String Key, final String Id) {
-        final ProgressDialog loading=ProgressDialog.show(context, "Chargement...", "Veuillez patienter");
+        //final ProgressDialog loading=ProgressDialog.show(context, "Chargement...", "Veuillez patienter");
     
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycby8U0Jj-rYkfcTIB035QZYzy3jfEkxaVanSvuc9d1nX54vytx-ykVZDZeWt58xBi_Vt/exec?action=addItem",
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbxV6lWAgamdYr8xAuZklYhFqbU7_gVQxqk4I8zlQ14ZTorBBUGwYgQwkgkFcxdpJzjA/exec?action=addItem",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                    
-                    
+
                         Toast.makeText(context, response, Toast.LENGTH_LONG).show();
-                        loading.dismiss();
+                        //loading.dismiss();
                     
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        loading.dismiss();
+                        //loading.dismiss();
                         Toast.makeText(context, "error", Toast.LENGTH_LONG).show();
                         
                     }
@@ -44,13 +43,13 @@ public class WriteOnSheetSouffrance {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> parmas=new HashMap<>();
-                parmas.put("Id", Id);
                 parmas.put("Operateur", operateur);
                 parmas.put("Bac", Bac);
                 parmas.put("Lignee", Lignee);
                 parmas.put("Lot", Lot);
                 parmas.put("Age", Age);
                 parmas.put("Responsable", Responsable);
+                parmas.put("Id", Id);
                 parmas.put("Key", Key);
     
     

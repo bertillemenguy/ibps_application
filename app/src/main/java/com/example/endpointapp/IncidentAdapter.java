@@ -106,16 +106,12 @@ public class IncidentAdapter extends ArrayAdapter<Incident> implements Serializa
         holder.travaux.setText(incident.getTravaux());
         holder.nourrissage.setText(incident.getNourrissage());
 
-        ColorFilter colorFilter = new PorterDuffColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
-        Drawable drawable = CompoundButtonCompat.getButtonDrawable(holder.checkbox);
 
         if (incident.getEtat().equals("En cours")){
             holder.checkbox.setChecked(selected.contains(incident));
         } else {
-            drawable.setColorFilter(colorFilter);
+            holder.checkbox.setVisibility(View.INVISIBLE);
         }
-
-
 
 
         return convertView;

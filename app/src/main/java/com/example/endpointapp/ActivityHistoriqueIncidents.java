@@ -228,7 +228,6 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
         }
 
 
-
         // élément checkbox
         adapter_incident=new IncidentAdapter(this, data);
         listView.setAdapter(adapter_incident);
@@ -279,7 +278,6 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
             @Override
             public void onClick(View v) {
 
-                System.out.println("Bouton cliqué___________________");
                 System.out.println(adapter_incident.getSelected());
                 list_select = adapter_incident.getSelected();
                 System.out.println(list_select);
@@ -341,16 +339,20 @@ public class ActivityHistoriqueIncidents extends AppCompatActivity implements Se
      public void lancersauvregard(){
          for (int i=0; i<list_select.size(); i++) {
 
+             if(list_select.get(i).getEtat().equals("En cours")) {
 
-             String key = list_select.get(i).getKey();
-             WriteOnSheetIncident.updateData(this, key);
+                 String key = list_select.get(i).getKey();
+                 WriteOnSheetIncident.updateData(this, key);
 
-             //Temps d'attente !!! IMPORTANT
-             try {
-                 Thread.sleep(1500);
-             } catch (InterruptedException e) {
-                 e.printStackTrace();
+                 //Temps d'attente !!! IMPORTANT
+                 try {
+                     Thread.sleep(1500);
+                 } catch (InterruptedException e) {
+                     e.printStackTrace();
+                 }
              }
+
+
          }
      }
 
