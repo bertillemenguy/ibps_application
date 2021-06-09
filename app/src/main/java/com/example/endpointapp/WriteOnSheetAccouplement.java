@@ -74,5 +74,46 @@ public class WriteOnSheetAccouplement {
         RequestQueue queue = Volley.newRequestQueue(context);
         queue.add(stringRequest);
     }
+
+    public static void deleteData(final Context context, String Key) {
+        final ProgressDialog loading=ProgressDialog.show(context, "Chargement...", "Veuillez patienter");
+
+        System.out.println(Key);
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbypv9XsMlpxp9hQyHbLGP2VR-_b1udIv_Z5MWS72_mSes_t3Y591T7hkRDRIGUPKwUq/exec?action=delItem&key"+Key,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+
+                        Toast.makeText(context, response, Toast.LENGTH_LONG).show();
+                        loading.dismiss();
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        loading.dismiss();
+                        Toast.makeText(context, "error", Toast.LENGTH_LONG).show();
+
+                    }
+                }
+        ) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> parmas = new HashMap<>();
+                parmas.put("key", Key);
+
+                //....
+
+                return parmas;
+            }
+        };
+        int socketTimeOut = 50000;// u can change this .. here it is 50 seconds
+        RetryPolicy retryPolicy = new DefaultRetryPolicy(socketTimeOut, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        stringRequest.setRetryPolicy(retryPolicy);
+        RequestQueue queue = Volley.newRequestQueue(context);
+        queue.add(stringRequest);
+    }
     
 }

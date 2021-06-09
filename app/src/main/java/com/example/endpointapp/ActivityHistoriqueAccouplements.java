@@ -40,7 +40,7 @@ public class ActivityHistoriqueAccouplements extends AppCompatActivity {
     String main_user;
 
     ListView listView;
-    SimpleAdapter adapter;
+    AccouplementAdapter adapter;
     ProgressDialog loading;
     EditText editTextSearchItem;
     
@@ -69,7 +69,7 @@ public class ActivityHistoriqueAccouplements extends AppCompatActivity {
     private void getItems() {
     
     
-        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbw6mmZdn43pcoDmmmqS471JzTwea9jJ_PnSrMVxudNE3XHWbYr0nYfqsT6FneLlvLdQ/exec?action=getItems", new Response.Listener<String>() {
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbz_LO8Ir5g-uXo5NtVzsb7mMUGJbqaAplo6NwyKNfMFXl6-5eOX37HfuHrI5JkbqotY/exec?action=getItems", new Response.Listener<String>() {
             @RequiresApi(api=Build.VERSION_CODES.N)
             @Override
             public void onResponse(String response) {
@@ -101,7 +101,8 @@ public class ActivityHistoriqueAccouplements extends AppCompatActivity {
     private void parseItems(String jsonResponce) {
         
         ArrayList<HashMap<String, String>> list = new ArrayList<>();
-        
+        ArrayList<Accouplement> list_accouplement = new ArrayList<>();
+
         try {
             JSONObject jobj = new JSONObject(jsonResponce);
             JSONArray jarray = jobj.getJSONArray("items");
@@ -153,8 +154,10 @@ public class ActivityHistoriqueAccouplements extends AppCompatActivity {
                 String Age2 = jo.getString("Age2");
                 String Lot = jo.getString("Lot");
                 String Lot2 = jo.getString("Lot2");
-                
-                
+                String Id = jo.getString("Id");
+
+                list_accouplement.add(new Accouplement(Date, operateur, NbBac, Couleur1, Couleur2, NbMale, Lot, Bac, LigneeM, Age,  NbFemelle,  Lot2,  Bac2,  LigneeF, Age2, Id));
+
                 HashMap<String, String> item = new HashMap<>();
                 
                 item.put("Date", Date);
@@ -183,7 +186,7 @@ public class ActivityHistoriqueAccouplements extends AppCompatActivity {
         }
     
     
-        adapter=new SimpleAdapter(this, list, R.layout.list_item_historique_accouplement, new String[]{"Date", "operateur", "LigneeM", "LigneeF", "Couleur1", "Couleur2", "Bac", "Bac2", "NbBac", "NbMale", "NbFemelle", "Age", "Age2", "Lot", "Lot2"}, new int[]{R.id.tv_date, R.id.tv_operateur, R.id.tv_ligneemale, R.id.tv_ligneefemelle, R.id.tv_couleur2, R.id.tv_couleur1, R.id.tv_bac, R.id.tv_bac2, R.id.tv_nbbac, R.id.tv_nbmale, R.id.tv_nbfemelle, R.id.tv_age, R.id.tv_age2, R.id.tv_lot, R.id.tv_lot2});
+        adapter=new AccouplementAdapter(this, list_accouplement);
     
     
         listView.setAdapter(adapter);

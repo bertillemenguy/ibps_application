@@ -65,10 +65,11 @@ public class WriteOnSheetIncident {
     public static void deleteData(final Context context, final String key) {
 
 
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbyBwOq7TE_jhFUMaNO5RmDDOorbwMCXd-2IS1t4634sKasEYPDNeHkh_E_CLHrwcH76DQ/exec?action=delItem&key"+key,
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "    https://script.google.com/macros/s/AKfycbxBljP69lUQhZlI6j-tc_zb1JUzNrEeSNfHyTjx4BwoaS8l1-y_Yoi6w-6DqCFzwk72/exec?action=delItem&key"+key,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+
 
                         Toast.makeText(context, response, Toast.LENGTH_LONG).show();
 
