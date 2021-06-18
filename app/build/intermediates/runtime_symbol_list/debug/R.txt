@@ -1562,7 +1562,7 @@ int string smile_rating_terrible 0x7f0e003c
 int string splash_page 0x7f0e003d
 int string status_bar_notification_info_overflow 0x7f0e003e
 int string ulc_re_mycose_saignement 0x7f0e003f
-int string zebrafish 0x7f0e0040
+int string zebrafish_bertille 0x7f0e0040
 int style AlertDialog_AppCompat 0x7f0f0000
 int style AlertDialog_AppCompat_Light 0x7f0f0001
 int style AlertDialogTheme 0x7f0f0002

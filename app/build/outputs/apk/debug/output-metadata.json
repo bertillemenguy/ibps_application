@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.endpointapp",
+  "applicationId": "com.example.appbertille",
   "variantName": "processDebugResources",
   "elements": [
     {

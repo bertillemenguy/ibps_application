@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.endpointapp">
+    package="com.example.appbertille">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -17,78 +17,78 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".ActivityRechercheRegistreBacs"/>
+        <activity android:name="com.example.appbertille.ActivityRechercheRegistreBacs"/>
 
-        <activity android:name=".ActivityDupliquerBacs" />
-        <activity android:name=".ActivityHistoriqueIncidents" />
-        <activity android:name=".ActivityWebHistoriqueAnimalerieAlevins" />
-        <activity android:name=".ActivityWebHistoriqueAnimalerieRemplissage" />
-        <activity android:name=".ActivityHistoriqueAnimalerieAlevins" />
-        <activity android:name=".ActivityEcrirRecapSouffrancePoisson" />
-        <activity android:name=".MyAdapter" />
-
-
-
-        <activity android:name=".ActivityWebHistoriqueReservationZebrafish" />
-        <activity android:name=".ActivityWebHistoriqueReservationInjection" />
-
-        <activity android:name=".ActivityReunificationBacs" />
-        <activity android:name=".ActivityHistoriqueOeufs" />
-        <activity android:name=".ActivityHistoriqueAccouplementsPourOeufs" />
-        <activity android:name=".ActivityHistoriqueAccouplements" />
-
-        <activity android:name=".ActivityEcrirRecapAccouplement" />
-        <activity android:name=".ActivityRechercheRegistreAccouplementsFemelle" />
-        <activity android:name=".ActivityRechercheRegistreAccouplementsMale" />
+        <activity android:name="com.example.appbertille.ActivityDupliquerBacs" />
+        <activity android:name="com.example.appbertille.ActivityHistoriqueIncidents" />
+        <activity android:name="com.example.appbertille.ActivityWebHistoriqueAnimalerieAlevins" />
+        <activity android:name="com.example.appbertille.ActivityWebHistoriqueAnimalerieRemplissage" />
+        <activity android:name="com.example.appbertille.ActivityHistoriqueAnimalerieAlevins" />
+        <activity android:name="com.example.appbertille.ActivityEcrirRecapSouffrancePoisson" />
+        <activity android:name="com.example.appbertille.MyAdapter" />
 
 
-        <activity android:name=".ActivityRechercheRegistre"/>
-        <activity android:name=".ActivityHistoriqueMorts" />
 
-        <activity android:name=".ActivityRechercheGestionBacs" />
-        <activity android:name=".ActivityTache" />
+        <activity android:name="com.example.appbertille.ActivityWebHistoriqueReservationZebrafish" />
+        <activity android:name="com.example.appbertille.ActivityWebHistoriqueReservationInjection" />
 
-        <activity android:name=".ActivityEuthanasie" />
+        <activity android:name="com.example.appbertille.ActivityReunificationBacs" />
+        <activity android:name="com.example.appbertille.ActivityHistoriqueOeufs" />
+        <activity android:name="com.example.appbertille.ActivityHistoriqueAccouplementsPourOeufs" />
+        <activity android:name="com.example.appbertille.ActivityHistoriqueAccouplements" />
+
+        <activity android:name="com.example.appbertille.ActivityEcrirRecapAccouplement" />
+        <activity android:name="com.example.appbertille.ActivityRechercheRegistreAccouplementsFemelle" />
+        <activity android:name="com.example.appbertille.ActivityRechercheRegistreAccouplementsMale" />
 
 
-        <activity android:name=".ActivityHistoriqueSouffrance" />
+        <activity android:name="com.example.appbertille.ActivityRechercheRegistre"/>
+        <activity android:name="com.example.appbertille.ActivityHistoriqueMorts" />
 
-        <activity android:name=".ActivityRechercheRegistreSouffrance">
+        <activity android:name="com.example.appbertille.ActivityRechercheGestionBacs" />
+        <activity android:name="com.example.appbertille.ActivityTache" />
+
+        <activity android:name="com.example.appbertille.ActivityEuthanasie" />
+
+
+        <activity android:name="com.example.appbertille.ActivityHistoriqueSouffrance" />
+
+        <activity android:name="com.example.appbertille.ActivityRechercheRegistreSouffrance">
 
         </activity>
 
-        <activity android:name=".CustomPopup"/>
-        <activity android:name=".CustomPopupIncident"/>
-        <activity android:name=".PopupRecapBacs"/>
+        <activity android:name="com.example.appbertille.CustomPopup"/>
+        <activity android:name="com.example.appbertille.CustomPopupIncident"/>
+        <activity android:name="com.example.appbertille.PopupRecapBacs"/>
 
-        <activity android:name=".ActivityEcrirRecapOeuf" />
-        <activity android:name=".ActivitySurveillance" />
-        <activity android:name=".ActivityRas" />
-        <activity android:name=".ActivityIsolement" />
-        <activity android:name=".ActivityEcrirRecapSouffrance" />
-        <activity android:name=".ActivityEcrirRecapMort" />
+        <activity android:name="com.example.appbertille.ActivityEcrirRecapOeuf" />
+        <activity android:name="com.example.appbertille.ActivitySurveillance" />
+        <activity android:name="com.example.appbertille.ActivityRas" />
+        <activity android:name="com.example.appbertille.ActivityIsolement" />
+        <activity android:name="com.example.appbertille.ActivityEcrirRecapSouffrance" />
+        <activity android:name="com.example.appbertille.ActivityEcrirRecapMort" />
         <activity android:name=".ActivityRecapitulatifMort" />
-        <activity android:name=".ActivityEcrirRecapIncidents" />
+        <activity android:name="com.example.appbertille.ActivityEcrirRecapIncidents" />
 
-        <activity android:name=".ActivityConnexion"/>
-        <activity android:name=".ActivityInscription"/>
-
-
-        <activity android:name=".ActivityRechercheRegistreMorts"/>
-        <activity android:name=".ActivityRechercheRegistreMortsTrier"/>
+        <activity android:name="com.example.appbertille.ActivityConnexion"/>
+        <activity android:name="com.example.appbertille.ActivityInscription"/>
 
 
-        <activity android:name=".ActivityEcrirRecapBacs" />
-        <activity android:name=".ActivityDeplacerBacs" />
-        <activity android:name=".ActivityReunirBacs" />
-        <activity android:name=".ActivityErreur" />
-
-        <activity android:name=".ActivityMenu"/>
-
-        <activity android:name=".NettoyageBac"/>
+        <activity android:name="com.example.appbertille.ActivityRechercheRegistreMorts"/>
+        <activity android:name="com.example.appbertille.ActivityRechercheRegistreMortsTrier"/>
 
 
-        <activity android:name=".ActivitySplash">
+        <activity android:name="com.example.appbertille.ActivityEcrirRecapBacs" />
+        <activity android:name="com.example.appbertille.ActivityDeplacerBacs" />
+        <activity android:name="com.example.appbertille.ActivityReunirBacs" />
+        <activity android:name="com.example.appbertille.ActivityErreur" />
+
+        <activity android:name="com.example.appbertille.ActivityMenu"/>
+
+        <activity android:name="com.example.appbertille.NettoyageBac"/>
+
+
+        <activity android:name="com.example.appbertille.ActivitySplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

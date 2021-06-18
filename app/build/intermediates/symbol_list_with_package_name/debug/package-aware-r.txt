@@ -1,4 +1,4 @@
-com.example.endpointapp
+com.example.appbertille
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -1563,7 +1563,7 @@ string smile_rating_terrible
 string splash_page
 string status_bar_notification_info_overflow
 string ulc_re_mycose_saignement
-string zebrafish
+string zebrafish_bertille
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AlertDialogTheme

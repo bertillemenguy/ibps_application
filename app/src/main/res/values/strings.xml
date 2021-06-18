@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Zebrafish</string>
-    <string name="zebrafish">Zebrafish</string>
+    <string name="app_name">Zebrafish Bertille</string>
+    <string name="zebrafish_bertille">Zebrafish Bertille</string>
     <string name="splash_page">Splash Page</string>
 
     <string name="operateur">Sélectionnez un opérateur</string>
