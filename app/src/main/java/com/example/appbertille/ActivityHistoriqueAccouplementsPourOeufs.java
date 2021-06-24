@@ -213,6 +213,7 @@ public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity 
     }
     
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        System.out.println("Coucou tu à clicker");
         Intent intent=new Intent(this, ActivityEcrirRecapOeuf.class);
         HashMap map=(HashMap) parent.getItemAtPosition(position);
         

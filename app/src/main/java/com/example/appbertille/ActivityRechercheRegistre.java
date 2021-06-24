@@ -299,6 +299,26 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
 
 
+
+
+
+            editTextSearchItem.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                    ActivityRechercheRegistre.this.adapter.getFilter().filter(charSequence);
+                }
+
+                @Override
+                public void afterTextChanged(Editable editable) {
+
+
+                }
+            });
             ArrayList<Poisson> list_poisson_peril=new ArrayList<>();
             ArrayList<Poisson> list_poisson_ok=new ArrayList<>();
 
@@ -336,66 +356,51 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
                     @Override
                     public int compare(Poisson o1, Poisson o2) {
 
-                        String lignee1=o1.getLignee().toUpperCase();
-                        String prem_1=lignee1.substring(0, 1);
-                        String rest_1=lignee1.substring(1, lignee1.length());
+                        /* Tri par ordre alphabétique l'équipe responsable*/
+                        String resp1 = o1.getResponsable();
+                        String resp2 = o2.getResponsable();
 
-                        String lignee2=o2.getLignee().toUpperCase();
-                        String prem_2=lignee2.substring(0, 1);
-                        String rest_2=lignee2.substring(1, lignee2.length());
+                        if (resp1.equals(resp2)) {
 
 
-                        if (prem_1.equals(" ")) {
-                            if (prem_2.equals(" ")){
-                                return (rest_1.compareTo(rest_2));
+                            String lignee1 = o1.getLignee().toUpperCase();
+                            String prem_1 = lignee1.substring(0, 1);
+                            String rest_1 = lignee1.substring(1, lignee1.length());
+
+                            String lignee2 = o2.getLignee().toUpperCase();
+                            String prem_2 = lignee2.substring(0, 1);
+                            String rest_2 = lignee2.substring(1, lignee2.length());
+
+
+                            if (prem_1.equals(" ")) {
+                                if (prem_2.equals(" ")) {
+                                    return (rest_1.compareTo(rest_2));
+                                }
+                                if (contains(SpecialChars, prem_2)) {
+                                    return (rest_1.compareTo(rest_2));
+                                }
+                                return (rest_1.compareTo(lignee2));
+                            } else if (contains(SpecialChars, prem_1)) {
+
+                                if (contains(SpecialChars, prem_2)) {
+                                    return (rest_1.compareTo(rest_2));
+                                }
+                                if (prem_2.equals(" ")) {
+                                    return (rest_1.compareTo(rest_2));
+                                }
+
+                                return (rest_1.compareTo(lignee2));
+                            } else {
+                                return (lignee1.compareTo(lignee2));
                             }
-                            if (contains(SpecialChars, prem_2)){
-                                return (rest_1.compareTo(rest_2));
-                            }
-                            return (rest_1.compareTo(lignee2));
+
                         }
-
-                        else if (contains(SpecialChars, prem_1)) {
-
-                            if (contains(SpecialChars, prem_2)){
-                                return (rest_1.compareTo(rest_2));
-                            }
-                            if (prem_2.equals(" ")){
-                                return (rest_1.compareTo(rest_2));
-                            }
-
-                            return (rest_1.compareTo(lignee2));
-                        }
-
-
-                        /*if (prem_2.equals(" ")) {
-                            if (prem_1.equals(" ")){
-                                return (rest_2.compareTo(rest_1));
-                            }
-                            if (contains(SpecialChars, prem_1)){
-                                return (rest_2.compareTo(rest_1));
-                            }
-                            return (rest_2.compareTo(lignee1));
-                        }
-
-                        if (contains(SpecialChars, prem_2)) {
-
-                            if (contains(SpecialChars, prem_1)){
-                                return (rest_2.compareTo(rest_1));
-                            }
-                            if (prem_1.equals(" ")){
-                                return (rest_2.compareTo(rest_1));
-                            }
-
-                            return (rest_2.compareTo(lignee1));
-                        }*/
-
-
-
                         else {
-                            return (lignee1.compareTo(lignee2));
+                            return (resp1.toUpperCase()).compareTo(resp2.toUpperCase());
                         }
+
                     }
+
                 };
 
                 // And then sort it using collections.sort().
@@ -403,6 +408,30 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
             }
 
+
+
+
+                                    /*if (prem_2.equals(" ")) {
+                                        if (prem_1.equals(" ")){
+                                            return (rest_2.compareTo(rest_1));
+                                        }
+                                        if (contains(SpecialChars, prem_1)){
+                                            return (rest_2.compareTo(rest_1));
+                                        }
+                                        return (rest_2.compareTo(lignee1));
+                                    }
+
+                                    if (contains(SpecialChars, prem_2)) {
+
+                                        if (contains(SpecialChars, prem_1)){
+                                            return (rest_2.compareTo(rest_1));
+                                        }
+                                        if (prem_1.equals(" ")){
+                                            return (rest_2.compareTo(rest_1));
+                                        }
+
+                                        return (rest_2.compareTo(lignee1));
+                                    }*/
 
             if (num_tri==2){
                 Comparator<Poisson> ageComparator = new Comparator<Poisson>() {
@@ -430,7 +459,7 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
                 // And then sort it using collections.sort().
                 Collections.sort(data, ageComparator);
-                Collections.reverse(data);
+                //Collections.reverse(data);
 
             }
 
@@ -452,24 +481,70 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
 
             if (num_tri==3){
+
                 /*Récupérer les lignées en péril*/
 
+
+
+                //trier lignée en péril par ordre alphabétique: équipe
+
+                Comparator<Poisson> equipeComparator = new Comparator<Poisson>() {
+
+                    @Override
+                    public int compare(Poisson o1, Poisson o2) {
+                        if ((o1.getResponsable().toUpperCase()).equals((o2.getResponsable()).toUpperCase())){
+                            String lignee1 = o1.getLignee().toUpperCase();
+                            String prem_1 = lignee1.substring(0, 1);
+                            String rest_1 = lignee1.substring(1, lignee1.length());
+
+                            String lignee2 = o2.getLignee().toUpperCase();
+                            String prem_2 = lignee2.substring(0, 1);
+                            String rest_2 = lignee2.substring(1, lignee2.length());
+
+
+                            if (prem_1.equals(" ")) {
+                                if (prem_2.equals(" ")) {
+                                    return (rest_1.compareTo(rest_2));
+                                }
+                                if (contains(SpecialChars, prem_2)) {
+                                    return (rest_1.compareTo(rest_2));
+                                }
+                                return (rest_1.compareTo(lignee2));
+                            } else if (contains(SpecialChars, prem_1)) {
+
+                                if (contains(SpecialChars, prem_2)) {
+                                    return (rest_1.compareTo(rest_2));
+                                }
+                                if (prem_2.equals(" ")) {
+                                    return (rest_1.compareTo(rest_2));
+                                }
+
+                                return (rest_1.compareTo(lignee2));
+                            } else {
+                                return (lignee1.compareTo(lignee2));
+                            }
+
+                        } else{
+                            return (o1.getResponsable().toUpperCase()).compareTo((o2.getResponsable()).toUpperCase());
+                        }
+                    }
+                };
+
+                Collections.sort(list_poisson_peril, equipeComparator);
+
+        //                Collections.sort(list_poisson_ok, equipeComparator);
+
+                // trier par équipe et lignée
+
                 data=list_poisson_peril;
+
+
+
 
                 for (int i=0; i<list_poisson_ok.size();i++){
                     data.add(list_poisson_ok.get(i));
                 }
 
-                /*Comparator<HashMap<String, String>> bacComparator = new Comparator<HashMap<String,String>>() {
-
-                    @Override
-                    public int compare(HashMap<String, String> o1, HashMap<String, String> o2) {
-                        return (o1.get("Bac").toUpperCase()).compareTo((o2.get("Bac")).toUpperCase());
-                    }
-                };
-
-                // And then sort it using collections.sort().
-                Collections.sort(list, bacComparator);*/
 
             }
 
@@ -489,24 +564,6 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
         //Toast
 
-
-        editTextSearchItem.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                ActivityRechercheRegistre.this.adapter.getFilter().filter(charSequence);
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-
-            }
-        });
     }
 
 

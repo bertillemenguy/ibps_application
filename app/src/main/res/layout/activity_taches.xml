@@ -107,7 +107,7 @@
 
 
                         <LinearLayout
-                            android:layout_width="79dp"
+                            android:layout_width="85dp"
                             android:layout_height="79dp"
                             android:layout_marginLeft="7dp"
                             android:layout_marginTop="5dp"
@@ -186,8 +186,9 @@
 
 
                                     <LinearLayout
-                                        android:layout_width="240dp"
-                                        android:layout_height="match_parent">
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
 
 
 
@@ -204,19 +205,10 @@
                                                 android:id="@+id/commentaire_lundi"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
-                                                android:textSize="10dp"
+                                                android:textSize="15dp"
                                                 android:gravity="center" />
 
-                                                <ImageButton
-                                                    android:id="@+id/btn_com_lundi"
-                                                    style="@android:style/Widget.Holo.Light.ImageButton"
-                                                    android:layout_width="15dp"
-                                                    android:layout_height="15dp"
-                                                    android:adjustViewBounds="true"
-                                                    android:background="@android:drawable/ic_menu_edit"
-                                                    android:onClick="getCommentLundi"
-                                                    android:scaleType="centerInside"
-                                                    android:layout_marginLeft="6dp"/>
+
 
 
                                             </LinearLayout>
@@ -226,7 +218,7 @@
 
 
                                  <LinearLayout
-                                    android:layout_width="80dp"
+                                    android:layout_width="90dp"
                                      android:layout_height="match_parent"
                                      android:orientation="vertical">
 
@@ -257,6 +249,16 @@
                                          android:layout_height="match_parent"
                                          android:orientation="horizontal">
 
+                                         <ImageButton
+                                             android:id="@+id/btn_com_lundi"
+                                             style="@android:style/Widget.Holo.Light.ImageButton"
+                                             android:layout_width="20dp"
+                                             android:layout_height="25dp"
+                                             android:adjustViewBounds="true"
+                                             android:background="@android:drawable/ic_menu_edit"
+                                             android:onClick="getCommentLundi"
+                                             android:scaleType="centerInside"
+                                             android:layout_marginTop="7dp"/>
 
                                          <Button
                                              android:id="@+id/tache_lundi"
@@ -299,7 +301,7 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="79dp"
+                            android:layout_width="85dp"
                             android:layout_height="79dp"
                             android:layout_marginLeft="7dp"
                             android:layout_marginTop="5dp"
@@ -374,8 +376,9 @@
 
 
                                     <LinearLayout
-                                        android:layout_width="240dp"
-                                        android:layout_height="match_parent">
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
 
 
 
@@ -391,18 +394,9 @@
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:gravity="center"
-                                                android:textSize="10dp"/>
+                                                android:textSize="15dp"/>
 
-                                            <ImageButton
-                                                android:id="@+id/btn_com_mardi"
-                                                style="@android:style/Widget.Holo.Light.ImageButton"
-                                                android:layout_width="15dp"
-                                                android:layout_height="15dp"
-                                                android:adjustViewBounds="true"
-                                                android:background="@android:drawable/ic_menu_edit"
-                                                android:onClick="getCommentMardi"
-                                                android:scaleType="centerInside"
-                                                android:layout_marginLeft="6dp"/>
+
 
                                         </LinearLayout>
 
@@ -411,7 +405,7 @@
 
 
                                     <LinearLayout
-                                        android:layout_width="80dp"
+                                        android:layout_width="90dp"
                                         android:layout_height="match_parent"
                                         android:orientation="vertical">
 
@@ -442,7 +436,16 @@
                                             android:layout_height="match_parent"
                                             android:orientation="horizontal">
 
-
+                                            <ImageButton
+                                                android:id="@+id/btn_com_mardi"
+                                                style="@android:style/Widget.Holo.Light.ImageButton"
+                                                android:layout_width="20dp"
+                                                android:layout_height="25dp"
+                                                android:adjustViewBounds="true"
+                                                android:background="@android:drawable/ic_menu_edit"
+                                                android:onClick="getCommentMardi"
+                                                android:scaleType="centerInside"
+                                                android:layout_marginTop="7dp"/>
                                             <Button
                                                 android:id="@+id/tache_mardi"
                                                 android:layout_width="70dp"
@@ -482,7 +485,7 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="79dp"
+                            android:layout_width="85dp"
                             android:layout_height="79dp"
                             android:layout_marginLeft="7dp"
                             android:layout_marginTop="5dp"
@@ -557,8 +560,9 @@
 
 
                                     <LinearLayout
-                                        android:layout_width="250dp"
-                                        android:layout_height="match_parent">
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
 
 
 
@@ -573,18 +577,8 @@
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:gravity="center"
-                                                android:textSize="10dp"/>
+                                                android:textSize="15dp" />
 
-                                            <ImageButton
-                                                android:id="@+id/btn_com_mercredi"
-                                                style="@android:style/Widget.Holo.Light.ImageButton"
-                                                android:layout_width="15dp"
-                                                android:layout_height="15dp"
-                                                android:adjustViewBounds="true"
-                                                android:background="@android:drawable/ic_menu_edit"
-                                                android:onClick="getCommentMercredi"
-                                                android:scaleType="centerInside"
-                                                android:layout_marginLeft="6dp"/>
 
                                         </LinearLayout>
 
@@ -593,7 +587,7 @@
 
 
                                     <LinearLayout
-                                        android:layout_width="80dp"
+                                        android:layout_width="90dp"
                                         android:layout_height="match_parent"
                                         android:orientation="vertical">
 
@@ -624,6 +618,16 @@
                                             android:layout_height="match_parent"
                                             android:orientation="horizontal">
 
+                                            <ImageButton
+                                                android:id="@+id/btn_com_mercredi"
+                                                style="@android:style/Widget.Holo.Light.ImageButton"
+                                                android:layout_width="20dp"
+                                                android:layout_height="25dp"
+                                                android:adjustViewBounds="true"
+                                                android:background="@android:drawable/ic_menu_edit"
+                                                android:onClick="getCommentMercredi"
+                                                android:scaleType="centerInside"
+                                                android:layout_marginTop="7dp"/>
 
                                             <Button
                                                 android:id="@+id/tache_mercredi"
@@ -672,7 +676,7 @@
 
 
                         <LinearLayout
-                            android:layout_width="79dp"
+                            android:layout_width="85dp"
                             android:layout_height="79dp"
                             android:layout_marginLeft="7dp"
                             android:layout_marginTop="5dp"
@@ -745,8 +749,9 @@
 
 
                                     <LinearLayout
-                                        android:layout_width="250dp"
-                                        android:layout_height="match_parent">
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
 
 
 
@@ -763,18 +768,9 @@
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:gravity="center"
-                                                android:textSize="10dp"/>
+                                                android:textSize="15dp"/>
 
-                                            <ImageButton
-                                                android:id="@+id/btn_com_jeudi"
-                                                style="@android:style/Widget.Holo.Light.ImageButton"
-                                                android:layout_width="15dp"
-                                                android:layout_height="15dp"
-                                                android:adjustViewBounds="true"
-                                                android:background="@android:drawable/ic_menu_edit"
-                                                android:onClick="getCommentJeudi"
-                                                android:scaleType="centerInside"
-                                                android:layout_marginLeft="6dp"/>
+
 
                                         </LinearLayout>
 
@@ -783,7 +779,7 @@
 
 
                                     <LinearLayout
-                                        android:layout_width="80dp"
+                                        android:layout_width="90dp"
                                         android:layout_height="match_parent"
                                         android:orientation="vertical">
 
@@ -815,6 +811,16 @@
                                             android:gravity="right"
                                             android:orientation="horizontal">
 
+                                            <ImageButton
+                                                android:id="@+id/btn_com_jeudi"
+                                                style="@android:style/Widget.Holo.Light.ImageButton"
+                                                android:layout_width="20dp"
+                                                android:layout_height="25dp"
+                                                android:adjustViewBounds="true"
+                                                android:background="@android:drawable/ic_menu_edit"
+                                                android:onClick="getCommentJeudi"
+                                                android:scaleType="centerInside"
+                                                android:layout_marginTop="7dp"/>
 
                                             <Button
                                                 android:id="@+id/tache_jeudi"
@@ -856,7 +862,7 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="79dp"
+                            android:layout_width="85dp"
                             android:layout_height="79dp"
                             android:layout_marginLeft="7dp"
                             android:layout_marginTop="5dp"
@@ -930,8 +936,9 @@
 
 
                                     <LinearLayout
-                                        android:layout_width="250dp"
-                                        android:layout_height="match_parent">
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
 
 
 
@@ -946,18 +953,8 @@
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:gravity="center"
-                                                android:textSize="10dp"/>
+                                                android:textSize="15dp"/>
 
-                                            <ImageButton
-                                                android:id="@+id/btn_com_vendredi"
-                                                style="@android:style/Widget.Holo.Light.ImageButton"
-                                                android:layout_width="15dp"
-                                                android:layout_height="15dp"
-                                                android:adjustViewBounds="true"
-                                                android:background="@android:drawable/ic_menu_edit"
-                                                android:onClick="getCommentVendredi"
-                                                android:scaleType="centerInside"
-                                                android:layout_marginLeft="6dp"/>
 
                                         </LinearLayout>
 
@@ -966,7 +963,7 @@
 
 
                                     <LinearLayout
-                                        android:layout_width="80dp"
+                                        android:layout_width="90dp"
                                         android:layout_height="match_parent"
                                         android:orientation="vertical">
 
@@ -997,6 +994,16 @@
                                             android:layout_height="match_parent"
                                             android:orientation="horizontal">
 
+                                            <ImageButton
+                                                android:id="@+id/btn_com_vendredi"
+                                                style="@android:style/Widget.Holo.Light.ImageButton"
+                                                android:layout_width="20dp"
+                                                android:layout_height="25dp"
+                                                android:adjustViewBounds="true"
+                                                android:background="@android:drawable/ic_menu_edit"
+                                                android:onClick="getCommentVendredi"
+                                                android:scaleType="centerInside"
+                                                android:layout_marginTop="7dp"/>
 
                                             <Button
                                                 android:id="@+id/tache_vendredi"
@@ -1039,7 +1046,7 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="79dp"
+                            android:layout_width="85dp"
                             android:layout_height="79dp"
                             android:layout_marginLeft="7dp"
                             android:layout_marginTop="5dp"
@@ -1113,8 +1120,9 @@
 
 
                                     <LinearLayout
-                                        android:layout_width="250dp"
-                                        android:layout_height="match_parent">
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
 
 
                                         <LinearLayout
@@ -1128,18 +1136,7 @@
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:gravity="center"
-                                                android:textSize="10dp" />
-
-                                            <ImageButton
-                                                android:id="@+id/btn_com_samedi"
-                                                style="@android:style/Widget.Holo.Light.ImageButton"
-                                                android:layout_width="15dp"
-                                                android:layout_height="15dp"
-                                                android:adjustViewBounds="true"
-                                                android:background="@android:drawable/ic_menu_edit"
-                                                android:onClick="getCommentSamedi"
-                                                android:scaleType="centerInside"
-                                                android:layout_marginLeft="6dp"/>
+                                                android:textSize="15dp" />
 
                                         </LinearLayout>
 
@@ -1148,7 +1145,7 @@
 
 
                                     <LinearLayout
-                                        android:layout_width="80dp"
+                                        android:layout_width="90dp"
                                         android:layout_height="match_parent"
                                         android:orientation="vertical">
 
@@ -1179,6 +1176,16 @@
                                             android:layout_height="match_parent"
                                             android:orientation="horizontal">
 
+                                            <ImageButton
+                                                android:id="@+id/btn_com_samedi"
+                                                style="@android:style/Widget.Holo.Light.ImageButton"
+                                                android:layout_width="20dp"
+                                                android:layout_height="25dp"
+                                                android:adjustViewBounds="true"
+                                                android:background="@android:drawable/ic_menu_edit"
+                                                android:onClick="getCommentSamedi"
+                                                android:scaleType="centerInside"
+                                                android:layout_marginTop="7dp"/>
 
                                             <Button
                                                 android:id="@+id/tache_samedi"
@@ -1220,7 +1227,7 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="79dp"
+                            android:layout_width="85dp"
                             android:layout_height="79dp"
                             android:layout_marginLeft="7dp"
                             android:layout_marginTop="5dp"
@@ -1294,8 +1301,9 @@
 
 
                                     <LinearLayout
-                                        android:layout_width="250dp"
-                                        android:layout_height="match_parent">
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
 
 
 
@@ -1310,18 +1318,7 @@
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:gravity="center"
-                                                android:textSize="10dp"/>
-
-                                            <ImageButton
-                                                android:id="@+id/btn_com_dimanche"
-                                                style="@android:style/Widget.Holo.Light.ImageButton"
-                                                android:layout_width="15dp"
-                                                android:layout_height="15dp"
-                                                android:adjustViewBounds="true"
-                                                android:background="@android:drawable/ic_menu_edit"
-                                                android:onClick="getCommentDimanche"
-                                                android:scaleType="centerInside"
-                                                android:layout_marginLeft="6dp"/>
+                                                android:textSize="15dp"/>
 
                                         </LinearLayout>
 
@@ -1330,7 +1327,7 @@
 
 
                                     <LinearLayout
-                                        android:layout_width="80dp"
+                                        android:layout_width="90dp"
                                         android:layout_height="match_parent"
                                         android:orientation="vertical">
 
@@ -1343,7 +1340,7 @@
                                                 android:id="@+id/compteur_dimanche"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
-                                                android:text="1"
+                                                android:text=""
                                                 android:layout_marginRight="3dp"/>
 
                                             <TextView
@@ -1362,6 +1359,16 @@
                                             android:layout_height="match_parent"
                                             android:orientation="horizontal">
 
+                                            <ImageButton
+                                                android:id="@+id/btn_com_dimanche"
+                                                style="@android:style/Widget.Holo.Light.ImageButton"
+                                                android:layout_width="20dp"
+                                                android:layout_height="25dp"
+                                                android:adjustViewBounds="true"
+                                                android:background="@android:drawable/ic_menu_edit"
+                                                android:onClick="getCommentDimanche"
+                                                android:scaleType="centerInside"
+                                                android:layout_marginTop="7dp"/>
 
                                             <Button
                                                 android:id="@+id/tache_dimanche"

@@ -1,6 +1,7 @@
 package com.example.appbertille;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -214,7 +215,10 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
 
                         startActivity(intent);
                         i--;
+
                     }
+
+
 
                 }
             }
@@ -238,6 +242,8 @@ public class ActivityEcrirRecapSouffrance extends AppCompatActivity {
         intent.putExtra("main_user", main_user);
         startActivity(intent);
     }
+
+
 
 
 }

@@ -3,7 +3,9 @@ package com.example.appbertille;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
@@ -22,8 +24,22 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.security.GeneralSecurityException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.HashMap;
+
+import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.PBEKeySpec;
+import javax.crypto.spec.SecretKeySpec;
+
+import static com.example.appbertille.ActivityInscription.createSecretKey;
 
 public class ActivityConnexion extends AppCompatActivity {
 
@@ -31,8 +47,16 @@ public class ActivityConnexion extends AppCompatActivity {
     ProgressDialog loading;
     EditText pseudo, pass;
     String main_user;
+    byte[] salt;
+    SecretKeySpec Key;
+    String Key2;
+
+    int iterationCount;
+    int keyLength;
+
 
     protected void onCreate(Bundle savedInstanceState){
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
 
@@ -43,6 +67,11 @@ public class ActivityConnexion extends AppCompatActivity {
         pass_list = new ArrayList<String>();
         lastname_list = new ArrayList<String>();
         firstname_list = new ArrayList<String>();
+
+        salt = new String("12345678").getBytes();
+        iterationCount = 40000;
+        keyLength = 128;
+
 
         getItems();
     }
@@ -101,7 +130,9 @@ public class ActivityConnexion extends AppCompatActivity {
                 String pass=jo.getString("pass");
 
                 pseudo_list.add(pseudo);
-                pass_list.add(decrypt(pass));
+
+                pass_list.add(pass);
+
                 lastname_list.add(lastname);
                 firstname_list.add(firstname);
 
@@ -129,6 +160,16 @@ public class ActivityConnexion extends AppCompatActivity {
         String chaine1 = pseudo.getText().toString();
         String chaine2 = pass.getText().toString();
 
+        try {
+            this.Key=createSecretKey(chaine2.toCharArray(), salt, iterationCount, keyLength);
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (InvalidKeySpecException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Key "+Key);
+
         boolean trouve = false;
         int i =0;
 
@@ -137,7 +178,13 @@ public class ActivityConnexion extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Champ manquant", Toast.LENGTH_SHORT).show();
         } else {
             while ((!trouve)&&(i<pseudo_list.size())) {
-                if (chaine1.equalsIgnoreCase(String.valueOf(pseudo_list.get(i))) &&  chaine2.equals(String.valueOf(pass_list.get(i)))) {
+
+                this.Key2=String.valueOf(pass_list.get(i));
+
+                System.out.println("Key2 "+Key2);
+
+
+                if (chaine1.equalsIgnoreCase(String.valueOf(pseudo_list.get(i))) &&  String.valueOf(Key).equals(Key2)) {
                     main_user=firstname_list.get(i)+" "+lastname_list.get(i);
                     trouve = true;
                     Intent intent = new Intent(this, ActivityMenu.class);
@@ -165,15 +212,35 @@ public class ActivityConnexion extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public String decrypt(String password){
+    /*public String decrypt(String password){
         String aCrypter="";
         for (int i=0; i<password.length();i++)  {
             int c=password.charAt(i)^48;
             aCrypter=aCrypter+(char)c;
         }
         return aCrypter;
+    }*/
+
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static String decrypt(String string, SecretKeySpec key) throws GeneralSecurityException, IOException {
+        String iv = string.split(":")[0];
+        String property = string.split(":")[1];
+        Cipher pbeCipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+        pbeCipher.init(Cipher.DECRYPT_MODE, key, new IvParameterSpec(base64Decode(iv)));
+        return new String(pbeCipher.doFinal(base64Decode(property)), "UTF-8");
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private static byte[] base64Decode(String property) throws IOException {
+        return Base64.getDecoder().decode(property);
+    }
 
+    public static SecretKeySpec createSecretKey(char[] password, byte[] salt, int iterationCount, int keyLength) throws NoSuchAlgorithmException, InvalidKeySpecException {
+        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA512");
+        PBEKeySpec keySpec = new PBEKeySpec(password, salt, iterationCount, keyLength);
+        SecretKey keyTmp = keyFactory.generateSecret(keySpec);
+        return new SecretKeySpec(keyTmp.getEncoded(), "AES");
+    }
 
 }

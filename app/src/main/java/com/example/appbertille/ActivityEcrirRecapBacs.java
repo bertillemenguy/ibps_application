@@ -235,6 +235,7 @@ public class ActivityEcrirRecapBacs extends AppCompatActivity implements Seriali
     // Eliminer bac(s)
     public void lancereliminer(View view) {
         Intent intent=new Intent(this, ActivityEcrirRecapBacs.class);
+        intent.putExtra("main_user", main_user);
         list_select = adapter.getSelected();
         System.out.println(list_select);
         Action="Eliminé";

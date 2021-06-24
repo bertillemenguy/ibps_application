@@ -3,7 +3,9 @@ package com.example.appbertille;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
@@ -22,14 +24,34 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.security.AlgorithmParameters;
+import java.security.GeneralSecurityException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.HashMap;
+import java.util.Properties;
+
+import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.PBEKeySpec;
+import javax.crypto.spec.SecretKeySpec;
 
 public class ActivityInscription extends AppCompatActivity {
 
     ArrayList pseudo_list, nom_list, prenom_list, mail_list;
     ProgressDialog loading;
     EditText new_pseudo, new_firstname, new_lastname, new_mail, pass, confirm_pass;
+    byte[] salt;
+    int iterationCount;
+    int keyLength;
+    SecretKeySpec key;
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -45,6 +67,10 @@ public class ActivityInscription extends AppCompatActivity {
         nom_list = new ArrayList<String>();
         prenom_list = new ArrayList<String>();
         mail_list = new ArrayList<String>();
+
+        salt = new String("12345678").getBytes();
+        iterationCount = 40000;
+        keyLength = 128;
 
 
         getItems();
@@ -127,13 +153,29 @@ public class ActivityInscription extends AppCompatActivity {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static String encrypt(String dataToEncrypt, SecretKeySpec key) throws GeneralSecurityException, UnsupportedEncodingException {
+        Cipher pbeCipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+        pbeCipher.init(Cipher.ENCRYPT_MODE, key);
+        AlgorithmParameters parameters = pbeCipher.getParameters();
+        IvParameterSpec ivParameterSpec = parameters.getParameterSpec(IvParameterSpec.class);
+        byte[] cryptoText = pbeCipher.doFinal(dataToEncrypt.getBytes("UTF-8"));
+        byte[] iv = ivParameterSpec.getIV();
+        return base64Encode(iv) + ":" + base64Encode(cryptoText);
+    }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private static String base64Encode(byte[] bytes) {
+        return Base64.getEncoder().encodeToString(bytes);
+    }
 
-    public void creer(View view){
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public void creer(View view) throws GeneralSecurityException, UnsupportedEncodingException {
         String chaine1 = new_pseudo.getText().toString();
         String chaine2 = new_firstname.getText().toString();
         String chaine3 = new_lastname.getText().toString();
         String chaine4 = new_mail.getText().toString();
+
 
         String pass1 = pass.getText().toString();
         String pass2 = confirm_pass.getText().toString();
@@ -182,12 +224,20 @@ public class ActivityInscription extends AppCompatActivity {
                 i++;
             }
             if (!trouve){
-                String password = encrypt(pass1);
+                key = null;
+                try {
+                    key = createSecretKey(pass1.toCharArray(), salt, iterationCount, keyLength);
+                } catch (NoSuchAlgorithmException e) {
+                    e.printStackTrace();
+                } catch (InvalidKeySpecException e) {
+                    e.printStackTrace();
+                }
+                //String password = encrypt(pass1, key);
                 String first = chaine2.substring(0, 1);
                 String rest = chaine2.substring(1, chaine2.length());
                 first=first.toUpperCase();
                 String res = first+rest;
-                WriteOnSheetUser.writeData(this, chaine1, res, chaine3.toUpperCase(), chaine4, password);
+                WriteOnSheetUser.writeData(this, chaine1, res, chaine3.toUpperCase(), chaine4, String.valueOf(key));
                 Intent intent = new Intent(this, ActivityMenu.class);
                 intent.putExtra("main_user", res + " "+chaine3.toUpperCase());
                 startActivity(intent);
@@ -201,15 +251,26 @@ public class ActivityInscription extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public String encrypt(String password){
+   /* public String encrypt(String password){
+        //SecretKeySpec key = createSecretKey(password.toCharArray(), salt, iterationCount, keyLength);
+
+
         String crypte="";
         for (int i=0; i<password.length();i++)  {
             int c=password.charAt(i)^48;
             crypte=crypte+(char)c;
         }
         return crypte;
-    }
+    }*/
 
+
+
+    public static SecretKeySpec createSecretKey(char[] password, byte[] salt, int iterationCount, int keyLength) throws NoSuchAlgorithmException, InvalidKeySpecException {
+        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA512");
+        PBEKeySpec keySpec = new PBEKeySpec(password, salt, iterationCount, keyLength);
+        SecretKey keyTmp = keyFactory.generateSecret(keySpec);
+        return new SecretKeySpec(keyTmp.getEncoded(), "AES");
+    }
 
 
 }

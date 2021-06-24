@@ -39,6 +39,7 @@ com/example/appbertille/ActivityRechercheRegistre.java
  com.example.appbertille.ActivityRechercheRegistre$4
  com.example.appbertille.ActivityRechercheRegistre$5
  com.example.appbertille.ActivityRechercheRegistre$6
+ com.example.appbertille.ActivityRechercheRegistre$7
 com/example/appbertille/ActivityWebHistoriqueAnimalerieAlevins.java
  com.example.appbertille.ActivityWebHistoriqueAnimalerieAlevins
  com.example.appbertille.ActivityWebHistoriqueAnimalerieAlevins$1
@@ -55,8 +56,10 @@ com/example/appbertille/WriteOnSheetIncident.java
 com/example/appbertille/ActivityEcrirRecapSouffrancePoisson.java
  com.example.appbertille.ActivityEcrirRecapSouffrancePoisson
  com.example.appbertille.ActivityEcrirRecapSouffrancePoisson$1
-com/example/appbertille/ActivityDupliquerBacs.java
- com.example.appbertille.ActivityDupliquerBacs
+com/example/appbertille/TacheAdapter.java
+ com.example.appbertille.TacheAdapter
+ com.example.appbertille.TacheAdapter$1
+ com.example.appbertille.TacheAdapter$TacheViewHolder
 com/example/appbertille/WriteOnSheetDupliquer.java
  com.example.appbertille.WriteOnSheetDupliquer
  com.example.appbertille.WriteOnSheetDupliquer$1
@@ -101,8 +104,11 @@ com/example/appbertille/ActivityRechercheGestionBacs.java
  com.example.appbertille.ActivityRechercheGestionBacs$7
 com/example/appbertille/Tache.java
  com.example.appbertille.Tache
-com/example/appbertille/ActivityDeplacerBacs.java
- com.example.appbertille.ActivityDeplacerBacs
+com/example/appbertille/ActivityHistoriqueSouffrance.java
+ com.example.appbertille.ActivityHistoriqueSouffrance
+ com.example.appbertille.ActivityHistoriqueSouffrance$1
+ com.example.appbertille.ActivityHistoriqueSouffrance$2
+ com.example.appbertille.ActivityHistoriqueSouffrance$3
 com/example/appbertille/WriteOnSheetSignaler.java
  com.example.appbertille.WriteOnSheetSignaler
  com.example.appbertille.WriteOnSheetSignaler$1
@@ -138,17 +144,6 @@ com/example/appbertille/OeufAdapter.java
  com.example.appbertille.OeufAdapter$IncidentViewHolder
 com/example/appbertille/ActivityEcrirRecapOeuf.java
  com.example.appbertille.ActivityEcrirRecapOeuf
-com/example/appbertille/ActivityHistoriqueAccouplementsPourOeufs.java
- com.example.appbertille.ActivityHistoriqueAccouplementsPourOeufs
- com.example.appbertille.ActivityHistoriqueAccouplementsPourOeufs$1
- com.example.appbertille.ActivityHistoriqueAccouplementsPourOeufs$2
- com.example.appbertille.ActivityHistoriqueAccouplementsPourOeufs$3
-com/example/appbertille/PopupRecapBacs.java
- com.example.appbertille.PopupRecapBacs
-com/example/appbertille/ActivityErreur.java
- com.example.appbertille.ActivityErreur
-com/example/appbertille/PoissonMort.java
- com.example.appbertille.PoissonMort
 com/example/appbertille/ActivityEcrirRecapBacs.java
  com.example.appbertille.ActivityEcrirRecapBacs
  com.example.appbertille.ActivityEcrirRecapBacs$1
@@ -156,17 +151,29 @@ com/example/appbertille/ActivityEcrirRecapBacs.java
  com.example.appbertille.ActivityEcrirRecapBacs$3
  com.example.appbertille.ActivityEcrirRecapBacs$4
  com.example.appbertille.ActivityEcrirRecapBacs$5
+com/example/appbertille/PopupRecapBacs.java
+ com.example.appbertille.PopupRecapBacs
+com/example/appbertille/ActivityErreur.java
+ com.example.appbertille.ActivityErreur
+com/example/appbertille/PoissonMort.java
+ com.example.appbertille.PoissonMort
+com/example/appbertille/ActivityInscription.java
+ com.example.appbertille.ActivityInscription
+ com.example.appbertille.ActivityInscription$1
+ com.example.appbertille.ActivityInscription$2
 com/example/appbertille/WriteOnSheetUser.java
  com.example.appbertille.WriteOnSheetUser
  com.example.appbertille.WriteOnSheetUser$1
  com.example.appbertille.WriteOnSheetUser$2
  com.example.appbertille.WriteOnSheetUser$3
-com/example/appbertille/ActivityMenu.java
- com.example.appbertille.ActivityMenu
- com.example.appbertille.ActivityMenu$1
- com.example.appbertille.ActivityMenu$2
- com.example.appbertille.ActivityMenu$3
- com.example.appbertille.ActivityMenu$4
+com/example/appbertille/ActivityRechercheRegistreAccouplementsFemelle.java
+ com.example.appbertille.ActivityRechercheRegistreAccouplementsFemelle
+ com.example.appbertille.ActivityRechercheRegistreAccouplementsFemelle$1
+ com.example.appbertille.ActivityRechercheRegistreAccouplementsFemelle$2
+ com.example.appbertille.ActivityRechercheRegistreAccouplementsFemelle$3
+ com.example.appbertille.ActivityRechercheRegistreAccouplementsFemelle$4
+ com.example.appbertille.ActivityRechercheRegistreAccouplementsFemelle$5
+ com.example.appbertille.ActivityRechercheRegistreAccouplementsFemelle$6
 com/example/appbertille/RecyclerViewAdapter.java
  com.example.appbertille.RecyclerViewAdapter
  com.example.appbertille.RecyclerViewAdapter$1
@@ -204,11 +211,8 @@ com/example/appbertille/ActivityEcrirRecapMort.java
  com.example.appbertille.ActivityEcrirRecapMort
 com/example/appbertille/Accouplement.java
  com.example.appbertille.Accouplement
-com/example/appbertille/ActivityRechercheRegistreBacs.java
- com.example.appbertille.ActivityRechercheRegistreBacs
- com.example.appbertille.ActivityRechercheRegistreBacs$1
- com.example.appbertille.ActivityRechercheRegistreBacs$2
- com.example.appbertille.ActivityRechercheRegistreBacs$3
+com/example/appbertille/ActivityEuthanasie.java
+ com.example.appbertille.ActivityEuthanasie
 com/example/appbertille/Bac.java
  com.example.appbertille.Bac
 com/example/appbertille/ActivityWebHistoriqueAnimalerieRemplissage.java
@@ -239,8 +243,14 @@ com/example/appbertille/CustomPopup.java
  com.example.appbertille.CustomPopup
  com.example.appbertille.CustomPopup$1
  com.example.appbertille.CustomPopup$2
-com/example/appbertille/ActivityReunificationBacs.java
- com.example.appbertille.ActivityReunificationBacs
+com/example/appbertille/WriteOnSheetAccouplement.java
+ com.example.appbertille.WriteOnSheetAccouplement
+ com.example.appbertille.WriteOnSheetAccouplement$1
+ com.example.appbertille.WriteOnSheetAccouplement$2
+ com.example.appbertille.WriteOnSheetAccouplement$3
+ com.example.appbertille.WriteOnSheetAccouplement$4
+ com.example.appbertille.WriteOnSheetAccouplement$5
+ com.example.appbertille.WriteOnSheetAccouplement$6
 com/example/appbertille/WriteOnSheetSouffrance.java
  com.example.appbertille.WriteOnSheetSouffrance
  com.example.appbertille.WriteOnSheetSouffrance$1
@@ -319,34 +329,25 @@ com/example/appbertille/ActivityEcrirRecapSouffrance.java
  com.example.appbertille.ActivityEcrirRecapSouffrance$1
 com/example/appbertille/CustomPopupIncident.java
  com.example.appbertille.CustomPopupIncident
-com/example/appbertille/ActivityRechercheRegistreAccouplementsFemelle.java
- com.example.appbertille.ActivityRechercheRegistreAccouplementsFemelle
- com.example.appbertille.ActivityRechercheRegistreAccouplementsFemelle$1
- com.example.appbertille.ActivityRechercheRegistreAccouplementsFemelle$2
- com.example.appbertille.ActivityRechercheRegistreAccouplementsFemelle$3
- com.example.appbertille.ActivityRechercheRegistreAccouplementsFemelle$4
- com.example.appbertille.ActivityRechercheRegistreAccouplementsFemelle$5
- com.example.appbertille.ActivityRechercheRegistreAccouplementsFemelle$6
-com/example/appbertille/ActivityInscription.java
- com.example.appbertille.ActivityInscription
- com.example.appbertille.ActivityInscription$1
- com.example.appbertille.ActivityInscription$2
-com/example/appbertille/TacheAdapter.java
- com.example.appbertille.TacheAdapter
- com.example.appbertille.TacheAdapter$1
- com.example.appbertille.TacheAdapter$TacheViewHolder
-com/example/appbertille/WriteOnSheetAccouplement.java
- com.example.appbertille.WriteOnSheetAccouplement
- com.example.appbertille.WriteOnSheetAccouplement$1
- com.example.appbertille.WriteOnSheetAccouplement$2
- com.example.appbertille.WriteOnSheetAccouplement$3
- com.example.appbertille.WriteOnSheetAccouplement$4
- com.example.appbertille.WriteOnSheetAccouplement$5
- com.example.appbertille.WriteOnSheetAccouplement$6
-com/example/appbertille/ActivityHistoriqueSouffrance.java
- com.example.appbertille.ActivityHistoriqueSouffrance
- com.example.appbertille.ActivityHistoriqueSouffrance$1
- com.example.appbertille.ActivityHistoriqueSouffrance$2
- com.example.appbertille.ActivityHistoriqueSouffrance$3
-com/example/appbertille/ActivityEuthanasie.java
- com.example.appbertille.ActivityEuthanasie
+com/example/appbertille/ActivityRechercheRegistreBacs.java
+ com.example.appbertille.ActivityRechercheRegistreBacs
+ com.example.appbertille.ActivityRechercheRegistreBacs$1
+ com.example.appbertille.ActivityRechercheRegistreBacs$2
+ com.example.appbertille.ActivityRechercheRegistreBacs$3
+com/example/appbertille/ActivityDeplacerBacs.java
+ com.example.appbertille.ActivityDeplacerBacs
+com/example/appbertille/ActivityReunificationBacs.java
+ com.example.appbertille.ActivityReunificationBacs
+com/example/appbertille/ActivityDupliquerBacs.java
+ com.example.appbertille.ActivityDupliquerBacs
+com/example/appbertille/ActivityHistoriqueAccouplementsPourOeufs.java
+ com.example.appbertille.ActivityHistoriqueAccouplementsPourOeufs
+ com.example.appbertille.ActivityHistoriqueAccouplementsPourOeufs$1
+ com.example.appbertille.ActivityHistoriqueAccouplementsPourOeufs$2
+ com.example.appbertille.ActivityHistoriqueAccouplementsPourOeufs$3
+com/example/appbertille/ActivityMenu.java
+ com.example.appbertille.ActivityMenu
+ com.example.appbertille.ActivityMenu$1
+ com.example.appbertille.ActivityMenu$2
+ com.example.appbertille.ActivityMenu$3
+ com.example.appbertille.ActivityMenu$4
