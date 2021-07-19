@@ -41,7 +41,7 @@ public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity 
     
 
     ListView listView;
-    SimpleAdapter adapter;
+    AccouplementAdapter adapter;
     ProgressDialog loading;
     EditText editTextSearchItem;
     
@@ -96,49 +96,51 @@ public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity 
         queue.add(stringRequest);
         
     }
-    
-    
+
+
     @RequiresApi(api=Build.VERSION_CODES.N)
     private void parseItems(String jsonResponce) {
-        
+
         ArrayList<HashMap<String, String>> list = new ArrayList<>();
-        
+        ArrayList<Accouplement> list_accouplement = new ArrayList<>();
+
         try {
             JSONObject jobj = new JSONObject(jsonResponce);
             JSONArray jarray = jobj.getJSONArray("items");
-            
-            
+
+
             for (int i = 0; i < jarray.length(); i++) {
-                
+
                 JSONObject jo = jarray.getJSONObject(i);
-    
+
                 SimpleDateFormat inputFormat=new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
                 SimpleDateFormat outputFormat=new SimpleDateFormat("EEEE d MMM yyyy", Locale.FRANCE);
-    
+
                 try {
                     date=inputFormat.parse(jo.getString("Date"));
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
                 String Date=outputFormat.format(date);
-    
-    
+
+
                 Calendar c=Calendar.getInstance();
-    
+
                 c.setTime(outputFormat.parse(Date));
-    
+
                 c.add(Calendar.DATE, 1);  // number of days to add
-    
+
                 Date=outputFormat.format(c.getTime());  // dt is now the new date
-    
-    
+
+
                 /**  Date=new Date();
                  Calendar c = Calendar.getInstance();
                  c.setTime(currentDate);
-     
+
                  */
-    
-    
+
+
+                //   String Date = outputFormat.format(date);
                 String operateur=jo.getString("operateur");
                 String LigneeM=jo.getString("LigneeM");
                 String LigneeF=jo.getString("LigneeF");
@@ -149,16 +151,16 @@ public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity 
                 String NbBac=jo.getString("NbBac");
                 String NbMale=jo.getString("NbMale");
                 String NbFemelle=jo.getString("NbFemelle");
-                String Age=jo.getString("Age");
-                String Age2=jo.getString("Age2");
-                String Lot=jo.getString("Lot");
-                String Lot2=jo.getString("Lot2");
-    
-                String Key=jo.getString("Key");
-                String Key2=jo.getString("Key2");
-    
-                HashMap<String, String> item=new HashMap<>();
-    
+                String Age = jo.getString("Age");
+                String Age2 = jo.getString("Age2");
+                String Lot = jo.getString("Lot");
+                String Lot2 = jo.getString("Lot2");
+                String Id = jo.getString("Id");
+
+                list_accouplement.add(new Accouplement(Date, operateur, NbBac, Couleur1, Couleur2, NbMale, Lot, Bac, LigneeM, Age,  NbFemelle,  Lot2,  Bac2,  LigneeF, Age2, Id));
+
+                HashMap<String, String> item = new HashMap<>();
+
                 item.put("Date", Date);
                 item.put("operateur", operateur);
                 item.put("LigneeM", LigneeM);
@@ -174,21 +176,20 @@ public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity 
                 item.put("Age2", Age2);
                 item.put("Lot", Lot);
                 item.put("Lot2", Lot2);
-    
-                item.put("Key", Key);
-                item.put("Key2", Key2);
+
+
                 list.add(item);
-    
-    
+
+
             }
         } catch (JSONException | ParseException e) {
             e.printStackTrace();
         }
-    
-    
-        adapter=new SimpleAdapter(this, list, R.layout.list_item_historique_accouplement, new String[]{"Date", "operateur", "LigneeM", "LigneeF", "Couleur1", "Couleur2", "Bac", "Bac2", "NbBac", "NbMale", "NbFemelle", "Age", "Age2", "Lot", "Lot2"}, new int[]{R.id.tv_date, R.id.tv_operateur, R.id.tv_ligneemale, R.id.tv_ligneefemelle, R.id.tv_couleur2, R.id.tv_couleur1, R.id.tv_bac, R.id.tv_bac2, R.id.tv_nbbac, R.id.tv_nbmale, R.id.tv_nbfemelle, R.id.tv_age, R.id.tv_age2, R.id.tv_lot, R.id.tv_lot2});
-    
-    
+
+
+        adapter=new AccouplementAdapter(this, list_accouplement, main_user);
+
+
         listView.setAdapter(adapter);
         loading.dismiss();
     

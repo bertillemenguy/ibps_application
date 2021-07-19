@@ -203,7 +203,7 @@ public class ActivityHistoriqueSouffrance extends AppCompatActivity {
 
 
 
-        adapter=new SouffranceAdapter(this, list_souffrance);
+        adapter=new SouffranceAdapter(this, list_souffrance, main_user);
     
         listView.setAdapter(adapter);
         loading.dismiss();

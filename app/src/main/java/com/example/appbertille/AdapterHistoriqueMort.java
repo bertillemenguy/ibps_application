@@ -26,9 +26,10 @@ public class AdapterHistoriqueMort extends ArrayAdapter<PoissonMort> implements 
     String main_user;
 
 
-    public AdapterHistoriqueMort(Context context, List<PoissonMort> data) {
+    public AdapterHistoriqueMort(Context context, List<PoissonMort> data, String main_user) {
         super(context, 0, data);
         this.context=context;
+        this.main_user=main_user;
         this.liste = data;
         intent = new Intent(getContext(), ActivityHistoriqueMorts.class);
     }

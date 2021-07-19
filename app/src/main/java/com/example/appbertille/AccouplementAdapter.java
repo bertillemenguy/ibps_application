@@ -22,10 +22,11 @@ public class AccouplementAdapter extends ArrayAdapter<Accouplement> implements S
     Intent intent;
     String main_user;
 
-    public AccouplementAdapter(Context context, List<Accouplement> data) {
+    public AccouplementAdapter(Context context, List<Accouplement> data, String main_user) {
         super(context, 0, data);
         this.context=context;
         this.liste = data;
+        this.main_user=main_user;
         intent = new Intent(getContext(), ActivityHistoriqueAccouplements.class);
     }
 

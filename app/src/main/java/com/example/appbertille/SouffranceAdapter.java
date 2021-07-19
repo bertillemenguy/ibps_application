@@ -21,9 +21,10 @@ public class SouffranceAdapter  extends ArrayAdapter<Souffrance> implements Seri
     Intent intent;
     String main_user;
 
-    public SouffranceAdapter(Context context, List<Souffrance> data) {
+    public SouffranceAdapter(Context context, List<Souffrance> data, String main_user) {
         super(context, 0, data);
         this.context=context;
+        this.main_user=main_user;
         this.liste = data;
         intent = new Intent(getContext(), ActivityHistoriqueSouffrance.class);
     }

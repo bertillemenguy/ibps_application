@@ -185,7 +185,7 @@ public class ActivityHistoriqueAccouplements extends AppCompatActivity {
         }
     
     
-        adapter=new AccouplementAdapter(this, list_accouplement);
+        adapter=new AccouplementAdapter(this, list_accouplement, main_user);
     
     
         listView.setAdapter(adapter);

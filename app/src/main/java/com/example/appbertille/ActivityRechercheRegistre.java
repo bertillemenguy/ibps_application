@@ -169,6 +169,23 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
         switch (position){
             case 0:
                 getItems_tri(0);
+                editTextSearchItem.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                    }
+
+                    @Override
+                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                        ActivityRechercheRegistre.this.adapter.getFilter().filter(charSequence);
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable editable) {
+
+
+                    }
+                });
                 Toast.makeText(parent.getContext(), "Trié par bac", Toast.LENGTH_SHORT).show();
                 break;
             case 1:
@@ -299,26 +316,6 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
 
 
 
-
-
-
-            editTextSearchItem.addTextChangedListener(new TextWatcher() {
-                @Override
-                public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-                }
-
-                @Override
-                public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                    ActivityRechercheRegistre.this.adapter.getFilter().filter(charSequence);
-                }
-
-                @Override
-                public void afterTextChanged(Editable editable) {
-
-
-                }
-            });
             ArrayList<Poisson> list_poisson_peril=new ArrayList<>();
             ArrayList<Poisson> list_poisson_ok=new ArrayList<>();
 
@@ -562,11 +559,11 @@ public class ActivityRechercheRegistre extends AppCompatActivity implements View
         listView.setAdapter(adapter);
         loading.dismiss();
 
+
+
         //Toast
 
     }
-
-
 
 
 }

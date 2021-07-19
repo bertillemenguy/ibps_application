@@ -159,7 +159,7 @@ public class ActivityHistoriqueMorts extends AppCompatActivity implements Adapte
         }
 
 
-        adapter = new AdapterHistoriqueMort(this, list_poisson);
+        adapter = new AdapterHistoriqueMort(this, list_poisson, main_user);
 
         listView.setAdapter(adapter);
         loading.dismiss();
