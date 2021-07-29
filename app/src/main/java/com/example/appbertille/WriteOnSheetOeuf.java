@@ -21,7 +21,7 @@ public class WriteOnSheetOeuf {
     public static void writeData(final Context context, final String main_user, final String Qualite, final String Quantite, final String NbBac, final String NbMale, final String NbFemelle, final String Bac, final String Bac2, final String LigneeM, final String LigneeF, final String Age, final String Age2, final String Lot, final String Lot2, final String Date, final String NbMalesFeconde, final String NbfemellesFeconde, final String Key, final String Key2) {
         final ProgressDialog loading=ProgressDialog.show(context, "Chargement...", "Veuillez patienter");
     
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbwXfBE9JPCjbpe0G1ysGIit4-b8WtwajfidatibSfZBQFJPOGyXcT9A3HwHt8mQq4Rh/exec?action=addItem",
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbwCSW2TM1e-Lj3yOj9D4iho1EwAVmMduVArtoUixBlaX-CHy0ktbQT3PC2vZFGhfksy/exec?action=addItem",
             
             
                 new Response.Listener<String>() {
@@ -64,7 +64,6 @@ public class WriteOnSheetOeuf {
                 parmas.put("Key", Key);
                 parmas.put("Key2", Key2);
 //ajout
-    
     
                 parmas.put("main_user", main_user);
                 parmas.put("Date", Date);

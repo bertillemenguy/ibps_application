@@ -29,37 +29,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3afe4e3-bb95-40eb-9760-15c9f83c8141" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_recherche_registre_item.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_recherche_registre_item.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_ecrir_recap_oeuf.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_ecrir_recap_oeuf.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_rechercheregistreaccouplmentmale.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_rechercheregistreaccouplmentmale.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_list_item_historique_accouplement.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_list_item_historique_accouplement.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_list_item_historique_oeufs.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_list_item_historique_oeufs.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/Accouplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/Accouplement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/AccouplementAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/AccouplementAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityEcrirRecapOeuf.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityEcrirRecapOeuf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityEcrirRecapSouffrance.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityEcrirRecapSouffrance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityEcrirRecapSouffrancePoisson.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityEcrirRecapSouffrancePoisson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityHistoriqueAccouplements.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityHistoriqueAccouplements.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityHistoriqueAccouplementsPourOeufs.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityHistoriqueAccouplementsPourOeufs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityHistoriqueMorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityHistoriqueMorts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityHistoriqueSouffrance.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityHistoriqueSouffrance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityRechercheRegistre.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityRechercheRegistre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/AdapterHistoriqueMort.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/AdapterHistoriqueMort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/SouffranceAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/SouffranceAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_recherche_registre_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_recherche_registre_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_rechercheregistreaccouplmentmale.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_rechercheregistreaccouplmentmale.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityTache.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityTache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/OeufAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/OeufAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/WriteOnSheetOeuf.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/WriteOnSheetOeuf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/WriteOnSheetSouffrance.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appbertille/WriteOnSheetSouffrance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ecrir_recap_oeuf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_ecrir_recap_oeuf.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_historique_accouplement.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_historique_accouplement.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_historique_oeufs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_historique_oeufs.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,13 +225,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618313200526</updated>
-    </task>
-    <task id="LOCAL-00012" summary="commit connexion">
-      <created>1619636447390</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1619636447390</updated>
     </task>
     <task id="LOCAL-00013" summary="commit connexion avant test">
       <created>1619638581915</created>
@@ -567,7 +562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624527346324</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="commit correction partie 1">
+      <created>1626710070991</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1626710070991</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -596,7 +598,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="commit checkbox mort fonctionne" />
     <MESSAGE value="commit 31 mai" />
     <MESSAGE value="commit checkbox incident" />
     <MESSAGE value="commit 1 juin" />
@@ -621,18 +622,14 @@
     <MESSAGE value="commit vendredi 18 juin adaptation tablette" />
     <MESSAGE value="commit mardi 22" />
     <MESSAGE value="commit correction error bac" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit correction error bac" />
+    <MESSAGE value="commit correction partie 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit correction partie 1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="106" y="78" width="800" height="723" key="#Intentions" timestamp="1619730326352">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
     <state x="106" y="78" width="800" height="723" key="#Intentions/0.25.1440.781@0.25.1440.781" timestamp="1619730326352" />
-    <state x="454" y="282" key="#Notifications" timestamp="1618315496225">
-      <screen x="0" y="25" width="1440" height="791" />
-    </state>
-    <state x="454" y="282" key="#Notifications/0.25.1440.791@0.25.1440.791" timestamp="1618315496225" />
-    <state x="454" y="283" key="#Notifications/0.25.1440.794@0.25.1440.794" timestamp="1618313566346" />
     <state x="42" y="149" key="#PSD" timestamp="1624365126890">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
@@ -650,10 +647,10 @@
       <screen x="0" y="25" width="1440" height="781" />
     </state>
     <state x="18" y="74" width="783" height="682" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.781@0.25.1440.781" timestamp="1623143965062" />
-    <state x="282" y="126" width="1158" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1623259545345">
+    <state x="282" y="126" width="1158" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1626727137256">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
-    <state x="282" y="126" width="1158" height="560" key="#com.intellij.ide.util.MemberChooser/0.25.1440.781@0.25.1440.781" timestamp="1623259545345" />
+    <state x="282" y="126" width="1158" height="560" key="#com.intellij.ide.util.MemberChooser/0.25.1440.781@0.25.1440.781" timestamp="1626727137256" />
     <state x="282" y="127" key="#com.intellij.ide.util.MemberChooser/0.25.1440.791@0.25.1440.791" timestamp="1621426585711" />
     <state x="370" y="166" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1622214792973">
       <screen x="0" y="25" width="1440" height="781" />
@@ -678,44 +675,44 @@
       <screen x="0" y="25" width="1440" height="781" />
     </state>
     <state x="176" y="193" key="AndroidCreateXmlResourceDialog/0.25.1440.781@0.25.1440.781" timestamp="1622581092782" />
-    <state x="28" y="25" width="883" height="569" key="CommitChangelistDialog2" timestamp="1624527343894">
+    <state x="28" y="25" width="883" height="569" key="CommitChangelistDialog2" timestamp="1626710069956">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
     <state x="195" y="0" width="883" height="569" key="CommitChangelistDialog2/0.0.1360.768@0.0.1360.768" timestamp="1624261615045" />
     <state x="171" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1624276116061" />
-    <state x="28" y="25" width="984" height="781" key="CommitChangelistDialog2/0.25.1440.781@0.25.1440.781" timestamp="1624527343894" />
+    <state x="28" y="25" width="984" height="781" key="CommitChangelistDialog2/0.25.1440.781@0.25.1440.781" timestamp="1626710069956" />
     <state x="206" y="25" key="CommitChangelistDialog2/0.25.1440.785@0.25.1440.785" timestamp="1624002605634" />
     <state x="0" y="25" key="CommitChangelistDialog2/0.25.1440.788@0.25.1440.788" timestamp="1621259443813" />
     <state x="1715" y="25" key="CommitChangelistDialog2/0.25.1440.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1624210711223" />
-    <state width="1098" height="110" key="GridCell.Tab.0.bottom" timestamp="1626708178848">
+    <state width="873" height="91" key="GridCell.Tab.0.bottom" timestamp="1627558631019">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
-    <state width="1398" height="180" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1619689680097" />
-    <state width="1098" height="110" key="GridCell.Tab.0.bottom/0.25.1440.781@0.25.1440.781" timestamp="1626708178848" />
+    <state width="1398" height="118" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1627306599024" />
+    <state width="873" height="91" key="GridCell.Tab.0.bottom/0.25.1440.781@0.25.1440.781" timestamp="1627558631019" />
     <state width="1279" height="108" key="GridCell.Tab.0.bottom/0.25.1440.788@0.25.1440.788" timestamp="1624019150082" />
     <state width="1279" height="108" key="GridCell.Tab.0.bottom/0.25.1440.791@0.25.1440.791" timestamp="1624019564129" />
     <state width="890" height="110" key="GridCell.Tab.0.bottom/0.25.1440.794@0.25.1440.794" timestamp="1621426147255" />
-    <state width="1098" height="110" key="GridCell.Tab.0.center" timestamp="1626708178848">
+    <state width="873" height="91" key="GridCell.Tab.0.center" timestamp="1627558631019">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
-    <state width="1398" height="180" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1619689680096" />
-    <state width="1098" height="110" key="GridCell.Tab.0.center/0.25.1440.781@0.25.1440.781" timestamp="1626708178848" />
+    <state width="1398" height="118" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1627306599024" />
+    <state width="873" height="91" key="GridCell.Tab.0.center/0.25.1440.781@0.25.1440.781" timestamp="1627558631019" />
     <state width="1279" height="108" key="GridCell.Tab.0.center/0.25.1440.788@0.25.1440.788" timestamp="1624019150082" />
     <state width="1279" height="108" key="GridCell.Tab.0.center/0.25.1440.791@0.25.1440.791" timestamp="1624019564128" />
     <state width="890" height="110" key="GridCell.Tab.0.center/0.25.1440.794@0.25.1440.794" timestamp="1621426147255" />
-    <state width="1098" height="110" key="GridCell.Tab.0.left" timestamp="1626708178847">
+    <state width="873" height="91" key="GridCell.Tab.0.left" timestamp="1627558631019">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
-    <state width="1398" height="180" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1619689680096" />
-    <state width="1098" height="110" key="GridCell.Tab.0.left/0.25.1440.781@0.25.1440.781" timestamp="1626708178847" />
+    <state width="1398" height="118" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1627306599023" />
+    <state width="873" height="91" key="GridCell.Tab.0.left/0.25.1440.781@0.25.1440.781" timestamp="1627558631019" />
     <state width="1279" height="108" key="GridCell.Tab.0.left/0.25.1440.788@0.25.1440.788" timestamp="1624019150082" />
     <state width="1279" height="108" key="GridCell.Tab.0.left/0.25.1440.791@0.25.1440.791" timestamp="1624019564128" />
     <state width="890" height="110" key="GridCell.Tab.0.left/0.25.1440.794@0.25.1440.794" timestamp="1621426147254" />
-    <state width="1098" height="110" key="GridCell.Tab.0.right" timestamp="1626708178848">
+    <state width="873" height="91" key="GridCell.Tab.0.right" timestamp="1627558631019">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
-    <state width="1398" height="180" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1619689680097" />
-    <state width="1098" height="110" key="GridCell.Tab.0.right/0.25.1440.781@0.25.1440.781" timestamp="1626708178848" />
+    <state width="1398" height="118" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1627306599024" />
+    <state width="873" height="91" key="GridCell.Tab.0.right/0.25.1440.781@0.25.1440.781" timestamp="1627558631019" />
     <state width="1279" height="108" key="GridCell.Tab.0.right/0.25.1440.788@0.25.1440.788" timestamp="1624019150082" />
     <state width="1279" height="108" key="GridCell.Tab.0.right/0.25.1440.791@0.25.1440.791" timestamp="1624019564128" />
     <state width="890" height="110" key="GridCell.Tab.0.right/0.25.1440.794@0.25.1440.794" timestamp="1621426147255" />
@@ -743,31 +740,20 @@
       <screen x="0" y="25" width="1440" height="781" />
     </state>
     <state x="148" y="161" key="IDE.errors.dialog/0.25.1440.781@0.25.1440.781" timestamp="1624361028720" />
-    <state x="148" y="163" key="IDE.errors.dialog/0.25.1440.794@0.25.1440.794" timestamp="1618314437799" />
-    <state x="421" y="122" key="RollbackChangesDialog" timestamp="1618315948340">
-      <screen x="0" y="25" width="1440" height="791" />
-    </state>
-    <state x="421" y="122" key="RollbackChangesDialog/0.25.1440.791@0.25.1440.791" timestamp="1618315948340" />
     <state x="59" y="77" width="900" height="728" key="SettingsEditor" timestamp="1624365461477">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
     <state x="59" y="77" width="900" height="728" key="SettingsEditor/0.25.1440.781@0.25.1440.781" timestamp="1624365461477" />
-    <state x="86" y="30" width="900" height="728" key="SettingsEditor/0.25.1440.791@0.25.1440.791" timestamp="1618318037161" />
-    <state x="0" y="52" key="SettingsEditor/0.25.1440.794@0.25.1440.794" timestamp="1618313996060" />
-    <state x="-38" y="30" key="SettingsEditor/0.25.1440.799@0.25.1440.799" timestamp="1618318328170" />
     <state width="500" height="476" key="SwitcherDM" timestamp="1622467645536">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
     <state width="500" height="476" key="SwitcherDM/0.25.1440.781@0.25.1440.781" timestamp="1622467645536" />
-    <state width="500" height="445" key="SwitcherDM/0.25.1440.791@0.25.1440.791" timestamp="1618315021751" />
-    <state x="21" y="146" key="Vcs.Push.Dialog.v2" timestamp="1624527351752">
+    <state x="21" y="146" key="Vcs.Push.Dialog.v2" timestamp="1626710083035">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
-    <state x="21" y="146" key="Vcs.Push.Dialog.v2/0.25.1440.781@0.25.1440.781" timestamp="1624527351752" />
+    <state x="21" y="146" key="Vcs.Push.Dialog.v2/0.25.1440.781@0.25.1440.781" timestamp="1626710083035" />
     <state x="21" y="147" key="Vcs.Push.Dialog.v2/0.25.1440.785@0.25.1440.785" timestamp="1624002629767" />
     <state x="21" y="147" key="Vcs.Push.Dialog.v2/0.25.1440.788@0.25.1440.788" timestamp="1621259454968" />
-    <state x="21" y="147" key="Vcs.Push.Dialog.v2/0.25.1440.791@0.25.1440.791" timestamp="1618316963539" />
-    <state x="21" y="148" key="Vcs.Push.Dialog.v2/0.25.1440.794@0.25.1440.794" timestamp="1618318694671" />
     <state x="158" y="226" key="com.android.tools.idea.run.deployment.ModifyDeviceSetDialog" timestamp="1624362450171">
       <screen x="0" y="25" width="1440" height="781" />
     </state>
@@ -789,10 +775,6 @@
       <screen x="0" y="25" width="1440" height="785" />
     </state>
     <state x="245" y="171" key="extract.method.dialog/0.25.1440.785@0.25.1440.785" timestamp="1620836942441" />
-    <state x="208" y="281" key="git4idea.rebase.GitRebaseDialog" timestamp="1618316984025">
-      <screen x="0" y="25" width="1440" height="791" />
-    </state>
-    <state x="208" y="281" key="git4idea.rebase.GitRebaseDialog/0.25.1440.791@0.25.1440.791" timestamp="1618316984025" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1620810221580">
       <screen x="0" y="25" width="1440" height="785" />
     </state>
@@ -805,9 +787,10 @@
       <screen x="0" y="25" width="1440" height="781" />
     </state>
     <state x="113" y="185" key="run.anything.popup/0.25.1440.781@0.25.1440.781" timestamp="1624359611934" />
-    <state x="364" y="63" width="670" height="676" key="search.everywhere.popup" timestamp="1626708360338">
-      <screen x="0" y="25" width="1440" height="781" />
+    <state x="364" y="44" width="670" height="780" key="search.everywhere.popup" timestamp="1627306166770">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="364" y="44" width="670" height="780" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1627306166770" />
     <state x="364" y="63" width="670" height="676" key="search.everywhere.popup/0.25.1440.781@0.25.1440.781" timestamp="1626708360338" />
   </component>
   <component name="XDebuggerManager">
@@ -823,11 +806,6 @@
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityInscription.java</url>
           <line>147</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/appbertille/ActivityEcrirRecapSouffrance.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -21,9 +21,28 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/btn_return5"
+                        style="@android:style/Widget.Holo.Light.ImageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentBottom="false"
+                        android:layout_gravity="center|left"
+                        android:onClick="fermeractivite"
+                        app:srcCompat="@android:drawable/ic_menu_revert" />
+                </LinearLayout>
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="50dp"
+                    android:layout_marginBottom="20dp"
                     android:layout_weight="1"
                     android:background="@color/colorPrimary"
                     android:baselineAligned="false"
@@ -36,7 +55,7 @@
                         android:layout_height="wrap_content"
                         android:text="APPRECIATION DE LA PONTE"
                         android:textAlignment="center"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -48,13 +67,12 @@
                     android:orientation="vertical"
                     android:paddingLeft="1dp"
                     android:paddingTop="1dp"
-                    android:paddingRight="1dp"
-                    android:paddingBottom="1dp">
+                    android:paddingRight="1dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_weight="0"
                         android:orientation="vertical">
 
@@ -72,7 +90,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:layout_marginBottom="100dp"
+                        android:layout_marginBottom="30dp"
                         android:layout_weight="0"
                         android:orientation="vertical">
 
@@ -177,7 +195,7 @@
                                                     android:id="@+id/textView46"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
-                                                    android:text="Bacs" />
+                                                    android:text=" Bacs" />
                                             </LinearLayout>
                                         </LinearLayout>
 
@@ -312,6 +330,7 @@
                                                                 android:layout_width="wrap_content"
                                                                 android:layout_height="wrap_content"
                                                                 android:layout_weight="1"
+                                                                android:padding="1dp"
                                                                 android:text="mois" />
                                                         </LinearLayout>
                                                     </LinearLayout>
@@ -551,7 +570,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:baselineAligned="false"
                     android:orientation="vertical">
@@ -575,7 +594,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="50dp"
+                        android:layout_marginBottom="20dp"
                         android:background="#FFFFFF"
                         android:backgroundTint="#3F51B5"
                         android:orientation="horizontal">
@@ -799,20 +818,6 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:id="@+id/imageView2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:onClick="fermeractivite"
-                                app:srcCompat="@android:drawable/ic_menu_revert" />
-                        </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"

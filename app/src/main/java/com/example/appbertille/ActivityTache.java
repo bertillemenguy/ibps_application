@@ -80,8 +80,6 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
         Intent intent = getIntent();
         this.main_user = intent.getStringExtra("main_user");
 
-
-
         btn_lun = (Button) findViewById(R.id.tache_lundi) ;
         btn_lun.setOnClickListener(this);
 
@@ -823,7 +821,7 @@ public class ActivityTache extends AppCompatActivity implements View.OnClickList
             WriteOnSheetTaches.writeData(this, main_user, tache.getTache());
 
             try {
-                Thread.sleep(1200);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

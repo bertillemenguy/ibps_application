@@ -124,7 +124,9 @@ public class ActivityEcrirRecapOeuf extends AppCompatActivity implements SmileRa
         Age2=intent.getStringExtra("Age2");
         Key=intent.getStringExtra("Key");
         Key2=intent.getStringExtra("Key2");
-        
+        main_user=intent.getStringExtra("main_user");
+
+
         // Couleur1 = intent.getStringExtra("Couleur1");
         // Couleur2 = intent.getStringExtra("Couleur2");
         
@@ -177,7 +179,6 @@ public class ActivityEcrirRecapOeuf extends AppCompatActivity implements SmileRa
         //   textView41.setText(Couleur2);
 
 
-       main_user=intent.getStringExtra("main_user");
 
 
     }
@@ -229,11 +230,18 @@ public class ActivityEcrirRecapOeuf extends AppCompatActivity implements SmileRa
         WriteOnSheetOeuf.writeData(this, main_user, Qualite, Quantite, NbBac, NbMale, NbFemelle, Bac, Bac2, LigneeM, LigneeF, Age, Age2, Lot, Lot2, Date, NbMalesFeconde, NbfemellesFeconde, Key, Key2);
         Intent intent = new Intent(this, ActivityMenu.class);
         //intent.putExtra("operateur", operateur);
-        intent.putExtra("Quantite", Quantite);
+        //intent.putExtra("Quantite", Quantite);
         intent.putExtra("main_user", main_user);
         startActivity(intent);
-        
-        
+
+        System.out.println("------------ Bac ------------"+Bac);
+        System.out.println("------------ main_user ------------"+main_user);
+        System.out.println("------------ Qualite ------------"+Qualite);
+        System.out.println("------------ NBBac ------------"+NbBac);
+        System.out.println("------------ Bac2 ------------"+Bac2);
+        System.out.println("------------ LigneeF ------------"+LigneeF);
+        System.out.println("------------ Age ------------"+Age);
+
         /**
          public void lanceroeuf2(View view) {
          Intent intent = new Intent(this,ActivityOeuf2.class);

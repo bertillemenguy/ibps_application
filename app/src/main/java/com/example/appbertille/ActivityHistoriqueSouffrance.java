@@ -135,73 +135,12 @@ public class ActivityHistoriqueSouffrance extends AppCompatActivity {
 
                 list_souffrance.add(new Souffrance(Date,Age, Bac, Lignee, Lot,Responsable,Euthanasie,Isolement,Surveillance,Aucune_action_a_mener,PoissonSouffrance, Id));
 
-                list_Id.add(Id);
-
-                    HashMap<String, String> item = new HashMap<>();
-
-                    item.put("Date", Date);
-
-                    item.put("Age", Age);
-                    item.put("Bac", Bac);
-                    item.put("Lignee", Lignee);
-                    item.put("Lot", Lot);
-                    item.put("Responsable", Responsable);
-
-                    item.put("Euthanasie", Euthanasie);
-                    item.put("Isolement", Isolement);
-                    item.put("Surveillance", Surveillance);
-                    item.put("Aucune_action_a_mener", Aucune_action_a_mener);
-                    item.put("PoissonSouffrance", PoissonSouffrance);
-                    item.put("Id", Id);
-
-                    list.add(item);
             }
 
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-
-        for (int i=0; i<list_Id.size();i++){
-
-            int euthanasie=0;
-            int isolement=0;
-            int surveillance=0;
-            int ras=0;
-
-            int nb_fois=0;
-
-            ArrayList<Integer> pos= new ArrayList<>();
-
-            for (int j=0;j<list.size();j++){
-                if (list_Id.get(i).equals(list.get(j).get("Id"))){
-                    nb_fois=nb_fois+1;
-                    if(nb_fois>1){
-                        pos.add(j);
-                    }
-                }
-            }
-
-            System.out.println(nb_fois);
-
-            if (nb_fois>1){
-                if(pos.size()>1){
-                    for (int k=0;k<pos.size();k++){
-                        System.out.println("Coucou");
-                        int p= pos.get(k);
-                        System.out.println(p);
-
-                        list.remove(p);
-                    }
-                }
-
-            }
-
-        }
-
-
-
 
         adapter=new SouffranceAdapter(this, list_souffrance, main_user);
     

@@ -30,6 +30,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -37,8 +38,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 
-public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity implements AdapterView.OnItemClickListener {
-    
+public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity {
 
     ListView listView;
     AccouplementAdapter adapter;
@@ -48,14 +48,13 @@ public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity 
     String main_user = "";
     Date date=null;
     
-    
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historique_item);
     
         listView=findViewById(R.id.lv_items);
-        listView.setOnItemClickListener(this);
+
         editTextSearchItem=findViewById(R.id.et_search);
     
         // Get the transferred data from source activity.
@@ -63,14 +62,13 @@ public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity 
         main_user = intent.getStringExtra("main_user");
     
         getItems();
-    
+
     }
     
     
     private void getItems() {
-    
-    
-        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbw6mmZdn43pcoDmmmqS471JzTwea9jJ_PnSrMVxudNE3XHWbYr0nYfqsT6FneLlvLdQ/exec?action=getItems", new Response.Listener<String>() {
+
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbz_LO8Ir5g-uXo5NtVzsb7mMUGJbqaAplo6NwyKNfMFXl6-5eOX37HfuHrI5JkbqotY/exec?action=getItems", new Response.Listener<String>() {
             @TargetApi(Build.VERSION_CODES.O)
             @Override
             public void onResponse(String response) {
@@ -156,8 +154,10 @@ public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity 
                 String Lot = jo.getString("Lot");
                 String Lot2 = jo.getString("Lot2");
                 String Id = jo.getString("Id");
+                String Key = jo.getString("Key");
+                String Key2 = jo.getString("Key2");
 
-                list_accouplement.add(new Accouplement(Date, operateur, NbBac, Couleur1, Couleur2, NbMale, Lot, Bac, LigneeM, Age,  NbFemelle,  Lot2,  Bac2,  LigneeF, Age2, Id));
+                list_accouplement.add(new Accouplement(Date, operateur, NbBac, Couleur1, Couleur2, NbMale, Lot, Bac, LigneeM, Age,  NbFemelle,  Lot2,  Bac2,  LigneeF, Age2, Id, Key, Key2));
 
                 HashMap<String, String> item = new HashMap<>();
 
@@ -213,7 +213,7 @@ public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity 
         });
     }
     
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+    /*public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         System.out.println("Coucou tu à clicker");
         Intent intent=new Intent(this, ActivityEcrirRecapOeuf.class);
         HashMap map=(HashMap) parent.getItemAtPosition(position);
@@ -257,7 +257,7 @@ public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity 
         intent.putExtra("Key2", Key2);
         
         startActivity(intent);
-    }
+    }*/
     
     
     public void fermeractivite(View view) {
@@ -275,5 +275,6 @@ public class ActivityHistoriqueAccouplementsPourOeufs extends AppCompatActivity 
     public void onPointerCaptureChanged(boolean hasCapture) {
     
     }
+
 }
 

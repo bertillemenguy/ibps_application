@@ -1279,6 +1279,7 @@ int id btn_com_mardi 0x7f0a0045
 int id btn_com_mercredi 0x7f0a0046
 int id btn_com_samedi 0x7f0a0047
 int id btn_com_vendredi 0x7f0a0048
+int id btn_declaration 0x7f0a024d
 int id btn_delete 0x7f0a0049
 int id btn_return 0x7f0a004a
 int id btn_return4 0x7f0a004b
@@ -1426,7 +1427,6 @@ int id imageView16 0x7f0a00d8
 int id imageView17 0x7f0a00d9
 int id imageView18 0x7f0a00da
 int id imageView19 0x7f0a00db
-int id imageView2 0x7f0a00dc
 int id imageView3 0x7f0a00dd
 int id imageView4 0x7f0a00de
 int id imageView5 0x7f0a00df

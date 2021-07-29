@@ -1280,6 +1280,7 @@ id btn_com_mardi
 id btn_com_mercredi
 id btn_com_samedi
 id btn_com_vendredi
+id btn_declaration
 id btn_delete
 id btn_return
 id btn_return4
@@ -1427,7 +1428,6 @@ id imageView16
 id imageView17
 id imageView18
 id imageView19
-id imageView2
 id imageView3
 id imageView4
 id imageView5

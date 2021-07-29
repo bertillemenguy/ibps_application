@@ -154,8 +154,10 @@ public class ActivityHistoriqueAccouplements extends AppCompatActivity {
                 String Lot = jo.getString("Lot");
                 String Lot2 = jo.getString("Lot2");
                 String Id = jo.getString("Id");
+                String Key = jo.getString("Key");
+                String Key2 = jo.getString("Key2");
 
-                list_accouplement.add(new Accouplement(Date, operateur, NbBac, Couleur1, Couleur2, NbMale, Lot, Bac, LigneeM, Age,  NbFemelle,  Lot2,  Bac2,  LigneeF, Age2, Id));
+                list_accouplement.add(new Accouplement(Date, operateur, NbBac, Couleur1, Couleur2, NbMale, Lot, Bac, LigneeM, Age,  NbFemelle,  Lot2,  Bac2,  LigneeF, Age2, Id, Key, Key2));
 
                 HashMap<String, String> item = new HashMap<>();
                 

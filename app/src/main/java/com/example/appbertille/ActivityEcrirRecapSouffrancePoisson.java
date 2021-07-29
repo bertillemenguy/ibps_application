@@ -1,5 +1,6 @@
 package com.example.appbertille;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,9 +12,26 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 public class ActivityEcrirRecapSouffrancePoisson extends AppCompatActivity {
 
@@ -21,8 +39,11 @@ public class ActivityEcrirRecapSouffrancePoisson extends AppCompatActivity {
     Button Valider;
     TextView textView;
     String num, nb_poisson_mort;
+    Date date = null;
 
-
+    SouffranceAdapter adapter;
+    ProgressDialog loading;
+    ArrayList<Souffrance> list_souffrance;
     String Bac="";
     String Lignee="";
     String Lot="";
@@ -31,13 +52,13 @@ public class ActivityEcrirRecapSouffrancePoisson extends AppCompatActivity {
     String Key="";
 
     String Id;
-
-    Integer Icon , Liseret;
-
     String Euthanasie="0";
     String Surveillance="0";
     String Isolement="0";
     String Ras="0";
+
+    Integer Icon , Liseret;
+
     int PointLimite=3;
 
     String Position="0";
@@ -68,6 +89,8 @@ public class ActivityEcrirRecapSouffrancePoisson extends AppCompatActivity {
         num = intent.getStringExtra("num");
         nb_poisson_mort = intent.getStringExtra("nb_poisson_mort");
         Id = intent.getStringExtra("Id");
+
+        getItems();
 
         Valider = findViewById(R.id.btn_valider);
         textView = findViewById(R.id.numero_poisson);
@@ -114,7 +137,6 @@ public class ActivityEcrirRecapSouffrancePoisson extends AppCompatActivity {
         this.Valider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Coucou bouton fonctionne");
                 lancerresultat(v);
                 fermeractivite(v);
             }
@@ -134,18 +156,160 @@ public class ActivityEcrirRecapSouffrancePoisson extends AppCompatActivity {
             //intent=new Intent(this, ActivityEuthanasie.class);
             Toast.makeText(getApplicationContext(), "Euthanasie", Toast.LENGTH_LONG).show();
             Euthanasie="1";
+
+            boolean trouve=false;
+            for (int i =0; list_souffrance.size()>i;i++){
+                if(list_souffrance.get(i).getId().equals(Id)){
+                    if (list_souffrance.get(i).getEuthanasie().equals("0")){
+                        WriteOnSheetSouffrance.updateData(this, Euthanasie, list_souffrance.get(i).getIsolement(), list_souffrance.get(i).getSurveillance(), list_souffrance.get(i).getAucune_action_a_mener(), Id);
+                        try {
+                            Thread.sleep(1200);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }else {
+                        int nb=Integer.parseInt(list_souffrance.get(i).getEuthanasie())+1;
+                        Euthanasie= nb+"";
+                        WriteOnSheetSouffrance.updateData(this, Euthanasie, list_souffrance.get(i).getIsolement(), list_souffrance.get(i).getSurveillance(), list_souffrance.get(i).getAucune_action_a_mener(), Id);
+                        try {
+                            Thread.sleep(1200);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    list_souffrance.get(i).setEuthanasie(Euthanasie);
+                    trouve=true;
+                }
+            }
+
+            if (!trouve){
+                WriteOnSheetSouffrance.writeData(this, main_user, Bac, Lignee, Lot, Age, Responsable, Position, Nage, Malnutrition, Prostration, Nageoire, Maigreur, Obesite, Blessure, Ulcere, Scoliose, Exophtalmie, Opercules, Couleur, Euthanasie, Isolement, Surveillance, Ras, nb_poisson_mort, Key, Id);
+                try {
+                    Thread.sleep(1200);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
         } else if ((score < PointLimite) && (Ulcere.equals("3"))) {
             //intent=new Intent(this, ActivityIsolement.class);
             Toast.makeText(getApplicationContext(), "Isolement", Toast.LENGTH_LONG).show();
             Isolement="1";
+
+
+            boolean trouve=false;
+            for (int i =0; list_souffrance.size()>i;i++){
+                if(list_souffrance.get(i).getId().equals(Id)){
+                    if (list_souffrance.get(i).getIsolement().equals("0")){
+                        WriteOnSheetSouffrance.updateData(this, list_souffrance.get(i).getEuthanasie(), Isolement, list_souffrance.get(i).getSurveillance(), list_souffrance.get(i).getAucune_action_a_mener(), Id);
+                        try {
+                            Thread.sleep(1200);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }else {
+                        int nb=Integer.parseInt(list_souffrance.get(i).getIsolement())+1;
+                        Isolement= nb+"";
+                        WriteOnSheetSouffrance.updateData(this, list_souffrance.get(i).getEuthanasie(), Isolement, list_souffrance.get(i).getSurveillance(), list_souffrance.get(i).getAucune_action_a_mener(), Id);
+                        try {
+                            Thread.sleep(1200);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    list_souffrance.get(i).setIsolement(Isolement);
+                    trouve=true;
+                }
+            }
+
+            if (!trouve){
+                WriteOnSheetSouffrance.writeData(this, main_user, Bac, Lignee, Lot, Age, Responsable, Position, Nage, Malnutrition, Prostration, Nageoire, Maigreur, Obesite, Blessure, Ulcere, Scoliose, Exophtalmie, Opercules, Couleur, Euthanasie, Isolement, Surveillance, Ras, nb_poisson_mort, Key, Id);
+                try {
+                    Thread.sleep(1200);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
         } else if ((score + 1) < PointLimite) {
             //intent = new Intent(this, ActivityRas.class);
             Toast.makeText(getApplicationContext(), "Ras", Toast.LENGTH_LONG).show();
             Ras = "1";
+
+            boolean trouve=false;
+            for (int i =0; list_souffrance.size()>i;i++){
+                if(list_souffrance.get(i).getId().equals(Id)){
+                    if (list_souffrance.get(i).getAucune_action_a_mener().equals("0")){
+                        WriteOnSheetSouffrance.updateData(this, list_souffrance.get(i).getEuthanasie(), list_souffrance.get(i).getIsolement(), list_souffrance.get(i).getSurveillance(), Ras, Id);
+                        try {
+                            Thread.sleep(1200);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }else {
+                        int nb=Integer.parseInt(list_souffrance.get(i).getAucune_action_a_mener())+1;
+                        Ras= nb+"";
+                        WriteOnSheetSouffrance.updateData(this, list_souffrance.get(i).getEuthanasie(), list_souffrance.get(i).getIsolement(), list_souffrance.get(i).getSurveillance(), Ras, Id);
+                        try {
+                            Thread.sleep(1200);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    list_souffrance.get(i).setAucune_action_a_mener(Ras);
+                    trouve=true;
+                }
+            }
+
+            if (!trouve){
+                WriteOnSheetSouffrance.writeData(this, main_user, Bac, Lignee, Lot, Age, Responsable, Position, Nage, Malnutrition, Prostration, Nageoire, Maigreur, Obesite, Blessure, Ulcere, Scoliose, Exophtalmie, Opercules, Couleur, Euthanasie, Isolement, Surveillance, Ras, nb_poisson_mort, Key, Id);
+                try {
+                    Thread.sleep(1200);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
+
         } else if (score == (PointLimite - 1)) {
             //intent=new Intent(this, ActivitySurveillance.class);
             Toast.makeText(getApplicationContext(), "Surveillance", Toast.LENGTH_LONG).show();
             Surveillance="1";
+
+            boolean trouve=false;
+            for (int i =0; list_souffrance.size()>i;i++){
+                if(list_souffrance.get(i).getId().equals(Id)){
+                    if (list_souffrance.get(i).getSurveillance().equals("0")){
+                        WriteOnSheetSouffrance.updateData(this, list_souffrance.get(i).getEuthanasie(), list_souffrance.get(i).getIsolement(), Surveillance, list_souffrance.get(i).getAucune_action_a_mener(), Id);
+                        try {
+                            Thread.sleep(1200);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }else {
+                        int nb=Integer.parseInt(list_souffrance.get(i).getSurveillance())+1;
+                        Surveillance= nb+"";
+                        WriteOnSheetSouffrance.updateData(this, list_souffrance.get(i).getEuthanasie(), list_souffrance.get(i).getIsolement(), Surveillance, list_souffrance.get(i).getAucune_action_a_mener(), Id);
+                        try {
+                            Thread.sleep(1200);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    list_souffrance.get(i).setSurveillance(Surveillance);
+                    trouve=true;
+                }
+            }
+
+            if (!trouve){
+                WriteOnSheetSouffrance.writeData(this, main_user, Bac, Lignee, Lot, Age, Responsable, Position, Nage, Malnutrition, Prostration, Nageoire, Maigreur, Obesite, Blessure, Ulcere, Scoliose, Exophtalmie, Opercules, Couleur, Euthanasie, Isolement, Surveillance, Ras, nb_poisson_mort, Key, Id);
+                try {
+                    Thread.sleep(1200);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
         }
 
 
@@ -168,7 +332,8 @@ public class ActivityEcrirRecapSouffrancePoisson extends AppCompatActivity {
         intent.putExtra("Prostration", Prostration);*/
 
         //startActivity(intent);
-       WriteOnSheetSouffrance.writeData(this, main_user, Bac, Lignee, Lot, Age, Responsable, Position, Nage, Malnutrition, Prostration, Nageoire, Maigreur, Obesite, Blessure, Ulcere, Scoliose, Exophtalmie, Opercules, Couleur, Euthanasie, Isolement, Surveillance, Ras, nb_poisson_mort, Key, Id);
+
+
 
     }
 
@@ -261,5 +426,80 @@ public class ActivityEcrirRecapSouffrancePoisson extends AppCompatActivity {
         }
     }
 
+
+
+
+    private void getItems() {
+
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycby83kflTnHKd3L0rn9KncsKif-vhhfRbmZrkuoP11g4ygspd5QH5yTDEEvPjXm0WPY/exec?action=getItems", new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                parseItems(response);
+            }
+        },
+
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                    }
+                }
+        );
+        //loading = ProgressDialog.show(this, "Chargement...", " Veuillez patienter", false, true);
+
+        int socketTimeOut = 50000;
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeOut, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+
+        stringRequest.setRetryPolicy(policy);
+
+        RequestQueue queue = Volley.newRequestQueue(this);
+        queue.add(stringRequest);
+
+    }
+
+
+    private void parseItems(String jsonResponce) {
+        list_souffrance = new ArrayList<>();
+        try {
+            JSONObject jobj = new JSONObject(jsonResponce);
+            JSONArray jarray = jobj.getJSONArray("items");
+
+
+            for (int i = 0; i < jarray.length(); i++) {
+
+                JSONObject jo = jarray.getJSONObject(i);
+
+                SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+                SimpleDateFormat outputFormat = new SimpleDateFormat("EEEE d MMM yyyy", Locale.FRANCE);
+
+                try {
+                    date = inputFormat.parse(jo.getString("Date"));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                String Date = outputFormat.format(date);
+
+                String Age = jo.getString("Age");
+                String Bac = jo.getString("Bac");
+                String Lignee = jo.getString("Lignee");
+                String Lot = jo.getString("Lot");
+                String Responsable = jo.getString("Responsable");
+
+                String Euthanasie = jo.getString("Euthanasie");
+                String Isolement = jo.getString("Isolement");
+                String Surveillance = jo.getString("Surveillance");
+                String Aucune_action_a_mener = jo.getString("Aucune_action_a_mener");
+                String PoissonSouffrance = jo.getString("PoissonSouffrance");
+
+                String Id = jo.getString("Id");
+
+                list_souffrance.add(new Souffrance(Date, Age, Bac, Lignee, Lot, Responsable, Euthanasie, Isolement, Surveillance, Aucune_action_a_mener, PoissonSouffrance, Id));
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+    }
 
 }

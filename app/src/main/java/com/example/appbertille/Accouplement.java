@@ -18,10 +18,12 @@ public class Accouplement {
     private final String LigneeFemelle;
     private final String AgeFemelle;
     private final String Id;
+    private final String KeyMale;
+    private final String KeyFemelle;
 
 
 
-    public Accouplement(String Date, String Operateur, String NombreAccouplements, String Couleur1, String Couleur2, String NbMal, String LotMal, String BacMal, String LigneeMal, String AgeMal, String NbFemelle, String LotFemelle, String BacFemelle, String LigneeFemelle, String AgeFemelle, String Id){
+    public Accouplement(String Date, String Operateur, String NombreAccouplements, String Couleur1, String Couleur2, String NbMal, String LotMal, String BacMal, String LigneeMal, String AgeMal, String NbFemelle, String LotFemelle, String BacFemelle, String LigneeFemelle, String AgeFemelle, String Id, String KeyMale, String KeyFemelle){
         this.Date=Date;
         this.Operateur=Operateur;
         this.NombreAccouplements=NombreAccouplements;
@@ -38,7 +40,8 @@ public class Accouplement {
         this.LigneeFemelle=LigneeFemelle;
         this.AgeFemelle=AgeFemelle;
         this.Id=Id;
-
+        this.KeyMale=KeyMale;
+        this.KeyFemelle=KeyFemelle;
     }
 
     @Override
@@ -127,4 +130,14 @@ public class Accouplement {
     public String getId() {
         return Id;
     }
+
+    public String getKeyMale() {
+        return KeyMale;
+    }
+
+    public String getKeyFemelle() {
+        return KeyFemelle;
+    }
+
+
 }

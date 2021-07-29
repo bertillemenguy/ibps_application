@@ -25,7 +25,7 @@ public class OeufAdapter extends ArrayAdapter<Oeuf> implements Serializable {
         super(context, 0, data);
         this.context=context;
         this.liste = data;
-        intent = new Intent(getContext(), ActivityHistoriqueAccouplements.class);
+        intent = new Intent(getContext(), ActivityHistoriqueOeufs.class);
 
     }
 

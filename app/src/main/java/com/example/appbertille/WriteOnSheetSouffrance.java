@@ -86,7 +86,7 @@ public class WriteOnSheetSouffrance {
     public static void deleteData(final Context context, final String Id) {
         //final ProgressDialog loading=ProgressDialog.show(context, "Chargement...", "Veuillez patienter");
 
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbwGHyjUTmwzyg4DeeIbbdXuLRzUjC1-ykLYX_y21sIp-FSlADOVc1wDIqLPNvPZzdgv/exec?action=addItem&Id="+Id,
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbweF8pUvnlDBMEIP1FGauf2UTa_0z1Lz2NxciascGU5lqQQfsaDT6NFAFJ0-v1ZifHS/exec?action=delItem&Id="+Id,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -122,6 +122,53 @@ public class WriteOnSheetSouffrance {
         RequestQueue queue = Volley.newRequestQueue(context);
         queue.add(stringRequest);
     }
+
+
+
+    public static void updateData(final Context context, final String Euthanasie, final String Isolement, final String Surveillance, final String Ras,final String Id) {
+        //final ProgressDialog loading=ProgressDialog.show(context, "Chargement...", "Veuillez patienter");
+
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbwPsX0DXicMd7gtQJOYku7aHnLs-s_lhnJVPF4RFt2Ov4lqEXg-jJY_OKzjiK9m39Ui/exec?action=updateItem",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                        Toast.makeText(context, response, Toast.LENGTH_LONG).show();
+                        //loading.dismiss();
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        //loading.dismiss();
+                        Toast.makeText(context, "error", Toast.LENGTH_LONG).show();
+
+                    }
+                }
+        ) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> parmas=new HashMap<>();
+
+                parmas.put("Id", Id);
+                parmas.put("Euthanasie", Euthanasie);
+                parmas.put("Isolement", Isolement);
+                parmas.put("Surveillance", Surveillance);
+                parmas.put("Ras", Ras);
+
+                //....
+
+                return parmas;
+            }
+        };
+        int socketTimeOut = 50000;// u can change this .. here it is 50 seconds
+        RetryPolicy retryPolicy = new DefaultRetryPolicy(socketTimeOut, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        stringRequest.setRetryPolicy(retryPolicy);
+        RequestQueue queue = Volley.newRequestQueue(context);
+        queue.add(stringRequest);
+    }
+
 
 
 }
