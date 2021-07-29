@@ -159,9 +159,11 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
                 String Bac=jo.getString("Bac");
                 String Lignee2=jo.getString("Lignee2");
                 String Bac2=jo.getString("Bac2");
-    
+
+                String Bac1b=jo.getString("Bac1b");
                 String remarque=jo.getString("remarque");
                 String remarque2=jo.getString("remarque2");
+
                 String Bac2b=jo.getString("Bac2b");
     
                 String remarque3=jo.getString("remarque3");
@@ -178,14 +180,14 @@ public class ActivityRechercheGestionBacs extends AppCompatActivity  {
 
 
                 if (SItraite.equals("En cours")){
-                    tete.add(new Bac(modif_Date, Id, Actions, NouveauBac, Lignee, Bac, Lignee2, Bac2, remarque, remarque2, Bac2b, remarque3, Bac3, remarque4, Bac4, Lot, Lot2, SItraite));
+                    tete.add(new Bac(modif_Date, Id, Actions, NouveauBac, Lignee, Bac, Lignee2, Bac2, Bac1b,remarque, remarque2, Bac2b, remarque3, Bac3, remarque4, Bac4, Lot, Lot2, SItraite));
                 } else {
-                    queue.add(new Bac(modif_Date, Id, Actions, NouveauBac, Lignee, Bac, Lignee2, Bac2, remarque, remarque2, Bac2b, remarque3, Bac3, remarque4, Bac4, Lot, Lot2, SItraite));
+                    queue.add(new Bac(modif_Date, Id, Actions, NouveauBac, Lignee, Bac, Lignee2, Bac2, Bac1b,remarque, remarque2, Bac2b, remarque3, Bac3, remarque4, Bac4, Lot, Lot2, SItraite));
                 }
 
 
                 if (type_affichage==2){
-                    data.add(new Bac(modif_Date, Id, Actions, NouveauBac, Lignee, Bac, Lignee2, Bac2, remarque, remarque2, Bac2b, remarque3, Bac3, remarque4, Bac4, Lot, Lot2, SItraite));
+                    data.add(new Bac(modif_Date, Id, Actions, NouveauBac, Lignee, Bac, Lignee2, Bac2, Bac1b, remarque, remarque2, Bac2b, remarque3, Bac3, remarque4, Bac4, Lot, Lot2, SItraite));
                 }
 
                 /*HashMap<String, String> item=new HashMap<>();

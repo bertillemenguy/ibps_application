@@ -34,6 +34,7 @@ public class BacAdapter extends ArrayAdapter<Bac> implements Serializable {
         TextView Lignee;
         TextView Bac;
         TextView Lignee2;
+        TextView Bac1b;
         TextView Bac2;
         TextView remarque;
         TextView remarque2;
@@ -81,6 +82,10 @@ public class BacAdapter extends ArrayAdapter<Bac> implements Serializable {
             holder.remarque2 = (TextView) convertView.findViewById(R.id.tv_DupliRemarque2);
             holder.Bac2b = (TextView) convertView.findViewById(R.id.tv_DupliBac2);
             holder.remarque3 = (TextView) convertView.findViewById(R.id.tv_DupliRemarque3);
+
+            holder.Bac1b = (TextView) convertView.findViewById(R.id.tv_nouveaubacEtDupliBac1);
+
+
             holder.Bac3 = (TextView) convertView.findViewById(R.id.tv_DupliBac3);
             holder.Remarque4 = (TextView) convertView.findViewById(R.id.tv_DupliRemarque4);
             holder.Bac4 = (TextView) convertView.findViewById(R.id.tv_DupliBac4);
@@ -113,6 +118,7 @@ public class BacAdapter extends ArrayAdapter<Bac> implements Serializable {
         holder.remarque3.setText(bac.getRemarque3());
         holder.Remarque4.setText(bac.getRemarque4());
         holder.Bac3.setText(bac.getBac3());
+        holder.Bac1b.setText(bac.getBac1b());
         holder.Bac4.setText(bac.getBac4());
         holder.Lot.setText(bac.getLot());
         holder.Lot2.setText(bac.getLot2());

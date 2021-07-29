@@ -19,6 +19,7 @@ public class Bac implements Serializable {
     private final String Bac3;
     private final String Remarque4;
     private final String Bac4;
+    private final String Bac1b;
     private final String Lot;
     private final String Lot2;
     private final String SiTraite;
@@ -27,13 +28,14 @@ public class Bac implements Serializable {
     private boolean active;
 
 
-    public Bac(String Date, String Id,String Actions,String NouveauBac,String Lignee,String Bac,String Lignee2,String Bac2,String remarque,String remarque2,String Bac2b,String remarque3,String Bac3,String remarque4,String Bac4,String Lot,String Lot2,String SItraite){
+    public Bac(String Date, String Id,String Actions,String NouveauBac,String Lignee,String Bac,String Lignee2,String Bac2, String Bac1b, String remarque,String remarque2,String Bac2b,String remarque3,String Bac3,String remarque4,String Bac4,String Lot,String Lot2,String SItraite){
         this.date=Date;
         this.Id=Id;
         this.Actions=Actions;
         this.NouveauBac=NouveauBac;
         this.Lignee=Lignee;
         this.Bac=Bac;
+        this.Bac1b=Bac1b;
         this.Lignee2= Lignee2;
         this.Bac2= Bac2;
         this.remarque= remarque;
@@ -78,6 +80,7 @@ public class Bac implements Serializable {
     }
     public String getRemarque(){ return remarque; }
     public String getRemarque2(){ return remarque2; }
+    public String getBac1b(){ return Bac1b; }
     public String getBac2b(){ return Bac2b; }
     public String getRemarque3(){ return remarque3; }
     public String getBac3(){ return Bac3; }
